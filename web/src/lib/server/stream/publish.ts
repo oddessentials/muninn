@@ -3,8 +3,9 @@ import { getDb } from '../db/client';
 import { events, type EventRow } from '../db/schema';
 import { bus } from '../events/bus';
 import type { StoredEnvelope } from '../ingest/context';
-import { buildActivityItems, feedIncludes } from '../read/activity';
+import { buildActivityItems, feedIncludes, switchedOffTypes } from '../read/activity';
 import { computeOnline, computeStatus } from '../read/status';
+import { siteFeatures } from '../settings';
 import { inArray } from 'drizzle-orm';
 
 let lastStatusJson: string | null = null;
@@ -26,9 +27,12 @@ export async function publishSnapshots(force = false): Promise<void> {
 }
 
 export async function publishEvents(envelopes: StoredEnvelope[]): Promise<ActivityItem[]> {
-  const included = envelopes.filter((event) => feedIncludes(event.type as EventType, null));
-  if (included.length === 0) return [];
   const db = getDb();
+  const switchedOff = switchedOffTypes(await siteFeatures(db));
+  const included = envelopes.filter((event) =>
+    feedIncludes(event.type as EventType, null, switchedOff)
+  );
+  if (included.length === 0) return [];
   const rows: EventRow[] = await db
     .select()
     .from(events)

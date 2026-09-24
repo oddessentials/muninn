@@ -7,7 +7,7 @@ import type { PageServerLoad } from './$types';
 
 const ranges: readonly NonNullable<PositionsRange>[] = ['1h', '6h', '24h', '7d'];
 
-export const load: PageServerLoad = async ({ fetch, url, params }) => {
+export const load: PageServerLoad = async ({ fetch, url, params, parent }) => {
   const id = Number(params.id);
   if (!Number.isInteger(id) || id < 1) error(404, 'player ids are positive integers');
   const server = serverApi(fetch, url);
@@ -24,11 +24,13 @@ export const load: PageServerLoad = async ({ fetch, url, params }) => {
       error(caught.status >= 500 ? 503 : caught.status, caught.message);
     throw caught;
   }
+  const { features } = await parent();
+  const tracked = features?.positions ?? true;
   const [sessions, deaths, kills, positions, structures, activity, world] = await Promise.all([
     attempt(api.listPlayerSessions(id, { limit: 25, cursor })),
     attempt(api.listPlayerDeaths(id, { limit: 50 })),
     attempt(api.getPlayerKills(id)),
-    attempt(api.getPlayerPositions(id, { range, limit: 2000 })),
+    tracked ? attempt(api.getPlayerPositions(id, { range, limit: 2000 })) : null,
     attempt(api.getPlayerStructures(id)),
     attempt(api.listPlayerActivity(id, { limit: 30 })),
     attempt(api.getWorld())

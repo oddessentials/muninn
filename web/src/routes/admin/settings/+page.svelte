@@ -10,6 +10,7 @@
   import {
     buildSettingsUpdate,
     environmentVariables,
+    featureOptions,
     settingsForm,
     siteNameMaxLength,
     type LockableField
@@ -139,6 +140,29 @@
             The site asks the game server's Steam query port who is online, once a minute. Leave the host
             empty to switch this off; the status then comes from the plugin alone. The query port is usually
             the game port plus one.
+          </p>
+        </fieldset>
+
+        <fieldset class="flex flex-col gap-3">
+          <legend class="label">Features</legend>
+          {#each featureOptions as option (option.name)}
+            <div class="flex items-start gap-2.5">
+              <input
+                type="checkbox"
+                id="feature-{option.name}"
+                name="feature_{option.name}"
+                class="mt-0.5"
+                aria-describedby="feature-{option.name}-note"
+                bind:checked={form.features[option.name]}
+              />
+              <div class="flex flex-col gap-0.5">
+                <label for="feature-{option.name}">{option.label}</label>
+                <span class="note" id="feature-{option.name}-note">{option.description}</span>
+              </div>
+            </div>
+          {/each}
+          <p class="note">
+            A feature that is off disappears from the menu, and its pages answer 404.
           </p>
         </fieldset>
 

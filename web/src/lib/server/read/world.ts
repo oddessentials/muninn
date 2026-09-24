@@ -5,6 +5,7 @@ import { events, globalKeys, mapImages, saves } from '../db/schema';
 import { iso, round } from '../http/respond';
 import { keyCategory, worldDayLengthSeconds } from '../names';
 import { computeStatus, statusRecord } from './status';
+import { siteFeatures } from '../settings';
 
 export async function progression(db: Database): Promise<ProgressionKey[]> {
   const rows = await db
@@ -98,7 +99,7 @@ export async function worldSummary(db: Database, now = new Date()): Promise<Worl
         to_net_time: Number(data.to_net_time ?? 0)
       };
     }),
-    map: await mapInfo(db, worldUid)
+    map: (await siteFeatures(db)).map ? await mapInfo(db, worldUid) : null
   };
 }
 

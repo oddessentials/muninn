@@ -121,6 +121,13 @@
           are missing.
         </p>
       {/if}
+      {#if health.plugin_version && data.version && health.plugin_version !== data.version}
+        <p class="mt-4 text-[0.8125rem] text-warning">
+          The game server runs plugin {health.plugin_version} and this site is {data.version}. Get
+          the matching DLL on the
+          <a href="/admin/plugin" class="text-accent hover:underline">Plugin page</a>.
+        </p>
+      {/if}
       {#if health.run}
         <p class="mt-4 text-[0.8125rem] text-ink-muted">
           Latest run started <Time at={health.run.started_at} />, {stopReasonLabel(

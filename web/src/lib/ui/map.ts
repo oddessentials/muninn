@@ -98,6 +98,12 @@ export interface MapMarker extends MapPoint {
   href?: string;
 }
 
+export function hasPosition<T extends { x: number | null; z: number | null }>(
+  item: T
+): item is T & MapPoint {
+  return item.x !== null && item.z !== null;
+}
+
 export interface MapTrack {
   label: string;
   points: MapPoint[];

@@ -1,0 +1,11 @@
+{
+  "version": "0.6.0",
+  "telemetry_secret": "mock-telemetry-secret-3q2mN8vRk1",
+  "secret_from_environment": false,
+  "dll_available": true,
+  "last_start": {
+    "at": "2026-08-30T09:03:40Z",
+    "plugin_version": "0.1.0",
+    "game_version": "1.0.7"
+  }
+}

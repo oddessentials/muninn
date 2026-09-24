@@ -298,6 +298,14 @@ async function answerAdminMutation(event: RequestEvent): Promise<Response | null
   if (pathname === '/api/v1/admin/setup' && method === 'POST') {
     return errorResponse(409, 'conflict', 'the admin password is already set');
   }
+  if (pathname === '/api/v1/admin/plugin/secret' && method === 'POST') {
+    return Response.json(
+      {
+        telemetry_secret: `mock-${createHash('sha1').update(String(Date.now())).digest('hex').slice(0, 24)}`
+      },
+      { headers: noStore }
+    );
+  }
   if (pathname === '/api/v1/admin/settings' && method === 'PUT') {
     const body = await readJson(event);
     if (!body) return errorResponse(400, 'bad_request', 'body must be a JSON object');

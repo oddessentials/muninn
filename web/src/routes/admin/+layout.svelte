@@ -14,6 +14,7 @@
     { href: '/admin/players', label: 'Players' },
     { href: '/admin/announce', label: 'Announce' },
     { href: '/admin/events', label: 'Raw events' },
+    { href: '/admin/plugin', label: 'Plugin' },
     { href: '/admin/settings', label: 'Settings' }
   ];
 

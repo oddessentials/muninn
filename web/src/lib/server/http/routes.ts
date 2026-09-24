@@ -1,7 +1,8 @@
 import type { RequestEvent, RequestHandler } from '@sveltejs/kit';
 import { requireAdmin, requireSameOrigin } from '../auth/admin';
 import { getDb, type Database } from '../db/client';
-import { guarded, privateJson, publicJson } from './respond';
+import { featureLabels, siteFeatures, type FeatureName } from '../settings';
+import { guarded, notFound, privateJson, publicJson } from './respond';
 
 export function clientAddress(event: RequestEvent): string {
   const forwarded = event.request.headers.get('x-forwarded-for');
@@ -41,6 +42,12 @@ export function adminMutation(
       requireSameOrigin(event);
       return handler(event, getDb());
     });
+}
+
+export async function requireFeature(name: FeatureName, db: Database = getDb()): Promise<void> {
+  if (!(await siteFeatures(db))[name]) {
+    throw notFound(`${featureLabels[name]} is switched off on this site`);
+  }
 }
 
 export async function readJsonBody(event: RequestEvent): Promise<unknown> {

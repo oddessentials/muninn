@@ -316,6 +316,9 @@ test('the admin pages log in, show health and queue a job', async ({ page }) => 
   await expect(page).toHaveURL(/\/admin$/);
   await expect(page.locator('main h1')).toHaveText('Telemetry health');
   await expect(page.getByText('25 s ago')).toBeVisible();
+  await expect(
+    page.getByText('The game server runs plugin 0.1.0 and this site is 0.6.0.')
+  ).toBeVisible();
   await page.getByRole('button', { name: 'Run a backup now' }).click();
   await expect(page.getByRole('status').last()).toContainText('Job 42');
   await page.goto('/admin/players');
@@ -348,6 +351,33 @@ test('the admin pages log in, show health and queue a job', async ({ page }) => 
   await page.getByLabel('Site name').fill('Ravenhold');
   await page.getByRole('button', { name: 'Save' }).click();
   await expect(page.getByRole('status').last()).toHaveText('Saved.');
+  await page.getByLabel('Chat', { exact: true }).uncheck();
+  await page.getByRole('button', { name: 'Save' }).click();
+  await expect(page.getByRole('status').last()).toHaveText('Saved.');
+  await expect(page.getByLabel('Chat', { exact: true })).not.toBeChecked();
+  await page.goto('/admin/plugin');
+  await expect(page.locator('main h1')).toHaveText('Plugin');
+  await expect(
+    page.getByText('The server runs plugin 0.1.0 and this site ships 0.6.0.', { exact: false })
+  ).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Download GuildTelemetry.dll' })).toHaveAttribute(
+    'href',
+    '/api/v1/admin/plugin/dll'
+  );
+  await page.getByRole('button', { name: 'Show' }).click();
+  await expect(page.getByText('mock-telemetry-secret-3q2mN8vRk1')).toBeVisible();
+  const download = page.waitForEvent('download');
+  await page.getByRole('button', { name: 'Download com.guildsite.telemetry.cfg' }).click();
+  const config = await download;
+  expect(config.suggestedFilename()).toBe('com.guildsite.telemetry.cfg');
+  const text = readFileSync(await config.path(), 'utf8');
+  expect(text).toContain('[General]');
+  expect(text).toMatch(/^Url = http:\/\/localhost:\d+\/api\/ingest$/m);
+  expect(text).toContain('Secret = mock-telemetry-secret-3q2mN8vRk1');
+  await page.getByRole('button', { name: 'Make a new secret' }).click();
+  await page.getByRole('button', { name: 'Replace the secret' }).click();
+  await expect(page.getByRole('status').last()).toContainText('New secret made.');
+  await expect(page.getByText('mock-telemetry-secret-3q2mN8vRk1')).toHaveCount(0);
   expect(problems).toEqual([]);
 });
 
@@ -409,6 +439,7 @@ const everyPage = [
   '/admin/players',
   '/admin/announce',
   '/admin/events',
+  '/admin/plugin',
   '/admin/settings'
 ];
 

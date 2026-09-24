@@ -70,7 +70,12 @@ function fixtureNameFor(path) {
   return path.replace(/^\/api\/v1\//, '');
 }
 
-const servedLive = ['/api/v1/openapi.json', '/api/v1/stream', '/api/v1/zone/probe/'];
+const servedLive = [
+  '/api/v1/openapi.json',
+  '/api/v1/stream',
+  '/api/v1/zone/probe/',
+  '/api/v1/admin/plugin/dll'
+];
 
 const expectedFixtures = new Map();
 for (const { path, operation } of getPaths) {
