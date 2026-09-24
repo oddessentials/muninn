@@ -1,10 +1,13 @@
 import { existsSync } from 'node:fs';
-import { resolve } from 'node:path';
+import { copyFile, mkdir, writeFile } from 'node:fs/promises';
+import { join, resolve } from 'node:path';
 import type { PluginInfo } from '$lib/api/types';
 import type { Database } from './db/client';
 import { env } from './env';
 import { secrets } from './auth/secrets';
 import { latestRun } from './read/status';
+import { siteFeatures } from './settings';
+import { configFileName, pluginConfig } from '$lib/ui/plugin';
 
 export const pluginFileName = 'GuildTelemetry.dll';
 export const imagePluginPath = `/app/plugin/${pluginFileName}`;
@@ -37,4 +40,37 @@ export async function pluginInfo(db: Database): Promise<PluginInfo> {
         }
       : null
   };
+}
+
+export async function exportPlugin(
+  db: Database,
+  directory: string,
+  origin: string,
+  dll = pluginDllPath()
+): Promise<string[]> {
+  const written: string[] = [];
+  await mkdir(directory, { recursive: true });
+  if (dll) {
+    await mkdir(join(directory, 'plugins'), { recursive: true });
+    await copyFile(dll, join(directory, 'plugins', pluginFileName));
+    written.push(`plugins/${pluginFileName}`);
+  }
+  const config = pluginConfig({
+    origin,
+    secret: await secrets.telemetrySecret(),
+    mapEnabled: (await siteFeatures(db)).map
+  });
+  await writeFile(join(directory, configFileName), config);
+  written.push(configFileName);
+  return written;
+}
+
+export async function exportConfiguredPlugin(db: Database): Promise<void> {
+  if (!env.pluginExportDir || env.apiMock) return;
+  try {
+    const written = await exportPlugin(db, env.pluginExportDir, env.pluginExportOrigin);
+    console.log(`plugin exported to ${env.pluginExportDir}: ${written.join(', ')}`);
+  } catch (error) {
+    console.error('plugin export failed', error instanceof Error ? error.message : error);
+  }
 }

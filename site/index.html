@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Muninn</title>
+    <meta
+      name="description"
+      content="A live website for your guild's Valheim server. A server-side plugin reports what happens in the world; players install nothing."
+    />
+    <meta property="og:title" content="Muninn" />
+    <meta
+      property="og:description"
+      content="A live website for your guild's Valheim server. Players install nothing."
+    />
+    <meta property="og:image" content="https://oddessentials.github.io/muninn/assets/banner.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#121116" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <style>
+      @font-face {
+        font-family: 'Cinzel Decorative';
+        font-weight: 700;
+        font-display: swap;
+        src: url('assets/fonts/cinzel-decorative-700.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'Cinzel Decorative';
+        font-weight: 900;
+        font-display: swap;
+        src: url('assets/fonts/cinzel-decorative-900.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'IBM Plex Mono';
+        font-weight: 400;
+        font-display: swap;
+        src: url('assets/fonts/ibm-plex-mono-400.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'IBM Plex Mono';
+        font-weight: 600;
+        font-display: swap;
+        src: url('assets/fonts/ibm-plex-mono-600.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'Caveat';
+        font-weight: 400 700;
+        font-display: swap;
+        src: url('assets/fonts/caveat-variable.woff2') format('woff2');
+      }
+      :root {
+        color-scheme: dark;
+        --surface: #121116;
+        --raised: #19181f;
+        --ink: #ece5d3;
+        --ink-muted: #aaa290;
+        --line: #2b2a33;
+        --accent: #d9ab4a;
+        --accent-bright: #f0c65a;
+        --display: 'Cinzel Decorative', 'Cinzel', 'Palatino Linotype', Georgia, serif;
+        --mono: 'IBM Plex Mono', 'Cascadia Mono', Consolas, 'Liberation Mono', Menlo, monospace;
+        --note: 'Caveat', 'Segoe Script', 'Bradley Hand', cursive;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--surface);
+        color: var(--ink);
+        font: 400 0.95rem/1.65 var(--mono);
+      }
+      a {
+        color: var(--accent);
+      }
+      a:hover {
+        color: var(--accent-bright);
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+      .wrap {
+        max-width: 72rem;
+        margin: 0 auto;
+        padding-inline: 16px;
+      }
+      header.hero {
+        position: relative;
+        background: linear-gradient(90deg, rgba(18, 17, 22, 0.94) 0%, rgba(18, 17, 22, 0.72) 55%, rgba(18, 17, 22, 0.45) 100%),
+          linear-gradient(0deg, var(--surface) 0%, rgba(18, 17, 22, 0) 40%),
+          url('assets/tavern-1600.webp') center 35% / cover no-repeat;
+        border-top: 4px solid var(--accent);
+      }
+      .hero .wrap {
+        display: grid;
+        grid-template-columns: minmax(0, 14rem) minmax(0, 1fr);
+        gap: 2.5rem;
+        align-items: center;
+        padding-block: 5.5rem 4.5rem;
+      }
+      .hero svg {
+        width: 100%;
+        height: auto;
+        filter: drop-shadow(0 0 30px rgba(217, 171, 74, 0.35));
+      }
+      .eyebrow {
+        font-weight: 600;
+        font-size: 0.8rem;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin: 0;
+      }
+      h1 {
+        margin: 0.4rem 0 0;
+        font: 900 clamp(3rem, 2rem + 6vw, 6.5rem) / 1 var(--display);
+        letter-spacing: 0.04em;
+        background: linear-gradient(175deg, #f4d58c 15%, #d9ab4a 52%, #b58735 92%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .tagline {
+        margin: 1rem 0 0;
+        font: 600 clamp(1.5rem, 1.1rem + 1.5vw, 2.2rem) / 1.2 var(--note);
+        color: #e3dac4;
+        max-width: 34ch;
+      }
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-top: 2rem;
+      }
+      .button {
+        display: inline-block;
+        padding: 0.7rem 1.1rem;
+        border: 1px solid var(--accent);
+        font-weight: 600;
+        font-size: 0.78rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: var(--ink);
+        background: rgba(18, 17, 22, 0.6);
+      }
+      .button.primary {
+        background: var(--accent);
+        color: var(--surface);
+      }
+      .button:hover {
+        color: var(--surface);
+        background: var(--accent-bright);
+      }
+      .button:focus-visible,
+      .copy:focus-visible,
+      a:focus-visible {
+        outline: 2px solid var(--accent-bright);
+        outline-offset: 3px;
+      }
+      section {
+        padding-block: 4rem 0;
+      }
+      h2 {
+        margin: 0 0 1.5rem;
+        font: 700 clamp(1.4rem, 1.1rem + 1vw, 1.9rem) / 1.2 var(--display);
+        color: var(--accent);
+        text-wrap: balance;
+      }
+      h3 {
+        margin: 1rem 0 0.4rem;
+        font: 700 1.15rem/1.2 var(--display);
+        color: var(--ink);
+      }
+      .shot {
+        border: 1px solid var(--line);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+      }
+      .features {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr);
+        gap: 2rem;
+      }
+      .feature p {
+        margin: 0;
+        color: var(--ink-muted);
+      }
+      .wide {
+        grid-column: 1 / -1;
+      }
+      ul.plain {
+        margin: 0;
+        padding-left: 1.2rem;
+        color: var(--ink-muted);
+      }
+      ul.plain li + li {
+        margin-top: 0.3rem;
+      }
+      ol.steps {
+        margin: 0;
+        padding-left: 1.4rem;
+      }
+      ol.steps > li + li {
+        margin-top: 1.4rem;
+      }
+      ol.steps p {
+        margin: 0.2rem 0 0.6rem;
+        color: var(--ink-muted);
+      }
+      .code {
+        position: relative;
+        border: 1px solid var(--line);
+        background: var(--raised);
+      }
+      pre {
+        margin: 0;
+        padding: 1rem 5.5rem 1rem 1rem;
+        overflow-x: auto;
+        font: 400 0.85rem/1.6 var(--mono);
+        color: var(--ink);
+      }
+      .copy {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        padding: 0.3rem 0.6rem;
+        border: 1px solid var(--line);
+        background: var(--surface);
+        color: var(--ink-muted);
+        font: 600 0.7rem/1.4 var(--mono);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+      .copy:hover {
+        color: var(--accent-bright);
+        border-color: var(--accent);
+      }
+      .two {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2rem;
+      }
+      footer {
+        margin-top: 5rem;
+        border-top: 1px solid var(--line);
+        padding-block: 2rem 3rem;
+        color: var(--ink-muted);
+        font-size: 0.8rem;
+      }
+      footer .wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+      @media (max-width: 48rem) {
+        .hero .wrap {
+          grid-template-columns: minmax(0, 1fr);
+          padding-block: 3rem 3rem;
+          gap: 1.5rem;
+        }
+        .hero svg {
+          width: 8rem;
+        }
+        .features,
+        .two {
+          grid-template-columns: minmax(0, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="wrap">
+        <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+          <g fill="#d9ab4a">
+            <path d="M39 27 C45 19 54 16 63 20 C58 21 55 24 54 28 C58 29 61 33 62 38 C57 35 53 35 50 37 C52 40 52 44 50 48 C47 43 44 40 40 40 Z" />
+            <path transform="translate(64 0) scale(-1 1)" d="M39 27 C45 19 54 16 63 20 C58 21 55 24 54 28 C58 29 61 33 62 38 C57 35 53 35 50 37 C52 40 52 44 50 48 C47 43 44 40 40 40 Z" />
+            <path d="M28 11.2 C30.2 7.6 35.4 5.8 39.6 7.8 C43 9.4 44 13.8 43 17.8 L41.6 23.6 C41.2 26 40.6 28.4 40.2 31 C40.8 36 39.8 41.5 35.6 45.8 L37.6 54.8 L34.4 52.6 L32 57 L29.6 52.6 L26.4 54.8 L28.4 45.8 C24.2 41.5 23.2 36 24.6 31 L28.2 26.8 L24.8 27.6 L27.4 24 L23.8 24.6 L26.8 21.4 L23.6 21.4 L27.4 18.6 L18.2 17.8 C17.4 17.9 16.8 18.2 16.5 18.6 C16.1 17.4 16.5 16.2 17.2 15.2 C19.6 12.4 23.6 11 28 11.2 Z" />
+          </g>
+          <g fill="#121116">
+            <path d="M30.4 12.8 L36.4 11 L35.8 15 C33.4 15.6 31.2 14.8 30.4 12.8 Z" />
+            <path d="M27.2 16.9 L21.2 16.6 L21.2 17.3 L27.2 17.8 Z" />
+          </g>
+        </svg>
+        <div>
+          <p class="eyebrow">Valheim server log</p>
+          <h1>Muninn</h1>
+          <p class="tagline">A live website for your guild's Valheim server. Players install nothing.</p>
+          <div class="actions">
+            <a class="button primary" href="#install">Install</a>
+            <a class="button" href="https://thunderstore.io/c/valheim/p/oddessentials/Muninn/">Plugin on Thunderstore</a>
+            <a class="button" href="https://github.com/oddessentials/muninn">Source on GitHub</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section aria-label="The dashboard">
+        <img
+          class="shot"
+          src="assets/dashboard.jpg"
+          width="1800"
+          height="1125"
+          alt="The Muninn dashboard: server status, the world clock and the zone leader roll"
+        />
+      </section>
+
+      <section aria-labelledby="unique">
+        <h2 id="unique">Only in Muninn</h2>
+        <div class="features">
+          <div class="feature">
+            <img class="shot" src="assets/world-clock.jpg" width="540" height="740" alt="The world clock widget" />
+            <h3>World clock</h3>
+            <p>The in-game day and hour on a bronze dial, live from the server. Pop it out into its own window. The activity feed warns the guild before nightfall.</p>
+          </div>
+          <div class="feature">
+            <img class="shot" src="assets/zone-leader.jpg" width="884" height="765" alt="The zone leader roll" />
+            <h3>Zone leader</h3>
+            <p>Valheim hands every area to one player's machine. Each player measures theirs in the browser in about twenty seconds, and the guild sees who should host the fight.</p>
+          </div>
+          <div class="feature wide">
+            <img class="shot" src="assets/comfort-planner.jpg" width="1340" height="1000" alt="The comfort planner with a full plan" />
+            <h3>Comfort planner</h3>
+            <p>Every comfort piece, read from the game your server runs, with its icon and recipe. Pick pieces and the plan adds up comfort, Rested time and every material you need.</p>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="also">
+        <h2 id="also">Also on the site</h2>
+        <ul class="plain">
+          <li>Who is online, where they are and for how long</li>
+          <li>Boss progression, raids, deaths and kills</li>
+          <li>Every structure built, the explored world map, the activity feed and chat</li>
+          <li>An admin area for plugin setup, in-game announcements and backups</li>
+          <li>Switches to hide chat, positions, the map or Steam ids</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="install">
+        <h2 id="install">Install</h2>
+        <ol class="steps">
+          <li>
+            <strong>Run the site.</strong>
+            <p>On a machine with Docker and a domain name pointing at it. Caddy gets the HTTPS certificate.</p>
+            <div class="code">
+              <pre id="compose">mkdir muninn &amp;&amp; cd muninn
+curl -fsSLO https://oddessentials.github.io/muninn/docker-compose.yml
+printf 'DOMAIN=guild.example.com\nPOSTGRES_PASSWORD=%s\n' "$(openssl rand -hex 16)" &gt; .env
+docker compose up -d</pre>
+              <button class="copy" type="button" data-copy="compose">Copy</button>
+            </div>
+          </li>
+          <li>
+            <strong>Set the admin password.</strong>
+            <p>Open <code>https://guild.example.com/admin</code>. The first visit sets it.</p>
+          </li>
+          <li>
+            <strong>Install the plugin.</strong>
+            <p>The admin Plugin page has the DLL and a config with your site's address and secret. Put them in <code>BepInEx/plugins/</code> and <code>BepInEx/config/</code> on the game server, with <a href="https://thunderstore.io/c/valheim/p/denikson/BepInExPack_Valheim/">BepInExPack_Valheim</a> installed, and restart it.</p>
+          </li>
+          <li>
+            <strong>Or run the game server here too.</strong>
+            <p>The <code>valheim</code> profile starts a dedicated server with BepInEx and the plugin already connected.</p>
+            <div class="code">
+              <pre id="valheim">echo 'SERVER_PASS=choose-a-password' &gt;&gt; .env
+docker compose --profile valheim up -d</pre>
+              <button class="copy" type="button" data-copy="valheim">Copy</button>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="two" aria-label="Privacy and licence">
+        <div>
+          <h2>What the plugin sends</h2>
+          <p style="margin-top: 0; color: var(--ink-muted)">
+            Only to your own site, signed with its secret: server starts and saves, players joining and leaving with their platform id, deaths, positions, bosses, raids, structures, chat, the map image and the comfort pieces. The <a href="https://thunderstore.io/c/valheim/p/oddessentials/Muninn/">Thunderstore page</a> has the full list.
+          </p>
+        </div>
+        <div>
+          <h2>Free and open</h2>
+          <p style="margin-top: 0; color: var(--ink-muted)">
+            MIT licensed. The <a href="https://github.com/oddessentials/muninn">source</a>, the <a href="https://github.com/oddessentials/muninn/pkgs/container/muninn">Docker image</a> and the plugin are all public.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <span>Muninn &middot; MIT</span>
+        <span>A fan project, not affiliated with Iron Gate or Coffee Stain.</span>
+      </div>
+    </footer>
+
+    <script>
+      for (const button of document.querySelectorAll('button.copy')) {
+        button.addEventListener('click', async () => {
+          const text = document.getElementById(button.dataset.copy).textContent;
+          try {
+            await navigator.clipboard.writeText(text);
+            button.textContent = 'Copied';
+          } catch {
+            const range = document.createRange();
+            range.selectNodeContents(document.getElementById(button.dataset.copy));
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            button.textContent = 'Selected';
+          }
+          setTimeout(() => (button.textContent = 'Copy'), 2000);
+        });
+      }
+    </script>
+  </body>
+</html>

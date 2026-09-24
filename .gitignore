@@ -1,7 +1,8 @@
 node_modules/
 .svelte-kit/
 build/
-dist/
+dist/*
+!dist/docker-compose.yml
 test-results/
 playwright-report/
 .env
@@ -19,3 +20,6 @@ Thumbs.db
 .vscode/
 .idea/
 .agents/
+
+web/plugin-dll/*.dll
+thunderstore/build/
