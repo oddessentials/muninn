@@ -48,7 +48,7 @@ Every comfort piece, read from the game your server runs, with its icon and reci
 
 ## Install
 
-[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/new/template/q77U1N)
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/muninn)
 
 1. Deploy the site with the Railway button above, or with Docker Compose on your own machine: the [website](https://oddessentials.github.io/muninn/) has the file and the commands.
 2. Open `/admin` on your site and set the password.
