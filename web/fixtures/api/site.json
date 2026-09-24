@@ -1,0 +1,10 @@
+{
+  "name": "Valheim guild",
+  "version": "0.6.0",
+  "features": {
+    "chat": true,
+    "positions": true,
+    "map": true,
+    "platform_ids": true
+  }
+}

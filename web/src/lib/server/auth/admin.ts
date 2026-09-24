@@ -5,58 +5,74 @@ import { getDb } from '../db/client';
 import { adminSessions } from '../db/schema';
 import { env } from '../env';
 import { forbidden, unauthorized } from '../http/respond';
+import { secrets } from './secrets';
 
 export const cookieName = 'admin_session';
 export const sessionLifetimeMs = 12 * 60 * 60 * 1000;
 
-function sign(id: string): string {
-  return createHmac('sha256', env.adminSessionSecret).update(id).digest('base64url');
+async function sign(id: string): Promise<string> {
+  return createHmac('sha256', await secrets.sessionSecret())
+    .update(id)
+    .digest('base64url');
 }
 
-function cookieValue(id: string): string {
-  return `${id}.${sign(id)}`;
+async function cookieValue(id: string): Promise<string> {
+  return `${id}.${await sign(id)}`;
 }
 
-function parseCookie(value: string | undefined): string | null {
+async function parseCookie(value: string | undefined): Promise<string | null> {
   if (!value) return null;
   const dot = value.lastIndexOf('.');
   if (dot <= 0) return null;
   const id = value.slice(0, dot);
   const signature = value.slice(dot + 1);
-  const expected = sign(id);
+  const expected = await sign(id);
   const a = Buffer.from(signature);
   const b = Buffer.from(expected);
   if (a.length !== b.length || !timingSafeEqual(a, b)) return null;
   return id;
 }
 
-export function passwordMatches(candidate: string): boolean {
-  const a = Buffer.from(candidate, 'utf8');
-  const b = Buffer.from(env.adminPassword, 'utf8');
-  if (a.length !== b.length) {
-    timingSafeEqual(b, b);
+type OriginEvent = Pick<RequestEvent, 'url' | 'request'>;
+
+export function siteOrigin(event: Pick<RequestEvent, 'url'>): string {
+  return env.origin || event.url.origin;
+}
+
+export function isSecureSite(event: OriginEvent, configured = env.origin): boolean {
+  if (configured) return configured.startsWith('https://');
+  const origin = event.request.headers.get('origin');
+  if (origin) return origin.startsWith('https://');
+  return event.url.protocol === 'https:';
+}
+
+export function fromThisSite(origin: string, event: OriginEvent, configured = env.origin): boolean {
+  if (configured) return origin === configured;
+  try {
+    return new URL(origin).host === event.url.host;
+  } catch {
     return false;
   }
-  return timingSafeEqual(a, b);
 }
 
-function cookieAttributes(maxAgeSeconds: number): string {
-  const secure = env.origin.startsWith('https://') ? '; Secure' : '';
-  return `Path=/; HttpOnly; SameSite=Lax; Max-Age=${maxAgeSeconds}${secure}`;
+function cookieAttributes(maxAgeSeconds: number, secure: boolean): string {
+  return `Path=/; HttpOnly; SameSite=Lax; Max-Age=${maxAgeSeconds}${secure ? '; Secure' : ''}`;
 }
 
-export async function createSession(): Promise<{ setCookie: string; expiresAt: Date }> {
+export async function createSession(
+  secure = false
+): Promise<{ setCookie: string; expiresAt: Date }> {
   const id = randomBytes(24).toString('base64url');
   const expiresAt = new Date(Date.now() + sessionLifetimeMs);
   await getDb().insert(adminSessions).values({ id, expiresAt });
   return {
-    setCookie: `${cookieName}=${cookieValue(id)}; ${cookieAttributes(Math.floor(sessionLifetimeMs / 1000))}`,
+    setCookie: `${cookieName}=${await cookieValue(id)}; ${cookieAttributes(Math.floor(sessionLifetimeMs / 1000), secure)}`,
     expiresAt
   };
 }
 
-export function clearedCookie(): string {
-  return `${cookieName}=; ${cookieAttributes(0)}`;
+export function clearedCookie(secure = false): string {
+  return `${cookieName}=; ${cookieAttributes(0, secure)}`;
 }
 
 export interface AdminSessionState {
@@ -66,7 +82,7 @@ export interface AdminSessionState {
 }
 
 export async function readSession(event: RequestEvent): Promise<AdminSessionState> {
-  const id = parseCookie(event.cookies.get(cookieName));
+  const id = await parseCookie(event.cookies.get(cookieName));
   if (!id) return { authenticated: false, expiresAt: null, id: null };
   const rows = await getDb()
     .select({ expiresAt: adminSessions.expiresAt })
@@ -86,7 +102,7 @@ export async function requireAdmin(event: RequestEvent): Promise<AdminSessionSta
 
 export function requireSameOrigin(event: RequestEvent): void {
   const origin = event.request.headers.get('origin');
-  if (origin === null || origin !== env.origin) {
+  if (origin === null || !fromThisSite(origin, event)) {
     throw forbidden('the Origin header must match the site origin');
   }
 }

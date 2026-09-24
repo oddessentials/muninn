@@ -13,7 +13,8 @@
     { href: '/admin', label: 'Health' },
     { href: '/admin/players', label: 'Players' },
     { href: '/admin/announce', label: 'Announce' },
-    { href: '/admin/events', label: 'Raw events' }
+    { href: '/admin/events', label: 'Raw events' },
+    { href: '/admin/settings', label: 'Settings' }
   ];
 
   async function logout() {
@@ -48,7 +49,7 @@
       </span>
       <button type="button" class="btn" onclick={logout}>Log out</button>
     {:else}
-      <span class="ticker">Not logged in</span>
+      <span class="ticker">{data.setupRequired ? 'First start' : 'Not logged in'}</span>
     {/if}
   </div>
   {#if message}

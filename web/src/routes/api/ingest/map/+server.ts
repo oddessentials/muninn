@@ -1,6 +1,6 @@
 import type { RequestHandler } from '@sveltejs/kit';
 import { getDb } from '$lib/server/db/client';
-import { env } from '$lib/server/env';
+import { secrets } from '$lib/server/auth/secrets';
 import { empty, errorResponse, guarded } from '$lib/server/http/respond';
 import { recordRejectedBatch } from '$lib/server/ingest/ingest';
 import { signatureHeader, timestampHeader, verifyMapSignature } from '$lib/server/ingest/signature';
@@ -23,7 +23,7 @@ export const POST: RequestHandler = ({ request }) =>
       return errorResponse(413, 'payload_too_large', 'the image exceeds 16 MB');
     }
     const check = verifyMapSignature(
-      env.telemetrySecret,
+      await secrets.telemetrySecret(),
       request.headers.get(timestampHeader),
       request.headers.get(signatureHeader),
       body

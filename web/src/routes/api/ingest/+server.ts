@@ -1,5 +1,5 @@
 import type { RequestHandler } from '@sveltejs/kit';
-import { env } from '$lib/server/env';
+import { secrets } from '$lib/server/auth/secrets';
 import { getDb } from '$lib/server/db/client';
 import { errorResponse, guarded, privateJson } from '$lib/server/http/respond';
 import { ingestBatch, maxBatchBytes, recordRejectedBatch } from '$lib/server/ingest/ingest';
@@ -30,7 +30,7 @@ export const POST: RequestHandler = ({ request }) =>
       return errorResponse(413, 'payload_too_large', 'the batch exceeds 1 MB');
     }
     const check = verifyBatchSignature(
-      env.telemetrySecret,
+      await secrets.telemetrySecret(),
       request.headers.get(timestampHeader),
       request.headers.get(signatureHeader),
       body

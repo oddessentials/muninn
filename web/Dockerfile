@@ -18,6 +18,8 @@ COPY --chown=app:app web/src/lib/server/db/migrate.ts ./web/src/lib/server/db/mi
 ENV NODE_ENV=production
 ENV PORT=3000
 ENV HOST=0.0.0.0
+ENV PROTOCOL_HEADER=x-forwarded-proto
+ENV HOST_HEADER=x-forwarded-host
 EXPOSE 3000
 HEALTHCHECK --interval=30s --timeout=5s --start-period=30s --retries=3 CMD curl -fsS http://localhost:3000/api/v1/health || exit 1
 WORKDIR /app/web

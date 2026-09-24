@@ -1,5 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
+import { shortName, webManifest } from '$lib/ui/manifest';
 
 const staticFile = (name: string) =>
   readFileSync(new URL(`../../../static/${name}`, import.meta.url));
@@ -8,14 +9,7 @@ const text = (path: string) => readFileSync(new URL(path, import.meta.url), 'utf
 const css = text('../../../src/app.css');
 const surface = /--color-surface:\s*(#[0-9a-f]{6});/.exec(css)?.[1] ?? '';
 const appHtml = text('../../../src/app.html');
-const manifest = JSON.parse(staticFile('site.webmanifest').toString('utf8')) as {
-  name: string;
-  short_name: string;
-  theme_color: string;
-  background_color: string;
-  start_url: string;
-  icons: { src: string; sizes: string; type: string; purpose?: string }[];
-};
+const manifest = webManifest('Valheim guild');
 
 function pngSize(file: Buffer): { width: number; height: number } {
   expect(file.subarray(0, 8)).toEqual(
@@ -88,6 +82,13 @@ describe('the manifest', () => {
     expect(manifest.name).toBe('Valheim guild');
     expect(manifest.short_name.length).toBeLessThanOrEqual(12);
     expect(manifest.start_url).toBe('/');
+  });
+
+  it('shortens a long site name for the home screen', () => {
+    expect(shortName('Ravenhold')).toBe('Ravenhold');
+    expect(shortName('Valheim guild')).toBe('Valheim');
+    expect(shortName('Brotherhoodofthesea Vikings')).toBe('Brotherhoodo');
+    expect(webManifest('The Iron Wolves of the North').short_name).toBe('The Iron');
   });
 
   it('uses the surface token as theme and background, like app.html', () => {

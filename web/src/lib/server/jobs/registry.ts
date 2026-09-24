@@ -1,4 +1,4 @@
-import { pollA2s } from './a2s';
+import { pollA2s, queryDisabled } from './a2s';
 import { nightlyBackupDue, runBackup } from './backup';
 import { creditStructures } from './credits';
 import { heralds } from './heralds';
@@ -31,7 +31,9 @@ export const jobs: JobDefinition[] = [
     runOnStart: true,
     run: unlessMock(async () => {
       const result = await pollA2s();
-      if (!result.ok) throw new Error(result.error ?? 'A2S query failed');
+      if (!result.ok && result.error !== queryDisabled) {
+        throw new Error(result.error ?? 'A2S query failed');
+      }
     })
   },
   {
