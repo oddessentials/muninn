@@ -20,6 +20,8 @@ export interface Env {
   readonly pgDumpCommand: string;
   readonly backupsKept: number;
   readonly pluginDll: string;
+  readonly pluginExportDir: string;
+  readonly pluginExportOrigin: string;
 }
 
 export const requiredVariables = ['DATABASE_URL'] as const;
@@ -38,7 +40,9 @@ export const optionalVariables = [
   'BACKUP_DIR',
   'PG_DUMP',
   'BACKUPS_KEPT',
-  'PLUGIN_DLL'
+  'PLUGIN_DLL',
+  'PLUGIN_EXPORT_DIR',
+  'PLUGIN_EXPORT_ORIGIN'
 ] as const;
 
 export function validateEnvironment(source: Record<string, string | undefined>): Env {
@@ -111,7 +115,9 @@ export function validateEnvironment(source: Record<string, string | undefined>):
     backupDir: optional('BACKUP_DIR', '/backups'),
     pgDumpCommand: optional('PG_DUMP', 'pg_dump'),
     backupsKept: optionalInteger('BACKUPS_KEPT', 14),
-    pluginDll: optional('PLUGIN_DLL', '')
+    pluginDll: optional('PLUGIN_DLL', ''),
+    pluginExportDir: optional('PLUGIN_EXPORT_DIR', ''),
+    pluginExportOrigin: optional('PLUGIN_EXPORT_ORIGIN', 'http://web:3000')
   };
 
   if (missing.length > 0 || invalid.length > 0) {

@@ -1,4 +1,4 @@
-name: muninn
+name: muninn-dev
 
 services:
   db:

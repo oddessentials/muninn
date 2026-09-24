@@ -14,7 +14,7 @@ jobs:
   web:
     runs-on: ubuntu-latest
     env:
-      PG_DUMP: docker exec -i muninn-db-1 pg_dump
+      PG_DUMP: docker exec -i muninn-dev-db-1 pg_dump
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7

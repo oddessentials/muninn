@@ -1,4 +1,4 @@
-import { mkdtempSync, writeFileSync } from 'node:fs';
+import { mkdtempSync, readFileSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import type { RequestEvent } from '@sveltejs/kit';
@@ -8,6 +8,7 @@ import { getDb } from '../../src/lib/server/db/client';
 import { env } from '../../src/lib/server/env';
 import { applyBatchInTransaction } from '../../src/lib/server/ingest/ingest';
 import {
+  exportPlugin,
   imagePluginPath,
   pluginDllCandidates,
   pluginDllPath,
@@ -63,6 +64,25 @@ describe('the plugin page', () => {
     writeFileSync(dll, 'MZ');
     expect(pluginDllPath([join(folder, 'missing.dll'), dll])).toBe(dll);
     expect(pluginDllPath([join(folder, 'missing.dll')])).toBeNull();
+  });
+
+  it('exports the DLL and a config for a game server on the same network', async () => {
+    const source = mkdtempSync(join(tmpdir(), 'muninn-dll-'));
+    const dll = join(source, 'GuildTelemetry.dll');
+    writeFileSync(dll, 'MZ plugin');
+    const target = join(mkdtempSync(join(tmpdir(), 'muninn-export-')), 'bepinex');
+    expect(await exportPlugin(getDb(), target, 'http://web:3000', dll)).toEqual([
+      'plugins/GuildTelemetry.dll',
+      'com.guildsite.telemetry.cfg'
+    ]);
+    expect(readFileSync(join(target, 'plugins', 'GuildTelemetry.dll'), 'utf8')).toBe('MZ plugin');
+    const config = readFileSync(join(target, 'com.guildsite.telemetry.cfg'), 'utf8');
+    expect(config).toContain('Url = http://web:3000/api/ingest');
+    expect(config).toContain(`Secret = ${process.env.TELEMETRY_SECRET}`);
+    expect(config).toContain('AllowInsecureHttp = true');
+    expect(await exportPlugin(getDb(), target, 'http://web:3000', null)).toEqual([
+      'com.guildsite.telemetry.cfg'
+    ]);
   });
 
   it('will not replace a secret that TELEMETRY_SECRET sets', async () => {

@@ -31,7 +31,7 @@ export function useTestDatabase(): string {
 export function pgDumpCommand(): string {
   if (process.env.PG_DUMP) return process.env.PG_DUMP;
   const probe = spawnSync('pg_dump --version', { shell: true, stdio: 'ignore' });
-  return probe.status === 0 ? 'pg_dump' : 'docker exec -i muninn-db-1 pg_dump';
+  return probe.status === 0 ? 'pg_dump' : 'docker exec -i muninn-dev-db-1 pg_dump';
 }
 
 export function pgRestoreCommand(): string[] {

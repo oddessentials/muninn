@@ -15,6 +15,7 @@ COPY --chown=app:app package.json ./
 COPY --chown=app:app web/package.json web/docker-entrypoint.sh ./web/
 COPY --chown=app:app web/drizzle ./web/drizzle
 COPY --chown=app:app web/src/lib/server/db/migrate.ts ./web/src/lib/server/db/migrate.ts
+COPY --from=build --chown=app:app /app/web/plugin-dll /app/plugin
 ENV NODE_ENV=production
 ENV PORT=3000
 ENV HOST=0.0.0.0

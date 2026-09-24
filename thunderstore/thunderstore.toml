@@ -1,0 +1,29 @@
+[config]
+schemaVersion = "0.0.1"
+
+[package]
+namespace = "oddessentials"
+name = "Muninn"
+versionNumber = "0.0.0"
+description = "A live website for your Valheim server: who is online, bosses, raids, builds, the world clock and a comfort planner. Server-side only; players install nothing."
+websiteUrl = "https://oddessentials.github.io/muninn/"
+containsNsfwContent = false
+
+[package.dependencies]
+denikson-BepInExPack_Valheim = "5.4.2351"
+
+[build]
+icon = "./icon.png"
+readme = "./README.md"
+outdir = "./build"
+
+[[build.copy]]
+source = "../plugin/out/GuildTelemetry.dll"
+target = "plugins/GuildTelemetry.dll"
+
+[publish]
+repository = "https://thunderstore.io"
+communities = ["valheim"]
+
+[publish.categories]
+valheim = ["server-side", "utility", "ai-generated"]
