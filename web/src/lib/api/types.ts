@@ -319,6 +319,38 @@ export interface paths {
     patch?: never;
     trace?: never;
   };
+  '/api/v1/admin/settings': {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get: operations['getAdminSettings'];
+    put: operations['updateAdminSettings'];
+    post?: never;
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
+  '/api/v1/admin/setup': {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get?: never;
+    put?: never;
+    post: operations['adminSetup'];
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/api/v1/bosses': {
     parameters: {
       query?: never;
@@ -655,6 +687,22 @@ export interface paths {
     patch?: never;
     trace?: never;
   };
+  '/api/v1/site': {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get: operations['getSite'];
+    put?: never;
+    post?: never;
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/api/v1/status': {
     parameters: {
       query?: never;
@@ -965,6 +1013,25 @@ export interface components {
     AdminSession: {
       authenticated: boolean;
       expires_at: string | null;
+      setup_required: boolean;
+    };
+    AdminSettings: {
+      features: components['schemas']['SiteFeatures'];
+      locked: ('site_name' | 'steam_query_host' | 'steam_query_port')[];
+      site_name: string;
+      steam_query_host: string;
+      steam_query_port: number;
+    };
+    AdminSettingsUpdate: {
+      features?: {
+        chat?: boolean;
+        map?: boolean;
+        platform_ids?: boolean;
+        positions?: boolean;
+      };
+      site_name?: string;
+      steam_query_host?: string;
+      steam_query_port?: number;
     };
     Announcement: {
       cancelled_at: string | null;
@@ -1930,6 +1997,20 @@ export interface components {
       items: components['schemas']['Session'][];
       next_cursor: string | null;
     };
+    SetupRequest: {
+      password: string;
+    };
+    Site: {
+      features: components['schemas']['SiteFeatures'];
+      name: string;
+      version: string;
+    };
+    SiteFeatures: {
+      chat: boolean;
+      map: boolean;
+      platform_ids: boolean;
+      positions: boolean;
+    };
     Status: {
       game_version: string | null;
       last_save_at: string | null;
@@ -2335,6 +2416,8 @@ export type AdminHealthMap = components['schemas']['AdminHealthMap'];
 export type AdminPlayer = components['schemas']['AdminPlayer'];
 export type AdminPlayerPage = components['schemas']['AdminPlayerPage'];
 export type AdminSession = components['schemas']['AdminSession'];
+export type AdminSettings = components['schemas']['AdminSettings'];
+export type AdminSettingsUpdate = components['schemas']['AdminSettingsUpdate'];
 export type Announcement = components['schemas']['Announcement'];
 export type AnnouncementCreate = components['schemas']['AnnouncementCreate'];
 export type AnnouncementKind = components['schemas']['AnnouncementKind'];
@@ -2453,6 +2536,9 @@ export type ServerStoppingData = components['schemas']['ServerStoppingData'];
 export type ServerStoppingEvent = components['schemas']['ServerStoppingEvent'];
 export type Session = components['schemas']['Session'];
 export type SessionPage = components['schemas']['SessionPage'];
+export type SetupRequest = components['schemas']['SetupRequest'];
+export type Site = components['schemas']['Site'];
+export type SiteFeatures = components['schemas']['SiteFeatures'];
 export type Status = components['schemas']['Status'];
 export type StatusHistory = components['schemas']['StatusHistory'];
 export type StatusHistoryPoint = components['schemas']['StatusHistoryPoint'];
@@ -3770,6 +3856,192 @@ export interface operations {
       };
     };
   };
+  getAdminSettings: {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    requestBody?: never;
+    responses: {
+      200: {
+        headers: {
+          'Cache-Control': components['headers']['NoStore'];
+          [name: string]: unknown;
+        };
+        content: {
+          'application/json': components['schemas']['AdminSettings'];
+        };
+      };
+      401: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          'application/json': components['schemas']['Error'];
+        };
+      };
+      501: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          'application/json': components['schemas']['Error'];
+        };
+      };
+      503: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          'application/json': components['schemas']['Error'];
+        };
+      };
+    };
+  };
+  updateAdminSettings: {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    requestBody: {
+      content: {
+        'application/json': components['schemas']['AdminSettingsUpdate'];
+      };
+    };
+    responses: {
+      200: {
+        headers: {
+          'Cache-Control': components['headers']['NoStore'];
+          [name: string]: unknown;
+        };
+        content: {
+          'application/json': components['schemas']['AdminSettings'];
+        };
+      };
+      400: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          'application/json': components['schemas']['Error'];
+        };
+      };
+      401: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          'application/json': components['schemas']['Error'];
+        };
+      };
+      403: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          'application/json': components['schemas']['Error'];
+        };
+      };
+      409: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          'application/json': components['schemas']['Error'];
+        };
+      };
+      501: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          'application/json': components['schemas']['Error'];
+        };
+      };
+      503: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          'application/json': components['schemas']['Error'];
+        };
+      };
+    };
+  };
+  adminSetup: {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    requestBody: {
+      content: {
+        'application/json': components['schemas']['SetupRequest'];
+      };
+    };
+    responses: {
+      204: {
+        headers: {
+          'Set-Cookie'?: string;
+          [name: string]: unknown;
+        };
+        content?: never;
+      };
+      400: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          'application/json': components['schemas']['Error'];
+        };
+      };
+      403: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          'application/json': components['schemas']['Error'];
+        };
+      };
+      409: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          'application/json': components['schemas']['Error'];
+        };
+      };
+      429: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          'application/json': components['schemas']['Error'];
+        };
+      };
+      501: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          'application/json': components['schemas']['Error'];
+        };
+      };
+      503: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          'application/json': components['schemas']['Error'];
+        };
+      };
+    };
+  };
   listBosses: {
     parameters: {
       query?: never;
@@ -4919,6 +5191,51 @@ export interface operations {
         };
         content: {
           'application/json': components['schemas']['Error'];
+        };
+      };
+      429: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          'application/json': components['schemas']['Error'];
+        };
+      };
+      501: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          'application/json': components['schemas']['Error'];
+        };
+      };
+      503: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          'application/json': components['schemas']['Error'];
+        };
+      };
+    };
+  };
+  getSite: {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    requestBody?: never;
+    responses: {
+      200: {
+        headers: {
+          'Cache-Control': components['headers']['CacheControl'];
+          ETag: components['headers']['ETag'];
+          [name: string]: unknown;
+        };
+        content: {
+          'application/json': components['schemas']['Site'];
         };
       };
       429: {

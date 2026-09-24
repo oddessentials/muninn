@@ -1,5 +1,6 @@
 import type { RequestHandler } from '@sveltejs/kit';
-import { createSession, passwordMatches } from '$lib/server/auth/admin';
+import { createSession, isSecureSite } from '$lib/server/auth/admin';
+import { secrets } from '$lib/server/auth/secrets';
 import { empty, errorResponse, guarded } from '$lib/server/http/respond';
 import { loginRateLimiter } from '$lib/server/http/rateLimit';
 import { clientAddress, readJsonBody } from '$lib/server/http/routes';
@@ -17,8 +18,11 @@ export const POST: RequestHandler = (event) =>
     if (!body || typeof body !== 'object' || typeof body.password !== 'string') {
       return errorResponse(400, 'bad_request', 'password is required');
     }
-    if (!passwordMatches(body.password))
+    if ((await secrets.passwordSource()) === 'unset') {
+      return errorResponse(409, 'conflict', 'set the admin password first');
+    }
+    if (!(await secrets.verifyPassword(body.password)))
       return errorResponse(401, 'unauthorized', 'wrong password');
-    const session = await createSession();
+    const session = await createSession(isSecureSite(event));
     return empty(204, { 'set-cookie': session.setCookie });
   });

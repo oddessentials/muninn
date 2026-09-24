@@ -29,6 +29,12 @@ export const meta = pgTable('meta', {
   updatedAt: utc('updated_at').notNull().defaultNow()
 });
 
+export const settings = pgTable('settings', {
+  key: text('key').primaryKey(),
+  value: jsonb('value').notNull(),
+  updatedAt: utc('updated_at').notNull().defaultNow()
+});
+
 export const events = pgTable(
   'events',
   {

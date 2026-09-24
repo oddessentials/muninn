@@ -2,8 +2,8 @@ import { eq } from 'drizzle-orm';
 import { queryInfo } from '../a2s';
 import { getDb, type Database } from '../db/client';
 import { serverStatus } from '../db/schema';
-import { env } from '../env';
 import { computeStatus, recordStatusSample } from '../read/status';
+import { siteSettings } from '../settings';
 
 export interface A2sPollResult {
   ok: boolean;
@@ -12,12 +12,20 @@ export interface A2sPollResult {
   playerCount: number | null;
 }
 
+export const queryDisabled = 'no Steam query address is set';
+
 export async function pollA2s(
   db: Database = getDb(),
-  host = env.steamQueryHost,
-  port = env.steamQueryPort,
+  host?: string,
+  port?: number,
   now = new Date()
 ): Promise<A2sPollResult> {
+  if (host === undefined || port === undefined) {
+    const settings = await siteSettings.read(db);
+    host ??= settings.steam_query_host;
+    port ??= settings.steam_query_port;
+  }
+  if (host === '') return { ok: false, error: queryDisabled, online: null, playerCount: null };
   await db.insert(serverStatus).values({ id: 1 }).onConflictDoNothing();
   try {
     const info = await queryInfo(host, port);

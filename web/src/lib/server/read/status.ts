@@ -1,19 +1,19 @@
-import { and, desc, eq, gte, isNull, sql } from 'drizzle-orm';
+import { and, desc, eq, gte, inArray, isNull, sql } from 'drizzle-orm';
 import type { OnlineList, Run, Status, StatusHistory } from '$lib/api/types';
 import type { Database } from '../db/client';
 import { meta, players, serverRuns, serverStatus, sessions, statusSamples } from '../db/schema';
-import { env } from '../env';
 import { batchMetaKeys } from '../ingest/ingest';
 import { biomeName, worldDayLengthSeconds } from '../names';
 import { iso, round } from '../http/respond';
+import { siteSettings } from '../settings';
 
 export const watchdogWindowSeconds = 180;
 export const a2sFreshnessSeconds = 300;
 
 export async function readMeta(db: Database, keys: string[]): Promise<Map<string, string>> {
-  const rows = await db.select().from(meta);
-  const wanted = new Set(keys);
-  return new Map(rows.filter((row) => wanted.has(row.key)).map((row) => [row.key, row.value]));
+  if (keys.length === 0) return new Map();
+  const rows = await db.select().from(meta).where(inArray(meta.key, keys));
+  return new Map(rows.map((row) => [row.key, row.value]));
 }
 
 export async function latestRun(db: Database) {
@@ -139,7 +139,7 @@ export async function computeStatus(db: Database, now = new Date()): Promise<Sta
       metaValues.get(batchMetaKeys.serverName) ??
       status?.a2sServerName ??
       status?.serverName ??
-      env.publicSiteName,
+      (await siteSettings.read(db)).site_name,
     world,
     run: runInfo,
     last_save_at: iso(status?.lastSaveAt),

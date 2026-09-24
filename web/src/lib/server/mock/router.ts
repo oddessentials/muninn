@@ -295,6 +295,19 @@ async function answerAdminMutation(event: RequestEvent): Promise<Response | null
       }
     });
   }
+  if (pathname === '/api/v1/admin/setup' && method === 'POST') {
+    return errorResponse(409, 'conflict', 'the admin password is already set');
+  }
+  if (pathname === '/api/v1/admin/settings' && method === 'PUT') {
+    const body = await readJson(event);
+    if (!body) return errorResponse(400, 'bad_request', 'body must be a JSON object');
+    const current = cloneFixture<Record<string, unknown>>('admin/settings') ?? {};
+    const features = {
+      ...(current.features as Record<string, boolean>),
+      ...((body.features as Record<string, boolean> | undefined) ?? {})
+    };
+    return Response.json({ ...current, ...body, features }, { headers: noStore });
+  }
   const players = listItems('admin/players');
   const patch = /^\/api\/v1\/admin\/players\/(\d+)$/.exec(pathname);
   if (patch && method === 'PATCH') {
@@ -397,7 +410,7 @@ export async function answerFromFixtures(event: RequestEvent): Promise<Response 
   if (pathname.startsWith(zonePrefix)) return answerMockZone(event);
   if (event.request.method === 'GET' || event.request.method === 'HEAD') {
     if (pathname === sessionPath && !hasAdminSession(event.request)) {
-      return jsonResponse({ authenticated: false, expires_at: null }, false);
+      return jsonResponse({ authenticated: false, expires_at: null, setup_required: false }, false);
     }
     for (const route of getRoutes()) {
       const match = route.pattern.exec(pathname);

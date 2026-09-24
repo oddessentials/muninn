@@ -148,11 +148,17 @@ export function createApi(options: ApiOptions = {}) {
     listActivity: (query: ActivityQuery = {}) =>
       unwrap(client.GET('/api/v1/activity', { params: { query } })),
     getHealth: () => unwrap(client.GET('/api/v1/health')),
+    getSite: () => unwrap(client.GET('/api/v1/site')),
     getOpenApi: () => unwrap(client.GET('/api/v1/openapi.json')),
     adminLogin: (password: string) =>
       unwrapVoid(client.POST('/api/v1/admin/login', { body: { password } })),
     adminLogout: () => unwrapVoid(client.POST('/api/v1/admin/logout')),
     getAdminSession: () => unwrap(client.GET('/api/v1/admin/session')),
+    adminSetup: (password: string) =>
+      unwrapVoid(client.POST('/api/v1/admin/setup', { body: { password } })),
+    getAdminSettings: () => unwrap(client.GET('/api/v1/admin/settings')),
+    updateAdminSettings: (update: components['schemas']['AdminSettingsUpdate']) =>
+      unwrap(client.PUT('/api/v1/admin/settings', { body: update })),
     listAdminPlayers: (query: AdminPlayersQuery = {}) =>
       unwrap(client.GET('/api/v1/admin/players', { params: { query } })),
     updateAdminPlayer: (id: number, patch: components['schemas']['PlayerPatch']) =>

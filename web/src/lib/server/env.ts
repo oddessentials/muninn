@@ -10,7 +10,7 @@ export interface Env {
   readonly adminPassword: string;
   readonly adminSessionSecret: string;
   readonly steamQueryHost: string;
-  readonly steamQueryPort: number;
+  readonly steamQueryPort: number | null;
   readonly publicSiteName: string;
   readonly origin: string;
   readonly port: number;
@@ -21,8 +21,9 @@ export interface Env {
   readonly backupsKept: number;
 }
 
-export const requiredVariables = [
-  'DATABASE_URL',
+export const requiredVariables = ['DATABASE_URL'] as const;
+
+export const optionalVariables = [
   'TELEMETRY_SECRET',
   'ADMIN_PASSWORD',
   'ADMIN_SESSION_SECRET',
@@ -32,10 +33,11 @@ export const requiredVariables = [
   'ORIGIN',
   'PORT',
   'API_MOCK',
-  'LOG_LEVEL'
+  'LOG_LEVEL',
+  'BACKUP_DIR',
+  'PG_DUMP',
+  'BACKUPS_KEPT'
 ] as const;
-
-export const optionalVariables = ['BACKUP_DIR', 'PG_DUMP', 'BACKUPS_KEPT'] as const;
 
 export function validateEnvironment(source: Record<string, string | undefined>): Env {
   const missing: string[] = [];
@@ -55,11 +57,13 @@ export function validateEnvironment(source: Record<string, string | undefined>):
     return value === undefined || value === '' ? fallback : value;
   };
 
-  const integer = (name: string): number => {
-    const raw = required(name);
+  const port = (name: string): number | null => {
+    const raw = optional(name, '');
+    if (raw === '') return null;
     const value = Number(raw);
-    if (raw !== '' && (!Number.isInteger(value) || value < 0)) {
-      invalid.push(`${name} must be a non-negative integer`);
+    if (!Number.isInteger(value) || value < 1 || value > 65535) {
+      invalid.push(`${name} must be a port number between 1 and 65535`);
+      return null;
     }
     return value;
   };
@@ -75,16 +79,16 @@ export function validateEnvironment(source: Record<string, string | undefined>):
   };
 
   const flag = (name: string): boolean => {
-    const raw = required(name).toLowerCase();
-    if (raw !== '' && !['0', '1', 'true', 'false'].includes(raw)) {
+    const raw = optional(name, '0').toLowerCase();
+    if (!['0', '1', 'true', 'false'].includes(raw)) {
       invalid.push(`${name} must be 0, 1, true or false`);
     }
     return raw === '1' || raw === 'true';
   };
 
   const logLevel = (name: string): LogLevel => {
-    const raw = required(name);
-    if (raw !== '' && !(logLevels as readonly string[]).includes(raw)) {
+    const raw = optional(name, 'info');
+    if (!(logLevels as readonly string[]).includes(raw)) {
       invalid.push(`${name} must be one of ${logLevels.join(', ')}`);
     }
     return raw as LogLevel;
@@ -92,14 +96,14 @@ export function validateEnvironment(source: Record<string, string | undefined>):
 
   const values: Env = {
     databaseUrl: required('DATABASE_URL'),
-    telemetrySecret: required('TELEMETRY_SECRET'),
-    adminPassword: required('ADMIN_PASSWORD'),
-    adminSessionSecret: required('ADMIN_SESSION_SECRET'),
-    steamQueryHost: required('STEAM_QUERY_HOST'),
-    steamQueryPort: integer('STEAM_QUERY_PORT'),
-    publicSiteName: required('PUBLIC_SITE_NAME'),
-    origin: required('ORIGIN'),
-    port: integer('PORT'),
+    telemetrySecret: optional('TELEMETRY_SECRET', ''),
+    adminPassword: optional('ADMIN_PASSWORD', ''),
+    adminSessionSecret: optional('ADMIN_SESSION_SECRET', ''),
+    steamQueryHost: optional('STEAM_QUERY_HOST', ''),
+    steamQueryPort: port('STEAM_QUERY_PORT'),
+    publicSiteName: optional('PUBLIC_SITE_NAME', ''),
+    origin: optional('ORIGIN', ''),
+    port: optionalInteger('PORT', 3000),
     apiMock: flag('API_MOCK'),
     logLevel: logLevel('LOG_LEVEL'),
     backupDir: optional('BACKUP_DIR', '/backups'),

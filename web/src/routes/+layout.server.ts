@@ -1,17 +1,23 @@
-import { env } from '$env/dynamic/public';
 import { attempt } from '$lib/ui/load';
-import { navigation } from '$lib/ui/navigation';
+import { navigationFor } from '$lib/ui/navigation';
 import { serverApi } from '$lib/ui/server';
 import type { LayoutServerLoad } from './$types';
 
+const defaultSiteName = 'Valheim guild';
+
 export const load: LayoutServerLoad = async ({ fetch, url }) => {
   const server = serverApi(fetch, url);
-  const status = await attempt(server.api.getStatus());
+  const [status, site] = await Promise.all([
+    attempt(server.api.getStatus()),
+    attempt(server.api.getSite())
+  ]);
+  const features = site.ok ? site.data.features : null;
   return {
-    siteName: env.PUBLIC_SITE_NAME ?? 'Valheim guild',
+    siteName: site.ok ? site.data.name : defaultSiteName,
+    features,
     status: status.ok ? status.data : null,
     statusError: status.ok ? null : status.error,
     streamEnabled: !server.external,
-    navigation
+    navigation: navigationFor(features)
   };
 };

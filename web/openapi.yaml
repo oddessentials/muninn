@@ -3,7 +3,7 @@ info:
   title: Valheim guild site API
   version: 1.0.0
   summary: Public read API, admin API, live stream and telemetry ingest of the guild site.
-  description: 'Conventions: JSON UTF-8; timestamps ISO 8601 UTC with Z; world day integer; coordinates x and z in world metres (the world is a disc of radius 10,000 m centred on 0,0); durations in seconds unless the field name ends in _ms. Ids: players, characters, sessions, raids and jobs are integers; events and server runs are UUID strings; boss keys and global keys are strings. Pagination: limit (1 to 200, default 50) and an opaque cursor; list responses are { items, next_cursor } ordered newest first unless stated. Errors: the HTTP status plus { error: { code, message } }. Caching: public GET responses carry Cache-Control: public, max-age=15 and an ETag; /stream and admin responses are uncacheable. Rate limit: 120 requests per minute per IP on public endpoints, answered with 429 rate_limited; ingest and stream are exempt. Admin auth: POST /admin/login sets a signed session cookie; admin endpoints answer 401 without it; state-changing requests require the Origin header to match ORIGIN.'
+  description: 'Conventions: JSON UTF-8; timestamps ISO 8601 UTC with Z; world day integer; coordinates x and z in world metres (the world is a disc of radius 10,000 m centred on 0,0); durations in seconds unless the field name ends in _ms. Ids: players, characters, sessions, raids and jobs are integers; events and server runs are UUID strings; boss keys and global keys are strings. Pagination: limit (1 to 200, default 50) and an opaque cursor; list responses are { items, next_cursor } ordered newest first unless stated. Errors: the HTTP status plus { error: { code, message } }. Caching: public GET responses carry Cache-Control: public, max-age=15 and an ETag; /stream and admin responses are uncacheable. Rate limit: 120 requests per minute per IP on public endpoints, answered with 429 rate_limited; ingest and stream are exempt. Admin auth: POST /admin/login sets a signed session cookie; admin endpoints answer 401 without it; state-changing requests require the Origin header to match the site origin (ORIGIN when set, otherwise the address the request was made to).'
 servers:
   - url: http://localhost:5173
     description: Local development server (npm run dev, npm run dev:mock).
@@ -1439,7 +1439,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
         '403':
-          description: 'forbidden: the Origin header does not match ORIGIN.'
+          description: 'forbidden: the Origin header does not match the site origin.'
           content:
             application/json:
               schema:
@@ -1620,6 +1620,43 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
+  /api/v1/site:
+    get:
+      operationId: getSite
+      tags:
+        - system
+      summary: Site name, version and features
+      description: The site name from the admin settings (or PUBLIC_SITE_NAME), the project version and which features are switched on.
+      responses:
+        '200':
+          description: OK
+          headers:
+            Cache-Control:
+              $ref: '#/components/headers/CacheControl'
+            ETag:
+              $ref: '#/components/headers/ETag'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Site'
+        '429':
+          description: 'rate_limited: more than 120 requests per minute from this IP.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '501':
+          description: 'not_implemented: the handler is not built yet.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '503':
+          description: 'unavailable: the database cannot be reached.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
   /api/v1/openapi.json:
     get:
       operationId: getOpenApi
@@ -1701,7 +1738,7 @@ paths:
       tags:
         - admin
       summary: Log in
-      description: Sets an HttpOnly, SameSite=Lax (Secure in production) session cookie signed with ADMIN_SESSION_SECRET. Limited to 5 attempts per minute per IP.
+      description: Sets an HttpOnly, SameSite=Lax (Secure in production) session cookie signed with the session secret (ADMIN_SESSION_SECRET, or one generated at first start). Limited to 5 attempts per minute per IP.
       requestBody:
         required: true
         content:
@@ -1764,7 +1801,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
         '403':
-          description: 'forbidden: the Origin header does not match ORIGIN.'
+          description: 'forbidden: the Origin header does not match the site origin.'
           content:
             application/json:
               schema:
@@ -1793,6 +1830,159 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/AdminSession'
+        '501':
+          description: 'not_implemented: the handler is not built yet.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '503':
+          description: 'unavailable: the database cannot be reached.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /api/v1/admin/setup:
+    post:
+      operationId: adminSetup
+      tags:
+        - admin
+      summary: Set the first admin password
+      description: Stores the admin password as a scrypt hash and logs in. Only allowed while no password is set and ADMIN_PASSWORD is not set. Limited to 5 attempts per minute per IP.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SetupRequest'
+      responses:
+        '204':
+          description: Password set and logged in; the cookie is set.
+          headers:
+            Set-Cookie:
+              description: The admin session cookie.
+              schema:
+                type: string
+        '400':
+          description: 'bad_request: password is missing or not 8 to 200 characters.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '403':
+          description: 'forbidden: the Origin header does not match the site origin.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '409':
+          description: 'conflict: the admin password is already set.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '429':
+          description: 'rate_limited: more than 5 attempts per minute from this IP.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '501':
+          description: 'not_implemented: the handler is not built yet.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '503':
+          description: 'unavailable: the database cannot be reached.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /api/v1/admin/settings:
+    get:
+      operationId: getAdminSettings
+      tags:
+        - admin
+      summary: Site settings
+      security:
+        - adminCookie: []
+      responses:
+        '200':
+          description: OK
+          headers:
+            Cache-Control:
+              $ref: '#/components/headers/NoStore'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AdminSettings'
+        '401':
+          description: 'unauthorized: no valid admin session cookie.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '501':
+          description: 'not_implemented: the handler is not built yet.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '503':
+          description: 'unavailable: the database cannot be reached.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      operationId: updateAdminSettings
+      tags:
+        - admin
+      summary: Change site settings
+      description: Changes the given settings and keeps the others. A setting whose environment variable is set cannot be changed here.
+      security:
+        - adminCookie: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AdminSettingsUpdate'
+      responses:
+        '200':
+          description: The settings after the change.
+          headers:
+            Cache-Control:
+              $ref: '#/components/headers/NoStore'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AdminSettings'
+        '400':
+          description: 'bad_request: a parameter or body field is invalid.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '401':
+          description: 'unauthorized: no valid admin session cookie.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '403':
+          description: 'forbidden: the Origin header does not match the site origin.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '409':
+          description: 'conflict: the setting is set by an environment variable.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
         '501':
           description: 'not_implemented: the handler is not built yet.'
           content:
@@ -1896,7 +2086,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
         '403':
-          description: 'forbidden: the Origin header does not match ORIGIN.'
+          description: 'forbidden: the Origin header does not match the site origin.'
           content:
             application/json:
               schema:
@@ -1959,7 +2149,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
         '403':
-          description: 'forbidden: the Origin header does not match ORIGIN.'
+          description: 'forbidden: the Origin header does not match the site origin.'
           content:
             application/json:
               schema:
@@ -2009,7 +2199,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
         '403':
-          description: 'forbidden: the Origin header does not match ORIGIN.'
+          description: 'forbidden: the Origin header does not match the site origin.'
           content:
             application/json:
               schema:
@@ -2169,7 +2359,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
         '403':
-          description: 'forbidden: the Origin header does not match ORIGIN.'
+          description: 'forbidden: the Origin header does not match the site origin.'
           content:
             application/json:
               schema:
@@ -2217,7 +2407,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
         '403':
-          description: 'forbidden: the Origin header does not match ORIGIN.'
+          description: 'forbidden: the Origin header does not match the site origin.'
           content:
             application/json:
               schema:
@@ -2436,7 +2626,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
         '403':
-          description: 'forbidden: the Origin header does not match ORIGIN.'
+          description: 'forbidden: the Origin header does not match the site origin.'
           content:
             application/json:
               schema:
@@ -2480,7 +2670,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
         '403':
-          description: 'forbidden: the Origin header does not match ORIGIN.'
+          description: 'forbidden: the Origin header does not match the site origin.'
           content:
             application/json:
               schema:
@@ -2701,7 +2891,7 @@ components:
       type: apiKey
       in: header
       name: X-Telemetry-Signature
-      description: sha256=<hex HMAC-SHA256> over X-Telemetry-Timestamp + "." + body with the shared TELEMETRY_SECRET.
+      description: sha256=<hex HMAC-SHA256> over X-Telemetry-Timestamp + "." + body with the shared telemetry secret (TELEMETRY_SECRET, or the one on the admin Plugin page).
   headers:
     CacheControl:
       description: public, max-age=15 on public GET responses.
@@ -5098,9 +5288,116 @@ components:
             - string
             - 'null'
           format: date-time
+        setup_required:
+          type: boolean
+          description: True until the first admin password is set.
       required:
         - authenticated
         - expires_at
+        - setup_required
+      additionalProperties: false
+    SetupRequest:
+      type: object
+      properties:
+        password:
+          type: string
+          minLength: 8
+          maxLength: 200
+      required:
+        - password
+      additionalProperties: false
+    SiteFeatures:
+      type: object
+      properties:
+        chat:
+          type: boolean
+          description: Chat page, chat API and chat frames in the stream.
+        positions:
+          type: boolean
+          description: Player positions in the API, on the map and in the stream.
+        map:
+          type: boolean
+          description: The World page and the world map image.
+        platform_ids:
+          type: boolean
+          description: Platform user ids (Steam ids) in public player responses.
+      required:
+        - chat
+        - positions
+        - map
+        - platform_ids
+      additionalProperties: false
+    Site:
+      type: object
+      properties:
+        name:
+          type: string
+        version:
+          type: string
+          description: The project version, shared by the site and the plugin.
+        features:
+          $ref: '#/components/schemas/SiteFeatures'
+      required:
+        - name
+        - version
+        - features
+      additionalProperties: false
+    AdminSettings:
+      type: object
+      properties:
+        site_name:
+          type: string
+          maxLength: 60
+        steam_query_host:
+          type: string
+          description: Host of the Steam query (A2S) poller; empty switches the poller off.
+        steam_query_port:
+          type: integer
+          minimum: 1
+          maximum: 65535
+        features:
+          $ref: '#/components/schemas/SiteFeatures'
+        locked:
+          type: array
+          description: Settings set by an environment variable, which win over the stored value.
+          items:
+            type: string
+            enum:
+              - site_name
+              - steam_query_host
+              - steam_query_port
+      required:
+        - site_name
+        - steam_query_host
+        - steam_query_port
+        - features
+        - locked
+      additionalProperties: false
+    AdminSettingsUpdate:
+      type: object
+      properties:
+        site_name:
+          type: string
+          minLength: 1
+          maxLength: 60
+        steam_query_host:
+          type: string
+        steam_query_port:
+          type: integer
+          minimum: 1
+          maximum: 65535
+        features:
+          type: object
+          properties:
+            chat:
+              type: boolean
+            positions:
+              type: boolean
+            map:
+              type: boolean
+            platform_ids:
+              type: boolean
+          additionalProperties: false
       additionalProperties: false
     AdminPlayer:
       type: object

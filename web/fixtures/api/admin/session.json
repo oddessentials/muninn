@@ -1,4 +1,5 @@
 {
   "authenticated": true,
-  "expires_at": "2026-09-11T07:30:00Z"
+  "expires_at": "2026-09-11T07:30:00Z",
+  "setup_required": false
 }

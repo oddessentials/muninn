@@ -337,6 +337,17 @@ test('the admin pages log in, show health and queue a job', async ({ page }) => 
   await expect(page.getByRole('status').last()).toContainText('Restart scheduled');
   await page.getByRole('button', { name: 'Cancel' }).first().click();
   await expect(page.getByRole('status').last()).toContainText('Restart cancelled');
+  await page.goto('/admin/settings');
+  await expect(page.locator('main h1')).toHaveText('Settings');
+  await expect(page.getByLabel('Site name')).toHaveValue('Valheim guild');
+  await page.getByRole('button', { name: 'Save' }).click();
+  await expect(page.getByRole('status').last()).toHaveText('Nothing changed.');
+  await page.getByLabel('Site name').fill('');
+  await page.getByRole('button', { name: 'Save' }).click();
+  await expect(page.getByRole('alert').last()).toHaveText('Give the site a name.');
+  await page.getByLabel('Site name').fill('Ravenhold');
+  await page.getByRole('button', { name: 'Save' }).click();
+  await expect(page.getByRole('status').last()).toHaveText('Saved.');
   expect(problems).toEqual([]);
 });
 
@@ -397,7 +408,8 @@ const everyPage = [
   '/admin',
   '/admin/players',
   '/admin/announce',
-  '/admin/events'
+  '/admin/events',
+  '/admin/settings'
 ];
 
 for (const width of [320, 400]) {

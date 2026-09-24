@@ -1,0 +1,12 @@
+{
+  "site_name": "Valheim guild",
+  "steam_query_host": "",
+  "steam_query_port": 2457,
+  "features": {
+    "chat": true,
+    "positions": true,
+    "map": true,
+    "platform_ids": true
+  },
+  "locked": []
+}
