@@ -48,7 +48,9 @@ Every comfort piece, read from the game your server runs, with its icon and reci
 
 ## Install
 
-1. Deploy the site with Docker Compose: the [website](https://oddessentials.github.io/muninn/) has the file and the commands.
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/new/template/q77U1N)
+
+1. Deploy the site with the Railway button above, or with Docker Compose on your own machine: the [website](https://oddessentials.github.io/muninn/) has the file and the commands.
 2. Open `/admin` on your site and set the password.
 3. On the Plugin page, download the DLL and its config, put them in BepInEx on the game server, and restart it.
 
