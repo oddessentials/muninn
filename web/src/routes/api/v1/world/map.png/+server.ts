@@ -1,11 +1,13 @@
 import type { RequestHandler } from '@sveltejs/kit';
 import { getDb } from '$lib/server/db/client';
 import { errorResponse, etagOf, guarded } from '$lib/server/http/respond';
+import { requireFeature } from '$lib/server/http/routes';
 import { currentWorldUid, mapImage } from '$lib/server/read/world';
 
 export const GET: RequestHandler = ({ request }) =>
   guarded(async () => {
     const db = getDb();
+    await requireFeature('map', db);
     const image = await mapImage(db, await currentWorldUid(db));
     if (!image) return errorResponse(404, 'not_found', 'no map image has been uploaded');
     const etag = etagOf(`${image.worldUid}:${image.generatedAt.toISOString()}`);

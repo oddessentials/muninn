@@ -14,6 +14,7 @@ import {
 } from '../db/schema';
 import { bossName, creatureName, raidLabel } from '../names';
 import { phaseOfPrefab } from '$lib/world/bosses';
+import { siteFeatures, type Features } from '../settings';
 
 export const feedDefaultExclusions: readonly EventType[] = [
   'server.heartbeat',
@@ -52,13 +53,30 @@ export const allEventTypes: readonly EventType[] = [
   'announcement.shown'
 ];
 
-export function feedTypes(requested: readonly EventType[] | null): EventType[] {
-  if (requested && requested.length > 0) return [...requested];
-  return allEventTypes.filter((type) => !feedDefaultExclusions.includes(type));
+export function switchedOffTypes(features: Pick<Features, 'chat' | 'positions'>): EventType[] {
+  const off: EventType[] = [];
+  if (!features.chat) off.push('chat.message');
+  if (!features.positions) off.push('player.position');
+  return off;
 }
 
-export function feedIncludes(type: EventType, requested: readonly EventType[] | null): boolean {
-  return feedTypes(requested).includes(type);
+export function feedTypes(
+  requested: readonly EventType[] | null,
+  switchedOff: readonly EventType[] = []
+): EventType[] {
+  const types =
+    requested && requested.length > 0
+      ? [...requested]
+      : allEventTypes.filter((type) => !feedDefaultExclusions.includes(type));
+  return types.filter((type) => !switchedOff.includes(type));
+}
+
+export function feedIncludes(
+  type: EventType,
+  requested: readonly EventType[] | null,
+  switchedOff: readonly EventType[] = []
+): boolean {
+  return feedTypes(requested, switchedOff).includes(type);
 }
 
 type Data = Record<string, unknown>;
@@ -472,7 +490,8 @@ export async function queryActivity(
   db: Database,
   options: ActivityQueryOptions
 ): Promise<{ rows: EventRow[]; hasMore: boolean }> {
-  const types = feedTypes(options.types);
+  const types = feedTypes(options.types, switchedOffTypes(await siteFeatures(db)));
+  if (types.length === 0) return { rows: [], hasMore: false };
   const conditions = [inArray(events.type, types)];
   if (options.since) conditions.push(gte(events.ts, options.since));
   if (options.until) conditions.push(lt(events.ts, options.until));
@@ -506,7 +525,7 @@ export async function eventsAfter(
   const anchor = await db.select().from(events).where(eq(events.id, lastEventId)).limit(1);
   const row = anchor[0];
   if (!row) return [];
-  const types = feedTypes(null);
+  const types = feedTypes(null, switchedOffTypes(await siteFeatures(db)));
   const rows = await db
     .select()
     .from(events)

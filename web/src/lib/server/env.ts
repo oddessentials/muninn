@@ -19,6 +19,7 @@ export interface Env {
   readonly backupDir: string;
   readonly pgDumpCommand: string;
   readonly backupsKept: number;
+  readonly pluginDll: string;
 }
 
 export const requiredVariables = ['DATABASE_URL'] as const;
@@ -36,7 +37,8 @@ export const optionalVariables = [
   'LOG_LEVEL',
   'BACKUP_DIR',
   'PG_DUMP',
-  'BACKUPS_KEPT'
+  'BACKUPS_KEPT',
+  'PLUGIN_DLL'
 ] as const;
 
 export function validateEnvironment(source: Record<string, string | undefined>): Env {
@@ -108,7 +110,8 @@ export function validateEnvironment(source: Record<string, string | undefined>):
     logLevel: logLevel('LOG_LEVEL'),
     backupDir: optional('BACKUP_DIR', '/backups'),
     pgDumpCommand: optional('PG_DUMP', 'pg_dump'),
-    backupsKept: optionalInteger('BACKUPS_KEPT', 14)
+    backupsKept: optionalInteger('BACKUPS_KEPT', 14),
+    pluginDll: optional('PLUGIN_DLL', '')
   };
 
   if (missing.length > 0 || invalid.length > 0) {

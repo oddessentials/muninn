@@ -1,3 +1,4 @@
+import { error } from '@sveltejs/kit';
 import { attempt } from '$lib/ui/load';
 import { pickText } from '$lib/ui/query';
 import { assetUrl, serverApi } from '$lib/ui/server';
@@ -14,6 +15,8 @@ export const load: PageServerLoad = async ({ fetch, url, parent }) => {
     attempt(api.listSaves({ limit: 12 })),
     attempt(api.getOnline())
   ]);
+  if (layout.features && !layout.features.map)
+    error(404, 'The world map is switched off on this site');
   return {
     status: layout.status,
     world,

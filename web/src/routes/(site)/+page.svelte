@@ -56,7 +56,9 @@
     <div class="min-w-0 lg:col-span-2">
       <Card title="Zone leader" description="who should host the fight" id="zone">
         {#snippet actions()}
-          <a href="/world" class="seg">World map</a>
+          {#if data.features?.map ?? true}
+            <a href="/world" class="seg">World map</a>
+          {/if}
         {/snippet}
         <ZoneLeader loaded={data.zone} canRemove={data.admin} />
       </Card>

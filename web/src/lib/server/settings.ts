@@ -187,4 +187,15 @@ export function createSettingsStore(
 
 export type SettingsStore = ReturnType<typeof createSettingsStore>;
 
+export const featureLabels: Record<FeatureName, string> = {
+  chat: 'Chat',
+  positions: 'Player positions',
+  map: 'The world map',
+  platform_ids: 'Platform ids'
+};
+
 export const siteSettings: SettingsStore = createSettingsStore(env);
+
+export async function siteFeatures(db?: Database): Promise<Features> {
+  return (await siteSettings.read(db)).features;
+}

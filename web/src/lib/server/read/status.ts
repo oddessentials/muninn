@@ -5,7 +5,7 @@ import { meta, players, serverRuns, serverStatus, sessions, statusSamples } from
 import { batchMetaKeys } from '../ingest/ingest';
 import { biomeName, worldDayLengthSeconds } from '../names';
 import { iso, round } from '../http/respond';
-import { siteSettings } from '../settings';
+import { siteFeatures, siteSettings } from '../settings';
 
 export const watchdogWindowSeconds = 180;
 export const a2sFreshnessSeconds = 300;
@@ -172,6 +172,7 @@ export async function computeOnline(db: Database): Promise<OnlineList> {
     .innerJoin(players, eq(players.id, sessions.playerId))
     .where(and(eq(sessions.runId, run.runId), isNull(sessions.leftAt)))
     .orderBy(sessions.joinedAt);
+  const { positions } = await siteFeatures(db);
   return {
     items: rows
       .filter((row) => !row.hidden)
@@ -181,8 +182,8 @@ export async function computeOnline(db: Database): Promise<OnlineList> {
         platform: row.platform as OnlineList['items'][number]['platform'],
         character_name: row.characterName,
         biome: biomeName(row.biome),
-        x: round(row.x ?? 0),
-        z: round(row.z ?? 0),
+        x: positions ? round(row.x ?? 0) : null,
+        z: positions ? round(row.z ?? 0) : null,
         since: row.since.toISOString()
       }))
   };

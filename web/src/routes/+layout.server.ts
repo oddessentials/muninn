@@ -14,6 +14,7 @@ export const load: LayoutServerLoad = async ({ fetch, url }) => {
   const features = site.ok ? site.data.features : null;
   return {
     siteName: site.ok ? site.data.name : defaultSiteName,
+    version: site.ok ? site.data.version : null,
     features,
     status: status.ok ? status.data : null,
     statusError: status.ok ? null : status.error,

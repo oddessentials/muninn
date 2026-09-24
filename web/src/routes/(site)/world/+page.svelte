@@ -5,7 +5,7 @@
   import { formatDuration, formatMillis, formatNumber } from '$lib/ui/format';
   import { stopReasonLabel } from '$lib/ui/labels';
   import { useLive } from '$lib/ui/live.svelte';
-  import type { MapMarker } from '$lib/ui/map';
+  import { hasPosition, type MapMarker } from '$lib/ui/map';
   import Meta from '$lib/ui/Meta.svelte';
   import PageHeader from '$lib/ui/PageHeader.svelte';
   import Pager from '$lib/ui/Pager.svelte';
@@ -23,7 +23,7 @@
   const reading = $derived(worldClock.reading(status));
   const online = $derived(live.online?.items ?? (data.online.ok ? data.online.data.items : []));
   const markers = $derived<MapMarker[]>(
-    online.map((player) => ({
+    online.filter(hasPosition).map((player) => ({
       x: player.x,
       z: player.z,
       label: player.character_name,

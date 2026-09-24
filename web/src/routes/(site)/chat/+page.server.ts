@@ -1,3 +1,4 @@
+import { error } from '@sveltejs/kit';
 import { attempt } from '$lib/ui/load';
 import { pickInstant, pickInt, pickOptionalEnum, pickText } from '$lib/ui/query';
 import { assetUrl, serverApi } from '$lib/ui/server';
@@ -5,7 +6,9 @@ import type { PageServerLoad } from './$types';
 
 const kinds = ['shout', 'ping', 'say'] as const;
 
-export const load: PageServerLoad = async ({ fetch, url }) => {
+export const load: PageServerLoad = async ({ fetch, url, parent }) => {
+  const { features } = await parent();
+  if (features && !features.chat) error(404, 'Chat is switched off on this site');
   const server = serverApi(fetch, url);
   const { api } = server;
   const kind = pickOptionalEnum(url.searchParams, 'kind', kinds);

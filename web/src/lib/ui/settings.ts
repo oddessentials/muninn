@@ -1,11 +1,13 @@
-import type { AdminSettings, AdminSettingsUpdate } from '$lib/api/types';
+import type { AdminSettings, AdminSettingsUpdate, SiteFeatures } from '$lib/api/types';
 
 export type LockableField = AdminSettings['locked'][number];
+export type FeatureName = keyof SiteFeatures;
 
 export interface SettingsForm {
   site_name: string;
   steam_query_host: string;
   steam_query_port: string;
+  features: SiteFeatures;
 }
 
 export const siteNameMaxLength = 60;
@@ -16,11 +18,39 @@ export const environmentVariables: Record<LockableField, string> = {
   steam_query_port: 'STEAM_QUERY_PORT'
 };
 
+export const featureOptions: { name: FeatureName; label: string; description: string }[] = [
+  {
+    name: 'chat',
+    label: 'Chat',
+    description: 'The Chat page and chat messages in the activity feed.'
+  },
+  {
+    name: 'positions',
+    label: 'Player positions',
+    description:
+      'Where players are right now on the World map, and the paths on player pages. Deaths stay on the map.'
+  },
+  {
+    name: 'map',
+    label: 'World map',
+    description:
+      'The World page and the map image. Plugin configs downloaded while it is off stop rendering the map.'
+  },
+  {
+    name: 'platform_ids',
+    label: 'Platform ids',
+    description: "Players' Steam ids on public pages and in the public API. Admins always see them."
+  }
+];
+
+const allFeaturesOn: SiteFeatures = { chat: true, positions: true, map: true, platform_ids: true };
+
 export function settingsForm(settings: AdminSettings | null): SettingsForm {
   return {
     site_name: settings?.site_name ?? '',
     steam_query_host: settings?.steam_query_host ?? '',
-    steam_query_port: settings ? String(settings.steam_query_port) : ''
+    steam_query_port: settings ? String(settings.steam_query_port) : '',
+    features: { ...(settings?.features ?? allFeaturesOn) }
   };
 }
 
@@ -55,5 +85,10 @@ export function buildSettingsUpdate(
     }
     if (port !== current.steam_query_port) body.steam_query_port = port;
   }
+  const features: AdminSettingsUpdate['features'] = {};
+  for (const { name } of featureOptions) {
+    if (form.features[name] !== current.features[name]) features[name] = form.features[name];
+  }
+  if (Object.keys(features).length > 0) body.features = features;
   return { ok: true, body };
 }

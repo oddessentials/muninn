@@ -16,7 +16,7 @@
   import { causeLabel, deathCauseKeyLabel, leftReasonLabel, prefabLabel } from '$lib/ui/labels';
   import { mergeActivity } from '$lib/ui/feed';
   import { useLive } from '$lib/ui/live.svelte';
-  import type { MapMarker, MapTrack } from '$lib/ui/map';
+  import { hasPosition, type MapMarker, type MapTrack } from '$lib/ui/map';
   import Meta from '$lib/ui/Meta.svelte';
   import PageHeader from '$lib/ui/PageHeader.svelte';
   import Pager from '$lib/ui/Pager.svelte';
@@ -37,7 +37,7 @@
   );
   const online = $derived(live.online ? liveEntry !== null : player.online);
   const track = $derived<MapTrack[]>(
-    data.positions.ok && data.positions.data.items.length > 1
+    data.positions?.ok && data.positions.data.items.length > 1
       ? [
           {
             label: `Path over the last ${data.range}`,
@@ -49,14 +49,14 @@
       : []
   );
   const sampleWindow = $derived.by(() => {
-    const items = data.positions.ok ? data.positions.data.items : [];
+    const items = data.positions?.ok ? data.positions.data.items : [];
     const stamps = items.map((position) => position.ts).sort();
     return { first: stamps[0] ?? null, last: stamps[stamps.length - 1] ?? null };
   });
   const markers = $derived.by<MapMarker[]>(() => {
     const out: MapMarker[] = [];
     const current = liveEntry ?? player.current_session;
-    if (current && online) {
+    if (current && online && hasPosition(current)) {
       out.push({
         x: current.x,
         z: current.z,
@@ -127,8 +127,10 @@
             >for the F2 panel and the admin, ban and permit lists</span
           >
         </dd>
-        <dt>Platform id</dt>
-        <dd><code>{player.platform_user_id}</code></dd>
+        {#if player.platform_user_id}
+          <dt>Platform id</dt>
+          <dd><code>{player.platform_user_id}</code></dd>
+        {/if}
         {#if player.aliases.length > 0}
           <dt>Merged ids</dt>
           <dd><code>{player.aliases.join(', ')}</code></dd>
@@ -239,7 +241,11 @@
         caption="Recent path and deaths of {player.display_name}"
       />
       <div class="flex flex-col gap-3 text-[0.8125rem] leading-relaxed">
-        {#if !data.positions.ok}
+        {#if data.positions === null}
+          <p class="note">
+            Position tracking is switched off on this site. Deaths are marked in red.
+          </p>
+        {:else if !data.positions.ok}
           <ErrorNote error={data.positions.error} what="the position samples" />
         {:else if data.positions.data.items.length === 0}
           <p class="note">

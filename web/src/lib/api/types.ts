@@ -287,6 +287,54 @@ export interface paths {
     patch?: never;
     trace?: never;
   };
+  '/api/v1/admin/plugin': {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get: operations['getAdminPlugin'];
+    put?: never;
+    post?: never;
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
+  '/api/v1/admin/plugin/dll': {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get: operations['getPluginDll'];
+    put?: never;
+    post?: never;
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
+  '/api/v1/admin/plugin/secret': {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get?: never;
+    put?: never;
+    post: operations['regenerateTelemetrySecret'];
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/api/v1/admin/projections/rebuild': {
     parameters: {
       query?: never;
@@ -1329,8 +1377,8 @@ export interface components {
       biome: components['schemas']['Biome'];
       character_name: string;
       joined_at: string;
-      x: number;
-      z: number;
+      x: number | null;
+      z: number | null;
     };
     Death: {
       at: string;
@@ -1551,8 +1599,8 @@ export interface components {
       platform: components['schemas']['Platform'];
       player_id: number;
       since: string;
-      x: number;
-      z: number;
+      x: number | null;
+      z: number | null;
     };
     Platform: 'Steam' | 'Xbox' | 'PlayStation' | 'Nintendo';
     Player: {
@@ -1577,7 +1625,7 @@ export interface components {
       last_seen: string;
       online: boolean;
       platform: components['schemas']['Platform'];
-      platform_user_id: string;
+      platform_user_id: string | null;
       playtime_s: number;
       raids: components['schemas']['PlayerRaid'][];
       sessions: number;
@@ -1681,7 +1729,7 @@ export interface components {
       last_seen: string;
       online: boolean;
       platform: components['schemas']['Platform'];
-      platform_user_id: string;
+      platform_user_id: string | null;
       playtime_s: number;
       sessions: number;
       structures_built: number;
@@ -1767,6 +1815,21 @@ export interface components {
       restart_at: string | null;
       restart_in_s: number | null;
       text: string | null;
+    };
+    PluginInfo: {
+      dll_available: boolean;
+      last_start: components['schemas']['PluginStart'] | null;
+      secret_from_environment: boolean;
+      telemetry_secret: string;
+      version: string;
+    };
+    PluginSecret: {
+      telemetry_secret: string;
+    };
+    PluginStart: {
+      at: string;
+      game_version: string | null;
+      plugin_version: string | null;
     };
     Position: {
       biome: components['schemas']['Biome'];
@@ -2505,6 +2568,9 @@ export type PlayerSpawnedEvent = components['schemas']['PlayerSpawnedEvent'];
 export type PlayerStats = components['schemas']['PlayerStats'];
 export type PlayerStructures = components['schemas']['PlayerStructures'];
 export type PluginAnnouncement = components['schemas']['PluginAnnouncement'];
+export type PluginInfo = components['schemas']['PluginInfo'];
+export type PluginSecret = components['schemas']['PluginSecret'];
+export type PluginStart = components['schemas']['PluginStart'];
 export type Position = components['schemas']['Position'];
 export type PositionList = components['schemas']['PositionList'];
 export type ProbeHealth = components['schemas']['ProbeHealth'];
@@ -3760,6 +3826,162 @@ export interface operations {
       };
     };
   };
+  getAdminPlugin: {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    requestBody?: never;
+    responses: {
+      200: {
+        headers: {
+          'Cache-Control': components['headers']['NoStore'];
+          [name: string]: unknown;
+        };
+        content: {
+          'application/json': components['schemas']['PluginInfo'];
+        };
+      };
+      401: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          'application/json': components['schemas']['Error'];
+        };
+      };
+      501: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          'application/json': components['schemas']['Error'];
+        };
+      };
+      503: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          'application/json': components['schemas']['Error'];
+        };
+      };
+    };
+  };
+  getPluginDll: {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    requestBody?: never;
+    responses: {
+      200: {
+        headers: {
+          'Cache-Control': components['headers']['NoStore'];
+          [name: string]: unknown;
+        };
+        content: {
+          'application/octet-stream': string;
+        };
+      };
+      401: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          'application/json': components['schemas']['Error'];
+        };
+      };
+      404: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          'application/json': components['schemas']['Error'];
+        };
+      };
+      501: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          'application/json': components['schemas']['Error'];
+        };
+      };
+      503: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          'application/json': components['schemas']['Error'];
+        };
+      };
+    };
+  };
+  regenerateTelemetrySecret: {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    requestBody?: never;
+    responses: {
+      200: {
+        headers: {
+          'Cache-Control': components['headers']['NoStore'];
+          [name: string]: unknown;
+        };
+        content: {
+          'application/json': components['schemas']['PluginSecret'];
+        };
+      };
+      401: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          'application/json': components['schemas']['Error'];
+        };
+      };
+      403: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          'application/json': components['schemas']['Error'];
+        };
+      };
+      409: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          'application/json': components['schemas']['Error'];
+        };
+      };
+      501: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          'application/json': components['schemas']['Error'];
+        };
+      };
+      503: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          'application/json': components['schemas']['Error'];
+        };
+      };
+    };
+  };
   rebuildProjections: {
     parameters: {
       query?: never;
@@ -4243,6 +4465,14 @@ export interface operations {
         };
       };
       400: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          'application/json': components['schemas']['Error'];
+        };
+      };
+      404: {
         headers: {
           [name: string]: unknown;
         };

@@ -554,7 +554,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
         '404':
-          description: 'not_found: no such resource.'
+          description: 'not_found: no such resource; or player positions are switched off on this site.'
           content:
             application/json:
               schema:
@@ -1015,7 +1015,7 @@ paths:
                 type: string
                 contentMediaType: image/png
         '404':
-          description: 'not_found: no such resource.'
+          description: 'not_found: no such resource; or the world map is switched off on this site.'
           content:
             application/json:
               schema:
@@ -1119,6 +1119,12 @@ paths:
                 $ref: '#/components/schemas/ChatPage'
         '400':
           description: 'bad_request: a parameter or body field is invalid.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: 'not_found: chat is switched off on this site.'
           content:
             application/json:
               schema:
@@ -1979,6 +1985,136 @@ paths:
                 $ref: '#/components/schemas/Error'
         '409':
           description: 'conflict: the setting is set by an environment variable.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '501':
+          description: 'not_implemented: the handler is not built yet.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '503':
+          description: 'unavailable: the database cannot be reached.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /api/v1/admin/plugin:
+    get:
+      operationId: getAdminPlugin
+      tags:
+        - admin
+      summary: Plugin setup
+      description: What the game server needs to report to this site - the plugin version this site ships, the telemetry secret, whether the DLL is in this build - and the latest server start.
+      security:
+        - adminCookie: []
+      responses:
+        '200':
+          description: OK
+          headers:
+            Cache-Control:
+              $ref: '#/components/headers/NoStore'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PluginInfo'
+        '401':
+          description: 'unauthorized: no valid admin session cookie.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '501':
+          description: 'not_implemented: the handler is not built yet.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '503':
+          description: 'unavailable: the database cannot be reached.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /api/v1/admin/plugin/secret:
+    post:
+      operationId: regenerateTelemetrySecret
+      tags:
+        - admin
+      summary: Replace the telemetry secret
+      description: The running plugin is refused until its config carries the new secret.
+      security:
+        - adminCookie: []
+      responses:
+        '200':
+          description: The new secret.
+          headers:
+            Cache-Control:
+              $ref: '#/components/headers/NoStore'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PluginSecret'
+        '401':
+          description: 'unauthorized: no valid admin session cookie.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '403':
+          description: 'forbidden: the Origin header does not match the site origin.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '409':
+          description: 'conflict: TELEMETRY_SECRET is set in the environment.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '501':
+          description: 'not_implemented: the handler is not built yet.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '503':
+          description: 'unavailable: the database cannot be reached.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /api/v1/admin/plugin/dll:
+    get:
+      operationId: getPluginDll
+      tags:
+        - admin
+      summary: Download the plugin DLL
+      description: The GuildTelemetry.dll built with this site's version, for BepInEx/plugins on the game server.
+      security:
+        - adminCookie: []
+      responses:
+        '200':
+          description: The DLL as an attachment.
+          headers:
+            Cache-Control:
+              $ref: '#/components/headers/NoStore'
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+        '401':
+          description: 'unauthorized: no valid admin session cookie.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: 'not_found: this build has no plugin DLL.'
           content:
             application/json:
               schema:
@@ -3355,11 +3491,15 @@ components:
         biome:
           $ref: '#/components/schemas/Biome'
         x:
-          type: number
-          description: World x coordinate in metres; the world is a disc of radius 10000 m centred on 0,0.
+          type:
+            - number
+            - 'null'
+          description: World x coordinate in metres; the world is a disc of radius 10000 m centred on 0,0. Null when the site hides player positions.
         z:
-          type: number
-          description: World z coordinate in metres; the world is a disc of radius 10000 m centred on 0,0.
+          type:
+            - number
+            - 'null'
+          description: World z coordinate in metres; the world is a disc of radius 10000 m centred on 0,0. Null when the site hides player positions.
         since:
           type: string
           format: date-time
@@ -3457,8 +3597,10 @@ components:
         platform:
           $ref: '#/components/schemas/Platform'
         platform_user_id:
-          type: string
-          description: Raw platform user id as the game formats it, for example Steam_76561198012345678.
+          type:
+            - string
+            - 'null'
+          description: Raw platform user id, for example Steam_76561198012345678. Null when the site hides platform ids.
         display_id:
           type: string
           description: Display form used by the F2 panel and the list files, for example V_76561198012345678.
@@ -3567,11 +3709,15 @@ components:
         biome:
           $ref: '#/components/schemas/Biome'
         x:
-          type: number
-          description: World x coordinate in metres; the world is a disc of radius 10000 m centred on 0,0.
+          type:
+            - number
+            - 'null'
+          description: World x coordinate in metres; the world is a disc of radius 10000 m centred on 0,0. Null when the site hides player positions.
         z:
-          type: number
-          description: World z coordinate in metres; the world is a disc of radius 10000 m centred on 0,0.
+          type:
+            - number
+            - 'null'
+          description: World z coordinate in metres; the world is a disc of radius 10000 m centred on 0,0. Null when the site hides player positions.
       required:
         - joined_at
         - character_name
@@ -3727,8 +3873,10 @@ components:
         platform:
           $ref: '#/components/schemas/Platform'
         platform_user_id:
-          type: string
-          description: Raw platform user id as the game formats it, for example Steam_76561198012345678.
+          type:
+            - string
+            - 'null'
+          description: Raw platform user id, for example Steam_76561198012345678. Null when the site hides platform ids.
         display_id:
           type: string
           description: Display form used by the F2 panel and the list files, for example V_76561198012345678.
@@ -5295,6 +5443,59 @@ components:
         - authenticated
         - expires_at
         - setup_required
+      additionalProperties: false
+    PluginStart:
+      type: object
+      properties:
+        at:
+          type: string
+          format: date-time
+        plugin_version:
+          type:
+            - string
+            - 'null'
+        game_version:
+          type:
+            - string
+            - 'null'
+      required:
+        - at
+        - plugin_version
+        - game_version
+      additionalProperties: false
+    PluginInfo:
+      type: object
+      properties:
+        version:
+          type: string
+          description: The plugin version this site ships and expects.
+        telemetry_secret:
+          type: string
+        secret_from_environment:
+          type: boolean
+          description: True when TELEMETRY_SECRET sets the secret, which then cannot be replaced here.
+        dll_available:
+          type: boolean
+          description: Whether this build carries the plugin DLL for download.
+        last_start:
+          description: The latest server start the plugin reported; null until the first one.
+          anyOf:
+            - $ref: '#/components/schemas/PluginStart'
+            - type: 'null'
+      required:
+        - version
+        - telemetry_secret
+        - secret_from_environment
+        - dll_available
+        - last_start
+      additionalProperties: false
+    PluginSecret:
+      type: object
+      properties:
+        telemetry_secret:
+          type: string
+      required:
+        - telemetry_secret
       additionalProperties: false
     SetupRequest:
       type: object

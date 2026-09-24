@@ -30,6 +30,7 @@ import {
 import { iso, notFound, round } from '../http/respond';
 import { biomeName, bossName, bossTier, creatureName, raidLabel } from '../names';
 import { toPlayerRef } from './activity';
+import { siteFeatures } from '../settings';
 
 export const playerSorts = [
   'playtime',
@@ -84,12 +85,12 @@ async function characterNames(db: Database, playerIds: number[]): Promise<Map<nu
   return out;
 }
 
-export function listItem(row: PlayerRow, names: string[]): PlayerListItem {
+export function listItem(row: PlayerRow, names: string[], platformIds = true): PlayerListItem {
   return {
     id: row.id,
     display_name: row.displayNameOverride ?? row.displayName,
     platform: row.platform as PlayerListItem['platform'],
-    platform_user_id: row.platformUserId,
+    platform_user_id: platformIds ? row.platformUserId : null,
     display_id: row.displayId,
     online: row.online,
     current_biome: row.online ? biomeName(row.lastBiome) : null,
@@ -107,6 +108,7 @@ export function listItem(row: PlayerRow, names: string[]): PlayerListItem {
 }
 
 export async function listPlayers(db: Database, options: PlayerListOptions) {
+  const features = await siteFeatures(db);
   const conditions: SQL[] = [];
   if (!options.includeHidden) conditions.push(eq(players.hidden, false));
   if (options.online !== null) conditions.push(eq(players.online, options.online));
@@ -120,7 +122,7 @@ export async function listPlayers(db: Database, options: PlayerListOptions) {
       or(
         ilike(players.displayName, pattern),
         ilike(players.displayNameOverride, pattern),
-        ilike(players.platformUserId, pattern),
+        ...(features.platform_ids ? [ilike(players.platformUserId, pattern)] : []),
         ilike(players.displayId, pattern),
         inArray(players.id, matches)
       )!
@@ -141,7 +143,7 @@ export async function listPlayers(db: Database, options: PlayerListOptions) {
   );
   return {
     rows: page,
-    items: page.map((row) => listItem(row, names.get(row.id) ?? [])),
+    items: page.map((row) => listItem(row, names.get(row.id) ?? [], features.platform_ids)),
     hasMore: rows.length > options.limit
   };
 }
@@ -170,6 +172,7 @@ export async function adminItem(db: Database, row: PlayerRow): Promise<AdminPlay
   const names = await characterNames(db, [row.id]);
   return {
     ...listItem(row, names.get(row.id) ?? []),
+    platform_user_id: row.platformUserId,
     hidden: row.hidden,
     display_name_override: row.displayNameOverride,
     aliases: await aliasesOf(db, row.id)
@@ -217,8 +220,9 @@ export async function playerRefs(
 
 export async function playerDetail(db: Database, id: number): Promise<Player> {
   const row = await playerRow(db, id);
+  const features = await siteFeatures(db);
   const names = await characterNames(db, [id]);
-  const item = listItem(row, names.get(id) ?? []);
+  const item = listItem(row, names.get(id) ?? [], features.platform_ids);
   const characterRows = await db
     .select()
     .from(characters)
@@ -285,8 +289,8 @@ export async function playerDetail(db: Database, id: number): Promise<Player> {
             joined_at: openSession.joinedAt.toISOString(),
             character_name: openSession.characterName,
             biome: biomeName(row.lastBiome),
-            x: round(row.lastX ?? 0),
-            z: round(row.lastZ ?? 0)
+            x: features.positions ? round(row.lastX ?? 0) : null,
+            z: features.positions ? round(row.lastZ ?? 0) : null
           }
         : null,
     stats: {

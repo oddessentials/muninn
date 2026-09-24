@@ -157,6 +157,9 @@ export function createApi(options: ApiOptions = {}) {
     adminSetup: (password: string) =>
       unwrapVoid(client.POST('/api/v1/admin/setup', { body: { password } })),
     getAdminSettings: () => unwrap(client.GET('/api/v1/admin/settings')),
+    getAdminPlugin: () => unwrap(client.GET('/api/v1/admin/plugin')),
+    regenerateTelemetrySecret: () => unwrap(client.POST('/api/v1/admin/plugin/secret')),
+    pluginDllUrl: endpoints.adminPluginDll,
     updateAdminSettings: (update: components['schemas']['AdminSettingsUpdate']) =>
       unwrap(client.PUT('/api/v1/admin/settings', { body: update })),
     listAdminPlayers: (query: AdminPlayersQuery = {}) =>
