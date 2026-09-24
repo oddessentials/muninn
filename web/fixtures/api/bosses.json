@@ -1,0 +1,316 @@
+{
+  "items": [
+    {
+      "key": "defeated_eikthyr",
+      "name": "Eikthyr",
+      "tier": "forsaken",
+      "order": 1,
+      "summons": 2,
+      "engaged": 2,
+      "kills": 2,
+      "first_kill": {
+        "at": "2026-07-25T19:20:00Z",
+        "day": 20,
+        "participants": [
+          {
+            "id": 1,
+            "display_name": "Bjorn",
+            "platform": "Steam"
+          },
+          {
+            "id": 5,
+            "display_name": "Ulf",
+            "platform": "Steam"
+          },
+          {
+            "id": 4,
+            "display_name": "Astrid",
+            "platform": "Steam"
+          },
+          {
+            "id": 3,
+            "display_name": "Ragnar",
+            "platform": "Steam"
+          },
+          {
+            "id": 6,
+            "display_name": "Sigrid",
+            "platform": "Steam"
+          }
+        ]
+      },
+      "last_kill_at": "2026-08-08T19:45:00Z",
+      "active": false,
+      "defeat": {
+        "since": "2026-07-25T19:20:00Z",
+        "day": 20,
+        "observed": true
+      }
+    },
+    {
+      "key": "defeated_gdking",
+      "name": "The Elder",
+      "tier": "forsaken",
+      "order": 2,
+      "summons": 1,
+      "engaged": 1,
+      "kills": 1,
+      "first_kill": {
+        "at": "2026-08-01T19:55:00Z",
+        "day": 57,
+        "participants": [
+          {
+            "id": 2,
+            "display_name": "Freya",
+            "platform": "Steam"
+          },
+          {
+            "id": 1,
+            "display_name": "Bjorn",
+            "platform": "Steam"
+          }
+        ]
+      },
+      "last_kill_at": "2026-08-01T19:55:00Z",
+      "active": false,
+      "defeat": {
+        "since": "2026-08-01T19:55:00Z",
+        "day": 57,
+        "observed": true
+      }
+    },
+    {
+      "key": "defeated_bonemass",
+      "name": "Bonemass",
+      "tier": "forsaken",
+      "order": 3,
+      "summons": 1,
+      "engaged": 1,
+      "kills": 1,
+      "first_kill": {
+        "at": "2026-08-15T19:37:00Z",
+        "day": 102,
+        "participants": [
+          {
+            "id": 1,
+            "display_name": "Bjorn",
+            "platform": "Steam"
+          },
+          {
+            "id": 2,
+            "display_name": "Freya",
+            "platform": "Steam"
+          },
+          {
+            "id": 4,
+            "display_name": "Astrid",
+            "platform": "Steam"
+          },
+          {
+            "id": 3,
+            "display_name": "Ragnar",
+            "platform": "Steam"
+          }
+        ]
+      },
+      "last_kill_at": "2026-08-15T19:37:00Z",
+      "active": false,
+      "defeat": {
+        "since": "2026-08-15T19:37:00Z",
+        "day": 102,
+        "observed": true
+      }
+    },
+    {
+      "key": "defeated_dragon",
+      "name": "Moder",
+      "tier": "forsaken",
+      "order": 4,
+      "summons": 1,
+      "engaged": 1,
+      "kills": 1,
+      "first_kill": {
+        "at": "2026-08-30T19:29:00Z",
+        "day": 152,
+        "participants": [
+          {
+            "id": 2,
+            "display_name": "Freya",
+            "platform": "Steam"
+          }
+        ]
+      },
+      "last_kill_at": "2026-08-30T19:29:00Z",
+      "active": false,
+      "defeat": {
+        "since": "2026-08-30T19:29:00Z",
+        "day": 152,
+        "observed": true
+      }
+    },
+    {
+      "key": "defeated_goblinking",
+      "name": "Yagluth",
+      "tier": "forsaken",
+      "order": 5,
+      "summons": 0,
+      "engaged": 0,
+      "kills": 0,
+      "first_kill": null,
+      "last_kill_at": null,
+      "active": false,
+      "defeat": null
+    },
+    {
+      "key": "defeated_queen",
+      "name": "The Queen",
+      "tier": "forsaken",
+      "order": 6,
+      "summons": 0,
+      "engaged": 0,
+      "kills": 0,
+      "first_kill": null,
+      "last_kill_at": null,
+      "active": false,
+      "defeat": null
+    },
+    {
+      "key": "defeated_fader",
+      "name": "Fader",
+      "tier": "forsaken",
+      "order": 7,
+      "summons": 0,
+      "engaged": 0,
+      "kills": 0,
+      "first_kill": null,
+      "last_kill_at": null,
+      "active": false,
+      "defeat": null
+    },
+    {
+      "key": "defeated_frozenking_p3",
+      "name": "Kall Fimbulbringer",
+      "tier": "forsaken",
+      "order": 8,
+      "summons": 0,
+      "engaged": 0,
+      "kills": 0,
+      "first_kill": null,
+      "last_kill_at": null,
+      "active": false,
+      "defeat": null
+    },
+    {
+      "key": "defeated_serpent",
+      "name": "Serpent",
+      "tier": "mini",
+      "order": 1,
+      "summons": 0,
+      "engaged": 0,
+      "kills": 1,
+      "first_kill": {
+        "at": "2026-08-24T19:43:00Z",
+        "day": 129,
+        "participants": [
+          {
+            "id": 5,
+            "display_name": "Ulf",
+            "platform": "Steam"
+          },
+          {
+            "id": 1,
+            "display_name": "Bjorn",
+            "platform": "Steam"
+          },
+          {
+            "id": 6,
+            "display_name": "Sigrid",
+            "platform": "Steam"
+          },
+          {
+            "id": 3,
+            "display_name": "Ragnar",
+            "platform": "Steam"
+          },
+          {
+            "id": 2,
+            "display_name": "Freya",
+            "platform": "Steam"
+          }
+        ]
+      },
+      "last_kill_at": "2026-08-24T19:43:00Z",
+      "active": false,
+      "defeat": {
+        "since": "2026-08-24T19:43:00Z",
+        "day": 129,
+        "observed": true
+      }
+    },
+    {
+      "key": "bosshildir1",
+      "name": "Brenna",
+      "tier": "mini",
+      "order": 2,
+      "summons": 0,
+      "engaged": 0,
+      "kills": 0,
+      "first_kill": null,
+      "last_kill_at": null,
+      "active": false,
+      "defeat": null
+    },
+    {
+      "key": "defeated_writhan",
+      "name": "Writhan",
+      "tier": "mini",
+      "order": 3,
+      "summons": 0,
+      "engaged": 0,
+      "kills": 0,
+      "first_kill": null,
+      "last_kill_at": null,
+      "active": false,
+      "defeat": null
+    },
+    {
+      "key": "bosshildir2",
+      "name": "Geirrhafa",
+      "tier": "mini",
+      "order": 4,
+      "summons": 0,
+      "engaged": 0,
+      "kills": 0,
+      "first_kill": null,
+      "last_kill_at": null,
+      "active": false,
+      "defeat": null
+    },
+    {
+      "key": "bosshildir3",
+      "name": "Zil & Thungr",
+      "tier": "mini",
+      "order": 5,
+      "summons": 0,
+      "engaged": 0,
+      "kills": 0,
+      "first_kill": null,
+      "last_kill_at": null,
+      "active": false,
+      "defeat": null
+    },
+    {
+      "key": "elakingmole_defeated",
+      "name": "Eyeless One",
+      "tier": "mini",
+      "order": 6,
+      "summons": 0,
+      "engaged": 0,
+      "kills": 0,
+      "first_kill": null,
+      "last_kill_at": null,
+      "active": false,
+      "defeat": null
+    }
+  ]
+}

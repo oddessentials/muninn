@@ -1,0 +1,20 @@
+<Project>
+  <PropertyGroup>
+    <VALHEIM_SERVER_PATH Condition="'$(VALHEIM_SERVER_PATH)' == ''">E:\valheim-server</VALHEIM_SERVER_PATH>
+    <ValheimManagedPath>$(VALHEIM_SERVER_PATH)\valheim_server_Data\Managed</ValheimManagedPath>
+    <PluginVersion>$([System.Text.RegularExpressions.Regex]::Replace($([System.IO.File]::ReadAllText('$(MSBuildThisFileDirectory)../package.json')), '(?s)^.*?"version"\s*:\s*"([^"]+)".*$', '$1'))</PluginVersion>
+    <Version>$(PluginVersion)</Version>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Deterministic>true</Deterministic>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+  </PropertyGroup>
+
+  <Target Name="CheckValheimServerPath" BeforeTargets="ResolveAssemblyReferences;CoreCompile" Condition="'$(RequiresValheimAssemblies)' == 'true' And !Exists('$(ValheimManagedPath)\assembly_valheim.dll')">
+    <Error Text="Valheim dedicated server assemblies were not found at $(ValheimManagedPath). Run scripts/get-valheim-server.ps1 to download them, or set VALHEIM_SERVER_PATH to an existing install." />
+  </Target>
+</Project>

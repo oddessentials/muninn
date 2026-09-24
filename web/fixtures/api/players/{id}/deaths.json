@@ -1,0 +1,105 @@
+{
+  "items": [
+    {
+      "id": 16,
+      "at": "2026-09-09T20:41:12Z",
+      "day": 190,
+      "biome": "Ocean",
+      "x": -3120.6,
+      "z": 1877.3,
+      "cause": null
+    },
+    {
+      "id": 15,
+      "at": "2026-08-08T13:03:34Z",
+      "day": 72,
+      "biome": "BlackForest",
+      "x": 725.7,
+      "z": -1296.2,
+      "cause": {
+        "hit_type": "EnemyHit",
+        "attacker_prefab": "Greydwarf_Elite",
+        "attacker": null
+      }
+    },
+    {
+      "id": 13,
+      "at": "2026-08-30T19:17:07Z",
+      "day": 152,
+      "biome": "Plains",
+      "x": -3674.5,
+      "z": -2200.1,
+      "cause": {
+        "hit_type": "EnemyHit",
+        "attacker_prefab": "Draugr",
+        "attacker": null
+      }
+    },
+    {
+      "id": 10,
+      "at": "2026-08-01T20:37:20Z",
+      "day": 58,
+      "biome": "Meadows",
+      "x": 98.4,
+      "z": -157.7,
+      "cause": {
+        "hit_type": "EnemyHit",
+        "attacker_prefab": "Goblin",
+        "attacker": null
+      }
+    },
+    {
+      "id": 9,
+      "at": "2026-08-16T20:06:04Z",
+      "day": 109,
+      "biome": "Mountain",
+      "x": 2052.4,
+      "z": 3183.3,
+      "cause": {
+        "hit_type": "EnemyHit",
+        "attacker_prefab": "Draugr",
+        "attacker": null
+      }
+    },
+    {
+      "id": 3,
+      "at": "2026-08-09T12:54:22Z",
+      "day": 77,
+      "biome": "Swamp",
+      "x": -2216.7,
+      "z": 586.9,
+      "cause": {
+        "hit_type": "EnemyHit",
+        "attacker_prefab": "Troll",
+        "attacker": null
+      }
+    },
+    {
+      "id": 2,
+      "at": "2026-09-01T19:53:34Z",
+      "day": 159,
+      "biome": "Mountain",
+      "x": 2165.3,
+      "z": 3207,
+      "cause": {
+        "hit_type": "EnemyHit",
+        "attacker_prefab": "Greydwarf_Elite",
+        "attacker": null
+      }
+    },
+    {
+      "id": 1,
+      "at": "2026-08-14T20:19:56Z",
+      "day": 98,
+      "biome": "BlackForest",
+      "x": 782.4,
+      "z": -1545.3,
+      "cause": {
+        "hit_type": "EnemyHit",
+        "attacker_prefab": "Troll",
+        "attacker": null
+      }
+    }
+  ],
+  "next_cursor": null
+}

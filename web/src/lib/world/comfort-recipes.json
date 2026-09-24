@@ -1,0 +1,1443 @@
+{
+  "game_version": "1.0.12",
+  "atlas": {
+    "cell": 64,
+    "gutter": 2,
+    "columns": 16,
+    "rows": 10
+  },
+  "icons": {
+    "item:AskHide": 0,
+    "item:AsksvinCarrionNeck": 1,
+    "item:AsksvinCarrionPelvic": 2,
+    "item:AsksvinCarrionRibcage": 3,
+    "item:AsksvinCarrionSkull": 4,
+    "item:BarberKit": 5,
+    "item:Barley": 6,
+    "item:BjornHide": 7,
+    "item:BjornPaw": 8,
+    "item:BlackMarble": 9,
+    "item:Blackwood": 10,
+    "item:Bloodbag": 11,
+    "item:Blueberries": 12,
+    "item:BoneFragments": 13,
+    "item:Bronze": 14,
+    "item:BronzeNails": 15,
+    "item:Carrot": 16,
+    "item:Chain": 17,
+    "item:CharcoalResin": 18,
+    "item:CharredBone": 19,
+    "item:Charredskull": 20,
+    "item:Cloudberry": 21,
+    "item:Coal": 22,
+    "item:Copper": 23,
+    "item:Dandelion": 24,
+    "item:DeerHide": 25,
+    "item:ElderBark": 26,
+    "item:Feathers": 27,
+    "item:FineWood": 28,
+    "item:FirCone": 29,
+    "item:FlametalNew": 30,
+    "item:Flax": 31,
+    "item:Frostwood": 32,
+    "item:Grausten": 33,
+    "item:GreydwarfEye": 34,
+    "item:Guck": 35,
+    "item:Iron": 36,
+    "item:IronNails": 37,
+    "item:Ironpit": 38,
+    "item:JuteBlue": 39,
+    "item:JuteRed": 40,
+    "item:Lantern": 41,
+    "item:LeatherScraps": 42,
+    "item:LoxPelt": 43,
+    "item:MooseHide": 44,
+    "item:MooseSinew": 45,
+    "item:PineCone": 46,
+    "item:Pot_Shard_Green": 47,
+    "item:ProustitePowder": 48,
+    "item:Raspberry": 49,
+    "item:Resin": 50,
+    "item:RoundLog": 51,
+    "item:ScaleHide": 52,
+    "item:SealHide": 53,
+    "item:Snowball": 54,
+    "item:Stone": 55,
+    "item:SulfurStone": 56,
+    "item:SurtlingCore": 57,
+    "item:Tar": 58,
+    "item:Thistle": 59,
+    "item:TrollHide": 60,
+    "item:TrophyBjorn": 61,
+    "item:TrophyMoose": 62,
+    "item:Turnip": 63,
+    "item:WolfClaw": 64,
+    "item:WolfPelt": 65,
+    "item:Wood": 66,
+    "piece:ArmorStand": 67,
+    "piece:ashwood_bed": 68,
+    "piece:bed": 69,
+    "piece:bonfire": 70,
+    "piece:fire_pit": 71,
+    "piece:fire_pit_iron": 72,
+    "piece:hearth": 73,
+    "piece:itemstand": 74,
+    "piece:itemstandh": 75,
+    "piece:jute_carpet": 76,
+    "piece:jute_carpet_blue": 77,
+    "piece:piece_asksvinskeleton": 78,
+    "piece:piece_banner01": 79,
+    "piece:piece_banner02": 80,
+    "piece:piece_banner03": 81,
+    "piece:piece_banner04": 82,
+    "piece:piece_banner05": 83,
+    "piece:piece_banner06": 84,
+    "piece:piece_banner07": 85,
+    "piece:piece_banner08": 86,
+    "piece:piece_banner09": 87,
+    "piece:piece_banner10": 88,
+    "piece:piece_banner11": 89,
+    "piece:piece_barber": 90,
+    "piece:piece_bathtub": 91,
+    "piece:piece_bed02": 92,
+    "piece:piece_bench01": 93,
+    "piece:piece_bench_runed": 94,
+    "piece:piece_blackmarble_bench": 95,
+    "piece:piece_blackmarble_table": 96,
+    "piece:piece_blackmarble_throne": 97,
+    "piece:piece_blackwood_bench01": 98,
+    "piece:piece_bone_throne": 99,
+    "piece:piece_brazierceiling01": 100,
+    "piece:piece_brazierfloor01": 101,
+    "piece:piece_brazierfloor02": 102,
+    "piece:piece_CelebrationGarland": 103,
+    "piece:piece_chair": 104,
+    "piece:piece_chair02": 105,
+    "piece:piece_chair03": 106,
+    "piece:piece_chair_runed": 107,
+    "piece:piece_cloth_hanging_door": 108,
+    "piece:piece_cloth_hanging_door_blue": 109,
+    "piece:piece_cloth_hanging_door_blue2": 110,
+    "piece:piece_dvergr_lantern": 111,
+    "piece:piece_dvergr_lantern_pole": 112,
+    "piece:piece_FairylightGarland": 113,
+    "piece:piece_jackoturnip": 114,
+    "piece:piece_Lavalantern": 115,
+    "piece:piece_logbench01": 116,
+    "piece:piece_maypole": 117,
+    "piece:piece_mistletoe": 118,
+    "piece:piece_moose_throne": 119,
+    "piece:piece_pot1": 120,
+    "piece:piece_pot2": 121,
+    "piece:piece_pot3": 122,
+    "piece:piece_snowlantern": 123,
+    "piece:piece_table": 124,
+    "piece:piece_table_oak": 125,
+    "piece:piece_table_round": 126,
+    "piece:piece_table_runed": 127,
+    "piece:piece_table_runed_small": 128,
+    "piece:piece_throne01": 129,
+    "piece:piece_throne02": 130,
+    "piece:piece_xmascrown": 131,
+    "piece:piece_xmasgarland": 132,
+    "piece:piece_xmastree": 133,
+    "piece:rug_asksvin": 134,
+    "piece:rug_Bjorn": 135,
+    "piece:rug_deer": 136,
+    "piece:rug_fur": 137,
+    "piece:rug_hare": 138,
+    "piece:rug_moose": 139,
+    "piece:rug_seal": 140,
+    "piece:rug_straw": 141,
+    "piece:rug_wolf": 142,
+    "station:blackforge": 143,
+    "station:forge": 144,
+    "station:piece_stonecutter": 145,
+    "station:piece_workbench": 146,
+    "status:CampFire": 147,
+    "status:Rested": 148,
+    "status:Resting": 149,
+    "status:Shelter": 150
+  },
+  "stations": {
+    "blackforge": "Black Forge",
+    "forge": "Forge",
+    "piece_stonecutter": "Stonecutter",
+    "piece_workbench": "Workbench"
+  },
+  "materials": {
+    "AskHide": "Asksvin Hide",
+    "AsksvinCarrionNeck": "Asksvin Neck",
+    "AsksvinCarrionPelvic": "Asksvin Pelvis",
+    "AsksvinCarrionRibcage": "Asksvin Ribcage",
+    "AsksvinCarrionSkull": "Asksvin Skull",
+    "BarberKit": "Barber Kit",
+    "Barley": "Barley",
+    "BjornHide": "Bear Hide",
+    "BjornPaw": "Bear Paw",
+    "BlackMarble": "Black Marble",
+    "Blackwood": "Ashwood",
+    "Bloodbag": "Bloodbag",
+    "Blueberries": "Blueberries",
+    "BoneFragments": "Bone Fragments",
+    "Bronze": "Bronze",
+    "BronzeNails": "Bronze Nails",
+    "Carrot": "Carrot",
+    "Chain": "Chain",
+    "CharcoalResin": "Charcoal Resin",
+    "CharredBone": "Charred Bone",
+    "Charredskull": "Charred Skull",
+    "Cloudberry": "Cloudberries",
+    "Coal": "Coal",
+    "Copper": "Copper",
+    "Dandelion": "Dandelion",
+    "DeerHide": "Deer Hide",
+    "ElderBark": "Ancient Bark",
+    "Feathers": "Feathers",
+    "FineWood": "Finewood",
+    "FirCone": "Fir Cone",
+    "FlametalNew": "Flametal",
+    "Flax": "Flax",
+    "Frostwood": "Timberwood",
+    "Grausten": "Grausten",
+    "GreydwarfEye": "Greydwarf Eye",
+    "Guck": "Guck",
+    "Iron": "Iron",
+    "IronNails": "Iron Nails",
+    "Ironpit": "Iron Pit",
+    "JuteBlue": "Blue Jute",
+    "JuteRed": "Red Jute",
+    "Lantern": "Dvergr Lantern",
+    "LeatherScraps": "Leather Scraps",
+    "LoxPelt": "Lox Pelt",
+    "MooseHide": "Moose Hide",
+    "MooseSinew": "Moose Sinew",
+    "PineCone": "Pine Cone",
+    "Pot_Shard_Green": "Pot Shard",
+    "ProustitePowder": "Proustite Powder",
+    "Raspberry": "Raspberries",
+    "Resin": "Resin",
+    "RoundLog": "Corewood",
+    "ScaleHide": "Scale Hide",
+    "SealHide": "Seal Pelt",
+    "Snowball": "Snowball",
+    "Stone": "Stone",
+    "SulfurStone": "Sulfur",
+    "SurtlingCore": "Surtling Core",
+    "Tar": "Tar",
+    "Thistle": "Thistle",
+    "TrollHide": "Troll Hide",
+    "TrophyBjorn": "Bear Trophy",
+    "TrophyMoose": "Moose Trophy",
+    "Turnip": "Turnip",
+    "WolfClaw": "Fenris Claw",
+    "WolfPelt": "Wolf Pelt",
+    "Wood": "Wood"
+  },
+  "pieces": {
+    "ArmorStand": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "FineWood",
+          "amount": 8
+        },
+        {
+          "item": "IronNails",
+          "amount": 4
+        },
+        {
+          "item": "LeatherScraps",
+          "amount": 2
+        }
+      ],
+      "description": "Some clothes are just too nice to fold away. Why not put them on display instead?"
+    },
+    "ashwood_bed": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "Blackwood",
+          "amount": 8
+        },
+        {
+          "item": "LoxPelt",
+          "amount": 2
+        },
+        {
+          "item": "AskHide",
+          "amount": 2
+        }
+      ],
+      "description": "Rest easy on this finely crafted bed, with asksvin hides to insulate you from heat and cold alike."
+    },
+    "bed": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "Wood",
+          "amount": 8
+        }
+      ],
+      "description": "When night falls, you'll want somewhere to sleep."
+    },
+    "bonfire": {
+      "station": null,
+      "materials": [
+        {
+          "item": "SurtlingCore",
+          "amount": 1
+        },
+        {
+          "item": "ElderBark",
+          "amount": 5
+        },
+        {
+          "item": "FineWood",
+          "amount": 5
+        },
+        {
+          "item": "RoundLog",
+          "amount": 5
+        }
+      ],
+      "description": "For when a regular campfire just isn't impressive enough!"
+    },
+    "fire_pit": {
+      "station": null,
+      "materials": [
+        {
+          "item": "Stone",
+          "amount": 5
+        },
+        {
+          "item": "Wood",
+          "amount": 2
+        }
+      ],
+      "description": "Useful for cooking, warmth, or just resting for a bit."
+    },
+    "fire_pit_iron": {
+      "station": null,
+      "materials": [
+        {
+          "item": "Ironpit",
+          "amount": 1
+        },
+        {
+          "item": "Wood",
+          "amount": 1
+        }
+      ],
+      "description": "If you don't want to place a campfire directly onto the ground, this is a classy alternative."
+    },
+    "hearth": {
+      "station": "piece_stonecutter",
+      "materials": [
+        {
+          "item": "Stone",
+          "amount": 15
+        }
+      ],
+      "description": "A central part of any homestead."
+    },
+    "itemstand": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "FineWood",
+          "amount": 4
+        },
+        {
+          "item": "BronzeNails",
+          "amount": 1
+        }
+      ],
+      "description": "Mount items on vertical surfaces with this item stand."
+    },
+    "itemstandh": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "FineWood",
+          "amount": 4
+        },
+        {
+          "item": "BronzeNails",
+          "amount": 1
+        }
+      ],
+      "description": "Place items on horizontal surfaces with this item stand."
+    },
+    "jute_carpet": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "JuteRed",
+          "amount": 4
+        }
+      ],
+      "description": "This coarse fabric is excellent for keeping the cold at bay."
+    },
+    "jute_carpet_blue": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "JuteBlue",
+          "amount": 4
+        }
+      ],
+      "description": "No matter how misty the air is, this carpet doesn't appear to get damp."
+    },
+    "piece_asksvinskeleton": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "BoneFragments",
+          "amount": 50
+        },
+        {
+          "item": "AsksvinCarrionNeck",
+          "amount": 1
+        },
+        {
+          "item": "AsksvinCarrionPelvic",
+          "amount": 1
+        },
+        {
+          "item": "AsksvinCarrionRibcage",
+          "amount": 1
+        },
+        {
+          "item": "AsksvinCarrionSkull",
+          "amount": 1
+        }
+      ],
+      "description": "Gruesome or decorative? That is up to you."
+    },
+    "piece_banner01": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "LeatherScraps",
+          "amount": 6
+        },
+        {
+          "item": "FineWood",
+          "amount": 2
+        },
+        {
+          "item": "Coal",
+          "amount": 4
+        }
+      ],
+      "description": "A black banner, like the depths of Hel."
+    },
+    "piece_banner02": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "LeatherScraps",
+          "amount": 6
+        },
+        {
+          "item": "FineWood",
+          "amount": 2
+        },
+        {
+          "item": "Blueberries",
+          "amount": 4
+        }
+      ],
+      "description": "A blue banner, like the oceans around Midgard."
+    },
+    "piece_banner03": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "LeatherScraps",
+          "amount": 6
+        },
+        {
+          "item": "FineWood",
+          "amount": 2
+        },
+        {
+          "item": "Raspberry",
+          "amount": 4
+        }
+      ],
+      "description": "A red striped banner, like a sail for a ship."
+    },
+    "piece_banner04": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "LeatherScraps",
+          "amount": 6
+        },
+        {
+          "item": "FineWood",
+          "amount": 2
+        },
+        {
+          "item": "Bloodbag",
+          "amount": 1
+        }
+      ],
+      "description": "A red banner, like the blood of Odin's foes."
+    },
+    "piece_banner05": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "LeatherScraps",
+          "amount": 6
+        },
+        {
+          "item": "FineWood",
+          "amount": 2
+        },
+        {
+          "item": "Guck",
+          "amount": 1
+        }
+      ],
+      "description": "A green banner, like the lush forests of Alfheim."
+    },
+    "piece_banner06": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "LeatherScraps",
+          "amount": 6
+        },
+        {
+          "item": "FineWood",
+          "amount": 2
+        },
+        {
+          "item": "Blueberries",
+          "amount": 2
+        },
+        {
+          "item": "Raspberry",
+          "amount": 2
+        },
+        {
+          "item": "Cloudberry",
+          "amount": 1
+        }
+      ],
+      "description": "A red and blue striped banner, because sometimes you can't pick a colour."
+    },
+    "piece_banner07": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "LeatherScraps",
+          "amount": 6
+        },
+        {
+          "item": "FineWood",
+          "amount": 2
+        },
+        {
+          "item": "Blueberries",
+          "amount": 2
+        },
+        {
+          "item": "Cloudberry",
+          "amount": 3
+        }
+      ],
+      "description": "A blue striped banner, like a sail for a ship."
+    },
+    "piece_banner08": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "LeatherScraps",
+          "amount": 6
+        },
+        {
+          "item": "FineWood",
+          "amount": 2
+        },
+        {
+          "item": "Dandelion",
+          "amount": 4
+        },
+        {
+          "item": "Coal",
+          "amount": 2
+        }
+      ],
+      "description": "A yellow banner, like the golden fields of Vanaheim."
+    },
+    "piece_banner09": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "LeatherScraps",
+          "amount": 6
+        },
+        {
+          "item": "FineWood",
+          "amount": 2
+        },
+        {
+          "item": "Blueberries",
+          "amount": 2
+        },
+        {
+          "item": "Raspberry",
+          "amount": 3
+        }
+      ],
+      "description": "A purple banner, like strange magics."
+    },
+    "piece_banner10": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "LeatherScraps",
+          "amount": 6
+        },
+        {
+          "item": "FineWood",
+          "amount": 2
+        },
+        {
+          "item": "Carrot",
+          "amount": 2
+        },
+        {
+          "item": "Cloudberry",
+          "amount": 3
+        }
+      ],
+      "description": "An orange banner, like the fires of Muspelheim."
+    },
+    "piece_banner11": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "LeatherScraps",
+          "amount": 6
+        },
+        {
+          "item": "FineWood",
+          "amount": 2
+        },
+        {
+          "item": "Coal",
+          "amount": 2
+        },
+        {
+          "item": "Cloudberry",
+          "amount": 4
+        }
+      ],
+      "description": "A white banner, like the snow in Niflheim."
+    },
+    "piece_barber": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "FineWood",
+          "amount": 10
+        },
+        {
+          "item": "BarberKit",
+          "amount": 1
+        },
+        {
+          "item": "BronzeNails",
+          "amount": 5
+        },
+        {
+          "item": "TrollHide",
+          "amount": 5
+        }
+      ],
+      "description": "Helps you stay up to date with the latest viking fashion."
+    },
+    "piece_bathtub": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "Wood",
+          "amount": 20
+        },
+        {
+          "item": "Tar",
+          "amount": 6
+        },
+        {
+          "item": "Iron",
+          "amount": 10
+        },
+        {
+          "item": "Stone",
+          "amount": 8
+        }
+      ],
+      "description": "Respectable vikings bathe as often as once per week!"
+    },
+    "piece_bed02": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "FineWood",
+          "amount": 40
+        },
+        {
+          "item": "DeerHide",
+          "amount": 7
+        },
+        {
+          "item": "WolfPelt",
+          "amount": 4
+        },
+        {
+          "item": "Feathers",
+          "amount": 10
+        },
+        {
+          "item": "IronNails",
+          "amount": 15
+        }
+      ],
+      "description": "Draped in furs, this bed is sure to give you a good night's sleep."
+    },
+    "piece_bench01": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "FineWood",
+          "amount": 6
+        }
+      ],
+      "description": "If there is room in your heart, there is room for your butt."
+    },
+    "piece_bench_runed": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "Frostwood",
+          "amount": 6
+        },
+        {
+          "item": "MooseHide",
+          "amount": 1
+        }
+      ],
+      "description": "A rustic yet comfortable place to sit."
+    },
+    "piece_blackmarble_bench": {
+      "station": "piece_stonecutter",
+      "materials": [
+        {
+          "item": "BlackMarble",
+          "amount": 6
+        },
+        {
+          "item": "Copper",
+          "amount": 3
+        }
+      ],
+      "description": "Sit with dignity on this bench, finely carved from black marble."
+    },
+    "piece_blackmarble_table": {
+      "station": "piece_stonecutter",
+      "materials": [
+        {
+          "item": "BlackMarble",
+          "amount": 6
+        },
+        {
+          "item": "Copper",
+          "amount": 3
+        }
+      ],
+      "description": "Dine like a dwarf at this table!"
+    },
+    "piece_blackmarble_throne": {
+      "station": "piece_stonecutter",
+      "materials": [
+        {
+          "item": "BlackMarble",
+          "amount": 20
+        },
+        {
+          "item": "ScaleHide",
+          "amount": 4
+        },
+        {
+          "item": "DeerHide",
+          "amount": 2
+        },
+        {
+          "item": "Copper",
+          "amount": 5
+        }
+      ],
+      "description": "A throne carved in authentic dvergr style, yet large enough for a human to sit comfortably upon."
+    },
+    "piece_blackwood_bench01": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "Blackwood",
+          "amount": 6
+        }
+      ],
+      "description": "This bench has an elegant curve to it, to facilitate conversation."
+    },
+    "piece_bone_throne": {
+      "station": "piece_stonecutter",
+      "materials": [
+        {
+          "item": "CharredBone",
+          "amount": 15
+        },
+        {
+          "item": "FlametalNew",
+          "amount": 4
+        },
+        {
+          "item": "Grausten",
+          "amount": 20
+        },
+        {
+          "item": "Charredskull",
+          "amount": 3
+        }
+      ],
+      "description": "This throne is sure to invoke respect in friends and foes alike."
+    },
+    "piece_brazierceiling01": {
+      "station": "forge",
+      "materials": [
+        {
+          "item": "Bronze",
+          "amount": 5
+        },
+        {
+          "item": "Coal",
+          "amount": 2
+        },
+        {
+          "item": "Chain",
+          "amount": 1
+        }
+      ],
+      "description": "If your fire hangs from the ceiling, you can't accidentally stumble into it."
+    },
+    "piece_brazierfloor01": {
+      "station": "forge",
+      "materials": [
+        {
+          "item": "Bronze",
+          "amount": 5
+        },
+        {
+          "item": "Coal",
+          "amount": 2
+        },
+        {
+          "item": "WolfClaw",
+          "amount": 3
+        }
+      ],
+      "description": "A classy way to light up the room."
+    },
+    "piece_brazierfloor02": {
+      "station": "forge",
+      "materials": [
+        {
+          "item": "Bronze",
+          "amount": 5
+        },
+        {
+          "item": "GreydwarfEye",
+          "amount": 5
+        },
+        {
+          "item": "WolfClaw",
+          "amount": 3
+        }
+      ],
+      "description": "It's hard to tell whether this flame burns incredibly hot or incredibly cold."
+    },
+    "piece_CelebrationGarland": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "FineWood",
+          "amount": 2
+        },
+        {
+          "item": "Dandelion",
+          "amount": 1
+        }
+      ],
+      "description": "Some flowers to brighten up your day!"
+    },
+    "piece_chair": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "FineWood",
+          "amount": 4
+        }
+      ],
+      "description": "A place to sit."
+    },
+    "piece_chair02": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "FineWood",
+          "amount": 4
+        }
+      ],
+      "description": "Lean back and relax."
+    },
+    "piece_chair03": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "FineWood",
+          "amount": 4
+        },
+        {
+          "item": "Tar",
+          "amount": 1
+        },
+        {
+          "item": "IronNails",
+          "amount": 5
+        },
+        {
+          "item": "DeerHide",
+          "amount": 1
+        }
+      ],
+      "description": "This chair is padded with furs, suitable for esteemed guests."
+    },
+    "piece_chair_runed": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "Frostwood",
+          "amount": 4
+        },
+        {
+          "item": "MooseSinew",
+          "amount": 1
+        }
+      ],
+      "description": "The shape of this chair might be simple, but its decorations are not."
+    },
+    "piece_cloth_hanging_door": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "JuteRed",
+          "amount": 4
+        },
+        {
+          "item": "FineWood",
+          "amount": 1
+        }
+      ],
+      "description": "Heavy curtains of red jute, excellent for draping."
+    },
+    "piece_cloth_hanging_door_blue": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "JuteBlue",
+          "amount": 4
+        },
+        {
+          "item": "FineWood",
+          "amount": 1
+        }
+      ],
+      "description": "Blue jute makes any building look official and important."
+    },
+    "piece_cloth_hanging_door_blue2": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "JuteBlue",
+          "amount": 4
+        },
+        {
+          "item": "FineWood",
+          "amount": 1
+        }
+      ],
+      "description": "Blue jute makes any building look official and important."
+    },
+    "piece_dvergr_lantern": {
+      "station": "blackforge",
+      "materials": [
+        {
+          "item": "Copper",
+          "amount": 2
+        },
+        {
+          "item": "Lantern",
+          "amount": 1
+        },
+        {
+          "item": "Chain",
+          "amount": 1
+        }
+      ],
+      "description": "A finely wrought lantern, crafted by a true artisan. The wall mount is easy enough to figure out though!"
+    },
+    "piece_dvergr_lantern_pole": {
+      "station": "blackforge",
+      "materials": [
+        {
+          "item": "Copper",
+          "amount": 3
+        },
+        {
+          "item": "Lantern",
+          "amount": 1
+        },
+        {
+          "item": "Chain",
+          "amount": 1
+        }
+      ],
+      "description": "You can build a pole easy enough, but the lantern can only have been made by a true master."
+    },
+    "piece_FairylightGarland": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "FineWood",
+          "amount": 2
+        },
+        {
+          "item": "Thistle",
+          "amount": 1
+        }
+      ],
+      "description": "Lends a gentle light to your festivities."
+    },
+    "piece_jackoturnip": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "Turnip",
+          "amount": 4
+        },
+        {
+          "item": "Resin",
+          "amount": 2
+        }
+      ],
+      "description": "The face carved into this vegetable...is it spooky or friendly?"
+    },
+    "piece_Lavalantern": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "FlametalNew",
+          "amount": 1
+        },
+        {
+          "item": "ProustitePowder",
+          "amount": 1
+        },
+        {
+          "item": "SulfurStone",
+          "amount": 1
+        }
+      ],
+      "description": "It's...hypnotising to look at..."
+    },
+    "piece_logbench01": {
+      "station": null,
+      "materials": [
+        {
+          "item": "RoundLog",
+          "amount": 2
+        }
+      ],
+      "description": "It's nothing fancy, but it's better than sitting on the ground."
+    },
+    "piece_maypole": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "Wood",
+          "amount": 10
+        },
+        {
+          "item": "Dandelion",
+          "amount": 4
+        },
+        {
+          "item": "Thistle",
+          "amount": 4
+        }
+      ],
+      "description": "On the longest day of the year, let this monument stretch towards the sun!"
+    },
+    "piece_mistletoe": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "FineWood",
+          "amount": 1
+        },
+        {
+          "item": "JuteRed",
+          "amount": 1
+        }
+      ],
+      "description": "You can't help but to feel like there's something romantic about this..."
+    },
+    "piece_moose_throne": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "Frostwood",
+          "amount": 15
+        },
+        {
+          "item": "TrophyMoose",
+          "amount": 1
+        },
+        {
+          "item": "MooseHide",
+          "amount": 5
+        }
+      ],
+      "description": "Though rustic and sturdy, this throne is well suited even for the most noble of royalty."
+    },
+    "piece_pot1": {
+      "station": null,
+      "materials": [
+        {
+          "item": "Pot_Shard_Green",
+          "amount": 4
+        },
+        {
+          "item": "CharcoalResin",
+          "amount": 1
+        }
+      ],
+      "description": "A piece of ceramic, deep enough to fit a thing or two inside."
+    },
+    "piece_pot2": {
+      "station": null,
+      "materials": [
+        {
+          "item": "Pot_Shard_Green",
+          "amount": 5
+        },
+        {
+          "item": "CharcoalResin",
+          "amount": 1
+        }
+      ],
+      "description": "A large statement piece of a pot! You could almost fit an entire viking in there."
+    },
+    "piece_pot3": {
+      "station": null,
+      "materials": [
+        {
+          "item": "Pot_Shard_Green",
+          "amount": 3
+        },
+        {
+          "item": "CharcoalResin",
+          "amount": 1
+        }
+      ],
+      "description": "A small piece of earthenware, with room for something inside."
+    },
+    "piece_snowlantern": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "Snowball",
+          "amount": 8
+        }
+      ],
+      "description": "Adds a cosy touch to a wintry landscape."
+    },
+    "piece_table": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "FineWood",
+          "amount": 6
+        }
+      ],
+      "description": "A small but sturdy table."
+    },
+    "piece_table_oak": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "FineWood",
+          "amount": 20
+        },
+        {
+          "item": "Tar",
+          "amount": 2
+        },
+        {
+          "item": "IronNails",
+          "amount": 20
+        }
+      ],
+      "description": "This table is perfect for a large feast, with room for many different dishes!"
+    },
+    "piece_table_round": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "FineWood",
+          "amount": 10
+        },
+        {
+          "item": "Tar",
+          "amount": 2
+        },
+        {
+          "item": "IronNails",
+          "amount": 20
+        }
+      ],
+      "description": "At a round table, no seat is more important than any other."
+    },
+    "piece_table_runed": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "Frostwood",
+          "amount": 20
+        },
+        {
+          "item": "Tar",
+          "amount": 2
+        },
+        {
+          "item": "IronNails",
+          "amount": 20
+        }
+      ],
+      "description": "The story carved into this table is excellent to read during long feasts."
+    },
+    "piece_table_runed_small": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "Frostwood",
+          "amount": 6
+        },
+        {
+          "item": "Tar",
+          "amount": 1
+        },
+        {
+          "item": "IronNails",
+          "amount": 6
+        }
+      ],
+      "description": "A table for more intimate gatherings."
+    },
+    "piece_throne01": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "FineWood",
+          "amount": 20
+        },
+        {
+          "item": "IronNails",
+          "amount": 10
+        }
+      ],
+      "description": "Perhaps this is what Odin's throne in Valhalla looks like... Either way, it's comfortable!"
+    },
+    "piece_throne02": {
+      "station": "piece_stonecutter",
+      "materials": [
+        {
+          "item": "Stone",
+          "amount": 20
+        },
+        {
+          "item": "DeerHide",
+          "amount": 2
+        },
+        {
+          "item": "WolfPelt",
+          "amount": 2
+        }
+      ],
+      "description": "A good leader must be firm like stone, yet they also need to know when to be soft like furs..."
+    },
+    "piece_xmascrown": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "PineCone",
+          "amount": 4
+        },
+        {
+          "item": "JuteRed",
+          "amount": 1
+        },
+        {
+          "item": "FineWood",
+          "amount": 1
+        }
+      ],
+      "description": "It's hard to think of anything more festive than a wreath!"
+    },
+    "piece_xmasgarland": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "FineWood",
+          "amount": 2
+        },
+        {
+          "item": "PineCone",
+          "amount": 1
+        }
+      ],
+      "description": "Deck the halls!"
+    },
+    "piece_xmastree": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "Wood",
+          "amount": 10
+        },
+        {
+          "item": "FirCone",
+          "amount": 1
+        }
+      ],
+      "description": "This fir tree has been given festive decorative lights."
+    },
+    "rug_asksvin": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "AskHide",
+          "amount": 4
+        }
+      ],
+      "description": "With how lumpy asksvin hide is, it's hard to make anything useful from a single piece. Some assembly is required."
+    },
+    "rug_Bjorn": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "BjornHide",
+          "amount": 1
+        },
+        {
+          "item": "BjornPaw",
+          "amount": 2
+        },
+        {
+          "item": "TrophyBjorn",
+          "amount": 1
+        }
+      ],
+      "description": "The fur is soft, though the teeth are still sharp."
+    },
+    "rug_deer": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "DeerHide",
+          "amount": 4
+        }
+      ],
+      "description": "Protects your feet from wood splinters."
+    },
+    "rug_fur": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "LoxPelt",
+          "amount": 4
+        }
+      ],
+      "description": "It's incredibly fluffy!"
+    },
+    "rug_hare": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "ScaleHide",
+          "amount": 4
+        }
+      ],
+      "description": "It's a strange texture, but a very interesting piece of decor."
+    },
+    "rug_moose": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "MooseHide",
+          "amount": 4
+        }
+      ],
+      "description": "This carpet is neatly sewn together, to ensure a large, soft surface."
+    },
+    "rug_seal": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "SealHide",
+          "amount": 4
+        }
+      ],
+      "description": "This rug is so soft, soft like innocence."
+    },
+    "rug_straw": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "Barley",
+          "amount": 1
+        },
+        {
+          "item": "Flax",
+          "amount": 1
+        }
+      ],
+      "description": "Your animals will love this."
+    },
+    "rug_wolf": {
+      "station": "piece_workbench",
+      "materials": [
+        {
+          "item": "WolfPelt",
+          "amount": 4
+        }
+      ],
+      "description": "Warm and cosy, especially up in the mountains."
+    }
+  }
+}

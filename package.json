@@ -1,0 +1,53 @@
+{
+  "name": "muninn",
+  "version": "0.6.0",
+  "private": true,
+  "engines": {
+    "node": ">=24"
+  },
+  "workspaces": [
+    "web"
+  ],
+  "scripts": {
+    "postinstall": "node scripts/postinstall.mjs",
+    "dev": "npm run dev -w web",
+    "dev:mock": "node scripts/run-with-env.mjs API_MOCK=1 -- npm run dev -w web",
+    "build": "npm run build -w web",
+    "format": "npm run format -w web && prettier --no-config --single-quote --trailing-comma none --print-width 100 --write .",
+    "format:check": "npm run format:check -w web && prettier --no-config --single-quote --trailing-comma none --print-width 100 --check .",
+    "lint": "npm run lint -w web",
+    "check": "npm run check -w web",
+    "comments:check": "node scripts/check-no-comments.mjs",
+    "api:lint": "redocly lint web/openapi.yaml",
+    "api:types": "node scripts/api-types.mjs",
+    "api:types:check": "node scripts/api-types.mjs --check",
+    "fixtures:check": "node scripts/fixtures-check.mjs",
+    "test": "npm run test -w web",
+    "test:e2e": "npm run test:e2e -w web",
+    "test:rig": "node --env-file-if-exists=.env web/scripts/test-rig.ts",
+    "db:migrate": "npm run db:migrate -w web",
+    "db:generate": "npm run db:generate -w web",
+    "db:studio": "npm run db:studio -w web",
+    "dotnet:build": "dotnet build plugin",
+    "dotnet:test": "dotnet test plugin",
+    "rig:up": "node scripts/rig.mjs up",
+    "rig:down": "node scripts/rig.mjs down",
+    "rig:join": "node scripts/rig.mjs join",
+    "rig:leave": "node scripts/rig.mjs leave",
+    "rig:rcon": "node scripts/rig.mjs rcon",
+    "rig:character": "node scripts/rig.mjs character",
+    "verify:quick": "npm run format:check && npm run lint && npm run comments:check && npm run check",
+    "verify": "npm run verify:quick && npm run api:lint && npm run api:types:check && npm run fixtures:check && npm run test && npm run build && npm run test:e2e && npm run dotnet:build && npm run dotnet:test",
+    "simulate": "node --env-file-if-exists=.env web/scripts/simulate.ts",
+    "a2s": "node --env-file-if-exists=.env web/scripts/a2s.ts"
+  },
+  "devDependencies": {
+    "@redocly/cli": "2.52.0",
+    "ajv": "8.20.0",
+    "ajv-formats": "3.0.1",
+    "openapi-typescript": "7.13.0",
+    "prettier": "3.9.6",
+    "typescript": "5.9.3",
+    "yaml": "2.9.0"
+  }
+}

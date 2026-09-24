@@ -1,0 +1,26 @@
+{
+  "name": "Ravenhold",
+  "uid": 7130451826379422,
+  "day": 193,
+  "net_time": 349080,
+  "day_length_s": 1800,
+  "saves": {
+    "last_at": "2026-09-10T19:00:00Z",
+    "count_24h": 48,
+    "avg_duration_ms": 954
+  },
+  "rollbacks": [
+    {
+      "detected_at": "2026-08-30T09:03:41Z",
+      "from_net_time": 277800,
+      "to_net_time": 272400
+    }
+  ],
+  "map": {
+    "available": true,
+    "image_url": "/api/v1/world/map.png",
+    "size_px": 2048,
+    "radius_m": 10000,
+    "generated_at": "2026-08-30T09:05:10Z"
+  }
+}

@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <RootNamespace>GuildTelemetry</RootNamespace>
+    <AssemblyName>GuildTelemetry</AssemblyName>
+    <RequiresValheimAssemblies>true</RequiresValheimAssemblies>
+    <BepInExPluginGuid>com.guildsite.telemetry</BepInExPluginGuid>
+    <BepInExPluginName>GuildTelemetry</BepInExPluginName>
+    <BepInExPluginVersion>$(PluginVersion)</BepInExPluginVersion>
+    <DebugType>portable</DebugType>
+    <PluginOutputDirectory>$(MSBuildThisFileDirectory)..\out\</PluginOutputDirectory>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BepInEx.Core" />
+    <PackageReference Include="BepInEx.PluginInfoProps" />
+    <PackageReference Include="BepInEx.AssemblyPublicizer.MSBuild" PrivateAssets="all" />
+    <PackageReference Include="HarmonyX" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="assembly_valheim" HintPath="$(ValheimManagedPath)\assembly_valheim.dll" Publicize="true" Private="false" />
+    <Reference Include="Splatform" HintPath="$(ValheimManagedPath)\Splatform.dll" Private="false" />
+    <Reference Include="assembly_utils" HintPath="$(ValheimManagedPath)\assembly_utils.dll" Private="false" />
+    <Reference Include="assembly_guiutils" HintPath="$(ValheimManagedPath)\assembly_guiutils.dll" Private="false" />
+    <Reference Include="UnityEngine" HintPath="$(ValheimManagedPath)\UnityEngine.dll" Private="false" />
+    <Reference Include="UnityEngine.CoreModule" HintPath="$(ValheimManagedPath)\UnityEngine.CoreModule.dll" Private="false" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="..\GuildTelemetry.Core\**\*.cs" Exclude="..\GuildTelemetry.Core\bin\**;..\GuildTelemetry.Core\obj\**" LinkBase="Core" />
+  </ItemGroup>
+
+  <Target Name="CopyPluginToOut" AfterTargets="Build">
+    <MakeDir Directories="$(PluginOutputDirectory)" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(PluginOutputDirectory)" SkipUnchangedFiles="true" />
+    <Message Importance="high" Text="GuildTelemetry.dll copied to $(PluginOutputDirectory)" />
+  </Target>
+</Project>

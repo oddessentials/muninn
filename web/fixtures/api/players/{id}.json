@@ -1,0 +1,236 @@
+{
+  "id": 1,
+  "display_name": "Bjorn",
+  "platform": "Steam",
+  "platform_user_id": "Steam_76561198012345678",
+  "display_id": "V_76561198012345678",
+  "online": true,
+  "current_biome": "Meadows",
+  "first_seen": "2026-07-20T13:27:00Z",
+  "last_seen": "2026-09-10T19:30:00Z",
+  "playtime_s": 236820,
+  "sessions": 45,
+  "deaths": 8,
+  "kills": 1142,
+  "boss_kills": 5,
+  "structures_built": 598,
+  "distance_m": 217121,
+  "characters": [
+    {
+      "character_id": 3187264590123456,
+      "name": "Bjorn",
+      "first_seen": "2026-07-20T13:27:00Z",
+      "last_seen": "2026-09-10T19:30:00Z"
+    }
+  ],
+  "current_session": {
+    "joined_at": "2026-09-10T17:05:00Z",
+    "character_name": "Bjorn",
+    "biome": "Meadows",
+    "x": 76.1,
+    "z": -253.1
+  },
+  "stats": {
+    "playtime_s": 236820,
+    "sessions": 45,
+    "deaths": 8,
+    "kills_credited": 218,
+    "kills_nearby": 924,
+    "boss_kills": 5,
+    "raids": 3,
+    "structures_built": 598,
+    "structures_destroyed": 20,
+    "shouts": 7,
+    "distance_m": 217121
+  },
+  "biomes": [
+    {
+      "biome": "Meadows",
+      "first_at": "2026-07-20T13:27:15Z",
+      "first_day": 1,
+      "visits": 52,
+      "last_at": "2026-09-10T17:36:15Z"
+    },
+    {
+      "biome": "BlackForest",
+      "first_at": "2026-07-20T13:45:15Z",
+      "first_day": 1,
+      "visits": 28,
+      "last_at": "2026-09-08T19:34:15Z"
+    },
+    {
+      "biome": "Swamp",
+      "first_at": "2026-07-29T19:57:15Z",
+      "first_day": 40,
+      "visits": 20,
+      "last_at": "2026-09-06T20:43:15Z"
+    },
+    {
+      "biome": "Mountain",
+      "first_at": "2026-08-03T13:29:15Z",
+      "first_day": 67,
+      "visits": 10,
+      "last_at": "2026-09-10T17:13:15Z"
+    },
+    {
+      "biome": "Plains",
+      "first_at": "2026-08-29T19:47:15Z",
+      "first_day": 149,
+      "visits": 5,
+      "last_at": "2026-09-07T19:45:15Z"
+    }
+  ],
+  "deaths_by_cause": {
+    "EnemyHit": 7,
+    "unknown": 1
+  },
+  "kills_by_creature": [
+    {
+      "creature": "Greydwarf",
+      "credited": 29,
+      "nearby": 140
+    },
+    {
+      "creature": "Deer",
+      "credited": 27,
+      "nearby": 119
+    },
+    {
+      "creature": "Boar",
+      "credited": 21,
+      "nearby": 97
+    },
+    {
+      "creature": "Neck",
+      "credited": 15,
+      "nearby": 97
+    },
+    {
+      "creature": "Skeleton",
+      "credited": 19,
+      "nearby": 82
+    },
+    {
+      "creature": "Greydwarf shaman",
+      "credited": 15,
+      "nearby": 51
+    },
+    {
+      "creature": "Greydwarf brute",
+      "credited": 13,
+      "nearby": 45
+    },
+    {
+      "creature": "Troll",
+      "credited": 12,
+      "nearby": 42
+    },
+    {
+      "creature": "Drake",
+      "credited": 4,
+      "nearby": 36
+    },
+    {
+      "creature": "Draugr",
+      "credited": 7,
+      "nearby": 31
+    },
+    {
+      "creature": "Wolf",
+      "credited": 4,
+      "nearby": 31
+    },
+    {
+      "creature": "Wraith",
+      "credited": 10,
+      "nearby": 24
+    },
+    {
+      "creature": "Abomination",
+      "credited": 7,
+      "nearby": 25
+    },
+    {
+      "creature": "Leech",
+      "credited": 10,
+      "nearby": 20
+    },
+    {
+      "creature": "Surtling",
+      "credited": 7,
+      "nearby": 23
+    },
+    {
+      "creature": "Blob",
+      "credited": 9,
+      "nearby": 19
+    },
+    {
+      "creature": "Draugr elite",
+      "credited": 3,
+      "nearby": 24
+    },
+    {
+      "creature": "Fuling",
+      "credited": 6,
+      "nearby": 18
+    }
+  ],
+  "boss_participation": [
+    {
+      "key": "defeated_eikthyr",
+      "name": "Eikthyr",
+      "at": "2026-07-25T19:20:00Z",
+      "day": 20,
+      "role": "credited"
+    },
+    {
+      "key": "defeated_gdking",
+      "name": "The Elder",
+      "at": "2026-08-01T19:55:00Z",
+      "day": 57,
+      "role": "credited"
+    },
+    {
+      "key": "defeated_bonemass",
+      "name": "Bonemass",
+      "at": "2026-08-15T19:37:00Z",
+      "day": 102,
+      "role": "credited"
+    },
+    {
+      "key": "defeated_dragon",
+      "name": "Moder",
+      "at": "2026-08-30T19:29:00Z",
+      "day": 152,
+      "role": "nearby"
+    }
+  ],
+  "raids": [
+    {
+      "id": 1,
+      "name": "army_eikthyr",
+      "label": "Eikthyr rallies the creatures of the forest",
+      "at": "2026-07-27T20:12:00Z",
+      "day": 34,
+      "survived": true
+    },
+    {
+      "id": 2,
+      "name": "army_theelder",
+      "label": "The forest is moving...",
+      "at": "2026-08-09T20:04:00Z",
+      "day": 80,
+      "survived": true
+    },
+    {
+      "id": 3,
+      "name": "army_bonemass",
+      "label": "A foul smell from the swamp",
+      "at": "2026-08-21T19:56:00Z",
+      "day": 117,
+      "survived": true
+    }
+  ],
+  "aliases": []
+}

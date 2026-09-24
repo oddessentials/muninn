@@ -1,0 +1,372 @@
+[
+  {
+    "event": "status",
+    "id": null,
+    "data": {
+      "online": true,
+      "source": "plugin",
+      "player_count": 2,
+      "max_players": 10,
+      "game_version": "1.0.7",
+      "network_version": 39,
+      "server_name": "Ravenhold",
+      "world": {
+        "name": "Ravenhold",
+        "uid": 7130451826379422,
+        "day": 193,
+        "time_of_day": 0.9329999999999999,
+        "net_time": 349080
+      },
+      "run": {
+        "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+        "started_at": "2026-08-30T09:03:40Z",
+        "uptime_s": 987955,
+        "plugin_version": "0.1.0"
+      },
+      "last_save_at": "2026-09-10T19:00:00Z",
+      "telemetry": {
+        "live": true,
+        "last_heartbeat_at": "2026-09-10T19:29:35Z",
+        "delayed_since": null
+      },
+      "updated_at": "2026-09-10T19:29:35Z"
+    }
+  },
+  {
+    "event": "online",
+    "id": null,
+    "data": {
+      "items": [
+        {
+          "player_id": 1,
+          "display_name": "Bjorn",
+          "platform": "Steam",
+          "character_name": "Bjorn",
+          "biome": "Meadows",
+          "x": 76.1,
+          "z": -253.1,
+          "since": "2026-09-10T17:05:00Z"
+        },
+        {
+          "player_id": 2,
+          "display_name": "Freya",
+          "platform": "Steam",
+          "character_name": "Freya",
+          "biome": "Meadows",
+          "x": 147.8,
+          "z": -210.8,
+          "since": "2026-09-10T17:40:00Z"
+        }
+      ]
+    }
+  },
+  {
+    "event": "activity",
+    "id": "beefb914-11cb-426c-9f28-d25866b3ce7c",
+    "data": {
+      "id": "beefb914-11cb-426c-9f28-d25866b3ce7c",
+      "at": "2026-09-10T17:40:00Z",
+      "day": 190,
+      "type": "player.joined",
+      "player": {
+        "id": 2,
+        "display_name": "Freya",
+        "platform": "Steam"
+      },
+      "summary": {
+        "display_id": "V_76561198087654321",
+        "platform": "Steam",
+        "name": "Freya",
+        "peer_uid": 35,
+        "playfab_id": null
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": 162
+      }
+    }
+  },
+  {
+    "event": "activity",
+    "id": "ec9f23b9-6588-4390-8107-1bd463ecb147",
+    "data": {
+      "id": "ec9f23b9-6588-4390-8107-1bd463ecb147",
+      "at": "2026-09-10T17:36:15Z",
+      "day": 190,
+      "type": "player.biome_changed",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "from": "Mountain",
+        "to": "Meadows",
+        "x": 76.1,
+        "z": -253.1,
+        "first_discovery": false
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    }
+  },
+  {
+    "event": "activity",
+    "id": "4ca5078a-9cf8-40cf-b36d-62789cc687f7",
+    "data": {
+      "id": "4ca5078a-9cf8-40cf-b36d-62789cc687f7",
+      "at": "2026-09-10T19:22:08Z",
+      "day": 193,
+      "type": "chat.message",
+      "player": {
+        "id": 2,
+        "display_name": "Freya",
+        "platform": "Steam"
+      },
+      "summary": {
+        "kind": "shout",
+        "text": "Found a swamp crypt north of the river",
+        "x": 147.8,
+        "z": -210.8,
+        "biome": "Meadows"
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    }
+  },
+  {
+    "event": "activity",
+    "id": "e14e51bb-81d5-4baf-a525-44d7eafed35d",
+    "data": {
+      "id": "e14e51bb-81d5-4baf-a525-44d7eafed35d",
+      "at": "2026-09-06T19:56:54Z",
+      "day": 171,
+      "type": "player.died",
+      "player": {
+        "id": 8,
+        "display_name": "Hilde",
+        "platform": "Steam"
+      },
+      "summary": {
+        "name": "Hilde",
+        "character_id": 2287654321098765,
+        "x": 2308.7,
+        "z": 3061.9,
+        "biome": "Mountain",
+        "observed_cause": null,
+        "cause": null,
+        "attacker": null
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    }
+  },
+  {
+    "event": "activity",
+    "id": "d2f4ee14-8ea9-4a04-8c9d-bc0fa36442c1",
+    "data": {
+      "id": "d2f4ee14-8ea9-4a04-8c9d-bc0fa36442c1",
+      "at": "2026-09-10T19:00:00Z",
+      "day": 192,
+      "type": "world.saved",
+      "player": null,
+      "summary": {
+        "duration_ms": 996
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    }
+  },
+  {
+    "event": "activity",
+    "id": "f739ebc5-fa8c-46c8-adb6-1dc5c722469d",
+    "data": {
+      "id": "f739ebc5-fa8c-46c8-adb6-1dc5c722469d",
+      "at": "2026-08-30T19:29:00Z",
+      "day": 152,
+      "type": "boss.defeated",
+      "player": {
+        "id": 2,
+        "display_name": "Freya",
+        "platform": "Steam"
+      },
+      "summary": {
+        "key": "defeated_dragon",
+        "first_time": true,
+        "nearby": [
+          {
+            "id": 1,
+            "display_name": "Bjorn",
+            "platform": "Steam"
+          },
+          {
+            "id": 2,
+            "display_name": "Freya",
+            "platform": "Steam"
+          }
+        ],
+        "prefab": "Dragon",
+        "name_key": "$enemy_dragon",
+        "participants": [
+          {
+            "id": 2,
+            "display_name": "Freya",
+            "platform": "Steam"
+          }
+        ],
+        "sender": {
+          "id": 1,
+          "display_name": "Bjorn",
+          "platform": "Steam"
+        },
+        "boss_name": "Moder"
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": "defeated_dragon",
+        "run_id": null,
+        "session_id": null
+      }
+    }
+  },
+  {
+    "event": "activity",
+    "id": "28ae9c74-b3ff-43f4-bfee-b86b595b917a",
+    "data": {
+      "id": "28ae9c74-b3ff-43f4-bfee-b86b595b917a",
+      "at": "2026-08-21T19:56:00Z",
+      "day": 117,
+      "type": "raid.started",
+      "player": null,
+      "summary": {
+        "name": "army_bonemass",
+        "x": 139.1,
+        "z": -232.2,
+        "biome": "Swamp",
+        "duration_s": 100,
+        "nearby": [
+          {
+            "id": 6,
+            "display_name": "Sigrid",
+            "platform": "Steam"
+          },
+          {
+            "id": 7,
+            "display_name": "Torvald",
+            "platform": "Xbox"
+          },
+          {
+            "id": 1,
+            "display_name": "Bjorn",
+            "platform": "Steam"
+          },
+          {
+            "id": 2,
+            "display_name": "Freya",
+            "platform": "Steam"
+          },
+          {
+            "id": 3,
+            "display_name": "Ragnar",
+            "platform": "Steam"
+          }
+        ],
+        "raid_label": "A foul smell from the swamp"
+      },
+      "links": {
+        "raid_id": 3,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    }
+  },
+  {
+    "event": "activity",
+    "id": "c42bc0d0-da7f-4d4e-9e85-dcc6e0449d10",
+    "data": {
+      "id": "c42bc0d0-da7f-4d4e-9e85-dcc6e0449d10",
+      "at": "2026-08-21T19:57:47Z",
+      "day": 118,
+      "type": "raid.ended",
+      "player": null,
+      "summary": {
+        "name": "army_bonemass",
+        "elapsed_s": 107,
+        "raid_label": "A foul smell from the swamp"
+      },
+      "links": {
+        "raid_id": 3,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    }
+  },
+  {
+    "event": "activity",
+    "id": "05112c70-3b32-4760-ae33-fb0778795672",
+    "data": {
+      "id": "05112c70-3b32-4760-ae33-fb0778795672",
+      "at": "2026-09-08T21:58:00Z",
+      "day": 189,
+      "type": "player.left",
+      "player": {
+        "id": 6,
+        "display_name": "Sigrid",
+        "platform": "Steam"
+      },
+      "summary": {
+        "name": "Sigrid",
+        "session_s": 8460,
+        "reason": "disconnect"
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": 160
+      }
+    }
+  },
+  {
+    "event": "activity",
+    "id": "2256b1e1-cb18-414c-8c6f-1db39aa87349",
+    "data": {
+      "id": "2256b1e1-cb18-414c-8c6f-1db39aa87349",
+      "at": "2026-08-10T19:49:00Z",
+      "day": 85,
+      "type": "global_key.set",
+      "player": null,
+      "summary": {
+        "key": "Hildir1",
+        "value": null,
+        "first_time": true
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    }
+  }
+]

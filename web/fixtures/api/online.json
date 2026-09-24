@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "player_id": 1,
+      "display_name": "Bjorn",
+      "platform": "Steam",
+      "character_name": "Bjorn",
+      "biome": "Meadows",
+      "x": 76.1,
+      "z": -253.1,
+      "since": "2026-09-10T17:05:00Z"
+    },
+    {
+      "player_id": 2,
+      "display_name": "Freya",
+      "platform": "Steam",
+      "character_name": "Freya",
+      "biome": "Meadows",
+      "x": 147.8,
+      "z": -210.8,
+      "since": "2026-09-10T17:40:00Z"
+    }
+  ]
+}

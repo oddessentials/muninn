@@ -1,0 +1,29 @@
+{
+  "online": true,
+  "source": "plugin",
+  "player_count": 2,
+  "max_players": 10,
+  "game_version": "1.0.7",
+  "network_version": 39,
+  "server_name": "Ravenhold",
+  "world": {
+    "name": "Ravenhold",
+    "uid": 7130451826379422,
+    "day": 193,
+    "time_of_day": 0.9329999999999999,
+    "net_time": 349080
+  },
+  "run": {
+    "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+    "started_at": "2026-08-30T09:03:40Z",
+    "uptime_s": 987955,
+    "plugin_version": "0.1.0"
+  },
+  "last_save_at": "2026-09-10T19:00:00Z",
+  "telemetry": {
+    "live": true,
+    "last_heartbeat_at": "2026-09-10T19:29:35Z",
+    "delayed_since": null
+  },
+  "updated_at": "2026-09-10T19:29:35Z"
+}

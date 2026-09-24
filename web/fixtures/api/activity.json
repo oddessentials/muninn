@@ -1,0 +1,1484 @@
+{
+  "items": [
+    {
+      "id": "3a9c1e2f-7b4d-4c5e-8f6a-1b2c3d4e5f60",
+      "at": "2026-09-10T19:29:40Z",
+      "day": 193,
+      "type": "player.position",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "x": 76.1,
+        "z": -253.1,
+        "biome": "Meadows"
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "4b8d2f3a-8c5e-4d6f-9a7b-2c3d4e5f6a71",
+      "at": "2026-09-10T19:29:35Z",
+      "day": 193,
+      "type": "server.heartbeat",
+      "player": null,
+      "summary": {
+        "uptime_s": 987955,
+        "net_time": 349080,
+        "world_day": 193,
+        "last_save_age_s": 1775,
+        "queue_depth": 0,
+        "dropped_events": 0,
+        "players": [
+          {
+            "platform_user_id": "Steam_76561198012345678",
+            "character_id": 3187264590123456,
+            "name": "Bjorn",
+            "x": 76.1,
+            "z": -253.1,
+            "biome": "Meadows",
+            "distance_since_last_m": 41.2
+          },
+          {
+            "platform_user_id": "Steam_76561198087654321",
+            "character_id": 5023871234567890,
+            "name": "Freya",
+            "x": 147.8,
+            "z": -210.8,
+            "biome": "Meadows",
+            "distance_since_last_m": 12.7
+          }
+        ]
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+        "session_id": null
+      }
+    },
+    {
+      "id": "5c9e3a4b-9d6f-4e7a-8b8c-3d4e5f6a7b82",
+      "at": "2026-09-10T19:28:08Z",
+      "day": 193,
+      "type": "creature.died",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "prefab": "Deer",
+        "level": 1,
+        "x": 141.7,
+        "z": -195.8,
+        "biome": "Meadows",
+        "credited": [
+          {
+            "id": 1,
+            "display_name": "Bjorn",
+            "platform": "Steam"
+          }
+        ],
+        "nearby": [
+          {
+            "id": 1,
+            "display_name": "Bjorn",
+            "platform": "Steam"
+          },
+          {
+            "id": 2,
+            "display_name": "Freya",
+            "platform": "Steam"
+          }
+        ],
+        "creature": "Deer"
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "7d2c4b1e-9a3f-4e6b-8c5d-0f1a2b3c4d5e",
+      "at": "2026-09-10T19:25:20Z",
+      "day": 193,
+      "type": "world.dusk_approaching",
+      "player": null,
+      "summary": {
+        "net_time": 348825,
+        "dusk_at": "2026-09-10T19:27:05Z",
+        "dusk_in_s": 105
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "4ca5078a-9cf8-40cf-b36d-62789cc687f7",
+      "at": "2026-09-10T19:22:08Z",
+      "day": 193,
+      "type": "chat.message",
+      "player": {
+        "id": 2,
+        "display_name": "Freya",
+        "platform": "Steam"
+      },
+      "summary": {
+        "kind": "shout",
+        "text": "Found a swamp crypt north of the river",
+        "x": 147.8,
+        "z": -210.8,
+        "biome": "Meadows"
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "6daf4b5c-ae7a-4f8b-9c9d-4e5f6a7b8c93",
+      "at": "2026-09-10T19:20:17Z",
+      "day": 193,
+      "type": "structure.built",
+      "player": {
+        "id": 2,
+        "display_name": "Freya",
+        "platform": "Steam"
+      },
+      "summary": {
+        "prefab": "wood_floor",
+        "x": 123.1,
+        "z": -230.2,
+        "biome": "Meadows",
+        "creator_character_id": 5023871234567890,
+        "creator": {
+          "id": 2,
+          "display_name": "Freya",
+          "platform": "Steam"
+        }
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "7eb05c6d-bf8b-4a9c-8dae-5f6a7b8c9da4",
+      "at": "2026-09-10T19:18:40Z",
+      "day": 193,
+      "type": "structure.destroyed",
+      "player": null,
+      "summary": {
+        "prefab": "wood_wall",
+        "x": 118.4,
+        "z": -236.9,
+        "biome": "Meadows",
+        "creator_character_id": 5023871234567890
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "76b6b3f4-38b1-4f3e-b5c2-d4e8893e4263",
+      "at": "2026-09-10T19:09:40Z",
+      "day": 193,
+      "type": "chat.message",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "kind": "ping",
+        "text": null,
+        "x": 76.1,
+        "z": -253.1,
+        "biome": "Meadows"
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "b5e1a7c3-2d4f-4a6b-9c8e-3f2a1b0c9d8e",
+      "at": "2026-09-10T19:05:20Z",
+      "day": 193,
+      "type": "world.dawn_approaching",
+      "player": null,
+      "summary": {
+        "net_time": 347625,
+        "dawn_at": "2026-09-10T19:06:05Z",
+        "dawn_in_s": 45
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "d2f4ee14-8ea9-4a04-8c9d-bc0fa36442c1",
+      "at": "2026-09-10T19:00:00Z",
+      "day": 192,
+      "type": "world.saved",
+      "player": null,
+      "summary": {
+        "duration_ms": 996
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "5d6db053-6a75-4309-a6de-04811a476bd9",
+      "at": "2026-09-10T19:00:00Z",
+      "day": 192,
+      "type": "world.save_started",
+      "player": null,
+      "summary": {},
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "64a4b576-98ce-4955-9447-66676023f7c3",
+      "at": "2026-09-10T18:30:00Z",
+      "day": 191,
+      "type": "world.saved",
+      "player": null,
+      "summary": {
+        "duration_ms": 747
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "29c5efe9-ed30-4106-a6d2-644086479c9c",
+      "at": "2026-09-10T18:30:00Z",
+      "day": 191,
+      "type": "world.save_started",
+      "player": null,
+      "summary": {},
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "234eed59-6120-4333-b8c6-11bc3002f3eb",
+      "at": "2026-09-10T18:28:45Z",
+      "day": 191,
+      "type": "chat.message",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "kind": "ping",
+        "text": null,
+        "x": 76.1,
+        "z": -253.1,
+        "biome": "Meadows"
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "531c7014-bd10-4d71-bd52-72824ff20a6b",
+      "at": "2026-09-10T18:00:00Z",
+      "day": 190,
+      "type": "world.saved",
+      "player": null,
+      "summary": {
+        "duration_ms": 963
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "73aaa049-6d60-4938-a710-d509657bebce",
+      "at": "2026-09-10T18:00:00Z",
+      "day": 190,
+      "type": "world.save_started",
+      "player": null,
+      "summary": {},
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "1ef65d2e-4e19-4a4d-bec5-17d8fe714a41",
+      "at": "2026-09-10T17:40:15Z",
+      "day": 190,
+      "type": "player.spawned",
+      "player": {
+        "id": 2,
+        "display_name": "Freya",
+        "platform": "Steam"
+      },
+      "summary": {
+        "name": "Freya",
+        "character_id": 5023871234567890,
+        "respawn": false,
+        "x": 147.8,
+        "z": -210.8,
+        "biome": "Meadows"
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "beefb914-11cb-426c-9f28-d25866b3ce7c",
+      "at": "2026-09-10T17:40:00Z",
+      "day": 190,
+      "type": "player.joined",
+      "player": {
+        "id": 2,
+        "display_name": "Freya",
+        "platform": "Steam"
+      },
+      "summary": {
+        "display_id": "V_76561198087654321",
+        "platform": "Steam",
+        "name": "Freya",
+        "peer_uid": 35,
+        "playfab_id": null
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": 162
+      }
+    },
+    {
+      "id": "ec9f23b9-6588-4390-8107-1bd463ecb147",
+      "at": "2026-09-10T17:36:15Z",
+      "day": 190,
+      "type": "player.biome_changed",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "from": "Mountain",
+        "to": "Meadows",
+        "x": 76.1,
+        "z": -253.1,
+        "first_discovery": false
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "dac1c247-fcfb-4630-9e56-b903931f7635",
+      "at": "2026-09-10T17:30:00Z",
+      "day": 189,
+      "type": "world.saved",
+      "player": null,
+      "summary": {
+        "duration_ms": 570
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "f4febaec-03b6-4b6f-82a1-d31509e4a54c",
+      "at": "2026-09-10T17:30:00Z",
+      "day": 189,
+      "type": "world.save_started",
+      "player": null,
+      "summary": {},
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "9efc19ed-7c41-4723-9666-cbb1470dbd13",
+      "at": "2026-09-10T17:13:15Z",
+      "day": 189,
+      "type": "player.biome_changed",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "from": "Meadows",
+        "to": "Mountain",
+        "x": 2222.2,
+        "z": 3026.8,
+        "first_discovery": false
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "6ebb8ac2-fb90-49ba-97da-cc07222d4361",
+      "at": "2026-09-10T17:05:15Z",
+      "day": 189,
+      "type": "player.spawned",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "name": "Bjorn",
+        "character_id": 3187264590123456,
+        "respawn": false,
+        "x": 113.6,
+        "z": -258.7,
+        "biome": "Meadows"
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "ee42b421-f66a-42ef-aa48-9adb3966d877",
+      "at": "2026-09-10T17:05:00Z",
+      "day": 189,
+      "type": "player.joined",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "display_id": "V_76561198012345678",
+        "platform": "Steam",
+        "name": "Bjorn",
+        "peer_uid": 34,
+        "playfab_id": null
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": 161
+      }
+    },
+    {
+      "id": "4ca9eaa3-c30c-4402-94cd-e929b08a7ca2",
+      "at": "2026-09-10T17:00:01Z",
+      "day": 189,
+      "type": "world.saved",
+      "player": null,
+      "summary": {
+        "duration_ms": 1037
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "f2c39ad4-9e54-41fc-8275-244975c6ca0a",
+      "at": "2026-09-10T17:00:00Z",
+      "day": 189,
+      "type": "world.save_started",
+      "player": null,
+      "summary": {},
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "50c8df6d-18e3-422b-8715-a7917593e937",
+      "at": "2026-09-10T16:30:00Z",
+      "day": 189,
+      "type": "world.saved",
+      "player": null,
+      "summary": {
+        "duration_ms": 858
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "856a66c3-231f-485c-8df4-4f5f41e06c7b",
+      "at": "2026-09-10T16:30:00Z",
+      "day": 189,
+      "type": "world.save_started",
+      "player": null,
+      "summary": {},
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "5e417382-3c30-4311-b2bb-013eb158a17f",
+      "at": "2026-09-10T16:00:00Z",
+      "day": 189,
+      "type": "world.saved",
+      "player": null,
+      "summary": {
+        "duration_ms": 410
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "566bb926-4abc-4944-90fa-7561592968cd",
+      "at": "2026-09-10T16:00:00Z",
+      "day": 189,
+      "type": "world.save_started",
+      "player": null,
+      "summary": {},
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "e6063824-ee12-4507-994e-65b46c19d01f",
+      "at": "2026-09-10T15:30:00Z",
+      "day": 189,
+      "type": "world.saved",
+      "player": null,
+      "summary": {
+        "duration_ms": 701
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "10b3acaa-ca4c-4ab6-bdb9-f9ca2ea83adf",
+      "at": "2026-09-10T15:30:00Z",
+      "day": 189,
+      "type": "world.save_started",
+      "player": null,
+      "summary": {},
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "8ec5545b-3eaa-4c76-b67c-eaa48cdc3680",
+      "at": "2026-09-10T15:00:00Z",
+      "day": 189,
+      "type": "world.saved",
+      "player": null,
+      "summary": {
+        "duration_ms": 976
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "a6f56582-b54b-46c2-9961-ec64f114547a",
+      "at": "2026-09-10T15:00:00Z",
+      "day": 189,
+      "type": "world.save_started",
+      "player": null,
+      "summary": {},
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "39175be3-5ea7-4de1-8089-0bc23f1d8212",
+      "at": "2026-09-10T14:30:01Z",
+      "day": 189,
+      "type": "world.saved",
+      "player": null,
+      "summary": {
+        "duration_ms": 1278
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "131680d2-e95d-4577-99cf-afd399e9b10d",
+      "at": "2026-09-10T14:30:00Z",
+      "day": 189,
+      "type": "world.save_started",
+      "player": null,
+      "summary": {},
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "a5f9f97f-2379-4c46-b42f-c73031275a71",
+      "at": "2026-09-10T14:00:01Z",
+      "day": 189,
+      "type": "world.saved",
+      "player": null,
+      "summary": {
+        "duration_ms": 1241
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "1ab831b6-1eed-4bc7-9d28-4595b217303c",
+      "at": "2026-09-10T14:00:00Z",
+      "day": 189,
+      "type": "world.save_started",
+      "player": null,
+      "summary": {},
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "eecdcbd5-931e-4570-8e5a-f13ea2abf0dc",
+      "at": "2026-09-10T13:30:01Z",
+      "day": 189,
+      "type": "world.saved",
+      "player": null,
+      "summary": {
+        "duration_ms": 1266
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "155918f4-4c2d-42ce-8924-db05d2e6c44d",
+      "at": "2026-09-10T13:30:00Z",
+      "day": 189,
+      "type": "world.save_started",
+      "player": null,
+      "summary": {},
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "c701bd3d-e9a3-4251-af28-66bdb3d23f60",
+      "at": "2026-09-10T13:00:00Z",
+      "day": 189,
+      "type": "world.saved",
+      "player": null,
+      "summary": {
+        "duration_ms": 731
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "06a2a36b-4049-48ba-9930-7264ae722f0b",
+      "at": "2026-09-10T13:00:00Z",
+      "day": 189,
+      "type": "world.save_started",
+      "player": null,
+      "summary": {},
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "1b33560d-f21e-446c-9a6d-dc95654541a2",
+      "at": "2026-09-10T12:30:01Z",
+      "day": 189,
+      "type": "world.saved",
+      "player": null,
+      "summary": {
+        "duration_ms": 1045
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "1f291619-d8e2-4619-af07-ca56761c8cc4",
+      "at": "2026-09-10T12:30:00Z",
+      "day": 189,
+      "type": "world.save_started",
+      "player": null,
+      "summary": {},
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "ab0f466b-a420-462d-8e99-5993886c47f5",
+      "at": "2026-09-10T12:00:01Z",
+      "day": 189,
+      "type": "world.saved",
+      "player": null,
+      "summary": {
+        "duration_ms": 1164
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "aabb0c8d-59c8-4047-b11f-15686f115ba5",
+      "at": "2026-09-10T12:00:00Z",
+      "day": 189,
+      "type": "world.save_started",
+      "player": null,
+      "summary": {},
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "8965ffad-e8dd-4193-a6df-71fcc13d9ee3",
+      "at": "2026-09-10T11:30:00Z",
+      "day": 189,
+      "type": "world.saved",
+      "player": null,
+      "summary": {
+        "duration_ms": 409
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "d4949005-a9fd-4009-8ca5-f937bcc60be6",
+      "at": "2026-09-10T11:30:00Z",
+      "day": 189,
+      "type": "world.save_started",
+      "player": null,
+      "summary": {},
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "82c99d75-d5f9-4b38-bc0a-b32ecfa04ce3",
+      "at": "2026-09-10T11:00:00Z",
+      "day": 189,
+      "type": "world.saved",
+      "player": null,
+      "summary": {
+        "duration_ms": 866
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "e99ccdb9-2dd5-4dd8-a5c7-d0794361b33c",
+      "at": "2026-09-10T11:00:00Z",
+      "day": 189,
+      "type": "world.save_started",
+      "player": null,
+      "summary": {},
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "f44b4609-038f-44da-84da-56a8b772b73b",
+      "at": "2026-09-10T10:30:01Z",
+      "day": 189,
+      "type": "world.saved",
+      "player": null,
+      "summary": {
+        "duration_ms": 1380
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "eceb0f7f-463b-48bc-a7b7-0ed08ea45c0c",
+      "at": "2026-09-10T10:30:00Z",
+      "day": 189,
+      "type": "world.save_started",
+      "player": null,
+      "summary": {},
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "fbe15939-f679-4178-876a-a01f2eef8cff",
+      "at": "2026-09-10T10:00:01Z",
+      "day": 189,
+      "type": "world.saved",
+      "player": null,
+      "summary": {
+        "duration_ms": 1481
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "ad08e168-ccc4-49b4-9fd5-69d199e4a554",
+      "at": "2026-09-10T10:00:00Z",
+      "day": 189,
+      "type": "world.save_started",
+      "player": null,
+      "summary": {},
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "0755b1e8-69cd-4605-bf4b-675881829d42",
+      "at": "2026-09-10T09:30:00Z",
+      "day": 189,
+      "type": "world.saved",
+      "player": null,
+      "summary": {
+        "duration_ms": 449
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "cadafb9c-56fa-432d-b788-47e325a978e2",
+      "at": "2026-09-10T09:30:00Z",
+      "day": 189,
+      "type": "world.save_started",
+      "player": null,
+      "summary": {},
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "98e52647-d915-4f24-b9e7-08c2c920e227",
+      "at": "2026-09-10T09:00:01Z",
+      "day": 189,
+      "type": "world.saved",
+      "player": null,
+      "summary": {
+        "duration_ms": 1295
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "8fc16d7e-c09c-4bad-9ebf-6a7b8c9daeb5",
+      "at": "2026-09-10T08:30:00Z",
+      "day": 192,
+      "type": "chat.message",
+      "player": null,
+      "summary": {
+        "kind": "shout",
+        "text": "Server restart at 09:00 UTC for the backup, log out before then",
+        "x": 0,
+        "z": 0,
+        "biome": "None"
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "05112c70-3b32-4760-ae33-fb0778795672",
+      "at": "2026-09-08T21:58:00Z",
+      "day": 189,
+      "type": "player.left",
+      "player": {
+        "id": 6,
+        "display_name": "Sigrid",
+        "platform": "Steam"
+      },
+      "summary": {
+        "name": "Sigrid",
+        "session_s": 8460,
+        "reason": "disconnect"
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": 160
+      }
+    },
+    {
+      "id": "e14e51bb-81d5-4baf-a525-44d7eafed35d",
+      "at": "2026-09-06T19:56:54Z",
+      "day": 171,
+      "type": "player.died",
+      "player": {
+        "id": 8,
+        "display_name": "Hilde",
+        "platform": "Steam"
+      },
+      "summary": {
+        "name": "Hilde",
+        "character_id": 2287654321098765,
+        "x": 2308.7,
+        "z": 3061.9,
+        "biome": "Mountain",
+        "observed_cause": null,
+        "cause": null,
+        "attacker": null
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "ae0dc76b-668e-4ac8-ae8e-65dcb24c67bd",
+      "at": "2026-09-01T19:53:34Z",
+      "day": 159,
+      "type": "player.died",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "name": "Bjorn",
+        "character_id": 3187264590123456,
+        "x": 2165.3,
+        "z": 3207,
+        "biome": "Mountain",
+        "observed_cause": {
+          "hit_type": "EnemyHit",
+          "attacker_prefab": "Greydwarf_Elite",
+          "attacker": null,
+          "at": "2026-09-01T19:53:30Z"
+        },
+        "cause": "Greydwarf brute",
+        "attacker": null
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "9a0d27e8-d1ad-4cbe-8fc0-7b8c9daebfc6",
+      "at": "2026-08-31T20:12:09Z",
+      "day": 156,
+      "type": "player.died",
+      "player": {
+        "id": 7,
+        "display_name": "Torvald",
+        "platform": "Xbox"
+      },
+      "summary": {
+        "name": "Torvald",
+        "character_id": 4412345678901234,
+        "x": 2201.5,
+        "z": 3190.4,
+        "biome": "Mountain",
+        "observed_cause": {
+          "hit_type": "Freezing",
+          "attacker_prefab": null,
+          "attacker": null,
+          "at": "2026-08-31T20:12:08Z"
+        },
+        "cause": "Freezing",
+        "attacker": null
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "f739ebc5-fa8c-46c8-adb6-1dc5c722469d",
+      "at": "2026-08-30T19:29:00Z",
+      "day": 152,
+      "type": "boss.defeated",
+      "player": {
+        "id": 2,
+        "display_name": "Freya",
+        "platform": "Steam"
+      },
+      "summary": {
+        "key": "defeated_dragon",
+        "first_time": true,
+        "nearby": [
+          {
+            "id": 1,
+            "display_name": "Bjorn",
+            "platform": "Steam"
+          },
+          {
+            "id": 2,
+            "display_name": "Freya",
+            "platform": "Steam"
+          }
+        ],
+        "prefab": "Dragon",
+        "name_key": "$enemy_dragon",
+        "participants": [
+          {
+            "id": 2,
+            "display_name": "Freya",
+            "platform": "Steam"
+          }
+        ],
+        "sender": {
+          "id": 1,
+          "display_name": "Bjorn",
+          "platform": "Steam"
+        },
+        "boss_name": "Moder"
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": "defeated_dragon",
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "ab1e38f9-e2be-4dcf-9ad1-8c9daebfc0d7",
+      "at": "2026-08-30T19:29:00Z",
+      "day": 152,
+      "type": "global_key.set",
+      "player": null,
+      "summary": {
+        "key": "defeated_dragon",
+        "value": null,
+        "first_time": true
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "6500fe0e-55a9-4127-b695-48bd2b7d56cf",
+      "at": "2026-08-30T19:21:45Z",
+      "day": 152,
+      "type": "boss.engaged",
+      "player": null,
+      "summary": {
+        "prefab": "Dragon",
+        "name_key": "$enemy_dragon",
+        "x": 2323.3,
+        "z": 3483.8,
+        "biome": "Mountain",
+        "alert_message": "$enemy_dragon_alert",
+        "nearby": [
+          {
+            "id": 1,
+            "display_name": "Bjorn",
+            "platform": "Steam"
+          },
+          {
+            "id": 2,
+            "display_name": "Freya",
+            "platform": "Steam"
+          }
+        ],
+        "boss_name": "Moder"
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": "defeated_dragon",
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "bc2f490a-f3cf-4ed0-8be2-9daebfc0d1e8",
+      "at": "2026-08-30T19:15:00Z",
+      "day": 152,
+      "type": "boss.summoned",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "prefab": "Dragon",
+        "name_key": "$enemy_dragon",
+        "x": 2323.3,
+        "z": 3483.8,
+        "biome": "Mountain",
+        "method": "spawn_rpc",
+        "summoner": {
+          "id": 1,
+          "display_name": "Bjorn",
+          "platform": "Steam"
+        },
+        "boss_name": "Moder"
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": "defeated_dragon",
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "cd305a1b-04d0-4fe1-9cf3-aebfc0d1e2f9",
+      "at": "2026-08-30T09:03:41Z",
+      "day": 149,
+      "type": "world.rollback_detected",
+      "player": null,
+      "summary": {
+        "from_net_time": 277800,
+        "to_net_time": 272400
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "de416b2c-15e1-4af2-8d04-bfc0d1e2f30a",
+      "at": "2026-08-30T09:03:40Z",
+      "day": 149,
+      "type": "server.started",
+      "player": null,
+      "summary": {
+        "bepinex_version": "5.4.23.5",
+        "game_version": "1.0.7",
+        "global_keys": [
+          "defeated_eikthyr",
+          "KilledTroll",
+          "defeated_gdking",
+          "Hildir1",
+          "defeated_bonemass",
+          "defeated_serpent"
+        ],
+        "missing_hooks": [],
+        "net_time": 272400,
+        "network_version": 39,
+        "plugin_version": "0.1.0",
+        "unity_version": "6000.0.75f1",
+        "world_day": 151,
+        "world_name": "Ravenhold",
+        "world_uid": 7130451826379422
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+        "session_id": null
+      }
+    },
+    {
+      "id": "ef527c3d-26f2-4b03-9e15-c0d1e2f3041b",
+      "at": "2026-08-30T00:20:00Z",
+      "day": 149,
+      "type": "server.lost",
+      "player": null,
+      "summary": {
+        "last_heartbeat_at": "2026-08-30T00:17:00Z"
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": "c9d3e7f1-5b2a-4f6e-9c8d-1a2b3c4d5e6f",
+        "session_id": null
+      }
+    },
+    {
+      "id": "7a1c5e9b-3d4f-4a6b-8c2d-9e0f1a2b3c4d",
+      "at": "2026-08-29T23:49:58Z",
+      "day": 149,
+      "type": "raid.started",
+      "player": null,
+      "summary": {
+        "name": "wolves",
+        "x": -1210.4,
+        "z": 388.9,
+        "biome": "Mountain",
+        "duration_s": 120,
+        "nearby": [],
+        "raid_label": "You are being hunted"
+      },
+      "links": {
+        "raid_id": 4,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "f0638d4e-3703-4c14-8f26-d1e2f304152c",
+      "at": "2026-08-29T23:40:00Z",
+      "day": 149,
+      "type": "server.stopping",
+      "player": null,
+      "summary": {
+        "online_count": 0,
+        "uptime_s": 3476269
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": "a5c1a4de-1a2b-4c3d-9e8f-6d5a4b3c2d1e",
+        "session_id": null
+      }
+    },
+    {
+      "id": "c42bc0d0-da7f-4d4e-9e85-dcc6e0449d10",
+      "at": "2026-08-21T19:57:47Z",
+      "day": 118,
+      "type": "raid.ended",
+      "player": null,
+      "summary": {
+        "name": "army_bonemass",
+        "elapsed_s": 107,
+        "raid_label": "A foul smell from the swamp"
+      },
+      "links": {
+        "raid_id": 3,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "28ae9c74-b3ff-43f4-bfee-b86b595b917a",
+      "at": "2026-08-21T19:56:00Z",
+      "day": 117,
+      "type": "raid.started",
+      "player": null,
+      "summary": {
+        "name": "army_bonemass",
+        "x": 139.1,
+        "z": -232.2,
+        "biome": "Swamp",
+        "duration_s": 100,
+        "nearby": [
+          {
+            "id": 6,
+            "display_name": "Sigrid",
+            "platform": "Steam"
+          },
+          {
+            "id": 7,
+            "display_name": "Torvald",
+            "platform": "Xbox"
+          },
+          {
+            "id": 1,
+            "display_name": "Bjorn",
+            "platform": "Steam"
+          },
+          {
+            "id": 2,
+            "display_name": "Freya",
+            "platform": "Steam"
+          },
+          {
+            "id": 3,
+            "display_name": "Ragnar",
+            "platform": "Steam"
+          }
+        ],
+        "raid_label": "A foul smell from the swamp"
+      },
+      "links": {
+        "raid_id": 3,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "2256b1e1-cb18-414c-8c6f-1db39aa87349",
+      "at": "2026-08-10T19:49:00Z",
+      "day": 85,
+      "type": "global_key.set",
+      "player": null,
+      "summary": {
+        "key": "Hildir1",
+        "value": null,
+        "first_time": true
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    }
+  ],
+  "next_cursor": "NTA"
+}

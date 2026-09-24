@@ -1,0 +1,83 @@
+{
+  "run": {
+    "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+    "started_at": "2026-08-30T09:03:40Z",
+    "stopped_at": null,
+    "stop_reason": null,
+    "game_version": "1.0.7",
+    "plugin_version": "0.1.0",
+    "peak_players": 7,
+    "saves": 548
+  },
+  "last_heartbeat_at": "2026-09-10T19:29:35Z",
+  "heartbeat_age_s": 25,
+  "plugin_version": "0.1.0",
+  "game_version": "1.0.7",
+  "missing_hooks": [],
+  "queue_depth": 0,
+  "dropped_events": 0,
+  "a2s": {
+    "last_ok_at": "2026-09-10T19:29:20Z",
+    "last_error": null,
+    "online": true,
+    "player_count": 2
+  },
+  "ingest": {
+    "last_batch_at": "2026-09-10T19:29:42Z",
+    "batches_24h": 1620,
+    "events_24h": 921,
+    "duplicates_24h": 3,
+    "rejected_24h": 0
+  },
+  "db": {
+    "events_total": 184213,
+    "size_mb": 312.4
+  },
+  "backup": {
+    "last_at": "2026-09-10T03:00:31Z",
+    "size_mb": 39.1,
+    "kept": 14
+  },
+  "map": {
+    "available": true,
+    "generated_at": "2026-08-30T09:05:10Z"
+  },
+  "jobs": [
+    {
+      "name": "a2s_poller",
+      "last_run_at": "2026-09-10T19:29:20Z",
+      "last_ok": true,
+      "last_error": null
+    },
+    {
+      "name": "heartbeat_watchdog",
+      "last_run_at": "2026-09-10T19:29:48Z",
+      "last_ok": true,
+      "last_error": null
+    },
+    {
+      "name": "retention_prune",
+      "last_run_at": "2026-09-10T04:00:00Z",
+      "last_ok": true,
+      "last_error": null
+    },
+    {
+      "name": "nightly_backup",
+      "last_run_at": "2026-09-10T03:00:04Z",
+      "last_ok": true,
+      "last_error": null
+    },
+    {
+      "name": "stream_broadcaster",
+      "last_run_at": "2026-09-10T19:29:42Z",
+      "last_ok": true,
+      "last_error": null
+    },
+    {
+      "name": "heralds",
+      "last_run_at": "2026-09-10T19:29:43Z",
+      "last_ok": true,
+      "last_error": null
+    }
+  ]
+}

@@ -1,0 +1,322 @@
+{
+  "built_total": 1312,
+  "destroyed_total": 75,
+  "series": [
+    {
+      "date": "2026-08-12",
+      "built": 113,
+      "destroyed": 7
+    },
+    {
+      "date": "2026-08-13",
+      "built": 0,
+      "destroyed": 0
+    },
+    {
+      "date": "2026-08-14",
+      "built": 62,
+      "destroyed": 6
+    },
+    {
+      "date": "2026-08-15",
+      "built": 28,
+      "destroyed": 0
+    },
+    {
+      "date": "2026-08-16",
+      "built": 50,
+      "destroyed": 3
+    },
+    {
+      "date": "2026-08-17",
+      "built": 0,
+      "destroyed": 0
+    },
+    {
+      "date": "2026-08-18",
+      "built": 88,
+      "destroyed": 4
+    },
+    {
+      "date": "2026-08-19",
+      "built": 0,
+      "destroyed": 0
+    },
+    {
+      "date": "2026-08-20",
+      "built": 0,
+      "destroyed": 0
+    },
+    {
+      "date": "2026-08-21",
+      "built": 60,
+      "destroyed": 6
+    },
+    {
+      "date": "2026-08-22",
+      "built": 0,
+      "destroyed": 0
+    },
+    {
+      "date": "2026-08-23",
+      "built": 94,
+      "destroyed": 6
+    },
+    {
+      "date": "2026-08-24",
+      "built": 119,
+      "destroyed": 5
+    },
+    {
+      "date": "2026-08-25",
+      "built": 0,
+      "destroyed": 0
+    },
+    {
+      "date": "2026-08-26",
+      "built": 0,
+      "destroyed": 0
+    },
+    {
+      "date": "2026-08-27",
+      "built": 53,
+      "destroyed": 2
+    },
+    {
+      "date": "2026-08-28",
+      "built": 67,
+      "destroyed": 5
+    },
+    {
+      "date": "2026-08-29",
+      "built": 73,
+      "destroyed": 3
+    },
+    {
+      "date": "2026-08-30",
+      "built": 72,
+      "destroyed": 7
+    },
+    {
+      "date": "2026-08-31",
+      "built": 0,
+      "destroyed": 0
+    },
+    {
+      "date": "2026-09-01",
+      "built": 65,
+      "destroyed": 5
+    },
+    {
+      "date": "2026-09-02",
+      "built": 0,
+      "destroyed": 0
+    },
+    {
+      "date": "2026-09-03",
+      "built": 0,
+      "destroyed": 0
+    },
+    {
+      "date": "2026-09-04",
+      "built": 65,
+      "destroyed": 3
+    },
+    {
+      "date": "2026-09-05",
+      "built": 0,
+      "destroyed": 0
+    },
+    {
+      "date": "2026-09-06",
+      "built": 82,
+      "destroyed": 4
+    },
+    {
+      "date": "2026-09-07",
+      "built": 101,
+      "destroyed": 4
+    },
+    {
+      "date": "2026-09-08",
+      "built": 91,
+      "destroyed": 5
+    },
+    {
+      "date": "2026-09-09",
+      "built": 0,
+      "destroyed": 0
+    },
+    {
+      "date": "2026-09-10",
+      "built": 17,
+      "destroyed": 0
+    }
+  ],
+  "by_builder": [
+    {
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "built": 349,
+      "world": false
+    },
+    {
+      "player": {
+        "id": 2,
+        "display_name": "Freya",
+        "platform": "Steam"
+      },
+      "built": 290,
+      "world": false
+    },
+    {
+      "player": {
+        "id": 5,
+        "display_name": "Ulf",
+        "platform": "Steam"
+      },
+      "built": 178,
+      "world": false
+    },
+    {
+      "player": {
+        "id": 3,
+        "display_name": "Ragnar",
+        "platform": "Steam"
+      },
+      "built": 161,
+      "world": false
+    },
+    {
+      "player": {
+        "id": 6,
+        "display_name": "Sigrid",
+        "platform": "Steam"
+      },
+      "built": 135,
+      "world": false
+    },
+    {
+      "player": {
+        "id": 7,
+        "display_name": "Torvald",
+        "platform": "Xbox"
+      },
+      "built": 77,
+      "world": false
+    },
+    {
+      "player": {
+        "id": 4,
+        "display_name": "Astrid",
+        "platform": "Steam"
+      },
+      "built": 66,
+      "world": false
+    },
+    {
+      "player": {
+        "id": 8,
+        "display_name": "Hilde",
+        "platform": "Steam"
+      },
+      "built": 44,
+      "world": false
+    },
+    {
+      "player": null,
+      "built": 7,
+      "world": true
+    },
+    {
+      "player": null,
+      "built": 5,
+      "world": false
+    }
+  ],
+  "by_prefab": [
+    {
+      "prefab": "stone_arch",
+      "built": 79
+    },
+    {
+      "prefab": "fire_pit",
+      "built": 78
+    },
+    {
+      "prefab": "wood_door",
+      "built": 78
+    },
+    {
+      "prefab": "wood_beam",
+      "built": 73
+    },
+    {
+      "prefab": "forge",
+      "built": 73
+    },
+    {
+      "prefab": "wood_floor",
+      "built": 68
+    },
+    {
+      "prefab": "wood_fence",
+      "built": 67
+    },
+    {
+      "prefab": "wood_wall",
+      "built": 67
+    },
+    {
+      "prefab": "piece_sharpening_stone",
+      "built": 65
+    },
+    {
+      "prefab": "piece_bed",
+      "built": 63
+    },
+    {
+      "prefab": "piece_chest_wood",
+      "built": 63
+    },
+    {
+      "prefab": "wood_stair",
+      "built": 62
+    },
+    {
+      "prefab": "wood_roof_45",
+      "built": 62
+    },
+    {
+      "prefab": "wood_pole2",
+      "built": 61
+    },
+    {
+      "prefab": "stone_wall_2x1",
+      "built": 58
+    },
+    {
+      "prefab": "cauldron",
+      "built": 58
+    },
+    {
+      "prefab": "piece_banner01",
+      "built": 57
+    },
+    {
+      "prefab": "piece_workbench",
+      "built": 57
+    },
+    {
+      "prefab": "darkwood_roof",
+      "built": 57
+    },
+    {
+      "prefab": "stone_floor",
+      "built": 54
+    }
+  ]
+}

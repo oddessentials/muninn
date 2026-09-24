@@ -1,0 +1,16 @@
+.git
+node_modules
+web/node_modules
+web/.svelte-kit
+web/build
+web/test-results
+web/playwright-report
+local
+plugin
+docs
+.railway
+.githooks
+scripts
+*.md
+.env
+.env.*

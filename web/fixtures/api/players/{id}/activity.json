@@ -1,0 +1,1238 @@
+{
+  "items": [
+    {
+      "id": "76b6b3f4-38b1-4f3e-b5c2-d4e8893e4263",
+      "at": "2026-09-10T19:09:40Z",
+      "day": 193,
+      "type": "chat.message",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "kind": "ping",
+        "text": null,
+        "x": 76.1,
+        "z": -253.1,
+        "biome": "Meadows"
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "234eed59-6120-4333-b8c6-11bc3002f3eb",
+      "at": "2026-09-10T18:28:45Z",
+      "day": 191,
+      "type": "chat.message",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "kind": "ping",
+        "text": null,
+        "x": 76.1,
+        "z": -253.1,
+        "biome": "Meadows"
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "ec9f23b9-6588-4390-8107-1bd463ecb147",
+      "at": "2026-09-10T17:36:15Z",
+      "day": 190,
+      "type": "player.biome_changed",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "from": "Mountain",
+        "to": "Meadows",
+        "x": 76.1,
+        "z": -253.1,
+        "first_discovery": false
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "9efc19ed-7c41-4723-9666-cbb1470dbd13",
+      "at": "2026-09-10T17:13:15Z",
+      "day": 189,
+      "type": "player.biome_changed",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "from": "Meadows",
+        "to": "Mountain",
+        "x": 2222.2,
+        "z": 3026.8,
+        "first_discovery": false
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "6ebb8ac2-fb90-49ba-97da-cc07222d4361",
+      "at": "2026-09-10T17:05:15Z",
+      "day": 189,
+      "type": "player.spawned",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "name": "Bjorn",
+        "character_id": 3187264590123456,
+        "respawn": false,
+        "x": 113.6,
+        "z": -258.7,
+        "biome": "Meadows"
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "ee42b421-f66a-42ef-aa48-9adb3966d877",
+      "at": "2026-09-10T17:05:00Z",
+      "day": 189,
+      "type": "player.joined",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "display_id": "V_76561198012345678",
+        "platform": "Steam",
+        "name": "Bjorn",
+        "peer_uid": 34,
+        "playfab_id": null
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": 161
+      }
+    },
+    {
+      "id": "4bc30354-5f96-4520-b9a8-df3c47fc6e11",
+      "at": "2026-09-08T20:42:00Z",
+      "day": 186,
+      "type": "player.left",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "name": "Bjorn",
+        "session_s": 4620,
+        "reason": "disconnect"
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": 158
+      }
+    },
+    {
+      "id": "afa40f9e-81d9-48ff-964d-1896d3070f62",
+      "at": "2026-09-08T19:34:15Z",
+      "day": 184,
+      "type": "player.biome_changed",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "from": "Meadows",
+        "to": "BlackForest",
+        "x": 958.6,
+        "z": -1561.7,
+        "first_discovery": false
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "07b39de7-af45-4b76-9801-9112de71afab",
+      "at": "2026-09-08T19:25:15Z",
+      "day": 184,
+      "type": "player.spawned",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "name": "Bjorn",
+        "character_id": 3187264590123456,
+        "respawn": false,
+        "x": 111.4,
+        "z": -251.8,
+        "biome": "Meadows"
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "19ec8fdb-6980-427b-9132-85244dd2f4f6",
+      "at": "2026-09-08T19:25:00Z",
+      "day": 184,
+      "type": "player.joined",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "display_id": "V_76561198012345678",
+        "platform": "Steam",
+        "name": "Bjorn",
+        "peer_uid": 28,
+        "playfab_id": null
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": 158
+      }
+    },
+    {
+      "id": "aae189f7-9e18-46f9-aa48-52b0276ff5f5",
+      "at": "2026-09-08T12:56:00Z",
+      "day": 183,
+      "type": "player.left",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "name": "Bjorn",
+        "session_s": 2820,
+        "reason": "timeout"
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": 155
+      }
+    },
+    {
+      "id": "aa80c367-1003-4620-9b4f-431d48773cf3",
+      "at": "2026-09-08T12:43:15Z",
+      "day": 183,
+      "type": "player.biome_changed",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "from": "BlackForest",
+        "to": "Mountain",
+        "x": 1906.9,
+        "z": 3042.6,
+        "first_discovery": false
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "20a3a7f2-5b7d-41a6-8b54-875b63fdf4c4",
+      "at": "2026-09-08T12:15:15Z",
+      "day": 182,
+      "type": "player.biome_changed",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "from": "Meadows",
+        "to": "BlackForest",
+        "x": 870.6,
+        "z": -1451.1,
+        "first_discovery": false
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "60e7b7a6-0e72-4b85-9d18-799f5bb9fa79",
+      "at": "2026-09-08T12:09:15Z",
+      "day": 182,
+      "type": "player.spawned",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "name": "Bjorn",
+        "character_id": 3187264590123456,
+        "respawn": false,
+        "x": 105.7,
+        "z": -236.2,
+        "biome": "Meadows"
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "abb320c7-a3cf-416e-9d95-fa047f272640",
+      "at": "2026-09-08T12:09:00Z",
+      "day": 182,
+      "type": "player.joined",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "display_id": "V_76561198012345678",
+        "platform": "Steam",
+        "name": "Bjorn",
+        "peer_uid": 33,
+        "playfab_id": null
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": 155
+      }
+    },
+    {
+      "id": "34cb6041-7218-4537-a9a5-58d1e717d793",
+      "at": "2026-09-07T20:38:00Z",
+      "day": 180,
+      "type": "player.left",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "name": "Bjorn",
+        "session_s": 6360,
+        "reason": "disconnect"
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": 150
+      }
+    },
+    {
+      "id": "56671597-5433-4b87-853e-7dbb7aee246e",
+      "at": "2026-09-07T19:45:15Z",
+      "day": 178,
+      "type": "player.biome_changed",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "from": "BlackForest",
+        "to": "Plains",
+        "x": -3969.2,
+        "z": -2027.5,
+        "first_discovery": false
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "489c20d5-2321-4449-a22f-a5a46bfe7801",
+      "at": "2026-09-07T19:16:15Z",
+      "day": 177,
+      "type": "player.biome_changed",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "from": "Meadows",
+        "to": "BlackForest",
+        "x": 744.5,
+        "z": -1393,
+        "first_discovery": false
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "a7120a8b-db60-4ea7-bc4e-8d02f98cee44",
+      "at": "2026-09-07T18:52:15Z",
+      "day": 176,
+      "type": "player.spawned",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "name": "Bjorn",
+        "character_id": 3187264590123456,
+        "respawn": false,
+        "x": 103.9,
+        "z": -221.5,
+        "biome": "Meadows"
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "ad416368-71cb-4f7e-bf78-58991946de17",
+      "at": "2026-09-07T18:52:00Z",
+      "day": 176,
+      "type": "player.joined",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "display_id": "V_76561198012345678",
+        "platform": "Steam",
+        "name": "Bjorn",
+        "peer_uid": 20,
+        "playfab_id": null
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": 150
+      }
+    },
+    {
+      "id": "596cf1dd-7aba-44b4-95c2-27d04bdadb79",
+      "at": "2026-09-07T13:28:00Z",
+      "day": 176,
+      "type": "player.left",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "name": "Bjorn",
+        "session_s": 2040,
+        "reason": "disconnect"
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": 147
+      }
+    },
+    {
+      "id": "2940e073-2487-4779-acd2-1d5ecea2d7da",
+      "at": "2026-09-07T13:13:15Z",
+      "day": 176,
+      "type": "player.biome_changed",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "from": "Meadows",
+        "to": "Mountain",
+        "x": 1894.5,
+        "z": 3017.2,
+        "first_discovery": false
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "52473155-878b-489a-81d9-4a86b26653f8",
+      "at": "2026-09-07T12:54:15Z",
+      "day": 175,
+      "type": "player.spawned",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "name": "Bjorn",
+        "character_id": 3187264590123456,
+        "respawn": false,
+        "x": 130,
+        "z": -234.5,
+        "biome": "Meadows"
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "07c63d97-452a-46c8-a4a2-1a53d087cf2b",
+      "at": "2026-09-07T12:54:00Z",
+      "day": 175,
+      "type": "player.joined",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "display_id": "V_76561198012345678",
+        "platform": "Steam",
+        "name": "Bjorn",
+        "peer_uid": 27,
+        "playfab_id": null
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": 147
+      }
+    },
+    {
+      "id": "1705e957-ca85-4487-aaf4-67be3c0843a6",
+      "at": "2026-09-06T21:28:00Z",
+      "day": 174,
+      "type": "player.left",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "name": "Bjorn",
+        "session_s": 6720,
+        "reason": "disconnect"
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": 146
+      }
+    },
+    {
+      "id": "26c3f6a9-f229-4718-b080-07f2622cfffb",
+      "at": "2026-09-06T20:43:15Z",
+      "day": 172,
+      "type": "player.biome_changed",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "from": "Plains",
+        "to": "Swamp",
+        "x": -2288.3,
+        "z": 838.8,
+        "first_discovery": false
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "11fcc6e6-c0d1-46ca-86c3-cd2cb12edcc6",
+      "at": "2026-09-06T20:16:15Z",
+      "day": 172,
+      "type": "player.biome_changed",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "from": "Swamp",
+        "to": "Plains",
+        "x": -3911.9,
+        "z": -2180.8,
+        "first_discovery": false
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "1f206d2b-9ab3-460b-bd43-dc2cb7abc255",
+      "at": "2026-09-06T19:54:15Z",
+      "day": 171,
+      "type": "player.biome_changed",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "from": "Meadows",
+        "to": "Swamp",
+        "x": -2476.2,
+        "z": 501.2,
+        "first_discovery": false
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "4eb2ebf7-51e1-442b-b16f-75f7b10c3c8f",
+      "at": "2026-09-06T19:36:15Z",
+      "day": 170,
+      "type": "player.spawned",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "name": "Bjorn",
+        "character_id": 3187264590123456,
+        "respawn": false,
+        "x": 102.9,
+        "z": -224.7,
+        "biome": "Meadows"
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "b01a61d1-ff69-4e5e-a14f-fe0c411f58b9",
+      "at": "2026-09-06T19:36:00Z",
+      "day": 170,
+      "type": "player.joined",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "display_id": "V_76561198012345678",
+        "platform": "Steam",
+        "name": "Bjorn",
+        "peer_uid": 14,
+        "playfab_id": null
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": 146
+      }
+    },
+    {
+      "id": "5d4b4112-db15-4a6e-be23-4c5433a2fe93",
+      "at": "2026-09-06T12:57:00Z",
+      "day": 169,
+      "type": "player.left",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "name": "Bjorn",
+        "session_s": 1920,
+        "reason": "disconnect"
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": 141
+      }
+    },
+    {
+      "id": "758e600b-e3fb-4149-a4a7-b7621070e82d",
+      "at": "2026-09-06T12:44:15Z",
+      "day": 169,
+      "type": "player.biome_changed",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "from": "Meadows",
+        "to": "Swamp",
+        "x": -2435.6,
+        "z": 494.3,
+        "first_discovery": false
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "e83c9138-b687-4179-9e48-63a5cd6e95e3",
+      "at": "2026-09-06T12:25:15Z",
+      "day": 168,
+      "type": "player.spawned",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "name": "Bjorn",
+        "character_id": 3187264590123456,
+        "respawn": false,
+        "x": 112,
+        "z": -221.8,
+        "biome": "Meadows"
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "6d375f2e-80e0-4dfe-92a5-78de1964fef0",
+      "at": "2026-09-06T12:25:00Z",
+      "day": 168,
+      "type": "player.joined",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "display_id": "V_76561198012345678",
+        "platform": "Steam",
+        "name": "Bjorn",
+        "peer_uid": 19,
+        "playfab_id": null
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": 141
+      }
+    },
+    {
+      "id": "57fbce5e-1472-4e0f-9831-6eeca7f4aa81",
+      "at": "2026-09-04T21:27:00Z",
+      "day": 167,
+      "type": "player.left",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "name": "Bjorn",
+        "session_s": 7200,
+        "reason": "disconnect"
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": 137
+      }
+    },
+    {
+      "id": "9d1c15b6-f9f4-4474-aacc-b1ec19885156",
+      "at": "2026-09-04T20:14:15Z",
+      "day": 164,
+      "type": "player.biome_changed",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "from": "BlackForest",
+        "to": "Swamp",
+        "x": -2495.4,
+        "z": 666.3,
+        "first_discovery": false
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "2bf38336-e0e4-4fa9-be2b-98eb74f5bebc",
+      "at": "2026-09-04T19:46:15Z",
+      "day": 163,
+      "type": "player.biome_changed",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "from": "Meadows",
+        "to": "BlackForest",
+        "x": 643.5,
+        "z": -1412.7,
+        "first_discovery": false
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "55fa7720-ee08-472c-8252-4ccf6bb386f3",
+      "at": "2026-09-04T19:27:15Z",
+      "day": 163,
+      "type": "player.spawned",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "name": "Bjorn",
+        "character_id": 3187264590123456,
+        "respawn": false,
+        "x": 101.9,
+        "z": -230.9,
+        "biome": "Meadows"
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "85d3fd1e-cc92-4296-96df-ce4405aa5af9",
+      "at": "2026-09-04T19:27:00Z",
+      "day": 163,
+      "type": "player.joined",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "display_id": "V_76561198012345678",
+        "platform": "Steam",
+        "name": "Bjorn",
+        "peer_uid": 9,
+        "playfab_id": null
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": 137
+      }
+    },
+    {
+      "id": "fb9dfec4-c785-42df-a2cf-50476ddc05d7",
+      "at": "2026-09-01T20:14:00Z",
+      "day": 160,
+      "type": "player.left",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "name": "Bjorn",
+        "session_s": 5340,
+        "reason": "timeout"
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": 132
+      }
+    },
+    {
+      "id": "8fe8a99b-9bd1-4f4d-bea2-333c6cc72732",
+      "at": "2026-09-01T19:53:46Z",
+      "day": 159,
+      "type": "player.spawned",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "name": "Bjorn",
+        "character_id": 3187264590123456,
+        "respawn": true,
+        "x": 120,
+        "z": -240,
+        "biome": "Meadows"
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "ae0dc76b-668e-4ac8-ae8e-65dcb24c67bd",
+      "at": "2026-09-01T19:53:34Z",
+      "day": 159,
+      "type": "player.died",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "name": "Bjorn",
+        "character_id": 3187264590123456,
+        "x": 2165.3,
+        "z": 3207,
+        "biome": "Mountain",
+        "observed_cause": {
+          "hit_type": "EnemyHit",
+          "attacker_prefab": "Greydwarf_Elite",
+          "at": "2026-09-01T19:53:30Z"
+        },
+        "cause": "Greydwarf brute",
+        "attacker": null
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "efbf4a35-4836-467e-98af-00e3c7d4ed41",
+      "at": "2026-09-01T19:25:15Z",
+      "day": 158,
+      "type": "player.biome_changed",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "from": "Plains",
+        "to": "Mountain",
+        "x": 2179,
+        "z": 3180.4,
+        "first_discovery": false
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "d2511c04-4af4-4577-b86c-4ae0c4c8d356",
+      "at": "2026-09-01T19:01:15Z",
+      "day": 157,
+      "type": "player.biome_changed",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "from": "Meadows",
+        "to": "Plains",
+        "x": -3607.7,
+        "z": -2244.8,
+        "first_discovery": false
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "05326b9f-bbc1-48c0-910c-678b3ecfa8c9",
+      "at": "2026-09-01T18:45:15Z",
+      "day": 157,
+      "type": "player.spawned",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "name": "Bjorn",
+        "character_id": 3187264590123456,
+        "respawn": false,
+        "x": 131.5,
+        "z": -247.9,
+        "biome": "Meadows"
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "da3b4e1e-5611-4c83-94d9-fb82d5d451a1",
+      "at": "2026-09-01T18:45:00Z",
+      "day": 157,
+      "type": "player.joined",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "display_id": "V_76561198012345678",
+        "platform": "Steam",
+        "name": "Bjorn",
+        "peer_uid": 5,
+        "playfab_id": null
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": 132
+      }
+    },
+    {
+      "id": "c745efd9-b502-45f0-a508-f7ba64238620",
+      "at": "2026-08-30T20:01:00Z",
+      "day": 153,
+      "type": "player.left",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "name": "Bjorn",
+        "session_s": 3900,
+        "reason": "disconnect"
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": 128
+      }
+    },
+    {
+      "id": "f739ebc5-fa8c-46c8-adb6-1dc5c722469d",
+      "at": "2026-08-30T19:29:00Z",
+      "day": 152,
+      "type": "boss.defeated",
+      "player": {
+        "id": 2,
+        "display_name": "Freya",
+        "platform": "Steam"
+      },
+      "summary": {
+        "key": "defeated_dragon",
+        "first_time": true,
+        "nearby": [
+          {
+            "id": 1,
+            "display_name": "Bjorn",
+            "platform": "Steam"
+          },
+          {
+            "id": 2,
+            "display_name": "Freya",
+            "platform": "Steam"
+          }
+        ],
+        "prefab": "Dragon",
+        "name_key": "$enemy_dragon",
+        "participants": [
+          {
+            "id": 2,
+            "display_name": "Freya",
+            "platform": "Steam"
+          }
+        ],
+        "sender": {
+          "id": 1,
+          "display_name": "Bjorn",
+          "platform": "Steam"
+        },
+        "boss_name": "Moder"
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": "defeated_dragon",
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "6500fe0e-55a9-4127-b695-48bd2b7d56cf",
+      "at": "2026-08-30T19:21:45Z",
+      "day": 152,
+      "type": "boss.engaged",
+      "player": null,
+      "summary": {
+        "prefab": "Dragon",
+        "name_key": "$enemy_dragon",
+        "x": 2323.3,
+        "z": 3483.8,
+        "biome": "Mountain",
+        "alert_message": "$enemy_dragon_alert",
+        "nearby": [
+          {
+            "id": 1,
+            "display_name": "Bjorn",
+            "platform": "Steam"
+          },
+          {
+            "id": 2,
+            "display_name": "Freya",
+            "platform": "Steam"
+          }
+        ],
+        "boss_name": "Moder"
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": "defeated_dragon",
+        "run_id": null,
+        "session_id": null
+      }
+    },
+    {
+      "id": "a07ede9e-6340-4280-b015-3bc740ff3591",
+      "at": "2026-08-30T19:21:15Z",
+      "day": 152,
+      "type": "player.biome_changed",
+      "player": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "summary": {
+        "from": "Plains",
+        "to": "Swamp",
+        "x": -2269.9,
+        "z": 731.4,
+        "first_discovery": false
+      },
+      "links": {
+        "raid_id": null,
+        "boss_key": null,
+        "run_id": null,
+        "session_id": null
+      }
+    }
+  ],
+  "next_cursor": "NTA"
+}

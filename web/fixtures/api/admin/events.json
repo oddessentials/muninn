@@ -1,0 +1,716 @@
+{
+  "items": [
+    {
+      "id": "1e71953a-2452-4a56-a309-09948c74ecd9",
+      "seq": 2700,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:29:40Z",
+      "type": "player.position",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198087654321",
+        "x": 111.4,
+        "z": -153.8,
+        "biome": "Meadows"
+      }
+    },
+    {
+      "id": "e8ce18f3-1e51-42b0-acd2-4f798e676cf4",
+      "seq": 2699,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:29:40Z",
+      "type": "player.position",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198012345678",
+        "x": 85.4,
+        "z": -296.4,
+        "biome": "Meadows"
+      }
+    },
+    {
+      "id": "8d5b3b27-2d3a-4213-b795-cf02f270aebb",
+      "seq": 2698,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:29:20Z",
+      "type": "player.position",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198087654321",
+        "x": 135.1,
+        "z": -151,
+        "biome": "Meadows"
+      }
+    },
+    {
+      "id": "d1074f97-22c5-4e49-911a-13d9559cd18a",
+      "seq": 2697,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:29:20Z",
+      "type": "player.position",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198012345678",
+        "x": 85.4,
+        "z": -280,
+        "biome": "Meadows"
+      }
+    },
+    {
+      "id": "f097a6cf-8843-4e9e-879f-473c8abd20e6",
+      "seq": 2696,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:29:00Z",
+      "type": "player.position",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198087654321",
+        "x": 156.1,
+        "z": -154.6,
+        "biome": "Meadows"
+      }
+    },
+    {
+      "id": "c8b41465-8e54-40fe-b649-4a9c8429eb7d",
+      "seq": 2695,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:29:00Z",
+      "type": "player.position",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198012345678",
+        "x": 82.6,
+        "z": -265.2,
+        "biome": "Meadows"
+      }
+    },
+    {
+      "id": "e7254b1d-61d4-48f3-8d39-10d8cbdae55a",
+      "seq": 2694,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:28:40Z",
+      "type": "player.position",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198087654321",
+        "x": 171.4,
+        "z": -165.8,
+        "biome": "Meadows"
+      }
+    },
+    {
+      "id": "8bc899bc-9be9-4130-9537-ed63adabd33e",
+      "seq": 2693,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:28:40Z",
+      "type": "player.position",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198012345678",
+        "x": 74.7,
+        "z": -253.5,
+        "biome": "Meadows"
+      }
+    },
+    {
+      "id": "ee32a345-2f17-447a-8a60-53b3fc5ff852",
+      "seq": 2692,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:28:20Z",
+      "type": "player.position",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198087654321",
+        "x": 179.5,
+        "z": -184.3,
+        "biome": "Meadows"
+      }
+    },
+    {
+      "id": "e4db622b-b8e9-467f-9223-caffe8ef9184",
+      "seq": 2691,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:28:20Z",
+      "type": "player.position",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198012345678",
+        "x": 61,
+        "z": -245.6,
+        "biome": "Meadows"
+      }
+    },
+    {
+      "id": "bffcd2c8-9769-4df2-bdfb-666dc7d6a40b",
+      "seq": 2690,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:28:08Z",
+      "type": "creature.died",
+      "world_day": 193,
+      "data": {
+        "prefab": "Deer",
+        "level": 1,
+        "x": 56.2,
+        "z": -234.8,
+        "biome": "Meadows",
+        "credited": ["Steam_76561198012345678"],
+        "nearby": ["Steam_76561198012345678"]
+      }
+    },
+    {
+      "id": "b129e0e7-b10a-4006-af37-52ee09d2e190",
+      "seq": 2689,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:28:00Z",
+      "type": "player.position",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198087654321",
+        "x": 181.5,
+        "z": -208.2,
+        "biome": "Meadows"
+      }
+    },
+    {
+      "id": "fbfd04ff-63da-4f25-b66d-42a604caa6a4",
+      "seq": 2688,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:28:00Z",
+      "type": "player.position",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198012345678",
+        "x": 42.8,
+        "z": -240.7,
+        "biome": "Meadows"
+      }
+    },
+    {
+      "id": "0d3a312a-54c5-41bb-9404-264280871e80",
+      "seq": 2687,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:27:40Z",
+      "type": "player.position",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198087654321",
+        "x": 179.7,
+        "z": -234.6,
+        "biome": "Meadows"
+      }
+    },
+    {
+      "id": "fbe0b4a0-f6b0-4df2-b73a-55cea792e3cd",
+      "seq": 2686,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:27:40Z",
+      "type": "player.position",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198012345678",
+        "x": 22.9,
+        "z": -237.3,
+        "biome": "Meadows"
+      }
+    },
+    {
+      "id": "7201c02d-9f99-4fb8-8e33-6dea67e1da3a",
+      "seq": 2685,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:27:20Z",
+      "type": "player.position",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198087654321",
+        "x": 177.3,
+        "z": -259.8,
+        "biome": "Meadows"
+      }
+    },
+    {
+      "id": "cb5667fc-20c6-4ce8-853c-9268954c3809",
+      "seq": 2684,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:27:20Z",
+      "type": "player.position",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198012345678",
+        "x": 5.5,
+        "z": -233.9,
+        "biome": "Meadows"
+      }
+    },
+    {
+      "id": "7a85dc2c-70a3-4d37-aa59-34b96d7045e8",
+      "seq": 2683,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:27:00Z",
+      "type": "player.position",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198087654321",
+        "x": 177.3,
+        "z": -280,
+        "biome": "Meadows"
+      }
+    },
+    {
+      "id": "5fa007fb-1ecf-4f54-87ae-fab05a3ce89a",
+      "seq": 2682,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:27:00Z",
+      "type": "player.position",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198012345678",
+        "x": -5.5,
+        "z": -228.8,
+        "biome": "Meadows"
+      }
+    },
+    {
+      "id": "602e386a-a858-4a16-8806-070db32908a8",
+      "seq": 2681,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:26:56Z",
+      "type": "creature.died",
+      "world_day": 193,
+      "data": {
+        "prefab": "Boar",
+        "level": 2,
+        "x": 87.4,
+        "z": -226.3,
+        "biome": "Meadows",
+        "credited": [],
+        "nearby": ["Steam_76561198012345678"]
+      }
+    },
+    {
+      "id": "6d753573-bee6-4697-b7d4-c5b8d8323220",
+      "seq": 2680,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:26:40Z",
+      "type": "player.position",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198087654321",
+        "x": 181.4,
+        "z": -292.3,
+        "biome": "Meadows"
+      }
+    },
+    {
+      "id": "56feb9a1-d99c-4de1-ba3e-a3eebf8938c7",
+      "seq": 2679,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:26:40Z",
+      "type": "player.position",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198012345678",
+        "x": -7.5,
+        "z": -221.6,
+        "biome": "Meadows"
+      }
+    },
+    {
+      "id": "477258ea-aabc-4e73-b286-4dbd3ff3d05c",
+      "seq": 2678,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:26:20Z",
+      "type": "player.position",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198087654321",
+        "x": 189.6,
+        "z": -294.9,
+        "biome": "Meadows"
+      }
+    },
+    {
+      "id": "83d71682-740d-4471-b60e-9ec05b4637ac",
+      "seq": 2677,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:26:20Z",
+      "type": "player.position",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198012345678",
+        "x": 0.6,
+        "z": -212.6,
+        "biome": "Meadows"
+      }
+    },
+    {
+      "id": "ff958957-5aaa-40db-b98d-c8c4a5c96e1b",
+      "seq": 2676,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:26:00Z",
+      "type": "player.position",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198087654321",
+        "x": 200.1,
+        "z": -287.6,
+        "biome": "Meadows"
+      }
+    },
+    {
+      "id": "109ba7fe-4c37-48df-8a02-2889dd95e48e",
+      "seq": 2675,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:26:00Z",
+      "type": "player.position",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198012345678",
+        "x": 17.3,
+        "z": -203.4,
+        "biome": "Meadows"
+      }
+    },
+    {
+      "id": "814e294c-4178-401a-8089-6f9ad8738151",
+      "seq": 2674,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:25:40Z",
+      "type": "player.position",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198087654321",
+        "x": 209.6,
+        "z": -271.9,
+        "biome": "Meadows"
+      }
+    },
+    {
+      "id": "6a75aaa6-2f4d-4a02-9faa-1e78ec20e0c2",
+      "seq": 2673,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:25:40Z",
+      "type": "player.position",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198012345678",
+        "x": 39.7,
+        "z": -196.1,
+        "biome": "Meadows"
+      }
+    },
+    {
+      "id": "069fa9a3-8ebd-4bf7-bae1-35031b91fac0",
+      "seq": 2672,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:25:20Z",
+      "type": "player.position",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198087654321",
+        "x": 214.4,
+        "z": -250.5,
+        "biome": "Meadows"
+      }
+    },
+    {
+      "id": "35d150eb-97d0-420c-910d-04675b955f1b",
+      "seq": 2671,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:25:20Z",
+      "type": "player.position",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198012345678",
+        "x": 63.4,
+        "z": -193.3,
+        "biome": "Meadows"
+      }
+    },
+    {
+      "id": "456938b7-6133-4efc-bf50-7f8b89d8f6fe",
+      "seq": 2670,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:25:00Z",
+      "type": "player.position",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198087654321",
+        "x": 211.7,
+        "z": -227,
+        "biome": "Meadows"
+      }
+    },
+    {
+      "id": "2b906c6d-f7e2-4602-9df0-74df52425322",
+      "seq": 2669,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:25:00Z",
+      "type": "player.position",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198012345678",
+        "x": 84.4,
+        "z": -196.9,
+        "biome": "Meadows"
+      }
+    },
+    {
+      "id": "bb28e334-be15-4f2e-bd00-7a36b06328a1",
+      "seq": 2668,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:24:40Z",
+      "type": "player.position",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198087654321",
+        "x": 200.1,
+        "z": -204.8,
+        "biome": "Meadows"
+      }
+    },
+    {
+      "id": "7013ae35-12ca-43b6-b9b7-d4f0bebc920f",
+      "seq": 2667,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:24:40Z",
+      "type": "player.position",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198012345678",
+        "x": 99.7,
+        "z": -208.1,
+        "biome": "Meadows"
+      }
+    },
+    {
+      "id": "1f1aba6d-ff9a-4599-b278-2f436171e821",
+      "seq": 2666,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:24:20Z",
+      "type": "player.position",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198087654321",
+        "x": 180.3,
+        "z": -186.7,
+        "biome": "Meadows"
+      }
+    },
+    {
+      "id": "ed264600-5ef8-4a78-96a5-57298110e2d6",
+      "seq": 2665,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:24:20Z",
+      "type": "player.position",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198012345678",
+        "x": 107.8,
+        "z": -226.6,
+        "biome": "Meadows"
+      }
+    },
+    {
+      "id": "885802ad-7129-407d-b9a2-6252925d0450",
+      "seq": 2664,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:24:00Z",
+      "type": "player.position",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198087654321",
+        "x": 155.1,
+        "z": -174.4,
+        "biome": "Meadows"
+      }
+    },
+    {
+      "id": "11adf848-00aa-455c-8376-64dbd681d62e",
+      "seq": 2663,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:24:00Z",
+      "type": "player.position",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198012345678",
+        "x": 109.8,
+        "z": -250.5,
+        "biome": "Meadows"
+      }
+    },
+    {
+      "id": "c2408aaa-4bf3-4246-a9c7-3475548d0ea1",
+      "seq": 2662,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:23:40Z",
+      "type": "player.position",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198087654321",
+        "x": 128.5,
+        "z": -168.1,
+        "biome": "Meadows"
+      }
+    },
+    {
+      "id": "06dc9913-3bce-4941-b31d-179be4b68b64",
+      "seq": 2661,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:23:40Z",
+      "type": "player.position",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198012345678",
+        "x": 108,
+        "z": -276.9,
+        "biome": "Meadows"
+      }
+    },
+    {
+      "id": "5d5c1a61-9ad5-4135-9d4a-dc83c1da939c",
+      "seq": 2660,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:23:20Z",
+      "type": "player.position",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198087654321",
+        "x": 105,
+        "z": -166.9,
+        "biome": "Meadows"
+      }
+    },
+    {
+      "id": "71906031-411b-4099-b3af-46d1260e3b89",
+      "seq": 2659,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:23:20Z",
+      "type": "player.position",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198012345678",
+        "x": 105.6,
+        "z": -302.1,
+        "biome": "Meadows"
+      }
+    },
+    {
+      "id": "e484b3b0-4bdb-42ea-b69e-eca09eba754b",
+      "seq": 2658,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:23:00Z",
+      "type": "player.position",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198087654321",
+        "x": 88.4,
+        "z": -169.1,
+        "biome": "Meadows"
+      }
+    },
+    {
+      "id": "fd93d157-b54b-457d-a0dd-93e2f3281f53",
+      "seq": 2657,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:23:00Z",
+      "type": "player.position",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198012345678",
+        "x": 105.6,
+        "z": -322.3,
+        "biome": "Meadows"
+      }
+    },
+    {
+      "id": "56993482-c333-4b6e-9b81-60c44af92ea0",
+      "seq": 2656,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:22:40Z",
+      "type": "player.position",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198087654321",
+        "x": 80.4,
+        "z": -172.6,
+        "biome": "Meadows"
+      }
+    },
+    {
+      "id": "45eb65e6-b319-4847-9e2a-66a1e354617f",
+      "seq": 2655,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:22:40Z",
+      "type": "player.position",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198012345678",
+        "x": 109.7,
+        "z": -334.6,
+        "biome": "Meadows"
+      }
+    },
+    {
+      "id": "667636c4-2e1d-439b-bace-ba1de74b393b",
+      "seq": 2654,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:22:22Z",
+      "type": "creature.died",
+      "world_day": 193,
+      "data": {
+        "prefab": "Boar",
+        "level": 1,
+        "x": 155.3,
+        "z": -210.8,
+        "biome": "Meadows",
+        "credited": ["Steam_76561198087654321"],
+        "nearby": ["Steam_76561198087654321", "Steam_76561198012345678"]
+      }
+    },
+    {
+      "id": "e6577558-ff1c-49ff-9cf6-95e5485193de",
+      "seq": 2653,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:22:20Z",
+      "type": "player.position",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198087654321",
+        "x": 81.2,
+        "z": -175.5,
+        "biome": "Meadows"
+      }
+    },
+    {
+      "id": "6b1f8dbc-2930-410d-916a-3fb0464803cd",
+      "seq": 2652,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:22:20Z",
+      "type": "player.position",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198012345678",
+        "x": 117.9,
+        "z": -337.2,
+        "biome": "Meadows"
+      }
+    },
+    {
+      "id": "4ca5078a-9cf8-40cf-b36d-62789cc687f7",
+      "seq": 2651,
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "ts": "2026-09-10T19:22:08Z",
+      "type": "chat.message",
+      "world_day": 193,
+      "data": {
+        "platform_user_id": "Steam_76561198087654321",
+        "kind": "shout",
+        "text": "Found a swamp crypt north of the river",
+        "x": 147.8,
+        "z": -210.8,
+        "biome": "Meadows"
+      }
+    }
+  ],
+  "next_cursor": "NTA"
+}

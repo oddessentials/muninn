@@ -1,0 +1,438 @@
+{
+  "built": 598,
+  "destroyed": 20,
+  "by_prefab": [
+    {
+      "prefab": "wood_door",
+      "built": 42
+    },
+    {
+      "prefab": "cauldron",
+      "built": 35
+    },
+    {
+      "prefab": "fire_pit",
+      "built": 34
+    },
+    {
+      "prefab": "stone_arch",
+      "built": 32
+    },
+    {
+      "prefab": "piece_banner01",
+      "built": 32
+    },
+    {
+      "prefab": "piece_sharpening_stone",
+      "built": 31
+    },
+    {
+      "prefab": "wood_fence",
+      "built": 31
+    },
+    {
+      "prefab": "piece_chest_wood",
+      "built": 31
+    },
+    {
+      "prefab": "wood_wall",
+      "built": 30
+    },
+    {
+      "prefab": "darkwood_roof",
+      "built": 30
+    },
+    {
+      "prefab": "stone_floor",
+      "built": 30
+    },
+    {
+      "prefab": "wood_pole2",
+      "built": 29
+    },
+    {
+      "prefab": "piece_bed",
+      "built": 28
+    },
+    {
+      "prefab": "wood_floor",
+      "built": 28
+    },
+    {
+      "prefab": "wood_stair",
+      "built": 28
+    },
+    {
+      "prefab": "piece_workbench",
+      "built": 27
+    },
+    {
+      "prefab": "wood_beam",
+      "built": 26
+    },
+    {
+      "prefab": "forge",
+      "built": 25
+    },
+    {
+      "prefab": "stone_wall_2x1",
+      "built": 25
+    },
+    {
+      "prefab": "wood_roof_45",
+      "built": 24
+    }
+  ],
+  "recent": [
+    {
+      "at": "2026-09-10T17:59:11Z",
+      "prefab": "wood_beam",
+      "x": 100.2,
+      "z": -261.3,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-10T17:49:52Z",
+      "prefab": "wood_beam",
+      "x": 104.4,
+      "z": -246.8,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-10T17:33:47Z",
+      "prefab": "stone_floor",
+      "x": 112,
+      "z": -255.2,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-08T20:35:11Z",
+      "prefab": "forge",
+      "x": 101.4,
+      "z": -235.1,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-08T20:29:21Z",
+      "prefab": "wood_floor",
+      "x": 127.2,
+      "z": -239.6,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-08T20:25:26Z",
+      "prefab": "piece_bed",
+      "x": 98.1,
+      "z": -221.2,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-08T20:25:04Z",
+      "prefab": "wood_wall",
+      "x": 116.6,
+      "z": -225.7,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-08T20:19:05Z",
+      "prefab": "wood_door",
+      "x": 121.1,
+      "z": -245.1,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-08T20:15:21Z",
+      "prefab": "stone_arch",
+      "x": 135,
+      "z": -255.8,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-08T20:11:30Z",
+      "prefab": "wood_door",
+      "x": 110.2,
+      "z": -219.9,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-08T20:10:47Z",
+      "prefab": "piece_bed",
+      "x": 127.2,
+      "z": -244.7,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-08T20:07:12Z",
+      "prefab": "cauldron",
+      "x": 99.8,
+      "z": -242.4,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-08T20:05:57Z",
+      "prefab": "wood_floor",
+      "x": 142.7,
+      "z": -217.3,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-08T20:03:44Z",
+      "prefab": "wood_stair",
+      "x": 141.9,
+      "z": -246.8,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-08T19:54:10Z",
+      "prefab": "piece_chest_wood",
+      "x": 101.2,
+      "z": -215.4,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-08T19:41:06Z",
+      "prefab": "darkwood_roof",
+      "x": 125.4,
+      "z": -260.5,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-08T19:39:21Z",
+      "prefab": "wood_floor",
+      "x": 126.6,
+      "z": -253.3,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-08T19:32:08Z",
+      "prefab": "piece_chest_wood",
+      "x": 96.2,
+      "z": -217.3,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-08T19:27:37Z",
+      "prefab": "stone_wall_2x1",
+      "x": 137.7,
+      "z": -235,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-08T12:54:10Z",
+      "prefab": "stone_wall_2x1",
+      "x": 130.5,
+      "z": -238.5,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-08T12:54:04Z",
+      "prefab": "wood_fence",
+      "x": 136,
+      "z": -240.6,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-08T12:51:47Z",
+      "prefab": "darkwood_roof",
+      "x": 128.7,
+      "z": -263.3,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-08T12:48:23Z",
+      "prefab": "wood_fence",
+      "x": 137.7,
+      "z": -221.6,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-08T12:46:14Z",
+      "prefab": "wood_fence",
+      "x": 124.9,
+      "z": -238.9,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-08T12:43:03Z",
+      "prefab": "piece_chest_wood",
+      "x": 130.9,
+      "z": -241.8,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-08T12:41:09Z",
+      "prefab": "wood_fence",
+      "x": 113.2,
+      "z": -252.9,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-08T12:39:58Z",
+      "prefab": "wood_door",
+      "x": 101,
+      "z": -216.1,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-08T12:31:52Z",
+      "prefab": "forge",
+      "x": 118.5,
+      "z": -234.8,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-08T12:30:52Z",
+      "prefab": "stone_arch",
+      "x": 119.8,
+      "z": -257.1,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-08T12:29:30Z",
+      "prefab": "cauldron",
+      "x": 134.9,
+      "z": -225.7,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-08T12:27:34Z",
+      "prefab": "stone_floor",
+      "x": 129.4,
+      "z": -217,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-08T12:22:11Z",
+      "prefab": "piece_bed",
+      "x": 128.7,
+      "z": -225.3,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-08T12:20:07Z",
+      "prefab": "wood_stair",
+      "x": 133.7,
+      "z": -257.2,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-08T12:11:56Z",
+      "prefab": "fire_pit",
+      "x": 140.2,
+      "z": -239.9,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-08T12:10:33Z",
+      "prefab": "wood_roof_45",
+      "x": 144.7,
+      "z": -260.8,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-08T12:10:05Z",
+      "prefab": "piece_sharpening_stone",
+      "x": 98.3,
+      "z": -257.3,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-07T20:27:11Z",
+      "prefab": "wood_wall",
+      "x": 121.2,
+      "z": -217.7,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-07T20:22:08Z",
+      "prefab": "stone_wall_2x1",
+      "x": 137.8,
+      "z": -263.4,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-07T19:46:17Z",
+      "prefab": "cauldron",
+      "x": 122.4,
+      "z": -232.9,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-07T19:37:42Z",
+      "prefab": "wood_floor",
+      "x": 135.9,
+      "z": -257.8,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-07T19:21:47Z",
+      "prefab": "darkwood_roof",
+      "x": 138.3,
+      "z": -240.7,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-07T18:59:19Z",
+      "prefab": "stone_floor",
+      "x": 113.3,
+      "z": -216,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-07T13:22:24Z",
+      "prefab": "wood_fence",
+      "x": 111.4,
+      "z": -262.2,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-07T13:17:55Z",
+      "prefab": "fire_pit",
+      "x": 116.6,
+      "z": -220.8,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-07T13:13:38Z",
+      "prefab": "piece_banner01",
+      "x": 104.1,
+      "z": -221.4,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-07T13:08:01Z",
+      "prefab": "piece_workbench",
+      "x": 120.6,
+      "z": -260.4,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-07T12:55:35Z",
+      "prefab": "wood_door",
+      "x": 126.5,
+      "z": -254.4,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-06T21:22:51Z",
+      "prefab": "piece_bed",
+      "x": 143.3,
+      "z": -217.2,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-06T21:03:56Z",
+      "prefab": "wood_door",
+      "x": 113,
+      "z": -222.8,
+      "biome": "Meadows"
+    },
+    {
+      "at": "2026-09-06T20:41:23Z",
+      "prefab": "wood_stair",
+      "x": 122.2,
+      "z": -216.7,
+      "biome": "Meadows"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "items": [
+    {
+      "key": "defeated_eikthyr",
+      "value": null,
+      "category": "boss",
+      "first_set_at": "2026-07-25T19:20:00Z",
+      "day": 20
+    },
+    {
+      "key": "KilledTroll",
+      "value": null,
+      "category": "other",
+      "first_set_at": "2026-07-26T19:38:00Z",
+      "day": 27
+    },
+    {
+      "key": "defeated_gdking",
+      "value": null,
+      "category": "boss",
+      "first_set_at": "2026-08-01T19:55:00Z",
+      "day": 57
+    },
+    {
+      "key": "Hildir1",
+      "value": null,
+      "category": "other",
+      "first_set_at": "2026-08-10T19:49:00Z",
+      "day": 85
+    },
+    {
+      "key": "defeated_bonemass",
+      "value": null,
+      "category": "boss",
+      "first_set_at": "2026-08-15T19:37:00Z",
+      "day": 102
+    },
+    {
+      "key": "defeated_serpent",
+      "value": null,
+      "category": "mini_boss",
+      "first_set_at": "2026-08-24T19:43:00Z",
+      "day": 129
+    },
+    {
+      "key": "defeated_dragon",
+      "value": null,
+      "category": "boss",
+      "first_set_at": "2026-08-30T19:29:00Z",
+      "day": 152
+    }
+  ]
+}

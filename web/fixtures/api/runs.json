@@ -1,0 +1,35 @@
+{
+  "items": [
+    {
+      "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+      "started_at": "2026-08-30T09:03:40Z",
+      "stopped_at": null,
+      "stop_reason": null,
+      "game_version": "1.0.7",
+      "plugin_version": "0.1.0",
+      "peak_players": 7,
+      "saves": 548
+    },
+    {
+      "run_id": "c9d3e7f1-5b2a-4f6e-9c8d-1a2b3c4d5e6f",
+      "started_at": "2026-08-29T23:50:00Z",
+      "stopped_at": "2026-08-30T00:20:00Z",
+      "stop_reason": "inferred",
+      "game_version": "1.0.7",
+      "plugin_version": "0.1.0",
+      "peak_players": 1,
+      "saves": 1
+    },
+    {
+      "run_id": "a5c1a4de-1a2b-4c3d-9e8f-6d5a4b3c2d1e",
+      "started_at": "2026-07-20T18:02:11Z",
+      "stopped_at": "2026-08-29T23:40:00Z",
+      "stop_reason": "graceful",
+      "game_version": "1.0.7",
+      "plugin_version": "0.1.0",
+      "peak_players": 6,
+      "saves": 1931
+    }
+  ],
+  "next_cursor": null
+}

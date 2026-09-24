@@ -1,0 +1,624 @@
+{
+  "items": [
+    {
+      "rank": 1,
+      "name": "BJORN",
+      "tested_at": "2026-09-10T19:12:08Z",
+      "rating": "excellent",
+      "recommendation": "primary",
+      "scores": {
+        "network": 99,
+        "cpu": 96,
+        "stability": 99,
+        "secondary": 93,
+        "overall": 98
+      },
+      "explanation": {
+        "summary": "BJORN is a primary zone-leader candidate (98/100).",
+        "strongest": [
+          "No request failures and tight jitter.",
+          "Low median latency (14.2 ms).",
+          "Very low jitter (1.2 ms)."
+        ],
+        "limiting": [],
+        "reason": "Network quality and single-thread CPU performance are both strong enough to own a zone."
+      },
+      "result": {
+        "schemaVersion": 1,
+        "diagnosticVersion": "1.1.0",
+        "player": {
+          "name": "BJORN"
+        },
+        "testedAt": "2026-09-10T19:12:08Z",
+        "diagnosticTarget": {
+          "label": "Guild site",
+          "endpoint": "https://guild.example.org/api/v1/zone/probe"
+        },
+        "system": {
+          "logicalProcessors": 12,
+          "logicalProcessorsSource": "reported",
+          "deviceMemoryGB": 8,
+          "deviceMemorySource": "reported",
+          "gpuRenderer": "ANGLE (NVIDIA GeForce RTX 4070 SUPER)",
+          "gpuVendor": "NVIDIA",
+          "gpuSource": "reported",
+          "browser": "Chrome",
+          "browserSource": "reported",
+          "platform": "Windows",
+          "platformSource": "reported",
+          "hardwareConcurrency": 12,
+          "userAgentDataBrands": ["Chromium"]
+        },
+        "measurements": {
+          "cpu": {
+            "singleThread": 522000,
+            "multiThread": 2696000,
+            "variance": 0.0121,
+            "samples": [518000, 521000, 525100, 519500, 522500],
+            "workersUsed": 8,
+            "kernel": "vzd-cpu-1.0.0"
+          },
+          "network": {
+            "latencyMedianMs": 14.2,
+            "latencyP95Ms": 19.1,
+            "jitterMs": 1.21,
+            "uploadMbps": 38.4,
+            "downloadMbps": 318.6,
+            "failureRate": 0,
+            "latencySamplesMs": [
+              15.64, 14.22, 14.3, 15.64, 13.64, 13.11, 15.29, 12.41, 15.45, 13.45, 11.8
+            ],
+            "failedRequests": 0,
+            "totalRequests": 16,
+            "endpointReachable": true
+          },
+          "stability": {
+            "frameTimeP95Ms": 7.8,
+            "frameTimeMedianMs": 6.7,
+            "stallCount": 0,
+            "gpuFrameMs": 3.9,
+            "gpuApi": "webgl2"
+          }
+        },
+        "scores": {
+          "network": 99,
+          "cpu": 96,
+          "stability": 99,
+          "secondary": 93,
+          "overall": 98
+        },
+        "rating": "excellent",
+        "penalties": [],
+        "completion": {
+          "cpu": "ok",
+          "network": "ok",
+          "stability": "ok",
+          "tabLostFocus": false,
+          "interrupted": false,
+          "warnings": []
+        }
+      }
+    },
+    {
+      "rank": 2,
+      "name": "FREYA",
+      "tested_at": "2026-09-10T18:41:53Z",
+      "rating": "excellent",
+      "recommendation": "primary",
+      "scores": {
+        "network": 96,
+        "cpu": 92,
+        "stability": 98,
+        "secondary": 92,
+        "overall": 94
+      },
+      "explanation": {
+        "summary": "FREYA is a primary zone-leader candidate (94/100).",
+        "strongest": [
+          "No request failures and tight jitter.",
+          "Low median latency (21.3 ms).",
+          "Very low jitter (2.4 ms)."
+        ],
+        "limiting": [],
+        "reason": "Network quality and single-thread CPU performance are both strong enough to own a zone."
+      },
+      "result": {
+        "schemaVersion": 1,
+        "diagnosticVersion": "1.1.0",
+        "player": {
+          "name": "FREYA"
+        },
+        "testedAt": "2026-09-10T18:41:53Z",
+        "diagnosticTarget": {
+          "label": "Guild site",
+          "endpoint": "https://guild.example.org/api/v1/zone/probe"
+        },
+        "system": {
+          "logicalProcessors": 8,
+          "logicalProcessorsSource": "reported",
+          "deviceMemoryGB": 8,
+          "deviceMemorySource": "reported",
+          "gpuRenderer": "ANGLE (AMD Radeon RX 6700 XT)",
+          "gpuVendor": "AMD",
+          "gpuSource": "reported",
+          "browser": "Edge",
+          "browserSource": "reported",
+          "platform": "Windows",
+          "platformSource": "reported",
+          "hardwareConcurrency": 8,
+          "userAgentDataBrands": ["Chromium"]
+        },
+        "measurements": {
+          "cpu": {
+            "singleThread": 411000,
+            "multiThread": 1985000,
+            "variance": 0.0204,
+            "samples": [407800, 412600, 411300, 404100, 415200],
+            "workersUsed": 8,
+            "kernel": "vzd-cpu-1.0.0"
+          },
+          "network": {
+            "latencyMedianMs": 21.3,
+            "latencyP95Ms": 29.4,
+            "jitterMs": 2.38,
+            "uploadMbps": 22.1,
+            "downloadMbps": 148.9,
+            "failureRate": 0,
+            "latencySamplesMs": [
+              23.76, 18.08, 17.8, 22.39, 19.59, 17.8, 22.78, 22.28, 20.66, 18.08, 19.26
+            ],
+            "failedRequests": 0,
+            "totalRequests": 16,
+            "endpointReachable": true
+          },
+          "stability": {
+            "frameTimeP95Ms": 9.1,
+            "frameTimeMedianMs": 7.2,
+            "stallCount": 0,
+            "gpuFrameMs": 5.5,
+            "gpuApi": "webgl2"
+          }
+        },
+        "scores": {
+          "network": 96,
+          "cpu": 92,
+          "stability": 98,
+          "secondary": 92,
+          "overall": 94
+        },
+        "rating": "excellent",
+        "penalties": [],
+        "completion": {
+          "cpu": "ok",
+          "network": "ok",
+          "stability": "ok",
+          "tabLostFocus": false,
+          "interrupted": false,
+          "warnings": []
+        }
+      }
+    },
+    {
+      "rank": 3,
+      "name": "SIGRID",
+      "tested_at": "2026-09-08T21:07:46Z",
+      "rating": "strong",
+      "recommendation": "primary",
+      "scores": {
+        "network": 72,
+        "cpu": 92,
+        "stability": 92,
+        "secondary": 92,
+        "overall": 83
+      },
+      "explanation": {
+        "summary": "SIGRID is a primary zone-leader candidate (83/100).",
+        "strongest": [
+          "No request failures during the network test.",
+          "Strong measured single-thread CPU performance for zone simulation.",
+          "Consistent frame times and stable benchmark samples."
+        ],
+        "limiting": [
+          "Latency spikes to 88.2 ms p95 on a 58.4 ms median.",
+          "High round-trip latency (58.4 ms).",
+          "Upload throughput is tight for hosting a busy zone (7.4 Mbps)."
+        ],
+        "reason": "Best overall choice among current results, with only minor limits: Latency spikes to 88.2 ms p95 on a 58.4 ms median."
+      },
+      "result": {
+        "schemaVersion": 1,
+        "diagnosticVersion": "1.1.0",
+        "player": {
+          "name": "SIGRID"
+        },
+        "testedAt": "2026-09-08T21:07:46Z",
+        "diagnosticTarget": {
+          "label": "Guild site",
+          "endpoint": "https://guild.example.org/api/v1/zone/probe"
+        },
+        "system": {
+          "logicalProcessors": 8,
+          "logicalProcessorsSource": "reported",
+          "deviceMemoryGB": 8,
+          "deviceMemorySource": "reported",
+          "gpuRenderer": "ANGLE (Intel Arc A770)",
+          "gpuVendor": "Intel",
+          "gpuSource": "reported",
+          "browser": "Chrome",
+          "browserSource": "reported",
+          "platform": "Windows",
+          "platformSource": "reported",
+          "hardwareConcurrency": 8,
+          "userAgentDataBrands": ["Chromium"]
+        },
+        "measurements": {
+          "cpu": {
+            "singleThread": 434000,
+            "multiThread": 1948000,
+            "variance": 0.0188,
+            "samples": [431100, 435200, 434200, 427700, 439300],
+            "workersUsed": 8,
+            "kernel": "vzd-cpu-1.0.0"
+          },
+          "network": {
+            "latencyMedianMs": 58.4,
+            "latencyP95Ms": 88.2,
+            "jitterMs": 9.6,
+            "uploadMbps": 7.4,
+            "downloadMbps": 30.8,
+            "failureRate": 0,
+            "latencySamplesMs": [
+              48.75, 49.28, 66.37, 53.89, 65.6, 60.03, 46.59, 46.59, 70.02, 58.69, 48.9
+            ],
+            "failedRequests": 0,
+            "totalRequests": 16,
+            "endpointReachable": true
+          },
+          "stability": {
+            "frameTimeP95Ms": 11.4,
+            "frameTimeMedianMs": 8.3,
+            "stallCount": 1,
+            "gpuFrameMs": 7.1,
+            "gpuApi": "webgl2"
+          }
+        },
+        "scores": {
+          "network": 72,
+          "cpu": 92,
+          "stability": 92,
+          "secondary": 92,
+          "overall": 83
+        },
+        "rating": "strong",
+        "penalties": [],
+        "completion": {
+          "cpu": "ok",
+          "network": "ok",
+          "stability": "ok",
+          "tabLostFocus": false,
+          "interrupted": false,
+          "warnings": []
+        }
+      }
+    },
+    {
+      "rank": 4,
+      "name": "RAGNAR",
+      "tested_at": "2026-09-08T20:14:22Z",
+      "rating": "acceptable",
+      "recommendation": "backup",
+      "scores": {
+        "network": 84,
+        "cpu": 59,
+        "stability": 71,
+        "secondary": 88,
+        "overall": 74
+      },
+      "explanation": {
+        "summary": "RAGNAR is a reasonable backup (74/100).",
+        "strongest": ["No request failures during the network test."],
+        "limiting": [
+          "Latency spikes to 60.5 ms p95 on a 37.9 ms median.",
+          "Measured single-thread CPU performance is a limiting factor.",
+          "CPU samples varied more than expected, so the results may be noisy.",
+          "The browser tab lost focus during the run, which can distort measurements."
+        ],
+        "reason": "Latency spikes to 60.5 ms p95 on a 37.9 ms median."
+      },
+      "result": {
+        "schemaVersion": 1,
+        "diagnosticVersion": "1.1.0",
+        "player": {
+          "name": "RAGNAR"
+        },
+        "testedAt": "2026-09-08T20:14:22Z",
+        "diagnosticTarget": {
+          "label": "Guild site",
+          "endpoint": "https://guild.example.org/api/v1/zone/probe"
+        },
+        "system": {
+          "logicalProcessors": 6,
+          "logicalProcessorsSource": "reported",
+          "deviceMemoryGB": 8,
+          "deviceMemorySource": "reported",
+          "gpuRenderer": "ANGLE (NVIDIA GeForce GTX 1660)",
+          "gpuVendor": "NVIDIA",
+          "gpuSource": "reported",
+          "browser": "Firefox",
+          "browserSource": "reported",
+          "platform": "Windows",
+          "platformSource": "reported",
+          "hardwareConcurrency": 6,
+          "userAgentDataBrands": null
+        },
+        "measurements": {
+          "cpu": {
+            "singleThread": 177500,
+            "multiThread": 650000,
+            "variance": 0.1304,
+            "samples": [153800, 177500, 201100, 163700, 195500],
+            "workersUsed": 6,
+            "kernel": "vzd-cpu-1.0.0"
+          },
+          "network": {
+            "latencyMedianMs": 37.9,
+            "latencyP95Ms": 60.5,
+            "jitterMs": 5.52,
+            "uploadMbps": 11.6,
+            "downloadMbps": 58.7,
+            "failureRate": 0,
+            "latencySamplesMs": [
+              42.41, 34.89, 41.93, 44.49, 41.68, 43.72, 30.67, 45.26, 41.93, 34.12, 43.21
+            ],
+            "failedRequests": 0,
+            "totalRequests": 16,
+            "endpointReachable": true
+          },
+          "stability": {
+            "frameTimeP95Ms": 18.2,
+            "frameTimeMedianMs": 16.6,
+            "stallCount": 2,
+            "gpuFrameMs": 12.4,
+            "gpuApi": "webgl2"
+          }
+        },
+        "scores": {
+          "network": 84,
+          "cpu": 59,
+          "stability": 71,
+          "secondary": 88,
+          "overall": 74
+        },
+        "rating": "acceptable",
+        "penalties": [],
+        "completion": {
+          "cpu": "ok",
+          "network": "ok",
+          "stability": "ok",
+          "tabLostFocus": true,
+          "interrupted": false,
+          "warnings": ["This tab lost focus during the test. Results may be less consistent."]
+        }
+      }
+    },
+    {
+      "rank": 5,
+      "name": "ASTRID",
+      "tested_at": "2026-09-07T21:02:11Z",
+      "rating": "weak",
+      "recommendation": "avoid",
+      "scores": {
+        "network": 52,
+        "cpu": 85,
+        "stability": 90,
+        "secondary": 92,
+        "overall": 51
+      },
+      "explanation": {
+        "summary": "Some request failures were observed during the network test.",
+        "strongest": [
+          "Strong measured single-thread CPU performance for zone simulation.",
+          "Consistent frame times and stable benchmark samples."
+        ],
+        "limiting": [
+          "Request failure rate of 6% threatens zone ownership.",
+          "High jitter (27.4 ms) will desynchronize nearby players.",
+          "Latency spikes to 118.3 ms p95 on a 44.1 ms median."
+        ],
+        "reason": "Some request failures were observed during the network test."
+      },
+      "result": {
+        "schemaVersion": 1,
+        "diagnosticVersion": "1.1.0",
+        "player": {
+          "name": "ASTRID"
+        },
+        "testedAt": "2026-09-07T21:02:11Z",
+        "diagnosticTarget": {
+          "label": "Guild site",
+          "endpoint": "https://guild.example.org/api/v1/zone/probe"
+        },
+        "system": {
+          "logicalProcessors": 8,
+          "logicalProcessorsSource": "reported",
+          "deviceMemoryGB": 8,
+          "deviceMemorySource": "reported",
+          "gpuRenderer": "ANGLE (AMD Radeon RX 5700)",
+          "gpuVendor": "AMD",
+          "gpuSource": "reported",
+          "browser": "Chrome",
+          "browserSource": "reported",
+          "platform": "Windows",
+          "platformSource": "reported",
+          "hardwareConcurrency": 8,
+          "userAgentDataBrands": ["Chromium"]
+        },
+        "measurements": {
+          "cpu": {
+            "singleThread": 325700,
+            "multiThread": 1298000,
+            "variance": 0.0305,
+            "samples": [321800, 325700, 330700, 316700, 335200],
+            "workersUsed": 8,
+            "kernel": "vzd-cpu-1.0.0"
+          },
+          "network": {
+            "latencyMedianMs": 44.1,
+            "latencyP95Ms": 118.3,
+            "jitterMs": 27.4,
+            "uploadMbps": 15.2,
+            "downloadMbps": 92.4,
+            "failureRate": 0.0625,
+            "latencySamplesMs": [
+              64.14, 24.18, 32.82, 26.58, 45.78, 40.98, 59.7, 17.46, 33.78, 48.66, 35.22
+            ],
+            "failedRequests": 1,
+            "totalRequests": 16,
+            "endpointReachable": true
+          },
+          "stability": {
+            "frameTimeP95Ms": 12.9,
+            "frameTimeMedianMs": 8.4,
+            "stallCount": 1,
+            "gpuFrameMs": 6.8,
+            "gpuApi": "webgl2"
+          }
+        },
+        "scores": {
+          "network": 52,
+          "cpu": 85,
+          "stability": 90,
+          "secondary": 92,
+          "overall": 51
+        },
+        "rating": "weak",
+        "penalties": [
+          {
+            "id": "net-fail-moderate",
+            "amount": 8,
+            "message": "Some request failures were observed during the network test."
+          },
+          {
+            "id": "jitter-high",
+            "amount": 12,
+            "message": "High jitter is poorly suited to area ownership."
+          }
+        ],
+        "completion": {
+          "cpu": "ok",
+          "network": "ok",
+          "stability": "ok",
+          "tabLostFocus": false,
+          "interrupted": false,
+          "warnings": []
+        }
+      }
+    },
+    {
+      "rank": 6,
+      "name": "TORVALD",
+      "tested_at": "2026-09-07T19:48:37Z",
+      "rating": "poor",
+      "recommendation": "avoid",
+      "scores": {
+        "network": 53,
+        "cpu": 58,
+        "stability": 63,
+        "secondary": 71,
+        "overall": 32
+      },
+      "explanation": {
+        "summary": "Extreme latency makes this connection a poor zone-leader candidate.",
+        "strongest": ["No request failures during the network test."],
+        "limiting": [
+          "Latency spikes to 259.8 ms p95 on a 214.7 ms median.",
+          "High round-trip latency (214.7 ms).",
+          "Upload throughput is tight for hosting a busy zone (5.8 Mbps).",
+          "Measured single-thread CPU performance is a limiting factor."
+        ],
+        "reason": "Extreme latency makes this connection a poor zone-leader candidate."
+      },
+      "result": {
+        "schemaVersion": 1,
+        "diagnosticVersion": "1.1.0",
+        "player": {
+          "name": "TORVALD"
+        },
+        "testedAt": "2026-09-07T19:48:37Z",
+        "diagnosticTarget": {
+          "label": "Guild site",
+          "endpoint": "https://guild.example.org/api/v1/zone/probe"
+        },
+        "system": {
+          "logicalProcessors": 4,
+          "logicalProcessorsSource": "reported",
+          "deviceMemoryGB": 4,
+          "deviceMemorySource": "reported",
+          "gpuRenderer": "ANGLE (Intel(R) UHD Graphics 620)",
+          "gpuVendor": "Intel",
+          "gpuSource": "reported",
+          "browser": "Firefox",
+          "browserSource": "reported",
+          "platform": "Windows",
+          "platformSource": "reported",
+          "hardwareConcurrency": 4,
+          "userAgentDataBrands": null
+        },
+        "measurements": {
+          "cpu": {
+            "singleThread": 151600,
+            "multiThread": 440600,
+            "variance": 0.0483,
+            "samples": [148600, 151600, 157900, 144300, 156600],
+            "workersUsed": 4,
+            "kernel": "vzd-cpu-1.0.0"
+          },
+          "network": {
+            "latencyMedianMs": 214.7,
+            "latencyP95Ms": 259.8,
+            "jitterMs": 9.3,
+            "uploadMbps": 5.8,
+            "downloadMbps": 24.6,
+            "failureRate": 0,
+            "latencySamplesMs": [
+              223.82, 205.58, 216.46, 210.06, 198.22, 205.58, 230.86, 233.1, 223.5, 214.86, 203.02
+            ],
+            "failedRequests": 0,
+            "totalRequests": 16,
+            "endpointReachable": true
+          },
+          "stability": {
+            "frameTimeP95Ms": 27.6,
+            "frameTimeMedianMs": 16.8,
+            "stallCount": 5,
+            "gpuFrameMs": 19.7,
+            "gpuApi": "webgl"
+          }
+        },
+        "scores": {
+          "network": 53,
+          "cpu": 58,
+          "stability": 63,
+          "secondary": 71,
+          "overall": 32
+        },
+        "rating": "poor",
+        "penalties": [
+          {
+            "id": "latency-extreme",
+            "amount": 25,
+            "message": "Extreme latency makes this connection a poor zone-leader candidate."
+          }
+        ],
+        "completion": {
+          "cpu": "ok",
+          "network": "ok",
+          "stability": "ok",
+          "tabLostFocus": false,
+          "interrupted": false,
+          "warnings": []
+        }
+      }
+    }
+  ]
+}

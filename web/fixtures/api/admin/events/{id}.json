@@ -1,0 +1,23 @@
+{
+  "id": "ae0dc76b-668e-4ac8-ae8e-65dcb24c67bd",
+  "seq": 249,
+  "run_id": "b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d",
+  "ts": "2026-09-01T19:53:34Z",
+  "type": "player.died",
+  "world_day": 159,
+  "data": {
+    "platform_user_id": "Steam_76561198012345678",
+    "name": "Bjorn",
+    "character_id": 3187264590123456,
+    "x": 2165.3,
+    "z": 3207,
+    "biome": "Mountain",
+    "observed_cause": {
+      "hit_type": "EnemyHit",
+      "attacker_prefab": "Greydwarf_Elite",
+      "attacker_platform_user_id": null,
+      "at": "2026-09-01T19:53:30Z"
+    }
+  },
+  "received_at": "2026-09-01T19:53:36Z"
+}

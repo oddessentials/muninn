@@ -1,0 +1,448 @@
+{
+  "credited": 218,
+  "nearby": 924,
+  "by_creature": [
+    {
+      "creature": "Greydwarf",
+      "credited": 29,
+      "nearby": 140
+    },
+    {
+      "creature": "Deer",
+      "credited": 27,
+      "nearby": 119
+    },
+    {
+      "creature": "Boar",
+      "credited": 21,
+      "nearby": 97
+    },
+    {
+      "creature": "Neck",
+      "credited": 15,
+      "nearby": 97
+    },
+    {
+      "creature": "Skeleton",
+      "credited": 19,
+      "nearby": 82
+    },
+    {
+      "creature": "Greydwarf shaman",
+      "credited": 15,
+      "nearby": 51
+    },
+    {
+      "creature": "Greydwarf brute",
+      "credited": 13,
+      "nearby": 45
+    },
+    {
+      "creature": "Troll",
+      "credited": 12,
+      "nearby": 42
+    },
+    {
+      "creature": "Drake",
+      "credited": 4,
+      "nearby": 36
+    },
+    {
+      "creature": "Draugr",
+      "credited": 7,
+      "nearby": 31
+    },
+    {
+      "creature": "Wolf",
+      "credited": 4,
+      "nearby": 31
+    },
+    {
+      "creature": "Wraith",
+      "credited": 10,
+      "nearby": 24
+    },
+    {
+      "creature": "Abomination",
+      "credited": 7,
+      "nearby": 25
+    },
+    {
+      "creature": "Leech",
+      "credited": 10,
+      "nearby": 20
+    },
+    {
+      "creature": "Surtling",
+      "credited": 7,
+      "nearby": 23
+    },
+    {
+      "creature": "Blob",
+      "credited": 9,
+      "nearby": 19
+    },
+    {
+      "creature": "Draugr elite",
+      "credited": 3,
+      "nearby": 24
+    },
+    {
+      "creature": "Fuling",
+      "credited": 6,
+      "nearby": 18
+    }
+  ],
+  "recent": [
+    {
+      "at": "2026-09-10T19:28:08Z",
+      "creature": "Deer",
+      "level": 1,
+      "boss": false,
+      "basis": "credited"
+    },
+    {
+      "at": "2026-09-10T19:26:56Z",
+      "creature": "Boar",
+      "level": 2,
+      "boss": false,
+      "basis": "nearby"
+    },
+    {
+      "at": "2026-09-10T19:21:19Z",
+      "creature": "Boar",
+      "level": 2,
+      "boss": false,
+      "basis": "nearby"
+    },
+    {
+      "at": "2026-09-10T19:20:34Z",
+      "creature": "Greydwarf",
+      "level": 1,
+      "boss": false,
+      "basis": "credited"
+    },
+    {
+      "at": "2026-09-10T19:20:32Z",
+      "creature": "Boar",
+      "level": 1,
+      "boss": false,
+      "basis": "nearby"
+    },
+    {
+      "at": "2026-09-10T19:07:29Z",
+      "creature": "Boar",
+      "level": 1,
+      "boss": false,
+      "basis": "nearby"
+    },
+    {
+      "at": "2026-09-10T18:56:36Z",
+      "creature": "Neck",
+      "level": 2,
+      "boss": false,
+      "basis": "nearby"
+    },
+    {
+      "at": "2026-09-10T18:55:54Z",
+      "creature": "Deer",
+      "level": 1,
+      "boss": false,
+      "basis": "nearby"
+    },
+    {
+      "at": "2026-09-10T18:53:59Z",
+      "creature": "Boar",
+      "level": 1,
+      "boss": false,
+      "basis": "nearby"
+    },
+    {
+      "at": "2026-09-10T18:48:50Z",
+      "creature": "Neck",
+      "level": 1,
+      "boss": false,
+      "basis": "credited"
+    },
+    {
+      "at": "2026-09-10T18:47:10Z",
+      "creature": "Deer",
+      "level": 1,
+      "boss": false,
+      "basis": "nearby"
+    },
+    {
+      "at": "2026-09-10T18:41:50Z",
+      "creature": "Deer",
+      "level": 1,
+      "boss": false,
+      "basis": "credited"
+    },
+    {
+      "at": "2026-09-10T18:32:33Z",
+      "creature": "Greydwarf",
+      "level": 1,
+      "boss": false,
+      "basis": "nearby"
+    },
+    {
+      "at": "2026-09-10T18:21:20Z",
+      "creature": "Deer",
+      "level": 1,
+      "boss": false,
+      "basis": "nearby"
+    },
+    {
+      "at": "2026-09-10T18:16:21Z",
+      "creature": "Greydwarf",
+      "level": 3,
+      "boss": false,
+      "basis": "nearby"
+    },
+    {
+      "at": "2026-09-10T17:55:59Z",
+      "creature": "Neck",
+      "level": 1,
+      "boss": false,
+      "basis": "nearby"
+    },
+    {
+      "at": "2026-09-10T17:42:42Z",
+      "creature": "Greydwarf",
+      "level": 3,
+      "boss": false,
+      "basis": "credited"
+    },
+    {
+      "at": "2026-09-10T17:15:30Z",
+      "creature": "Wolf",
+      "level": 1,
+      "boss": false,
+      "basis": "nearby"
+    },
+    {
+      "at": "2026-09-08T20:38:33Z",
+      "creature": "Greydwarf shaman",
+      "level": 1,
+      "boss": false,
+      "basis": "credited"
+    },
+    {
+      "at": "2026-09-08T20:37:15Z",
+      "creature": "Skeleton",
+      "level": 1,
+      "boss": false,
+      "basis": "nearby"
+    },
+    {
+      "at": "2026-09-08T20:35:36Z",
+      "creature": "Skeleton",
+      "level": 3,
+      "boss": false,
+      "basis": "nearby"
+    },
+    {
+      "at": "2026-09-08T20:33:12Z",
+      "creature": "Greydwarf",
+      "level": 2,
+      "boss": false,
+      "basis": "credited"
+    },
+    {
+      "at": "2026-09-08T20:32:08Z",
+      "creature": "Wolf",
+      "level": 1,
+      "boss": false,
+      "basis": "nearby"
+    },
+    {
+      "at": "2026-09-08T20:31:40Z",
+      "creature": "Greydwarf brute",
+      "level": 3,
+      "boss": false,
+      "basis": "nearby"
+    },
+    {
+      "at": "2026-09-08T20:30:28Z",
+      "creature": "Greydwarf shaman",
+      "level": 1,
+      "boss": false,
+      "basis": "credited"
+    },
+    {
+      "at": "2026-09-08T20:30:23Z",
+      "creature": "Greydwarf",
+      "level": 1,
+      "boss": false,
+      "basis": "nearby"
+    },
+    {
+      "at": "2026-09-08T20:26:56Z",
+      "creature": "Drake",
+      "level": 1,
+      "boss": false,
+      "basis": "nearby"
+    },
+    {
+      "at": "2026-09-08T20:25:14Z",
+      "creature": "Greydwarf shaman",
+      "level": 2,
+      "boss": false,
+      "basis": "credited"
+    },
+    {
+      "at": "2026-09-08T20:20:56Z",
+      "creature": "Drake",
+      "level": 2,
+      "boss": false,
+      "basis": "nearby"
+    },
+    {
+      "at": "2026-09-08T20:16:13Z",
+      "creature": "Abomination",
+      "level": 3,
+      "boss": false,
+      "basis": "nearby"
+    },
+    {
+      "at": "2026-09-08T20:15:41Z",
+      "creature": "Greydwarf shaman",
+      "level": 1,
+      "boss": false,
+      "basis": "credited"
+    },
+    {
+      "at": "2026-09-08T20:15:37Z",
+      "creature": "Greydwarf",
+      "level": 2,
+      "boss": false,
+      "basis": "nearby"
+    },
+    {
+      "at": "2026-09-08T20:13:28Z",
+      "creature": "Greydwarf brute",
+      "level": 1,
+      "boss": false,
+      "basis": "nearby"
+    },
+    {
+      "at": "2026-09-08T20:12:37Z",
+      "creature": "Greydwarf shaman",
+      "level": 1,
+      "boss": false,
+      "basis": "nearby"
+    },
+    {
+      "at": "2026-09-08T20:09:19Z",
+      "creature": "Greydwarf brute",
+      "level": 2,
+      "boss": false,
+      "basis": "nearby"
+    },
+    {
+      "at": "2026-09-08T20:07:17Z",
+      "creature": "Skeleton",
+      "level": 1,
+      "boss": false,
+      "basis": "nearby"
+    },
+    {
+      "at": "2026-09-08T20:03:29Z",
+      "creature": "Boar",
+      "level": 1,
+      "boss": false,
+      "basis": "nearby"
+    },
+    {
+      "at": "2026-09-08T20:03:28Z",
+      "creature": "Wolf",
+      "level": 1,
+      "boss": false,
+      "basis": "nearby"
+    },
+    {
+      "at": "2026-09-08T19:59:57Z",
+      "creature": "Greydwarf shaman",
+      "level": 3,
+      "boss": false,
+      "basis": "nearby"
+    },
+    {
+      "at": "2026-09-08T19:59:17Z",
+      "creature": "Fuling",
+      "level": 1,
+      "boss": false,
+      "basis": "nearby"
+    },
+    {
+      "at": "2026-09-08T19:57:13Z",
+      "creature": "Greydwarf brute",
+      "level": 1,
+      "boss": false,
+      "basis": "credited"
+    },
+    {
+      "at": "2026-09-08T19:57:04Z",
+      "creature": "Greydwarf brute",
+      "level": 1,
+      "boss": false,
+      "basis": "credited"
+    },
+    {
+      "at": "2026-09-08T19:55:51Z",
+      "creature": "Greydwarf brute",
+      "level": 1,
+      "boss": false,
+      "basis": "nearby"
+    },
+    {
+      "at": "2026-09-08T19:55:05Z",
+      "creature": "Greydwarf",
+      "level": 1,
+      "boss": false,
+      "basis": "nearby"
+    },
+    {
+      "at": "2026-09-08T19:51:40Z",
+      "creature": "Skeleton",
+      "level": 1,
+      "boss": false,
+      "basis": "nearby"
+    },
+    {
+      "at": "2026-09-08T19:48:44Z",
+      "creature": "Troll",
+      "level": 1,
+      "boss": false,
+      "basis": "nearby"
+    },
+    {
+      "at": "2026-09-08T19:35:06Z",
+      "creature": "Greydwarf shaman",
+      "level": 3,
+      "boss": false,
+      "basis": "credited"
+    },
+    {
+      "at": "2026-09-08T19:33:51Z",
+      "creature": "Neck",
+      "level": 1,
+      "boss": false,
+      "basis": "nearby"
+    },
+    {
+      "at": "2026-09-08T19:32:08Z",
+      "creature": "Skeleton",
+      "level": 1,
+      "boss": false,
+      "basis": "nearby"
+    },
+    {
+      "at": "2026-09-08T19:29:45Z",
+      "creature": "Greydwarf",
+      "level": 1,
+      "boss": false,
+      "basis": "nearby"
+    }
+  ]
+}

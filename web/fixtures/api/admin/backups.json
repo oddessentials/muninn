@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "at": "2026-09-10T03:00:08Z",
+      "file": "valheim-2026-09-10T03-00-00Z.dump",
+      "size_bytes": 40903715,
+      "ok": true
+    },
+    {
+      "at": "2026-09-09T03:00:12Z",
+      "file": "valheim-2026-09-09T03-00-00Z.dump",
+      "size_bytes": 40691619,
+      "ok": true
+    },
+    {
+      "at": "2026-09-08T03:00:11Z",
+      "file": "valheim-2026-09-08T03-00-00Z.dump",
+      "size_bytes": 40774524,
+      "ok": true
+    },
+    {
+      "at": "2026-09-07T03:00:18Z",
+      "file": "valheim-2026-09-07T03-00-00Z.dump",
+      "size_bytes": 40543160,
+      "ok": true
+    },
+    {
+      "at": "2026-09-06T03:00:18Z",
+      "file": "valheim-2026-09-06T03-00-00Z.dump",
+      "size_bytes": 39247715,
+      "ok": true
+    },
+    {
+      "at": "2026-09-05T03:00:04Z",
+      "file": "valheim-2026-09-05T03-00-00Z.dump",
+      "size_bytes": 39697493,
+      "ok": true
+    },
+    {
+      "at": "2026-09-04T03:00:27Z",
+      "file": "valheim-2026-09-04T03-00-00Z.dump",
+      "size_bytes": 38585773,
+      "ok": true
+    },
+    {
+      "at": "2026-09-03T03:00:26Z",
+      "file": "valheim-2026-09-03T03-00-00Z.dump",
+      "size_bytes": 37839506,
+      "ok": true
+    },
+    {
+      "at": "2026-09-02T03:00:16Z",
+      "file": "valheim-2026-09-02T03-00-00Z.dump",
+      "size_bytes": 38507661,
+      "ok": true
+    },
+    {
+      "at": "2026-09-01T03:00:25Z",
+      "file": "valheim-2026-09-01T03-00-00Z.dump",
+      "size_bytes": 38477675,
+      "ok": true
+    },
+    {
+      "at": "2026-08-31T03:00:29Z",
+      "file": "valheim-2026-08-31T03-00-00Z.dump",
+      "size_bytes": 37147714,
+      "ok": true
+    },
+    {
+      "at": "2026-08-30T03:00:15Z",
+      "file": "valheim-2026-08-30T03-00-00Z.dump",
+      "size_bytes": 37828868,
+      "ok": true
+    },
+    {
+      "at": "2026-08-29T03:00:07Z",
+      "file": "valheim-2026-08-29T03-00-00Z.dump",
+      "size_bytes": 37440064,
+      "ok": true
+    },
+    {
+      "at": "2026-08-28T03:00:13Z",
+      "file": "valheim-2026-08-28T03-00-00Z.dump",
+      "size_bytes": 37154590,
+      "ok": true
+    }
+  ]
+}

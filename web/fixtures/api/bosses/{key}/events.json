@@ -1,0 +1,213 @@
+{
+  "items": [
+    {
+      "id": "71aaae58-c9f0-401a-b13d-0254a84d1013",
+      "kind": "defeated",
+      "phase": null,
+      "at": "2026-08-08T19:45:00Z",
+      "day": 74,
+      "x": null,
+      "z": null,
+      "biome": "Meadows",
+      "participants": [
+        {
+          "id": 4,
+          "display_name": "Astrid",
+          "platform": "Steam"
+        }
+      ],
+      "nearby": [
+        {
+          "id": 4,
+          "display_name": "Astrid",
+          "platform": "Steam"
+        },
+        {
+          "id": 3,
+          "display_name": "Ragnar",
+          "platform": "Steam"
+        }
+      ],
+      "summoner": null,
+      "first_time": false
+    },
+    {
+      "id": "2445de0e-97f2-4fc0-a771-688c9d7fcd1b",
+      "kind": "engaged",
+      "phase": null,
+      "at": "2026-08-08T19:37:45Z",
+      "day": 74,
+      "x": -374.6,
+      "z": 1140.7,
+      "biome": "Meadows",
+      "participants": [],
+      "nearby": [
+        {
+          "id": 4,
+          "display_name": "Astrid",
+          "platform": "Steam"
+        },
+        {
+          "id": 3,
+          "display_name": "Ragnar",
+          "platform": "Steam"
+        }
+      ],
+      "summoner": null,
+      "first_time": null
+    },
+    {
+      "id": "2620645e-e26f-4293-9060-68ee49369ebf",
+      "kind": "summoned",
+      "phase": null,
+      "at": "2026-08-08T19:37:00Z",
+      "day": 74,
+      "x": -374.6,
+      "z": 1140.7,
+      "biome": "Meadows",
+      "participants": [],
+      "nearby": [],
+      "summoner": {
+        "id": 4,
+        "display_name": "Astrid",
+        "platform": "Steam"
+      },
+      "first_time": null
+    },
+    {
+      "id": "f741f40b-155a-4be7-b694-3d20421b3459",
+      "kind": "defeated",
+      "phase": null,
+      "at": "2026-07-25T19:20:00Z",
+      "day": 20,
+      "x": null,
+      "z": null,
+      "biome": "Meadows",
+      "participants": [
+        {
+          "id": 1,
+          "display_name": "Bjorn",
+          "platform": "Steam"
+        },
+        {
+          "id": 5,
+          "display_name": "Ulf",
+          "platform": "Steam"
+        },
+        {
+          "id": 4,
+          "display_name": "Astrid",
+          "platform": "Steam"
+        },
+        {
+          "id": 3,
+          "display_name": "Ragnar",
+          "platform": "Steam"
+        },
+        {
+          "id": 6,
+          "display_name": "Sigrid",
+          "platform": "Steam"
+        }
+      ],
+      "nearby": [
+        {
+          "id": 1,
+          "display_name": "Bjorn",
+          "platform": "Steam"
+        },
+        {
+          "id": 5,
+          "display_name": "Ulf",
+          "platform": "Steam"
+        },
+        {
+          "id": 2,
+          "display_name": "Freya",
+          "platform": "Steam"
+        },
+        {
+          "id": 4,
+          "display_name": "Astrid",
+          "platform": "Steam"
+        },
+        {
+          "id": 3,
+          "display_name": "Ragnar",
+          "platform": "Steam"
+        },
+        {
+          "id": 6,
+          "display_name": "Sigrid",
+          "platform": "Steam"
+        }
+      ],
+      "summoner": null,
+      "first_time": true
+    },
+    {
+      "id": "ef231a60-1cb0-4901-a012-e4e5ff645e63",
+      "kind": "engaged",
+      "phase": null,
+      "at": "2026-07-25T19:15:45Z",
+      "day": 20,
+      "x": -407.7,
+      "z": 1133.6,
+      "biome": "Meadows",
+      "participants": [],
+      "nearby": [
+        {
+          "id": 1,
+          "display_name": "Bjorn",
+          "platform": "Steam"
+        },
+        {
+          "id": 5,
+          "display_name": "Ulf",
+          "platform": "Steam"
+        },
+        {
+          "id": 2,
+          "display_name": "Freya",
+          "platform": "Steam"
+        },
+        {
+          "id": 4,
+          "display_name": "Astrid",
+          "platform": "Steam"
+        },
+        {
+          "id": 3,
+          "display_name": "Ragnar",
+          "platform": "Steam"
+        },
+        {
+          "id": 6,
+          "display_name": "Sigrid",
+          "platform": "Steam"
+        }
+      ],
+      "summoner": null,
+      "first_time": null
+    },
+    {
+      "id": "17bf2620-8105-480a-a2ad-7cbc31c95c2d",
+      "kind": "summoned",
+      "phase": null,
+      "at": "2026-07-25T19:15:00Z",
+      "day": 20,
+      "x": -407.7,
+      "z": 1133.6,
+      "biome": "Meadows",
+      "participants": [],
+      "nearby": [],
+      "summoner": {
+        "id": 1,
+        "display_name": "Bjorn",
+        "platform": "Steam"
+      },
+      "first_time": null
+    }
+  ],
+  "next_cursor": null
+}

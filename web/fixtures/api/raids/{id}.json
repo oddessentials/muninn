@@ -1,0 +1,62 @@
+{
+  "id": 2,
+  "name": "army_theelder",
+  "label": "The forest is moving...",
+  "biome": "BlackForest",
+  "x": 105.6,
+  "z": -255.4,
+  "day": 80,
+  "started_at": "2026-08-09T20:04:00Z",
+  "ended_at": "2026-08-09T20:06:05Z",
+  "duration_s": 125,
+  "planned_duration_s": 120,
+  "participants": [
+    {
+      "id": 5,
+      "display_name": "Ulf",
+      "platform": "Steam"
+    },
+    {
+      "id": 1,
+      "display_name": "Bjorn",
+      "platform": "Steam"
+    },
+    {
+      "id": 6,
+      "display_name": "Sigrid",
+      "platform": "Steam"
+    },
+    {
+      "id": 2,
+      "display_name": "Freya",
+      "platform": "Steam"
+    },
+    {
+      "id": 4,
+      "display_name": "Astrid",
+      "platform": "Steam"
+    }
+  ],
+  "deaths_during": 2,
+  "end_reason": "ended",
+  "restored": false,
+  "active_s": 120,
+  "deaths": [
+    {
+      "player": {
+        "id": 4,
+        "display_name": "Astrid",
+        "platform": "Steam"
+      },
+      "at": "2026-08-09T20:04:48Z",
+      "x": -2455.4,
+      "z": 621.8
+    },
+    {
+      "player": null,
+      "at": "2026-08-09T20:05:30Z",
+      "x": -2440.2,
+      "z": 630.5
+    }
+  ]
+}
