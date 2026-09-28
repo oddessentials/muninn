@@ -1,0 +1,67 @@
+@font-face {
+  font-family: 'Baloo 2';
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url('/fonts/baloo2-variable.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Patrick Hand';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/patrick-hand-400.woff2') format('woff2');
+}
+
+:root {
+  color-scheme: light;
+  --color-surface: #f7f2e6;
+  --color-surface-raised: #fffdf6;
+  --color-surface-sunken: #ebe3d1;
+  --color-surface-hover: #f1ead9;
+  --color-ink: #241f18;
+  --color-ink-muted: #5c5244;
+  --color-ink-faint: #6a6050;
+  --color-line: #ddd3bd;
+  --color-line-strong: #bfb194;
+  --color-accent: #0d6e86;
+  --color-accent-bright: #0a5568;
+  --color-accent-deep: #084453;
+  --color-accent-contrast: #fffdf6;
+  --color-ember: #9a4b07;
+  --color-online: #2c6e2a;
+  --color-offline: #b02f26;
+  --color-warning: #8a5200;
+  --color-danger: #a82a20;
+  --color-info: #15607f;
+  --color-water: #2e86c8;
+  --color-sky: #4fb3e8;
+  --color-sky-deep: #1e7fc4;
+  --color-sun: #ffb020;
+  --color-sun-hot: #ff8a2b;
+  --color-grass: #7cc242;
+  --color-grass-deep: #46852c;
+  --color-sphere-shell: #23b5bf;
+  --color-sphere-cream: #f4eedd;
+  --color-sphere-band: #33424e;
+  --color-steel: #6e8091;
+  --color-biome-meadows: #8fcb52;
+  --color-biome-blackforest: #3c7a36;
+  --color-biome-swamp: #77794a;
+  --color-biome-mountain: #e8f0f5;
+  --color-biome-plains: #e4c65c;
+  --color-biome-mistlands: #7e7fa3;
+  --color-biome-ashlands: #d1502f;
+  --color-biome-deepnorth: #cfe4f2;
+  --color-biome-ocean: #2e86c8;
+  --color-biome-none: #a8a296;
+  --font-display: 'Baloo 2', 'Trebuchet MS', 'Segoe UI', system-ui, sans-serif;
+  --font-sans: 'IBM Plex Mono', 'Cascadia Mono', Consolas, 'Liberation Mono', Menlo, monospace;
+  --font-mono: 'IBM Plex Mono', 'Cascadia Mono', Consolas, 'Liberation Mono', Menlo, monospace;
+  --font-note: 'Patrick Hand', 'Segoe Print', 'Bradley Hand', cursive;
+  --radius-card: 10px;
+  --gutter: clamp(1rem, 4vw, 2.5rem);
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
