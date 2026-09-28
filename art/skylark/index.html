@@ -150,13 +150,15 @@
       <h2>The world clock</h2>
       <p class="lede">
         Muninn's bronze shield becomes a capture-sphere rim: eight armour plates, a teal inlay, and
-        the lark on the crest where the winged skull used to sit. The face stays calm because
-        <code>SunDial.svelte</code> draws ticks, numerals and the readout on top of it.
+        the lark on the crest where the winged skull used to sit. Modelled and lit in Blender
+        rather than drawn, so the bevels and rivets carry real reflections. The whole plate is
+        built from the radii <code>SunDial.svelte</code> depends on, and the face stays calm
+        because that component draws ticks, numerals and the readout on top of it.
       </p>
       <figure class="plate card">
         <img src="raster/dial-plate-1024.webp" alt="" />
         <div>
-          <p class="meta">Geometry held from SunDial.svelte</p>
+          <p class="meta">Cycles render &middot; blender/dial.py &middot; 1024px, 512 samples</p>
           <table>
             <tr><td>Face, clean for the overlay</td><td><code>r &lt; 353</code></td></tr>
             <tr><td>Sun and moon orbit</td><td><code>r = 339</code></td></tr>
@@ -200,7 +202,8 @@
           <tr><td><code>scenery-shaders.ts</code></td><td>Drop-in. Same four exports, same uniforms, same two passes, so <code>scenery.ts</code> is untouched.</td></tr>
           <tr><td><code>SunDial.svelte</code></td><td>Art paths only. The <code>.sun-dial-well</code> radial must invert for a light face.</td></tr>
           <tr><td><code>dial-art.test.ts</code></td><td>Byte budgets all hold with room: 1024 AVIF is 34 KB against 100 KB.</td></tr>
-          <tr><td><code>og.jpg</code>, banner</td><td>Rebuilt from <code>social.html</code> in this directory.</td></tr>
+          <tr><td><code>og.jpg</code>, banner</td><td>Not built yet. Needs the painted backdrop first.</td></tr>
+          <tr><td>The backdrop</td><td>The one piece not at Muninn's level. Shipping art is the vector scene; a Blender blockout exists in <code>blender/field.py</code> but needs real foliage, rock and cloud assets before it beats the vector version.</td></tr>
         </tbody>
       </table>
     </main>
