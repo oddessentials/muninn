@@ -16,7 +16,7 @@
   import { causeLabel, deathCauseKeyLabel, leftReasonLabel, prefabLabel } from '$lib/ui/labels';
   import { mergeActivity } from '$lib/ui/feed';
   import { useLive } from '$lib/ui/live.svelte';
-  import { hasPosition, type MapMarker, type MapTrack } from '$lib/ui/map';
+  import { hasPosition, trackSegments, type MapMarker, type MapTrack } from '$lib/ui/map';
   import Meta from '$lib/ui/Meta.svelte';
   import PageHeader from '$lib/ui/PageHeader.svelte';
   import Pager from '$lib/ui/Pager.svelte';
@@ -41,9 +41,7 @@
       ? [
           {
             label: `Path over the last ${data.range}`,
-            points: [...data.positions.data.items]
-              .sort((a, b) => (a.ts < b.ts ? -1 : 1))
-              .map((position) => ({ x: position.x, z: position.z }))
+            segments: trackSegments(data.positions.data.items)
           }
         ]
       : []

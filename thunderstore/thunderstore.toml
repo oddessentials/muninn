@@ -5,7 +5,7 @@ schemaVersion = "0.0.1"
 namespace = "oddessentials"
 name = "Muninn"
 versionNumber = "0.0.0"
-description = "A live website for your Valheim server: who is online, bosses, raids, builds, the world clock and a comfort planner. Server-side only; players install nothing."
+description = "A live website for your Valheim server: who is online, bosses, raids, builds, the world map, the world clock and a comfort planner. Server-side only; players install nothing."
 websiteUrl = "https://oddessentials.github.io/muninn/"
 containsNsfwContent = false
 

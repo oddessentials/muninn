@@ -13,8 +13,8 @@
       "summary": {
         "kind": "ping",
         "text": null,
-        "x": 76.1,
-        "z": -253.1,
+        "x": -29.3,
+        "z": -47.3,
         "biome": "Meadows"
       },
       "links": {
@@ -37,8 +37,8 @@
       "summary": {
         "kind": "ping",
         "text": null,
-        "x": 76.1,
-        "z": -253.1,
+        "x": -29.3,
+        "z": -47.3,
         "biome": "Meadows"
       },
       "links": {
@@ -61,8 +61,8 @@
       "summary": {
         "from": "Mountain",
         "to": "Meadows",
-        "x": 76.1,
-        "z": -253.1,
+        "x": -29.3,
+        "z": -47.3,
         "first_discovery": false
       },
       "links": {
@@ -85,8 +85,8 @@
       "summary": {
         "from": "Meadows",
         "to": "Mountain",
-        "x": 2222.2,
-        "z": 3026.8,
+        "x": -3379.7,
+        "z": -4605.2,
         "first_discovery": false
       },
       "links": {
@@ -110,8 +110,8 @@
         "name": "Bjorn",
         "character_id": 3187264590123456,
         "respawn": false,
-        "x": 113.6,
-        "z": -258.7,
+        "x": 8.2,
+        "z": -52.9,
         "biome": "Meadows"
       },
       "links": {
@@ -180,8 +180,8 @@
       "summary": {
         "from": "Meadows",
         "to": "BlackForest",
-        "x": 958.6,
-        "z": -1561.7,
+        "x": 2366.2,
+        "z": 869.9,
         "first_discovery": false
       },
       "links": {
@@ -205,8 +205,8 @@
         "name": "Bjorn",
         "character_id": 3187264590123456,
         "respawn": false,
-        "x": 111.4,
-        "z": -251.8,
+        "x": 6.0,
+        "z": -46.0,
         "biome": "Meadows"
       },
       "links": {
@@ -275,8 +275,8 @@
       "summary": {
         "from": "BlackForest",
         "to": "Mountain",
-        "x": 1906.9,
-        "z": 3042.6,
+        "x": -3647.7,
+        "z": -4591.8,
         "first_discovery": false
       },
       "links": {
@@ -299,8 +299,8 @@
       "summary": {
         "from": "Meadows",
         "to": "BlackForest",
-        "x": 870.6,
-        "z": -1451.1,
+        "x": 2304.6,
+        "z": 947.3,
         "first_discovery": false
       },
       "links": {
@@ -324,8 +324,8 @@
         "name": "Bjorn",
         "character_id": 3187264590123456,
         "respawn": false,
-        "x": 105.7,
-        "z": -236.2,
+        "x": 0.3,
+        "z": -30.4,
         "biome": "Meadows"
       },
       "links": {
@@ -394,8 +394,8 @@
       "summary": {
         "from": "BlackForest",
         "to": "Plains",
-        "x": -3969.2,
-        "z": -2027.5,
+        "x": -1198.9,
+        "z": -3259.9,
         "first_discovery": false
       },
       "links": {
@@ -418,8 +418,8 @@
       "summary": {
         "from": "Meadows",
         "to": "BlackForest",
-        "x": 744.5,
-        "z": -1393,
+        "x": 2216.3,
+        "z": 988.0,
         "first_discovery": false
       },
       "links": {
@@ -443,8 +443,8 @@
         "name": "Bjorn",
         "character_id": 3187264590123456,
         "respawn": false,
-        "x": 103.9,
-        "z": -221.5,
+        "x": -1.5,
+        "z": -15.7,
         "biome": "Meadows"
       },
       "links": {
@@ -513,8 +513,8 @@
       "summary": {
         "from": "Meadows",
         "to": "Mountain",
-        "x": 1894.5,
-        "z": 3017.2,
+        "x": -3658.3,
+        "z": -4613.4,
         "first_discovery": false
       },
       "links": {
@@ -538,8 +538,8 @@
         "name": "Bjorn",
         "character_id": 3187264590123456,
         "respawn": false,
-        "x": 130,
-        "z": -234.5,
+        "x": 24.6,
+        "z": -28.7,
         "biome": "Meadows"
       },
       "links": {
@@ -608,8 +608,8 @@
       "summary": {
         "from": "Plains",
         "to": "Swamp",
-        "x": -2288.3,
-        "z": 838.8,
+        "x": 2221.7,
+        "z": -210.0,
         "first_discovery": false
       },
       "links": {
@@ -632,8 +632,8 @@
       "summary": {
         "from": "Swamp",
         "to": "Plains",
-        "x": -3911.9,
-        "z": -2180.8,
+        "x": -1163.4,
+        "z": -3355.0,
         "first_discovery": false
       },
       "links": {
@@ -656,8 +656,8 @@
       "summary": {
         "from": "Meadows",
         "to": "Swamp",
-        "x": -2476.2,
-        "z": 501.2,
+        "x": 2153.3,
+        "z": -288.1,
         "first_discovery": false
       },
       "links": {
@@ -681,8 +681,8 @@
         "name": "Bjorn",
         "character_id": 3187264590123456,
         "respawn": false,
-        "x": 102.9,
-        "z": -224.7,
+        "x": -2.5,
+        "z": -18.9,
         "biome": "Meadows"
       },
       "links": {
@@ -751,8 +751,8 @@
       "summary": {
         "from": "Meadows",
         "to": "Swamp",
-        "x": -2435.6,
-        "z": 494.3,
+        "x": 2192.4,
+        "z": -297.9,
         "first_discovery": false
       },
       "links": {
@@ -776,8 +776,8 @@
         "name": "Bjorn",
         "character_id": 3187264590123456,
         "respawn": false,
-        "x": 112,
-        "z": -221.8,
+        "x": 6.6,
+        "z": -16.0,
         "biome": "Meadows"
       },
       "links": {
@@ -846,8 +846,8 @@
       "summary": {
         "from": "BlackForest",
         "to": "Swamp",
-        "x": -2495.4,
-        "z": 666.3,
+        "x": 2153.3,
+        "z": -268.6,
         "first_discovery": false
       },
       "links": {
@@ -870,8 +870,8 @@
       "summary": {
         "from": "Meadows",
         "to": "BlackForest",
-        "x": 643.5,
-        "z": -1412.7,
+        "x": 2145.6,
+        "z": 974.2,
         "first_discovery": false
       },
       "links": {
@@ -895,8 +895,8 @@
         "name": "Bjorn",
         "character_id": 3187264590123456,
         "respawn": false,
-        "x": 101.9,
-        "z": -230.9,
+        "x": -3.5,
+        "z": -25.1,
         "biome": "Meadows"
       },
       "links": {
@@ -966,8 +966,8 @@
         "name": "Bjorn",
         "character_id": 3187264590123456,
         "respawn": true,
-        "x": 120,
-        "z": -240,
+        "x": 14.6,
+        "z": -34.2,
         "biome": "Meadows"
       },
       "links": {
@@ -990,8 +990,8 @@
       "summary": {
         "name": "Bjorn",
         "character_id": 3187264590123456,
-        "x": 2165.3,
-        "z": 3207,
+        "x": -3428.1,
+        "z": -4452.1,
         "biome": "Mountain",
         "observed_cause": {
           "hit_type": "EnemyHit",
@@ -1021,8 +1021,8 @@
       "summary": {
         "from": "Plains",
         "to": "Mountain",
-        "x": 2179,
-        "z": 3180.4,
+        "x": -3416.4,
+        "z": -4474.7,
         "first_discovery": false
       },
       "links": {
@@ -1045,8 +1045,8 @@
       "summary": {
         "from": "Meadows",
         "to": "Plains",
-        "x": -3607.7,
-        "z": -2244.8,
+        "x": -974.8,
+        "z": -3394.7,
         "first_discovery": false
       },
       "links": {
@@ -1070,8 +1070,8 @@
         "name": "Bjorn",
         "character_id": 3187264590123456,
         "respawn": false,
-        "x": 131.5,
-        "z": -247.9,
+        "x": 26.1,
+        "z": -42.1,
         "biome": "Meadows"
       },
       "links": {
@@ -1184,8 +1184,8 @@
       "summary": {
         "prefab": "Dragon",
         "name_key": "$enemy_dragon",
-        "x": 2323.3,
-        "z": 3483.8,
+        "x": -3293.8,
+        "z": -4216.8,
         "biome": "Mountain",
         "alert_message": "$enemy_dragon_alert",
         "nearby": [
@@ -1222,8 +1222,8 @@
       "summary": {
         "from": "Plains",
         "to": "Swamp",
-        "x": -2269.9,
-        "z": 731.4,
+        "x": 2221.7,
+        "z": -258.8,
         "first_discovery": false
       },
       "links": {

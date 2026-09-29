@@ -43,8 +43,8 @@
           "platform": "Steam",
           "character_name": "Bjorn",
           "biome": "Meadows",
-          "x": 76.1,
-          "z": -253.1,
+          "x": -29.3,
+          "z": -47.3,
           "since": "2026-09-10T17:05:00Z"
         },
         {
@@ -53,8 +53,8 @@
           "platform": "Steam",
           "character_name": "Freya",
           "biome": "Meadows",
-          "x": 147.8,
-          "z": -210.8,
+          "x": 42.4,
+          "z": -5.0,
           "since": "2026-09-10T17:40:00Z"
         }
       ]
@@ -104,8 +104,8 @@
       "summary": {
         "from": "Mountain",
         "to": "Meadows",
-        "x": 76.1,
-        "z": -253.1,
+        "x": -29.3,
+        "z": -47.3,
         "first_discovery": false
       },
       "links": {
@@ -132,8 +132,8 @@
       "summary": {
         "kind": "shout",
         "text": "Found a swamp crypt north of the river",
-        "x": 147.8,
-        "z": -210.8,
+        "x": 42.4,
+        "z": -5.0,
         "biome": "Meadows"
       },
       "links": {
@@ -160,8 +160,8 @@
       "summary": {
         "name": "Hilde",
         "character_id": 2287654321098765,
-        "x": 2308.7,
-        "z": 3061.9,
+        "x": -3306.2,
+        "z": -4575.4,
         "biome": "Mountain",
         "observed_cause": null,
         "cause": null,
@@ -258,8 +258,8 @@
       "player": null,
       "summary": {
         "name": "army_bonemass",
-        "x": 139.1,
-        "z": -232.2,
+        "x": 1987.3,
+        "z": -268.6,
         "biome": "Swamp",
         "duration_s": 100,
         "nearby": [

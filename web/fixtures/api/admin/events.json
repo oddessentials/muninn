@@ -9,8 +9,8 @@
       "world_day": 193,
       "data": {
         "platform_user_id": "Steam_76561198087654321",
-        "x": 111.4,
-        "z": -153.8,
+        "x": 6.0,
+        "z": 52.0,
         "biome": "Meadows"
       }
     },
@@ -23,8 +23,8 @@
       "world_day": 193,
       "data": {
         "platform_user_id": "Steam_76561198012345678",
-        "x": 85.4,
-        "z": -296.4,
+        "x": -20.0,
+        "z": -90.6,
         "biome": "Meadows"
       }
     },
@@ -37,8 +37,8 @@
       "world_day": 193,
       "data": {
         "platform_user_id": "Steam_76561198087654321",
-        "x": 135.1,
-        "z": -151,
+        "x": 29.7,
+        "z": 54.8,
         "biome": "Meadows"
       }
     },
@@ -51,8 +51,8 @@
       "world_day": 193,
       "data": {
         "platform_user_id": "Steam_76561198012345678",
-        "x": 85.4,
-        "z": -280,
+        "x": -20.0,
+        "z": -74.2,
         "biome": "Meadows"
       }
     },
@@ -65,8 +65,8 @@
       "world_day": 193,
       "data": {
         "platform_user_id": "Steam_76561198087654321",
-        "x": 156.1,
-        "z": -154.6,
+        "x": 50.7,
+        "z": 51.2,
         "biome": "Meadows"
       }
     },
@@ -79,8 +79,8 @@
       "world_day": 193,
       "data": {
         "platform_user_id": "Steam_76561198012345678",
-        "x": 82.6,
-        "z": -265.2,
+        "x": -22.8,
+        "z": -59.4,
         "biome": "Meadows"
       }
     },
@@ -93,8 +93,8 @@
       "world_day": 193,
       "data": {
         "platform_user_id": "Steam_76561198087654321",
-        "x": 171.4,
-        "z": -165.8,
+        "x": 66.0,
+        "z": 40.0,
         "biome": "Meadows"
       }
     },
@@ -107,8 +107,8 @@
       "world_day": 193,
       "data": {
         "platform_user_id": "Steam_76561198012345678",
-        "x": 74.7,
-        "z": -253.5,
+        "x": -30.7,
+        "z": -47.7,
         "biome": "Meadows"
       }
     },
@@ -121,8 +121,8 @@
       "world_day": 193,
       "data": {
         "platform_user_id": "Steam_76561198087654321",
-        "x": 179.5,
-        "z": -184.3,
+        "x": 74.1,
+        "z": 21.5,
         "biome": "Meadows"
       }
     },
@@ -135,8 +135,8 @@
       "world_day": 193,
       "data": {
         "platform_user_id": "Steam_76561198012345678",
-        "x": 61,
-        "z": -245.6,
+        "x": -44.4,
+        "z": -39.8,
         "biome": "Meadows"
       }
     },
@@ -150,8 +150,8 @@
       "data": {
         "prefab": "Deer",
         "level": 1,
-        "x": 56.2,
-        "z": -234.8,
+        "x": -49.2,
+        "z": -29.0,
         "biome": "Meadows",
         "credited": ["Steam_76561198012345678"],
         "nearby": ["Steam_76561198012345678"]
@@ -166,8 +166,8 @@
       "world_day": 193,
       "data": {
         "platform_user_id": "Steam_76561198087654321",
-        "x": 181.5,
-        "z": -208.2,
+        "x": 76.1,
+        "z": -2.4,
         "biome": "Meadows"
       }
     },
@@ -180,8 +180,8 @@
       "world_day": 193,
       "data": {
         "platform_user_id": "Steam_76561198012345678",
-        "x": 42.8,
-        "z": -240.7,
+        "x": -62.6,
+        "z": -34.9,
         "biome": "Meadows"
       }
     },
@@ -194,8 +194,8 @@
       "world_day": 193,
       "data": {
         "platform_user_id": "Steam_76561198087654321",
-        "x": 179.7,
-        "z": -234.6,
+        "x": 74.3,
+        "z": -28.8,
         "biome": "Meadows"
       }
     },
@@ -208,8 +208,8 @@
       "world_day": 193,
       "data": {
         "platform_user_id": "Steam_76561198012345678",
-        "x": 22.9,
-        "z": -237.3,
+        "x": -82.5,
+        "z": -31.5,
         "biome": "Meadows"
       }
     },
@@ -222,8 +222,8 @@
       "world_day": 193,
       "data": {
         "platform_user_id": "Steam_76561198087654321",
-        "x": 177.3,
-        "z": -259.8,
+        "x": 71.9,
+        "z": -54.0,
         "biome": "Meadows"
       }
     },
@@ -236,8 +236,8 @@
       "world_day": 193,
       "data": {
         "platform_user_id": "Steam_76561198012345678",
-        "x": 5.5,
-        "z": -233.9,
+        "x": -99.9,
+        "z": -28.1,
         "biome": "Meadows"
       }
     },
@@ -250,8 +250,8 @@
       "world_day": 193,
       "data": {
         "platform_user_id": "Steam_76561198087654321",
-        "x": 177.3,
-        "z": -280,
+        "x": 71.9,
+        "z": -74.2,
         "biome": "Meadows"
       }
     },
@@ -264,8 +264,8 @@
       "world_day": 193,
       "data": {
         "platform_user_id": "Steam_76561198012345678",
-        "x": -5.5,
-        "z": -228.8,
+        "x": -110.9,
+        "z": -23.0,
         "biome": "Meadows"
       }
     },
@@ -279,8 +279,8 @@
       "data": {
         "prefab": "Boar",
         "level": 2,
-        "x": 87.4,
-        "z": -226.3,
+        "x": -18.0,
+        "z": -20.5,
         "biome": "Meadows",
         "credited": [],
         "nearby": ["Steam_76561198012345678"]
@@ -295,8 +295,8 @@
       "world_day": 193,
       "data": {
         "platform_user_id": "Steam_76561198087654321",
-        "x": 181.4,
-        "z": -292.3,
+        "x": 76.0,
+        "z": -86.5,
         "biome": "Meadows"
       }
     },
@@ -309,8 +309,8 @@
       "world_day": 193,
       "data": {
         "platform_user_id": "Steam_76561198012345678",
-        "x": -7.5,
-        "z": -221.6,
+        "x": -112.9,
+        "z": -15.8,
         "biome": "Meadows"
       }
     },
@@ -323,8 +323,8 @@
       "world_day": 193,
       "data": {
         "platform_user_id": "Steam_76561198087654321",
-        "x": 189.6,
-        "z": -294.9,
+        "x": 84.2,
+        "z": -89.1,
         "biome": "Meadows"
       }
     },
@@ -337,8 +337,8 @@
       "world_day": 193,
       "data": {
         "platform_user_id": "Steam_76561198012345678",
-        "x": 0.6,
-        "z": -212.6,
+        "x": -104.8,
+        "z": -6.8,
         "biome": "Meadows"
       }
     },
@@ -351,8 +351,8 @@
       "world_day": 193,
       "data": {
         "platform_user_id": "Steam_76561198087654321",
-        "x": 200.1,
-        "z": -287.6,
+        "x": 94.7,
+        "z": -81.8,
         "biome": "Meadows"
       }
     },
@@ -365,8 +365,8 @@
       "world_day": 193,
       "data": {
         "platform_user_id": "Steam_76561198012345678",
-        "x": 17.3,
-        "z": -203.4,
+        "x": -88.1,
+        "z": 2.4,
         "biome": "Meadows"
       }
     },
@@ -379,8 +379,8 @@
       "world_day": 193,
       "data": {
         "platform_user_id": "Steam_76561198087654321",
-        "x": 209.6,
-        "z": -271.9,
+        "x": 104.2,
+        "z": -66.1,
         "biome": "Meadows"
       }
     },
@@ -393,8 +393,8 @@
       "world_day": 193,
       "data": {
         "platform_user_id": "Steam_76561198012345678",
-        "x": 39.7,
-        "z": -196.1,
+        "x": -65.7,
+        "z": 9.7,
         "biome": "Meadows"
       }
     },
@@ -407,8 +407,8 @@
       "world_day": 193,
       "data": {
         "platform_user_id": "Steam_76561198087654321",
-        "x": 214.4,
-        "z": -250.5,
+        "x": 109.0,
+        "z": -44.7,
         "biome": "Meadows"
       }
     },
@@ -421,8 +421,8 @@
       "world_day": 193,
       "data": {
         "platform_user_id": "Steam_76561198012345678",
-        "x": 63.4,
-        "z": -193.3,
+        "x": -42.0,
+        "z": 12.5,
         "biome": "Meadows"
       }
     },
@@ -435,8 +435,8 @@
       "world_day": 193,
       "data": {
         "platform_user_id": "Steam_76561198087654321",
-        "x": 211.7,
-        "z": -227,
+        "x": 106.3,
+        "z": -21.2,
         "biome": "Meadows"
       }
     },
@@ -449,8 +449,8 @@
       "world_day": 193,
       "data": {
         "platform_user_id": "Steam_76561198012345678",
-        "x": 84.4,
-        "z": -196.9,
+        "x": -21.0,
+        "z": 8.9,
         "biome": "Meadows"
       }
     },
@@ -463,8 +463,8 @@
       "world_day": 193,
       "data": {
         "platform_user_id": "Steam_76561198087654321",
-        "x": 200.1,
-        "z": -204.8,
+        "x": 94.7,
+        "z": 1.0,
         "biome": "Meadows"
       }
     },
@@ -477,8 +477,8 @@
       "world_day": 193,
       "data": {
         "platform_user_id": "Steam_76561198012345678",
-        "x": 99.7,
-        "z": -208.1,
+        "x": -5.7,
+        "z": -2.3,
         "biome": "Meadows"
       }
     },
@@ -491,8 +491,8 @@
       "world_day": 193,
       "data": {
         "platform_user_id": "Steam_76561198087654321",
-        "x": 180.3,
-        "z": -186.7,
+        "x": 74.9,
+        "z": 19.1,
         "biome": "Meadows"
       }
     },
@@ -505,8 +505,8 @@
       "world_day": 193,
       "data": {
         "platform_user_id": "Steam_76561198012345678",
-        "x": 107.8,
-        "z": -226.6,
+        "x": 2.4,
+        "z": -20.8,
         "biome": "Meadows"
       }
     },
@@ -519,8 +519,8 @@
       "world_day": 193,
       "data": {
         "platform_user_id": "Steam_76561198087654321",
-        "x": 155.1,
-        "z": -174.4,
+        "x": 49.7,
+        "z": 31.4,
         "biome": "Meadows"
       }
     },
@@ -533,8 +533,8 @@
       "world_day": 193,
       "data": {
         "platform_user_id": "Steam_76561198012345678",
-        "x": 109.8,
-        "z": -250.5,
+        "x": 4.4,
+        "z": -44.7,
         "biome": "Meadows"
       }
     },
@@ -547,8 +547,8 @@
       "world_day": 193,
       "data": {
         "platform_user_id": "Steam_76561198087654321",
-        "x": 128.5,
-        "z": -168.1,
+        "x": 23.1,
+        "z": 37.7,
         "biome": "Meadows"
       }
     },
@@ -561,8 +561,8 @@
       "world_day": 193,
       "data": {
         "platform_user_id": "Steam_76561198012345678",
-        "x": 108,
-        "z": -276.9,
+        "x": 2.6,
+        "z": -71.1,
         "biome": "Meadows"
       }
     },
@@ -575,8 +575,8 @@
       "world_day": 193,
       "data": {
         "platform_user_id": "Steam_76561198087654321",
-        "x": 105,
-        "z": -166.9,
+        "x": -0.4,
+        "z": 38.9,
         "biome": "Meadows"
       }
     },
@@ -589,8 +589,8 @@
       "world_day": 193,
       "data": {
         "platform_user_id": "Steam_76561198012345678",
-        "x": 105.6,
-        "z": -302.1,
+        "x": 0.2,
+        "z": -96.3,
         "biome": "Meadows"
       }
     },
@@ -603,8 +603,8 @@
       "world_day": 193,
       "data": {
         "platform_user_id": "Steam_76561198087654321",
-        "x": 88.4,
-        "z": -169.1,
+        "x": -17.0,
+        "z": 36.7,
         "biome": "Meadows"
       }
     },
@@ -617,8 +617,8 @@
       "world_day": 193,
       "data": {
         "platform_user_id": "Steam_76561198012345678",
-        "x": 105.6,
-        "z": -322.3,
+        "x": 0.2,
+        "z": -116.5,
         "biome": "Meadows"
       }
     },
@@ -631,8 +631,8 @@
       "world_day": 193,
       "data": {
         "platform_user_id": "Steam_76561198087654321",
-        "x": 80.4,
-        "z": -172.6,
+        "x": -25.0,
+        "z": 33.2,
         "biome": "Meadows"
       }
     },
@@ -645,8 +645,8 @@
       "world_day": 193,
       "data": {
         "platform_user_id": "Steam_76561198012345678",
-        "x": 109.7,
-        "z": -334.6,
+        "x": 4.3,
+        "z": -128.8,
         "biome": "Meadows"
       }
     },
@@ -660,8 +660,8 @@
       "data": {
         "prefab": "Boar",
         "level": 1,
-        "x": 155.3,
-        "z": -210.8,
+        "x": 49.9,
+        "z": -5.0,
         "biome": "Meadows",
         "credited": ["Steam_76561198087654321"],
         "nearby": ["Steam_76561198087654321", "Steam_76561198012345678"]
@@ -676,8 +676,8 @@
       "world_day": 193,
       "data": {
         "platform_user_id": "Steam_76561198087654321",
-        "x": 81.2,
-        "z": -175.5,
+        "x": -24.2,
+        "z": 30.3,
         "biome": "Meadows"
       }
     },
@@ -690,8 +690,8 @@
       "world_day": 193,
       "data": {
         "platform_user_id": "Steam_76561198012345678",
-        "x": 117.9,
-        "z": -337.2,
+        "x": 12.5,
+        "z": -131.4,
         "biome": "Meadows"
       }
     },
@@ -706,8 +706,8 @@
         "platform_user_id": "Steam_76561198087654321",
         "kind": "shout",
         "text": "Found a swamp crypt north of the river",
-        "x": 147.8,
-        "z": -210.8,
+        "x": 42.4,
+        "z": -5.0,
         "biome": "Meadows"
       }
     }

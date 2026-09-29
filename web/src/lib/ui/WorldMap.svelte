@@ -5,15 +5,18 @@
   import { biomeLabel, mapBiomeColors } from './labels';
   import {
     focusViewBox,
+    labelLineHeight,
     mapGeometry,
     markerColors,
     markerKindLabels,
     metresToPixels,
     scaleBarMetres,
+    stackLabels,
     toPixel,
     viewBoxString,
     worldViewBox,
     type MapMarker,
+    type MapPoint,
     type MapTrack,
     type MarkerKind
   } from './map';
@@ -40,7 +43,7 @@
   let chosen = $state<'world' | 'markers' | null>(null);
   const mode = $derived(chosen ?? focus);
   const geometry = $derived(mapGeometry(map, src));
-  const points = $derived([...markers, ...tracks.flatMap((track) => track.points)]);
+  const points = $derived([...markers, ...tracks.flatMap((track) => track.segments.flat())]);
   const canFocus = $derived(points.length > 0);
   const box = $derived(
     mode === 'markers' && canFocus ? focusViewBox(points, geometry) : worldViewBox(geometry)
@@ -56,13 +59,22 @@
     [...new Set(markers.map((marker) => marker.kind))].filter((kind) => kind !== 'player')
   );
   const shrouded = $derived(geometry.available && !shroud.revealed);
+  const labels = $derived(
+    stackLabels(
+      markers
+        .filter((marker) => marker.kind === 'player')
+        .map((marker) => ({ ...pixel(marker), text: marker.label })),
+      radius,
+      fontSize
+    )
+  );
 
   function pixel(point: { x: number; z: number }) {
     return toPixel(point, geometry);
   }
 
-  function trackPath(track: MapTrack): string {
-    return track.points
+  function segmentPath(segment: MapPoint[]): string {
+    return segment
       .map((point) => {
         const { px, py } = pixel(point);
         return `${px.toFixed(1)},${py.toFixed(1)}`;
@@ -92,27 +104,29 @@
           <circle cx={size / 2} cy={size / 2} r={size / 2} fill="#274B8A" />
         {/if}
         {#each tracks as track (track.label)}
-          {#if track.points.length > 1}
-            <polyline
-              points={trackPath(track)}
-              fill="none"
-              stroke="#000"
-              stroke-opacity="0.6"
-              stroke-width={strokeWidth * 3}
-              stroke-linejoin="round"
-              stroke-linecap="round"
-            />
-            <polyline
-              points={trackPath(track)}
-              fill="none"
-              stroke="#fff"
-              stroke-width={strokeWidth * 1.5}
-              stroke-linejoin="round"
-              stroke-linecap="round"
-            >
-              <title>{track.label}</title>
-            </polyline>
-          {/if}
+          {#each track.segments as segment, index (index)}
+            {#if segment.length > 1}
+              <polyline
+                points={segmentPath(segment)}
+                fill="none"
+                stroke="#000"
+                stroke-opacity="0.6"
+                stroke-width={strokeWidth * 3}
+                stroke-linejoin="round"
+                stroke-linecap="round"
+              />
+              <polyline
+                points={segmentPath(segment)}
+                fill="none"
+                stroke="#fff"
+                stroke-width={strokeWidth * 1.5}
+                stroke-linejoin="round"
+                stroke-linecap="round"
+              >
+                <title>{track.label}</title>
+              </polyline>
+            {/if}
+          {/each}
         {/each}
         {#each markers as marker, index (index)}
           {@const { px, py } = pixel(marker)}
@@ -141,20 +155,24 @@
               <title>{marker.label}</title>
             </circle>
           {/if}
-          {#if marker.kind === 'player'}
-            <text
-              x={px + radius * 1.8}
-              y={py + fontSize * 0.35}
-              font-size={fontSize}
-              class="font-sans"
-              font-weight="600"
-              fill="#fff"
-              stroke="#000"
-              stroke-width={strokeWidth}
-              paint-order="stroke"
-              style="pointer-events: none">{marker.label}</text
-            >
-          {/if}
+        {/each}
+        {#each labels as label, labelIndex (labelIndex)}
+          <text
+            x={label.x}
+            y={label.y}
+            font-size={fontSize}
+            class="font-sans"
+            font-weight="600"
+            fill="#fff"
+            stroke="#000"
+            stroke-width={strokeWidth}
+            paint-order="stroke"
+            style="pointer-events: none"
+          >
+            {#each label.lines as line, index (index)}
+              <tspan x={label.x} dy={index === 0 ? 0 : fontSize * labelLineHeight}>{line}</tspan>
+            {/each}
+          </text>
         {/each}
       </svg>
     </div>

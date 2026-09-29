@@ -24,6 +24,7 @@
     "fixtures:check": "node scripts/fixtures-check.mjs",
     "test": "npm run test -w web",
     "test:e2e": "npm run test:e2e -w web",
+    "screenshots": "npm run screenshots -w web",
     "test:rig": "node --env-file-if-exists=.env web/scripts/test-rig.ts",
     "db:migrate": "npm run db:migrate -w web",
     "db:generate": "npm run db:generate -w web",

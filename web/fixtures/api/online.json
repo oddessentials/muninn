@@ -6,8 +6,8 @@
       "platform": "Steam",
       "character_name": "Bjorn",
       "biome": "Meadows",
-      "x": 76.1,
-      "z": -253.1,
+      "x": -29.3,
+      "z": -47.3,
       "since": "2026-09-10T17:05:00Z"
     },
     {
@@ -16,8 +16,8 @@
       "platform": "Steam",
       "character_name": "Freya",
       "biome": "Meadows",
-      "x": 147.8,
-      "z": -210.8,
+      "x": 42.4,
+      "z": -5.0,
       "since": "2026-09-10T17:40:00Z"
     }
   ]
