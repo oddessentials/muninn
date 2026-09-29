@@ -11,8 +11,8 @@
         "platform": "Steam"
       },
       "summary": {
-        "x": 76.1,
-        "z": -253.1,
+        "x": -29.3,
+        "z": -47.3,
         "biome": "Meadows"
       },
       "links": {
@@ -40,8 +40,8 @@
             "platform_user_id": "Steam_76561198012345678",
             "character_id": 3187264590123456,
             "name": "Bjorn",
-            "x": 76.1,
-            "z": -253.1,
+            "x": -29.3,
+            "z": -47.3,
             "biome": "Meadows",
             "distance_since_last_m": 41.2
           },
@@ -49,8 +49,8 @@
             "platform_user_id": "Steam_76561198087654321",
             "character_id": 5023871234567890,
             "name": "Freya",
-            "x": 147.8,
-            "z": -210.8,
+            "x": 42.4,
+            "z": -5.0,
             "biome": "Meadows",
             "distance_since_last_m": 12.7
           }
@@ -76,8 +76,8 @@
       "summary": {
         "prefab": "Deer",
         "level": 1,
-        "x": 141.7,
-        "z": -195.8,
+        "x": 36.3,
+        "z": 10.0,
         "biome": "Meadows",
         "credited": [
           {
@@ -138,8 +138,8 @@
       "summary": {
         "kind": "shout",
         "text": "Found a swamp crypt north of the river",
-        "x": 147.8,
-        "z": -210.8,
+        "x": 42.4,
+        "z": -5.0,
         "biome": "Meadows"
       },
       "links": {
@@ -161,8 +161,8 @@
       },
       "summary": {
         "prefab": "wood_floor",
-        "x": 123.1,
-        "z": -230.2,
+        "x": 17.7,
+        "z": -24.4,
         "biome": "Meadows",
         "creator_character_id": 5023871234567890,
         "creator": {
@@ -186,8 +186,8 @@
       "player": null,
       "summary": {
         "prefab": "wood_wall",
-        "x": 118.4,
-        "z": -236.9,
+        "x": 13.0,
+        "z": -31.1,
         "biome": "Meadows",
         "creator_character_id": 5023871234567890
       },
@@ -211,8 +211,8 @@
       "summary": {
         "kind": "ping",
         "text": null,
-        "x": 76.1,
-        "z": -253.1,
+        "x": -29.3,
+        "z": -47.3,
         "biome": "Meadows"
       },
       "links": {
@@ -313,8 +313,8 @@
       "summary": {
         "kind": "ping",
         "text": null,
-        "x": 76.1,
-        "z": -253.1,
+        "x": -29.3,
+        "z": -47.3,
         "biome": "Meadows"
       },
       "links": {
@@ -368,8 +368,8 @@
         "name": "Freya",
         "character_id": 5023871234567890,
         "respawn": false,
-        "x": 147.8,
-        "z": -210.8,
+        "x": 42.4,
+        "z": -5.0,
         "biome": "Meadows"
       },
       "links": {
@@ -416,8 +416,8 @@
       "summary": {
         "from": "Mountain",
         "to": "Meadows",
-        "x": 76.1,
-        "z": -253.1,
+        "x": -29.3,
+        "z": -47.3,
         "first_discovery": false
       },
       "links": {
@@ -470,8 +470,8 @@
       "summary": {
         "from": "Meadows",
         "to": "Mountain",
-        "x": 2222.2,
-        "z": 3026.8,
+        "x": -3379.7,
+        "z": -4605.2,
         "first_discovery": false
       },
       "links": {
@@ -495,8 +495,8 @@
         "name": "Bjorn",
         "character_id": 3187264590123456,
         "respawn": false,
-        "x": 113.6,
-        "z": -258.7,
+        "x": 8.2,
+        "z": -52.9,
         "biome": "Meadows"
       },
       "links": {
@@ -1035,8 +1035,8 @@
       "summary": {
         "kind": "shout",
         "text": "Server restart at 09:00 UTC for the backup, log out before then",
-        "x": 0,
-        "z": 0,
+        "x": -43.9,
+        "z": 102.5,
         "biome": "None"
       },
       "links": {
@@ -1081,8 +1081,8 @@
       "summary": {
         "name": "Hilde",
         "character_id": 2287654321098765,
-        "x": 2308.7,
-        "z": 3061.9,
+        "x": -3306.2,
+        "z": -4575.4,
         "biome": "Mountain",
         "observed_cause": null,
         "cause": null,
@@ -1108,8 +1108,8 @@
       "summary": {
         "name": "Bjorn",
         "character_id": 3187264590123456,
-        "x": 2165.3,
-        "z": 3207,
+        "x": -3428.1,
+        "z": -4452.1,
         "biome": "Mountain",
         "observed_cause": {
           "hit_type": "EnemyHit",
@@ -1140,8 +1140,8 @@
       "summary": {
         "name": "Torvald",
         "character_id": 4412345678901234,
-        "x": 2201.5,
-        "z": 3190.4,
+        "x": -3397.3,
+        "z": -4466.2,
         "biome": "Mountain",
         "observed_cause": {
           "hit_type": "Freezing",
@@ -1234,8 +1234,8 @@
       "summary": {
         "prefab": "Dragon",
         "name_key": "$enemy_dragon",
-        "x": 2323.3,
-        "z": 3483.8,
+        "x": -3293.8,
+        "z": -4216.8,
         "biome": "Mountain",
         "alert_message": "$enemy_dragon_alert",
         "nearby": [
@@ -1272,8 +1272,8 @@
       "summary": {
         "prefab": "Dragon",
         "name_key": "$enemy_dragon",
-        "x": 2323.3,
-        "z": 3483.8,
+        "x": -3293.8,
+        "z": -4216.8,
         "biome": "Mountain",
         "method": "spawn_rpc",
         "summoner": {
@@ -1364,8 +1364,8 @@
       "player": null,
       "summary": {
         "name": "wolves",
-        "x": -1210.4,
-        "z": 388.9,
+        "x": 2944.3,
+        "z": 24.4,
         "biome": "Mountain",
         "duration_s": 120,
         "nearby": [],
@@ -1421,8 +1421,8 @@
       "player": null,
       "summary": {
         "name": "army_bonemass",
-        "x": 139.1,
-        "z": -232.2,
+        "x": 1987.3,
+        "z": -268.6,
         "biome": "Swamp",
         "duration_s": 100,
         "nearby": [

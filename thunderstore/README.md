@@ -12,7 +12,15 @@ Muninn gives your Valheim guild its own website. This plugin runs on the dedicat
 
 ![The comfort planner](https://raw.githubusercontent.com/oddessentials/muninn/main/site/assets/comfort-planner.jpg)
 
-Also: who is online, bosses, raids, deaths, structures, the world map, the activity feed and chat.
+## The world, mapped
+
+The plugin draws your world's biome map once, from the server's own world generator. The site marks everyone online on it, draws each player's path with their deaths, and shows where raids and boss fights happened. It stays under a spoiler shroud until each visitor chooses to reveal it.
+
+![The biome map of the whole world](https://raw.githubusercontent.com/oddessentials/muninn/main/site/assets/world-map.jpg)
+
+![A player's path over the last day](https://raw.githubusercontent.com/oddessentials/muninn/main/site/assets/player-map.jpg)
+
+Also: who is online, bosses, raids, deaths, structures, the activity feed and chat.
 
 ## Install
 

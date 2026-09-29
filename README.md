@@ -38,11 +38,32 @@ Muninn gives your Valheim guild its own website. A plugin on the dedicated serve
 
 Every comfort piece, read from the game your server runs, with its icon and recipe. Pick pieces and the plan adds up comfort, Rested time and every material you need.
 
+## The world, mapped
+
+<img src="site/assets/world-map.jpg" alt="The world page: the biome map of the whole world, with the players online marked on it" width="100%">
+
+The plugin draws your world's biome map once, from the server's own world generator, and the site marks everyone online on it. The whole world is on it, so it stays under a spoiler shroud until each visitor chooses to reveal it.
+
+<table>
+  <tr>
+    <td width="34%" valign="top">
+      <img src="site/assets/raid-map.jpg" alt="A raid on the map: where it started and a death while it ran">
+      <h3>Fights, where they happened</h3>
+      Every raid's centre and the deaths while it ran, and every boss summon and fight, on the map.
+    </td>
+    <td width="66%" valign="top">
+      <img src="site/assets/player-map.jpg" alt="A player's page: their path over the last day, across two islands and a mountain, with their deaths marked">
+      <h3>Where they have been</h3>
+      Each player's path over the last hour, day or week, with every death marked. A teleport starts a new line instead of cutting across the map.
+    </td>
+  </tr>
+</table>
+
 ## Also on the site
 
 - Who is online, where they are and for how long
 - Boss progression, raids, deaths and kills
-- Every structure built, the explored world map, the activity feed and chat
+- Every structure built, the activity feed, and chat with a map of where each shout and ping was made
 - An admin area for plugin setup, in-game announcements and backups
 - Switches to hide chat, positions, the map or Steam ids
 

@@ -5,8 +5,8 @@
       "at": "2026-09-09T20:41:12Z",
       "day": 190,
       "biome": "Ocean",
-      "x": -3120.6,
-      "z": 1877.3,
+      "x": 1970.9,
+      "z": 95.1,
       "cause": null
     },
     {
@@ -14,8 +14,8 @@
       "at": "2026-08-08T13:03:34Z",
       "day": 72,
       "biome": "BlackForest",
-      "x": 725.7,
-      "z": -1296.2,
+      "x": 2203.2,
+      "z": 1055.8,
       "cause": {
         "hit_type": "EnemyHit",
         "attacker_prefab": "Greydwarf_Elite",
@@ -27,8 +27,8 @@
       "at": "2026-08-30T19:17:07Z",
       "day": 152,
       "biome": "Plains",
-      "x": -3674.5,
-      "z": -2200.1,
+      "x": -1016.2,
+      "z": -3367.0,
       "cause": {
         "hit_type": "EnemyHit",
         "attacker_prefab": "Draugr",
@@ -40,8 +40,8 @@
       "at": "2026-08-01T20:37:20Z",
       "day": 58,
       "biome": "Meadows",
-      "x": 98.4,
-      "z": -157.7,
+      "x": -7.0,
+      "z": 48.1,
       "cause": {
         "hit_type": "EnemyHit",
         "attacker_prefab": "Goblin",
@@ -53,8 +53,8 @@
       "at": "2026-08-16T20:06:04Z",
       "day": 109,
       "biome": "Mountain",
-      "x": 2052.4,
-      "z": 3183.3,
+      "x": -3524.1,
+      "z": -4472.2,
       "cause": {
         "hit_type": "EnemyHit",
         "attacker_prefab": "Draugr",
@@ -66,8 +66,8 @@
       "at": "2026-08-09T12:54:22Z",
       "day": 77,
       "biome": "Swamp",
-      "x": -2216.7,
-      "z": 586.9,
+      "x": 2231.4,
+      "z": -297.9,
       "cause": {
         "hit_type": "EnemyHit",
         "attacker_prefab": "Troll",
@@ -79,8 +79,8 @@
       "at": "2026-09-01T19:53:34Z",
       "day": 159,
       "biome": "Mountain",
-      "x": 2165.3,
-      "z": 3207,
+      "x": -3428.1,
+      "z": -4452.1,
       "cause": {
         "hit_type": "EnemyHit",
         "attacker_prefab": "Greydwarf_Elite",
@@ -92,8 +92,8 @@
       "at": "2026-08-14T20:19:56Z",
       "day": 98,
       "biome": "BlackForest",
-      "x": 782.4,
-      "z": -1545.3,
+      "x": 2242.9,
+      "z": 881.4,
       "cause": {
         "hit_type": "EnemyHit",
         "attacker_prefab": "Troll",

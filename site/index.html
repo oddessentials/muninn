@@ -190,6 +190,10 @@
       .wide {
         grid-column: 1 / -1;
       }
+      .map {
+        justify-self: center;
+        max-width: 52rem;
+      }
       ul.plain {
         margin: 0;
         padding-left: 1.2rem;
@@ -337,12 +341,33 @@
         </div>
       </section>
 
+      <section aria-labelledby="mapped">
+        <h2 id="mapped">The world, mapped</h2>
+        <div class="features">
+          <div class="feature wide map">
+            <img class="shot" src="assets/world-map.jpg" width="1340" height="1471" alt="The world page: the biome map of the whole world, with the players online marked on it" />
+            <h3>The whole world</h3>
+            <p>The plugin draws your world's biome map once, from the server's own world generator, and the site marks everyone online on it. The whole world is on it, so it stays under a spoiler shroud until each visitor chooses to reveal it.</p>
+          </div>
+          <div class="feature">
+            <img class="shot" src="assets/raid-map.jpg" width="655" height="739" alt="A raid on the map: where it started and a death while it ran" />
+            <h3>Fights, where they happened</h3>
+            <p>Every raid's centre and the deaths while it ran, and every boss summon and fight, on the map.</p>
+          </div>
+          <div class="feature">
+            <img class="shot" src="assets/player-map.jpg" width="1340" height="988" alt="A player's page: their path over the last day, across two islands and a mountain, with their deaths marked" />
+            <h3>Where they have been</h3>
+            <p>Each player's path over the last hour, day or week, with every death marked. A teleport starts a new line instead of cutting across the map.</p>
+          </div>
+        </div>
+      </section>
+
       <section aria-labelledby="also">
         <h2 id="also">Also on the site</h2>
         <ul class="plain">
           <li>Who is online, where they are and for how long</li>
           <li>Boss progression, raids, deaths and kills</li>
-          <li>Every structure built, the explored world map, the activity feed and chat</li>
+          <li>Every structure built, the activity feed, and chat with a map of where each shout and ping was made</li>
           <li>An admin area for plugin setup, in-game announcements and backups</li>
           <li>Switches to hide chat, positions, the map or Steam ids</li>
         </ul>

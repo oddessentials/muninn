@@ -106,7 +106,116 @@ export function hasPosition<T extends { x: number | null; z: number | null }>(
 
 export interface MapTrack {
   label: string;
-  points: MapPoint[];
+  segments: MapPoint[][];
+}
+
+export interface TrackSample extends MapPoint {
+  ts: string;
+}
+
+export const teleportMetres = 500;
+export const teleportWindowSeconds = 5;
+
+export function trackSegments(samples: readonly TrackSample[]): MapPoint[][] {
+  const ordered = [...samples].sort((a, b) => Date.parse(a.ts) - Date.parse(b.ts));
+  const segments: MapPoint[][] = [];
+  let current: MapPoint[] = [];
+  let previous: TrackSample | null = null;
+  for (const sample of ordered) {
+    if (previous) {
+      const seconds = Math.max(
+        teleportWindowSeconds,
+        (Date.parse(sample.ts) - Date.parse(previous.ts)) / 1000
+      );
+      const metres = Math.hypot(sample.x - previous.x, sample.z - previous.z);
+      if (metres >= teleportMetres * (seconds / teleportWindowSeconds)) {
+        segments.push(current);
+        current = [];
+      }
+    }
+    current.push({ x: sample.x, z: sample.z });
+    previous = sample;
+  }
+  if (current.length > 0) segments.push(current);
+  return segments;
+}
+
+export interface LabelAnchor {
+  px: number;
+  py: number;
+  text: string;
+}
+
+export interface LabelStack {
+  x: number;
+  y: number;
+  lines: string[];
+}
+
+export const labelLineHeight = 1.25;
+
+interface LabelGroup {
+  members: LabelAnchor[];
+  left: number;
+  right: number;
+  top: number;
+  bottom: number;
+}
+
+function layoutGroup(members: LabelAnchor[], radius: number, fontSize: number): LabelGroup {
+  const lineHeight = fontSize * labelLineHeight;
+  const left = Math.max(...members.map((member) => member.px)) + radius * 1.8;
+  const width = Math.max(...members.map((member) => member.text.length)) * fontSize * 0.62;
+  const centre = members.reduce((sum, member) => sum + member.py, 0) / members.length;
+  const height = fontSize + (members.length - 1) * lineHeight;
+  return {
+    members,
+    left,
+    right: left + width,
+    top: centre - height / 2,
+    bottom: centre + height / 2
+  };
+}
+
+function groupsTouch(a: LabelGroup, b: LabelGroup, radius: number): boolean {
+  const boxes =
+    a.left < b.right && b.left < a.right && a.top < b.bottom + radius && b.top < a.bottom + radius;
+  if (boxes) return true;
+  return a.members.some((one) =>
+    b.members.some((two) => Math.hypot(one.px - two.px, one.py - two.py) < radius * 2.4)
+  );
+}
+
+function touchingPair(groups: LabelGroup[], radius: number): [number, number] | null {
+  for (let i = 0; i < groups.length; i++) {
+    for (let j = i + 1; j < groups.length; j++) {
+      if (groupsTouch(groups[i]!, groups[j]!, radius)) return [i, j];
+    }
+  }
+  return null;
+}
+
+export function stackLabels(
+  anchors: readonly LabelAnchor[],
+  radius: number,
+  fontSize: number
+): LabelStack[] {
+  let groups = anchors.map((anchor) => layoutGroup([anchor], radius, fontSize));
+  for (let pair = touchingPair(groups, radius); pair; pair = touchingPair(groups, radius)) {
+    const [i, j] = pair;
+    const members = [...groups[i]!.members, ...groups[j]!.members];
+    groups = [
+      ...groups.filter((_, index) => index !== i && index !== j),
+      layoutGroup(members, radius, fontSize)
+    ];
+  }
+  return groups.map((group) => ({
+    x: group.left,
+    y: group.top + fontSize * 0.85,
+    lines: [...group.members]
+      .sort((a, b) => a.py - b.py || a.text.localeCompare(b.text))
+      .map((member) => member.text)
+  }));
 }
 
 export const markerColors: Record<MarkerKind, string> = {
