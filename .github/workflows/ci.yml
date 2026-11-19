@@ -84,6 +84,8 @@ jobs:
           sudo apt-get install --yes lib32gcc-s1
           mkdir -p "$RUNNER_TEMP/steamcmd"
           curl -fsSL https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz | tar -xz -C "$RUNNER_TEMP/steamcmd"
-          "$RUNNER_TEMP/steamcmd/steamcmd.sh" +force_install_dir "$VALHEIM_SERVER_PATH" +login anonymous +app_update 896660 validate +quit
+          for attempt in 1 2 3; do
+            "$RUNNER_TEMP/steamcmd/steamcmd.sh" +force_install_dir "$VALHEIM_SERVER_PATH" +login anonymous +app_update 896660 validate +quit && break
+          done
           test -f "$VALHEIM_SERVER_PATH/valheim_server_Data/Managed/assembly_valheim.dll"
       - run: dotnet build plugin/GuildTelemetry/GuildTelemetry.csproj -c Release
