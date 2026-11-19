@@ -1,5 +1,5 @@
-import type { Boss, BossEvent } from '$lib/api/types';
-import { forsakenCount, miniBosses } from '$lib/world/bosses';
+import type { Boss, BossEvent } from '#lib/api/types.ts';
+import { forsakenCount, miniBosses } from '#lib/world/bosses.ts';
 import { formatNumber } from './format';
 
 export const forsakenTotal = forsakenCount;

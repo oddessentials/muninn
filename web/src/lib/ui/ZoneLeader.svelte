@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { ApiError, createApi } from '$lib/api/client';
-  import type { ZoneRankedResult, ZoneResultList } from '$lib/api/types';
-  import type { DiagnosticProgress } from '$lib/zone/run-all';
-  import { normalizeZoneName } from '$lib/zone/stats';
+  import { ApiError, createApi } from '#lib/api/client.ts';
+  import type { ZoneRankedResult, ZoneResultList } from '#lib/api/types.ts';
+  import type { DiagnosticProgress } from '#lib/zone/run-all.ts';
+  import { normalizeZoneName } from '#lib/zone/stats.ts';
   import { atmosphere } from './atmosphere.svelte';
   import Emblem from './Emblem.svelte';
   import ErrorNote from './ErrorNote.svelte';
@@ -70,7 +70,7 @@
     progress = { phase: 'cpu', label: 'Loading the benchmark', fraction: 0 };
     const resumeAtmosphere = atmosphere.suspend();
     try {
-      const { runFullDiagnostic } = await import('$lib/zone/run-all');
+      const { runFullDiagnostic } = await import('#lib/zone/run-all.ts');
       const result = await runFullDiagnostic({
         playerName: key,
         target: {
@@ -135,7 +135,7 @@
   }
 
   async function download(entry: ZoneRankedResult): Promise<void> {
-    const { downloadResult } = await import('$lib/zone/download');
+    const { downloadResult } = await import('#lib/zone/download.ts');
     downloadResult(entry.result);
   }
 </script>

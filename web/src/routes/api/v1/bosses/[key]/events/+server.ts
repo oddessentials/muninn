@@ -1,6 +1,6 @@
-import { encodeCursor, notFound, parsePage } from '$lib/server/http/respond';
-import { publicGet } from '$lib/server/http/routes';
-import { bossEventItems, bossExists } from '$lib/server/read/bosses';
+import { encodeCursor, notFound, parsePage } from '#lib/server/http/respond.ts';
+import { publicGet } from '#lib/server/http/routes.ts';
+import { bossEventItems, bossExists } from '#lib/server/read/bosses.ts';
 
 export const GET = publicGet(async ({ params, url }, db) => {
   const key = params.key ?? '';

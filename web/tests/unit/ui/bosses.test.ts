@@ -5,7 +5,7 @@ import {
   bossEventLabel,
   bossStanding,
   bossTierEyebrow
-} from '$lib/ui/bosses';
+} from '#lib/ui/bosses.ts';
 
 const seen = { since: '2026-07-25T19:20:00Z', day: 20, observed: true };
 const saved = { since: '2026-09-11T03:31:56.391Z', day: 23, observed: false };

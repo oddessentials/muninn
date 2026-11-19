@@ -1,5 +1,5 @@
 import { and, desc, eq, gte, inArray, isNull, sql } from 'drizzle-orm';
-import type { OnlineList, Run, Status, StatusHistory } from '$lib/api/types';
+import type { OnlineList, Run, Status, StatusHistory } from '#lib/api/types.ts';
 import type { Database } from '../db/client';
 import { meta, players, serverRuns, serverStatus, sessions, statusSamples } from '../db/schema';
 import { batchMetaKeys } from '../ingest/ingest';

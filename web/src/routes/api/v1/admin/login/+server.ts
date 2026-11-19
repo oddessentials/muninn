@@ -1,9 +1,9 @@
 import type { RequestHandler } from '@sveltejs/kit';
-import { createSession, isSecureSite } from '$lib/server/auth/admin';
-import { secrets } from '$lib/server/auth/secrets';
-import { empty, errorResponse, guarded } from '$lib/server/http/respond';
-import { loginRateLimiter } from '$lib/server/http/rateLimit';
-import { clientAddress, readJsonBody } from '$lib/server/http/routes';
+import { createSession, isSecureSite } from '#lib/server/auth/admin.ts';
+import { secrets } from '#lib/server/auth/secrets.ts';
+import { empty, errorResponse, guarded } from '#lib/server/http/respond.ts';
+import { loginRateLimiter } from '#lib/server/http/rateLimit.ts';
+import { clientAddress, readJsonBody } from '#lib/server/http/routes.ts';
 
 export const POST: RequestHandler = (event) =>
   guarded(async () => {

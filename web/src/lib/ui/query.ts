@@ -56,10 +56,10 @@ export function pickList<T extends string>(
 }
 
 export function withParams(
-  url: URL,
+  url: { pathname: string; search: string },
   patch: Record<string, string | number | boolean | null | undefined>
 ): string {
-  const next = new URLSearchParams(url.searchParams);
+  const next = new URLSearchParams(url.search);
   for (const [key, value] of Object.entries(patch)) {
     if (value === null || value === undefined || value === '' || value === false) next.delete(key);
     else next.set(key, String(value));

@@ -1,5 +1,5 @@
-import { browser } from '$app/environment';
-import type { Status } from '$lib/api/types';
+import { browser } from '$app/env';
+import type { Status } from '#lib/api/types.ts';
 import {
   isWorldTimeAdvancing,
   nextTurn,
@@ -9,7 +9,7 @@ import {
   worldDay,
   type Phase,
   type Turn
-} from '$lib/world/clock';
+} from '#lib/world/clock.ts';
 
 export type ClockState = 'live' | 'still' | 'stale' | 'lost';
 

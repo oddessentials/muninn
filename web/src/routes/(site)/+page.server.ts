@@ -1,8 +1,8 @@
-import type { StatusHistoryRange } from '$lib/api/client';
-import { digestActivityTypes } from '$lib/ui/labels';
-import { attempt } from '$lib/ui/load';
-import { pickEnum } from '$lib/ui/query';
-import { serverApi } from '$lib/ui/server';
+import type { StatusHistoryRange } from '#lib/api/client.ts';
+import { digestActivityTypes } from '#lib/ui/labels.ts';
+import { attempt } from '#lib/ui/load.ts';
+import { pickEnum } from '#lib/ui/query.ts';
+import { serverApi } from '#lib/ui/server.ts';
 import type { PageServerLoad } from './$types';
 
 const ranges: readonly NonNullable<StatusHistoryRange>[] = ['24h', '7d', '30d'];

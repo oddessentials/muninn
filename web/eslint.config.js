@@ -3,7 +3,6 @@ import prettier from 'eslint-config-prettier';
 import svelte from 'eslint-plugin-svelte';
 import globals from 'globals';
 import ts from 'typescript-eslint';
-import svelteConfig from './svelte.config.js';
 
 export default ts.config(
   js.configs.recommended,
@@ -22,14 +21,30 @@ export default ts.config(
       parserOptions: {
         projectService: true,
         extraFileExtensions: ['.svelte'],
-        parser: ts.parser,
-        svelteConfig
+        parser: ts.parser
       }
     }
   },
   {
     rules: {
       'svelte/no-navigation-without-resolve': 'off'
+    }
+  },
+  {
+    files: ['tests/e2e/**'],
+    ignores: ['tests/e2e/hydrated.ts'],
+    rules: {
+      'no-restricted-imports': [
+        'error',
+        {
+          paths: [
+            {
+              name: '@playwright/test',
+              message: 'Import from ./hydrated.ts so every page load waits for hydration.'
+            }
+          ]
+        }
+      ]
     }
   },
   {

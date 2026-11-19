@@ -1,4 +1,4 @@
-import type { ActivityItem } from '$lib/api/types';
+import type { ActivityItem } from '#lib/api/types.ts';
 
 export function mergeActivity(
   fresh: ActivityItem[],

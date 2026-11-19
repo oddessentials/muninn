@@ -4,9 +4,9 @@ import {
   parseInstant,
   parseIntegerParam,
   parsePage
-} from '$lib/server/http/respond';
-import { publicGet } from '$lib/server/http/routes';
-import { buildActivityItems, parseTypes, queryActivity } from '$lib/server/read/activity';
+} from '#lib/server/http/respond.ts';
+import { publicGet } from '#lib/server/http/routes.ts';
+import { buildActivityItems, parseTypes, queryActivity } from '#lib/server/read/activity.ts';
 
 export const GET = publicGet(async ({ url }, db) => {
   const page = parsePage(url);

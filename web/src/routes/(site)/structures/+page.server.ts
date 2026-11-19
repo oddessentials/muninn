@@ -1,7 +1,7 @@
-import type { StructuresRange } from '$lib/api/client';
-import { attempt } from '$lib/ui/load';
-import { pickEnum, pickText } from '$lib/ui/query';
-import { serverApi } from '$lib/ui/server';
+import type { StructuresRange } from '#lib/api/client.ts';
+import { attempt } from '#lib/ui/load.ts';
+import { pickEnum, pickText } from '#lib/ui/query.ts';
+import { serverApi } from '#lib/ui/server.ts';
 import type { PageServerLoad } from './$types';
 
 const ranges: readonly NonNullable<StructuresRange>[] = ['7d', '30d', 'all'];

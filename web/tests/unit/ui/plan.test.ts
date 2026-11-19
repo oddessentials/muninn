@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
-import type { Comfort, ComfortPiece } from '$lib/api/types';
-import { peakComfort } from '$lib/ui/comfort';
+import type { Comfort, ComfortPiece } from '#lib/api/types.ts';
+import { peakComfort } from '#lib/ui/comfort.ts';
 import {
   changeCount,
   countOf,
@@ -14,8 +14,8 @@ import {
   serializePlan,
   totalPieces,
   withoutRecipe
-} from '$lib/ui/plan';
-import { recipeOf, type Recipe } from '$lib/world/recipes';
+} from '#lib/ui/plan.ts';
+import { recipeOf, type Recipe } from '#lib/world/recipes.ts';
 
 const fixture = JSON.parse(
   readFileSync(new URL('../../../fixtures/api/comfort.json', import.meta.url), 'utf8')

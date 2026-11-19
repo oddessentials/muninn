@@ -1,5 +1,5 @@
 import { and, asc, desc, eq, gte, sql } from 'drizzle-orm';
-import type { ProgressionKey, Save, World, WorldMap } from '$lib/api/types';
+import type { ProgressionKey, Save, World, WorldMap } from '#lib/api/types.ts';
 import type { Database } from '../db/client';
 import { events, globalKeys, mapImages, saves } from '../db/schema';
 import { iso, round } from '../http/respond';

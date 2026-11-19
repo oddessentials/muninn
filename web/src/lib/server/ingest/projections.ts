@@ -24,7 +24,7 @@ import type {
   StructureBuiltData,
   StructureDestroyedData,
   WorldSavedData
-} from '$lib/api/types';
+} from '#lib/api/types.ts';
 import {
   announcements,
   biomeVisits,
@@ -53,7 +53,7 @@ import {
   type RaidRow
 } from '../db/schema';
 import { bossKeyForPrefab, isBossPrefab } from '../names';
-import { bossForKey, bossForNameKey, bossForPrefab, isFinalKey } from '$lib/world/bosses';
+import { bossForKey, bossForNameKey, bossForPrefab, isFinalKey } from '#lib/world/bosses.ts';
 import {
   bumpCounter,
   eventDate,

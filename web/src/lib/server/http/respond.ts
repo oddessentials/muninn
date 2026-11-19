@@ -1,5 +1,5 @@
 import { createHash } from 'node:crypto';
-import type { ErrorCode } from '$lib/api/client';
+import type { ErrorCode } from '#lib/api/client.ts';
 
 export class ApiHttpError extends Error {
   readonly status: number;

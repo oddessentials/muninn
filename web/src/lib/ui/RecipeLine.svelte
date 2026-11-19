@@ -1,13 +1,13 @@
 <script lang="ts">
-  import { formatNumber } from '$lib/ui/format';
-  import GameIcon from '$lib/ui/GameIcon.svelte';
+  import { formatNumber } from '#lib/ui/format.ts';
+  import GameIcon from '#lib/ui/GameIcon.svelte';
   import {
     materialIcon,
     materialName,
     stationIcon,
     stationName,
     type Recipe
-  } from '$lib/world/recipes';
+  } from '#lib/world/recipes.ts';
 
   let {
     recipe,

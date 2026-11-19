@@ -1,5 +1,5 @@
 import { and, desc, eq, gte, lt, type SQL } from 'drizzle-orm';
-import type { ChatMessage } from '$lib/api/types';
+import type { ChatMessage } from '#lib/api/types.ts';
 import type { Database } from '../db/client';
 import { chatMessages } from '../db/schema';
 import { round } from '../http/respond';

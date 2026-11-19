@@ -1,4 +1,4 @@
-import type { StreamFrame } from '$lib/api/types';
+import type { StreamFrame } from '#lib/api/types.ts';
 import { getDb } from '../db/client';
 import { bus, type BusEvent } from '../events/bus';
 import { buildActivityItems, eventsAfter } from '../read/activity';

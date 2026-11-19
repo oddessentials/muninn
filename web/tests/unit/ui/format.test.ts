@@ -7,7 +7,7 @@ import {
   formatPerHour,
   formatPosition,
   relativeTime
-} from '$lib/ui/format';
+} from '#lib/ui/format.ts';
 
 describe('durations', () => {
   it('rounds to the units a player cares about', () => {

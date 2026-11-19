@@ -1,7 +1,7 @@
-import { activityTypes } from '$lib/ui/labels';
-import { attempt } from '$lib/ui/load';
-import { pickInstant, pickInt, pickOptionalEnum, pickText } from '$lib/ui/query';
-import { serverApi } from '$lib/ui/server';
+import { activityTypes } from '#lib/ui/labels.ts';
+import { attempt } from '#lib/ui/load.ts';
+import { pickInstant, pickInt, pickOptionalEnum, pickText } from '#lib/ui/query.ts';
+import { serverApi } from '#lib/ui/server.ts';
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async ({ fetch, url }) => {

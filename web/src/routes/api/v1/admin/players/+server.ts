@@ -1,6 +1,6 @@
-import { encodeCursor, parseBooleanParam, parsePage } from '$lib/server/http/respond';
-import { adminGet } from '$lib/server/http/routes';
-import { listAdminPlayers } from '$lib/server/read/admin';
+import { encodeCursor, parseBooleanParam, parsePage } from '#lib/server/http/respond.ts';
+import { adminGet } from '#lib/server/http/routes.ts';
+import { listAdminPlayers } from '#lib/server/read/admin.ts';
 
 export const GET = adminGet(async ({ url }, db) => {
   const page = parsePage(url);

@@ -1,13 +1,13 @@
 import { existsSync } from 'node:fs';
 import { copyFile, mkdir, writeFile } from 'node:fs/promises';
 import { join, resolve } from 'node:path';
-import type { PluginInfo } from '$lib/api/types';
+import type { PluginInfo } from '#lib/api/types.ts';
 import type { Database } from './db/client';
 import { env } from './env';
 import { secrets } from './auth/secrets';
 import { latestRun } from './read/status';
 import { siteFeatures } from './settings';
-import { configFileName, pluginConfig } from '$lib/ui/plugin';
+import { configFileName, pluginConfig } from '#lib/ui/plugin.ts';
 
 export const pluginFileName = 'GuildTelemetry.dll';
 export const imagePluginPath = `/app/plugin/${pluginFileName}`;

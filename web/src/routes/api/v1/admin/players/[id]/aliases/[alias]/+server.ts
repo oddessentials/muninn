@@ -1,6 +1,6 @@
-import { empty, parsePathId } from '$lib/server/http/respond';
-import { adminMutation } from '$lib/server/http/routes';
-import { deleteAlias } from '$lib/server/read/admin';
+import { empty, parsePathId } from '#lib/server/http/respond.ts';
+import { adminMutation } from '#lib/server/http/routes.ts';
+import { deleteAlias } from '#lib/server/read/admin.ts';
 
 export const DELETE = adminMutation(async (event, db) => {
   await deleteAlias(

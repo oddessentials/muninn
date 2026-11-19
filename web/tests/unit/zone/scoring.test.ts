@@ -5,7 +5,7 @@ import {
   ratingFromOverall,
   scoreCpu,
   scoreNetwork
-} from '$lib/zone/scoring';
+} from '#lib/zone/scoring.ts';
 import { defaultCompletion, defaultSystem, makeMeasurements, makeResult } from './fixtures';
 
 describe('network scoring', () => {

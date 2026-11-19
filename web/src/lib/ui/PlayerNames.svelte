@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { PlayerRef } from '$lib/api/types';
+  import type { PlayerRef } from '#lib/api/types.ts';
   import PlayerLink from './PlayerLink.svelte';
 
   let { players, empty = 'nobody' }: { players: (PlayerRef | null)[]; empty?: string } = $props();

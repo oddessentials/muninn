@@ -1,5 +1,5 @@
 import { and, asc, desc, eq, gt, inArray, isNull, or } from 'drizzle-orm';
-import type { Announcement, AnnouncementStatus, PluginAnnouncement } from '$lib/api/types';
+import type { Announcement, AnnouncementStatus, PluginAnnouncement } from '#lib/api/types.ts';
 import type { Database } from '../db/client';
 import { announcements, type AnnouncementKind, type AnnouncementRow } from '../db/schema';
 import { badRequest, conflict, iso, notFound } from '../http/respond';

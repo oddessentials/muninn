@@ -1,17 +1,17 @@
 <script lang="ts">
   import { onDestroy } from 'svelte';
-  import { invalidateAll } from '$app/navigation';
-  import { ApiError, api } from '$lib/api/client';
-  import type { Job } from '$lib/api/types';
-  import Card from '$lib/ui/Card.svelte';
-  import EmptyState from '$lib/ui/EmptyState.svelte';
-  import Meta from '$lib/ui/Meta.svelte';
-  import PageHeader from '$lib/ui/PageHeader.svelte';
-  import ErrorNote from '$lib/ui/ErrorNote.svelte';
-  import { formatBytes, formatDuration, formatMegabytes, formatNumber } from '$lib/ui/format';
-  import { stopReasonLabel } from '$lib/ui/labels';
-  import Stat from '$lib/ui/Stat.svelte';
-  import Time from '$lib/ui/Time.svelte';
+  import { refreshAll } from '$app/navigation';
+  import { ApiError, api } from '#lib/api/client.ts';
+  import type { Job } from '#lib/api/types.ts';
+  import Card from '#lib/ui/Card.svelte';
+  import EmptyState from '#lib/ui/EmptyState.svelte';
+  import Meta from '#lib/ui/Meta.svelte';
+  import PageHeader from '#lib/ui/PageHeader.svelte';
+  import ErrorNote from '#lib/ui/ErrorNote.svelte';
+  import { formatBytes, formatDuration, formatMegabytes, formatNumber } from '#lib/ui/format.ts';
+  import { stopReasonLabel } from '#lib/ui/labels.ts';
+  import Stat from '#lib/ui/Stat.svelte';
+  import Time from '#lib/ui/Time.svelte';
 
   let { data } = $props();
 
@@ -39,7 +39,7 @@
     if (job.state === 'queued' || job.state === 'running') {
       timer = setTimeout(() => poll(id), 2000);
     } else {
-      await invalidateAll();
+      await refreshAll();
     }
   }
 

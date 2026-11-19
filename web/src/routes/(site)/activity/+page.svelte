@@ -1,16 +1,16 @@
 <script lang="ts">
-  import type { ActivityItem } from '$lib/api/types';
-  import { activityMentions } from '$lib/ui/activity';
-  import ActivityFeed from '$lib/ui/ActivityFeed.svelte';
-  import Card from '$lib/ui/Card.svelte';
-  import ErrorNote from '$lib/ui/ErrorNote.svelte';
-  import { activityGroups, activityTypeLabel, noisyActivityTypes } from '$lib/ui/labels';
-  import { mergeActivity } from '$lib/ui/feed';
-  import { useLive } from '$lib/ui/live.svelte';
-  import Meta from '$lib/ui/Meta.svelte';
-  import PageHeader from '$lib/ui/PageHeader.svelte';
-  import Pager from '$lib/ui/Pager.svelte';
-  import { dateInputValue } from '$lib/ui/query';
+  import type { ActivityItem } from '#lib/api/types.ts';
+  import { activityMentions } from '#lib/ui/activity.ts';
+  import ActivityFeed from '#lib/ui/ActivityFeed.svelte';
+  import Card from '#lib/ui/Card.svelte';
+  import ErrorNote from '#lib/ui/ErrorNote.svelte';
+  import { activityGroups, activityTypeLabel, noisyActivityTypes } from '#lib/ui/labels.ts';
+  import { mergeActivity } from '#lib/ui/feed.ts';
+  import { useLive } from '#lib/ui/live.svelte.ts';
+  import Meta from '#lib/ui/Meta.svelte';
+  import PageHeader from '#lib/ui/PageHeader.svelte';
+  import Pager from '#lib/ui/Pager.svelte';
+  import { dateInputValue } from '#lib/ui/query.ts';
 
   let { data } = $props();
   const live = useLive();

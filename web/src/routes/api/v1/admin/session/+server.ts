@@ -1,7 +1,7 @@
 import type { RequestHandler } from '@sveltejs/kit';
-import { readSession } from '$lib/server/auth/admin';
-import { secrets } from '$lib/server/auth/secrets';
-import { guarded, privateJson } from '$lib/server/http/respond';
+import { readSession } from '#lib/server/auth/admin.ts';
+import { secrets } from '#lib/server/auth/secrets.ts';
+import { guarded, privateJson } from '#lib/server/http/respond.ts';
 
 export const GET: RequestHandler = (event) =>
   guarded(async () => {

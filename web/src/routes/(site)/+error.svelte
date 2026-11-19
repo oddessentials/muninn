@@ -1,7 +1,7 @@
 <script lang="ts">
   import { page } from '$app/state';
-  import Meta from '$lib/ui/Meta.svelte';
-  import MoatArt from '$lib/ui/MoatArt.svelte';
+  import Meta from '#lib/ui/Meta.svelte';
+  import MoatArt from '#lib/ui/MoatArt.svelte';
 </script>
 
 <Meta

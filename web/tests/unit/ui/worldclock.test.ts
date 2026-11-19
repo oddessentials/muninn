@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import type { Status } from '$lib/api/types';
+import type { Status } from '#lib/api/types.ts';
 import {
   settleMs,
   staleAfterMs,
@@ -7,7 +7,7 @@ import {
   tickMs,
   WorldClock,
   type TimeSource
-} from '$lib/ui/worldclock.svelte';
+} from '#lib/ui/worldclock.svelte.ts';
 
 function fakeSource(reduced = false) {
   let now = 10_000;

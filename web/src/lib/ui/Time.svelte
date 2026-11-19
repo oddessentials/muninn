@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { browser } from '$app/environment';
+  import { browser } from '$app/env';
   import { clock } from './clock.svelte';
   import { formatDate, formatDateTime, formatUtc, relativeTime } from './format';
 

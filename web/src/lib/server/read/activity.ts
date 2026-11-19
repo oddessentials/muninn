@@ -1,5 +1,5 @@
 import { and, asc, desc, eq, exists, gt, gte, inArray, lt, or, sql } from 'drizzle-orm';
-import type { ActivityItem, EventType, PlayerRef } from '$lib/api/types';
+import type { ActivityItem, EventType, PlayerRef } from '#lib/api/types.ts';
 import type { Database } from '../db/client';
 import {
   biomeVisits,
@@ -13,7 +13,7 @@ import {
   type EventRow
 } from '../db/schema';
 import { bossName, creatureName, raidLabel } from '../names';
-import { phaseOfPrefab } from '$lib/world/bosses';
+import { phaseOfPrefab } from '#lib/world/bosses.ts';
 import { siteFeatures, type Features } from '../settings';
 
 export const feedDefaultExclusions: readonly EventType[] = [

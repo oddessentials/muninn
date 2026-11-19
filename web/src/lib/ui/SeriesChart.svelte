@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { StructuresSeriesPoint } from '$lib/api/types';
+  import type { StructuresSeriesPoint } from '#lib/api/types.ts';
   import { formatNumber } from './format';
 
   let { series }: { series: StructuresSeriesPoint[] } = $props();

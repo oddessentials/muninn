@@ -9,7 +9,7 @@ import {
   ratingLabels,
   ratingTones,
   recommendationTones
-} from '$lib/ui/zone';
+} from '#lib/ui/zone.ts';
 
 describe('zone labels', () => {
   it('formats measurements with a dash for missing values', () => {

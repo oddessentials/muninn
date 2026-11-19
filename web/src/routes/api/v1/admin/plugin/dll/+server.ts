@@ -1,8 +1,8 @@
 import { readFile } from 'node:fs/promises';
 import type { RequestHandler } from '@sveltejs/kit';
-import { requireAdmin } from '$lib/server/auth/admin';
-import { errorResponse, guarded, noStore } from '$lib/server/http/respond';
-import { pluginDllPath, pluginFileName } from '$lib/server/plugin';
+import { requireAdmin } from '#lib/server/auth/admin.ts';
+import { errorResponse, guarded, noStore } from '#lib/server/http/respond.ts';
+import { pluginDllPath, pluginFileName } from '#lib/server/plugin.ts';
 
 export const GET: RequestHandler = (event) =>
   guarded(async () => {

@@ -71,5 +71,5 @@ run('gh', [
   zip
 ]);
 console.log(
-  `release: ${tag} is out. The release workflow now pushes the image, publishes to Thunderstore and updates the website: https://github.com/${repository}/actions/workflows/release.yml`
+  `release: ${tag} is out. The release workflow now pushes the image and publishes to Thunderstore:https://github.com/${repository}/actions/workflows/release.yml`
 );

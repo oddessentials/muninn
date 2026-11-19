@@ -8,7 +8,7 @@ import {
   crowOffsetSeconds,
   isWorldTimeAdvancing,
   worldDay
-} from '$lib/world/clock';
+} from '#lib/world/clock.ts';
 import { getDb, type Database } from '../db/client';
 import { events } from '../db/schema';
 import { createContext, type StoredEnvelope } from '../ingest/context';

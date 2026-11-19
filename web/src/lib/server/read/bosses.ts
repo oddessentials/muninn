@@ -1,10 +1,10 @@
 import { asc, desc, eq, sql } from 'drizzle-orm';
-import type { Boss, BossDetail, BossEvent } from '$lib/api/types';
+import type { Boss, BossDetail, BossEvent } from '#lib/api/types.ts';
 import type { Database } from '../db/client';
 import { bossEvents, bossKills, bossState, globalKeys } from '../db/schema';
 import { notFound, round } from '../http/respond';
 import { biomeName, bossName, knownBosses } from '../names';
-import { bossForKey, isFinalKey, phaseOfPrefab, type BossTier } from '$lib/world/bosses';
+import { bossForKey, isFinalKey, phaseOfPrefab, type BossTier } from '#lib/world/bosses.ts';
 import { playerRefs } from './players';
 
 interface BossAggregate {

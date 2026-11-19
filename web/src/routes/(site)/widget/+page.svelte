@@ -1,11 +1,11 @@
 <script lang="ts">
-  import ActivityFeed from '$lib/ui/ActivityFeed.svelte';
-  import BiomeTag from '$lib/ui/BiomeTag.svelte';
-  import { mergeActivity } from '$lib/ui/feed';
-  import { digestActivityTypes } from '$lib/ui/labels';
-  import { useLive } from '$lib/ui/live.svelte';
-  import Meta from '$lib/ui/Meta.svelte';
-  import SunDial from '$lib/ui/SunDial.svelte';
+  import ActivityFeed from '#lib/ui/ActivityFeed.svelte';
+  import BiomeTag from '#lib/ui/BiomeTag.svelte';
+  import { mergeActivity } from '#lib/ui/feed.ts';
+  import { digestActivityTypes } from '#lib/ui/labels.ts';
+  import { useLive } from '#lib/ui/live.svelte.ts';
+  import Meta from '#lib/ui/Meta.svelte';
+  import SunDial from '#lib/ui/SunDial.svelte';
 
   let { data } = $props();
   const live = useLive();

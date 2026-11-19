@@ -1,8 +1,8 @@
 import type { RequestHandler } from '@sveltejs/kit';
-import { getDb } from '$lib/server/db/client';
-import { errorResponse, etagOf, guarded } from '$lib/server/http/respond';
-import { requireFeature } from '$lib/server/http/routes';
-import { currentWorldUid, mapImage } from '$lib/server/read/world';
+import { getDb } from '#lib/server/db/client.ts';
+import { errorResponse, etagOf, guarded } from '#lib/server/http/respond.ts';
+import { requireFeature } from '#lib/server/http/routes.ts';
+import { currentWorldUid, mapImage } from '#lib/server/read/world.ts';
 
 export const GET: RequestHandler = ({ request }) =>
   guarded(async () => {

@@ -2,6 +2,7 @@ import { existsSync, readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vitest/config';
+import { kit } from './vite.config.ts';
 
 const envFile = fileURLToPath(new URL('../.env', import.meta.url));
 const packageJson = JSON.parse(
@@ -10,7 +11,7 @@ const packageJson = JSON.parse(
 if (existsSync(envFile)) process.loadEnvFile(envFile);
 
 export default defineConfig({
-  plugins: [sveltekit()],
+  plugins: [sveltekit(kit)],
   define: {
     __APP_VERSION__: JSON.stringify(packageJson.version)
   },

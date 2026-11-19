@@ -1,12 +1,12 @@
 <script lang="ts">
-  import { afterNavigate, replaceState } from '$app/navigation';
+  import { afterNavigate, goto } from '$app/navigation';
   import { page } from '$app/state';
   import { onMount, untrack } from 'svelte';
-  import Card from '$lib/ui/Card.svelte';
-  import ComfortPlanner from '$lib/ui/ComfortPlanner.svelte';
-  import EmptyState from '$lib/ui/EmptyState.svelte';
-  import ErrorNote from '$lib/ui/ErrorNote.svelte';
-  import GameIcon from '$lib/ui/GameIcon.svelte';
+  import Card from '#lib/ui/Card.svelte';
+  import ComfortPlanner from '#lib/ui/ComfortPlanner.svelte';
+  import EmptyState from '#lib/ui/EmptyState.svelte';
+  import ErrorNote from '#lib/ui/ErrorNote.svelte';
+  import GameIcon from '#lib/ui/GameIcon.svelte';
   import {
     baseComfort,
     conditionLabel,
@@ -22,22 +22,22 @@
     topOfGroup,
     type ComfortSort,
     type GroupStanding
-  } from '$lib/ui/comfort';
-  import { formatDistance, formatDuration, formatNumber } from '$lib/ui/format';
-  import Meta from '$lib/ui/Meta.svelte';
-  import PageHeader from '$lib/ui/PageHeader.svelte';
+  } from '#lib/ui/comfort.ts';
+  import { formatDistance, formatDuration, formatNumber } from '#lib/ui/format.ts';
+  import Meta from '#lib/ui/Meta.svelte';
+  import PageHeader from '#lib/ui/PageHeader.svelte';
   import {
     parsePlan,
     rememberedPlan,
     rememberPlan,
     serializePlan,
     type PlanEntry
-  } from '$lib/ui/plan';
-  import { withParams } from '$lib/ui/query';
-  import RecipeLine from '$lib/ui/RecipeLine.svelte';
-  import Stat from '$lib/ui/Stat.svelte';
-  import atlasUrl from '$lib/world/comfort-icons.webp';
-  import { pieceIcon, recipeOf, statusIcon } from '$lib/world/recipes';
+  } from '#lib/ui/plan.ts';
+  import { withParams } from '#lib/ui/query.ts';
+  import RecipeLine from '#lib/ui/RecipeLine.svelte';
+  import Stat from '#lib/ui/Stat.svelte';
+  import atlasUrl from '#lib/world/comfort-icons.webp';
+  import { pieceIcon, recipeOf, statusIcon } from '#lib/world/recipes.ts';
 
   let { data } = $props();
 
@@ -86,7 +86,7 @@
     if ((url.searchParams.get('plan') ?? '') === text) return;
     if (text) url.searchParams.set('plan', text);
     else url.searchParams.delete('plan');
-    replaceState(url, page.state);
+    void goto(url, { state: page.state, shallow: true, replace: true, reset: false });
   }
 
   function commit(next: PlanEntry[]): void {
@@ -102,8 +102,8 @@
     if (remembered.length > 0) plan = remembered;
   });
 
-  afterNavigate(({ type }) => {
-    if (type === 'enter') return;
+  afterNavigate(({ type, shallow }) => {
+    if (type === 'enter' || shallow) return;
     const incoming = page.url.searchParams.get('plan');
     if (type !== 'popstate' && incoming !== null && incoming !== planText) {
       plan = parsePlan(incoming, known);
@@ -118,7 +118,7 @@
   }
 
   const clearHref = $derived(
-    `${withParams(new URL('/comfort', page.url), { plan: planText })}#${tableAnchor}`
+    `${withParams(new URL('/comfort', page.url.href), { plan: planText })}#${tableAnchor}`
   );
 
   function seasonNote(season: string): string {

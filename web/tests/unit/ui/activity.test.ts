@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
-import type { ActivityItem } from '$lib/api/types';
-import { activityMentions, describeActivity } from '$lib/ui/activity';
-import { mergeActivity } from '$lib/ui/feed';
+import type { ActivityItem } from '#lib/api/types.ts';
+import { activityMentions, describeActivity } from '#lib/ui/activity.ts';
+import { mergeActivity } from '#lib/ui/feed.ts';
 
 const bjorn = { id: 1, display_name: 'Bjorn', platform: 'Steam' as const };
 

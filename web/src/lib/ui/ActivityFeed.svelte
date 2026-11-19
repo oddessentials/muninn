@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { ActivityItem } from '$lib/api/types';
+  import type { ActivityItem } from '#lib/api/types.ts';
   import ActivityLine from './ActivityLine.svelte';
   import EmptyState from './EmptyState.svelte';
 

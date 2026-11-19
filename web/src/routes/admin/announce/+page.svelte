@@ -1,8 +1,8 @@
 <script lang="ts">
   import { onDestroy, onMount } from 'svelte';
-  import { invalidateAll } from '$app/navigation';
-  import { ApiError, api } from '$lib/api/client';
-  import type { Announcement } from '$lib/api/types';
+  import { refreshAll } from '$app/navigation';
+  import { ApiError, api } from '#lib/api/client.ts';
+  import type { Announcement } from '#lib/api/types.ts';
   import {
     announcementSummary,
     buildAnnouncement,
@@ -17,14 +17,14 @@
     restartPresets,
     statusLabel,
     statusTone
-  } from '$lib/ui/announcements';
-  import Card from '$lib/ui/Card.svelte';
-  import { clock } from '$lib/ui/clock.svelte';
-  import EmptyState from '$lib/ui/EmptyState.svelte';
-  import ErrorNote from '$lib/ui/ErrorNote.svelte';
-  import Meta from '$lib/ui/Meta.svelte';
-  import PageHeader from '$lib/ui/PageHeader.svelte';
-  import Time from '$lib/ui/Time.svelte';
+  } from '#lib/ui/announcements.ts';
+  import Card from '#lib/ui/Card.svelte';
+  import { clock } from '#lib/ui/clock.svelte.ts';
+  import EmptyState from '#lib/ui/EmptyState.svelte';
+  import ErrorNote from '#lib/ui/ErrorNote.svelte';
+  import Meta from '#lib/ui/Meta.svelte';
+  import PageHeader from '#lib/ui/PageHeader.svelte';
+  import Time from '#lib/ui/Time.svelte';
 
   let { data } = $props();
 
@@ -42,7 +42,7 @@
   onMount(() => {
     form.time = localDateTimeValue(Date.now() + 30 * 60_000);
     timer = setInterval(() => {
-      if (live && !busy && cancelling === null) void invalidateAll();
+      if (live && !busy && cancelling === null) void refreshAll();
     }, 10_000);
   });
 
@@ -73,7 +73,7 @@
       await api.createAnnouncement(built.body);
       message = queuedNote(built.body);
       form = { ...emptyForm(), kind: form.kind, time: form.time };
-      await invalidateAll();
+      await refreshAll();
     } catch (error) {
       problem = explain(error);
     } finally {
@@ -91,7 +91,7 @@
         item.kind === 'restart'
           ? 'Restart cancelled. The countdown stops when the server next checks in.'
           : 'Message cancelled.';
-      await invalidateAll();
+      await refreshAll();
     } catch (error) {
       problem = explain(error);
     } finally {

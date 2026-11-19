@@ -1,4 +1,4 @@
-import type { ActivityItem, EventType } from '$lib/api/types';
+import type { ActivityItem, EventType } from '#lib/api/types.ts';
 import { getDb } from '../db/client';
 import { events, type EventRow } from '../db/schema';
 import { bus } from '../events/bus';

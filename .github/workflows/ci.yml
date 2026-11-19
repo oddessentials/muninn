@@ -61,3 +61,31 @@ jobs:
         with:
           global-json-file: global.json
       - run: dotnet test --project plugin/GuildTelemetry.Core.Tests/GuildTelemetry.Core.Tests.csproj
+
+  plugin-build:
+    runs-on: ubuntu-latest
+    env:
+      VALHEIM_SERVER_PATH: ${{ github.workspace }}/valheim-server
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-dotnet@v6
+        with:
+          global-json-file: global.json
+      - id: week
+        run: echo "week=$(date -u +%G-%V)" >> "$GITHUB_OUTPUT"
+      - id: managed
+        uses: actions/cache@v6
+        with:
+          path: valheim-server/valheim_server_Data/Managed
+          key: valheim-managed-${{ steps.week.outputs.week }}
+      - if: steps.managed.outputs.cache-hit != 'true'
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes lib32gcc-s1
+          mkdir -p "$RUNNER_TEMP/steamcmd"
+          curl -fsSL https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz | tar -xz -C "$RUNNER_TEMP/steamcmd"
+          for attempt in 1 2 3; do
+            "$RUNNER_TEMP/steamcmd/steamcmd.sh" +force_install_dir "$VALHEIM_SERVER_PATH" +login anonymous +app_update 896660 validate +quit && break
+          done
+          test -f "$VALHEIM_SERVER_PATH/valheim_server_Data/Managed/assembly_valheim.dll"
+      - run: dotnet build plugin/GuildTelemetry/GuildTelemetry.csproj -c Release

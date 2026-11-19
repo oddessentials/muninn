@@ -1,31 +1,31 @@
 <script lang="ts">
   import { page } from '$app/state';
-  import { activityMentions } from '$lib/ui/activity';
-  import ActivityFeed from '$lib/ui/ActivityFeed.svelte';
-  import BiomeTag from '$lib/ui/BiomeTag.svelte';
-  import Card from '$lib/ui/Card.svelte';
-  import EmptyState from '$lib/ui/EmptyState.svelte';
-  import ErrorNote from '$lib/ui/ErrorNote.svelte';
+  import { activityMentions } from '#lib/ui/activity.ts';
+  import ActivityFeed from '#lib/ui/ActivityFeed.svelte';
+  import BiomeTag from '#lib/ui/BiomeTag.svelte';
+  import Card from '#lib/ui/Card.svelte';
+  import EmptyState from '#lib/ui/EmptyState.svelte';
+  import ErrorNote from '#lib/ui/ErrorNote.svelte';
   import {
     formatDistance,
     formatDuration,
     formatHours,
     formatNumber,
     formatPosition
-  } from '$lib/ui/format';
-  import { causeLabel, deathCauseKeyLabel, leftReasonLabel, prefabLabel } from '$lib/ui/labels';
-  import { mergeActivity } from '$lib/ui/feed';
-  import { useLive } from '$lib/ui/live.svelte';
-  import { hasPosition, trackSegments, type MapMarker, type MapTrack } from '$lib/ui/map';
-  import Meta from '$lib/ui/Meta.svelte';
-  import PageHeader from '$lib/ui/PageHeader.svelte';
-  import Pager from '$lib/ui/Pager.svelte';
-  import PlatformTag from '$lib/ui/PlatformTag.svelte';
-  import PlayerLink from '$lib/ui/PlayerLink.svelte';
-  import { withParams } from '$lib/ui/query';
-  import Stat from '$lib/ui/Stat.svelte';
-  import Time from '$lib/ui/Time.svelte';
-  import WorldMap from '$lib/ui/WorldMap.svelte';
+  } from '#lib/ui/format.ts';
+  import { causeLabel, deathCauseKeyLabel, leftReasonLabel, prefabLabel } from '#lib/ui/labels.ts';
+  import { mergeActivity } from '#lib/ui/feed.ts';
+  import { useLive } from '#lib/ui/live.svelte.ts';
+  import { hasPosition, trackSegments, type MapMarker, type MapTrack } from '#lib/ui/map.ts';
+  import Meta from '#lib/ui/Meta.svelte';
+  import PageHeader from '#lib/ui/PageHeader.svelte';
+  import Pager from '#lib/ui/Pager.svelte';
+  import PlatformTag from '#lib/ui/PlatformTag.svelte';
+  import PlayerLink from '#lib/ui/PlayerLink.svelte';
+  import { withParams } from '#lib/ui/query.ts';
+  import Stat from '#lib/ui/Stat.svelte';
+  import Time from '#lib/ui/Time.svelte';
+  import WorldMap from '#lib/ui/WorldMap.svelte';
 
   let { data } = $props();
   const live = useLive();

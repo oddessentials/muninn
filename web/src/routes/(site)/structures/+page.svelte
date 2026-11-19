@@ -1,18 +1,18 @@
 <script lang="ts">
   import { page } from '$app/state';
-  import BiomeTag from '$lib/ui/BiomeTag.svelte';
-  import Card from '$lib/ui/Card.svelte';
-  import EmptyState from '$lib/ui/EmptyState.svelte';
-  import ErrorNote from '$lib/ui/ErrorNote.svelte';
-  import { formatNumber, formatPosition } from '$lib/ui/format';
-  import Meta from '$lib/ui/Meta.svelte';
-  import PageHeader from '$lib/ui/PageHeader.svelte';
-  import Pager from '$lib/ui/Pager.svelte';
-  import PlayerLink from '$lib/ui/PlayerLink.svelte';
-  import { withParams } from '$lib/ui/query';
-  import SeriesChart from '$lib/ui/SeriesChart.svelte';
-  import Stat from '$lib/ui/Stat.svelte';
-  import Time from '$lib/ui/Time.svelte';
+  import BiomeTag from '#lib/ui/BiomeTag.svelte';
+  import Card from '#lib/ui/Card.svelte';
+  import EmptyState from '#lib/ui/EmptyState.svelte';
+  import ErrorNote from '#lib/ui/ErrorNote.svelte';
+  import { formatNumber, formatPosition } from '#lib/ui/format.ts';
+  import Meta from '#lib/ui/Meta.svelte';
+  import PageHeader from '#lib/ui/PageHeader.svelte';
+  import Pager from '#lib/ui/Pager.svelte';
+  import PlayerLink from '#lib/ui/PlayerLink.svelte';
+  import { withParams } from '#lib/ui/query.ts';
+  import SeriesChart from '#lib/ui/SeriesChart.svelte';
+  import Stat from '#lib/ui/Stat.svelte';
+  import Time from '#lib/ui/Time.svelte';
 
   let { data } = $props();
 

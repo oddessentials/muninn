@@ -1,5 +1,5 @@
-import { adminGet } from '$lib/server/http/routes';
-import { adminHealth } from '$lib/server/read/admin';
+import { adminGet } from '#lib/server/http/routes.ts';
+import { adminHealth } from '#lib/server/read/admin.ts';
 import { getScheduler } from '../../../../../hooks.server';
 
 export const GET = adminGet(async (_event, db) =>

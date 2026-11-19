@@ -1,5 +1,5 @@
-import type { ZoneRating, ZoneRecommendation } from '$lib/api/types';
-import type { DiagnosticPhase } from '$lib/zone/run-all';
+import type { ZoneRating, ZoneRecommendation } from '#lib/api/types.ts';
+import type { DiagnosticPhase } from '#lib/zone/run-all.ts';
 
 export const ratingLabels: Record<ZoneRating, string> = {
   excellent: 'Excellent',

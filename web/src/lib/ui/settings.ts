@@ -1,4 +1,4 @@
-import type { AdminSettings, AdminSettingsUpdate, SiteFeatures } from '$lib/api/types';
+import type { AdminSettings, AdminSettingsUpdate, SiteFeatures } from '#lib/api/types.ts';
 
 export type LockableField = AdminSettings['locked'][number];
 export type FeatureName = keyof SiteFeatures;

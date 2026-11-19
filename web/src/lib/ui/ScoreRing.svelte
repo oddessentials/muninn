@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import type { ZoneRating } from '$lib/api/types';
+  import type { ZoneRating } from '#lib/api/types.ts';
   import { ratingColors } from './zone';
 
   let {

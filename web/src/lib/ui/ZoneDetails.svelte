@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { ZoneRankedResult } from '$lib/api/types';
+  import type { ZoneRankedResult } from '#lib/api/types.ts';
   import { formatPercent } from './format';
   import Time from './Time.svelte';
   import {

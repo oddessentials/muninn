@@ -1,9 +1,9 @@
 import { describe, expect, it } from 'vitest';
-import type { AdminSettings, SiteFeatures } from '$lib/api/types';
-import { feedTypes, switchedOffTypes } from '$lib/server/read/activity';
-import { hasPosition } from '$lib/ui/map';
-import { navigation, navigationFor } from '$lib/ui/navigation';
-import { buildSettingsUpdate, settingsForm } from '$lib/ui/settings';
+import type { AdminSettings, SiteFeatures } from '#lib/api/types.ts';
+import { feedTypes, switchedOffTypes } from '#lib/server/read/activity.ts';
+import { hasPosition } from '#lib/ui/map.ts';
+import { navigation, navigationFor } from '#lib/ui/navigation.ts';
+import { buildSettingsUpdate, settingsForm } from '#lib/ui/settings.ts';
 
 const allOn: SiteFeatures = { chat: true, positions: true, map: true, platform_ids: true };
 

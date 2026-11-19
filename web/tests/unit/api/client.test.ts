@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { ApiError, createApi } from '$lib/api/client';
-import { endpoints, resolvePath } from '$lib/api/endpoints';
+import { ApiError, createApi } from '#lib/api/client.ts';
+import { endpoints, resolvePath } from '#lib/api/endpoints.ts';
 
 function fakeFetch(handler: (url: string, init?: RequestInit) => Response): typeof fetch {
   return async (input, init) => {

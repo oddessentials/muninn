@@ -1,12 +1,16 @@
 import type { RequestHandler } from '@sveltejs/kit';
-import type { ComfortCatalogueUpload } from '$lib/api/types';
-import { getDb } from '$lib/server/db/client';
-import { secrets } from '$lib/server/auth/secrets';
-import { empty, errorResponse, guarded } from '$lib/server/http/respond';
-import { recordRejectedBatch } from '$lib/server/ingest/ingest';
-import { signatureHeader, timestampHeader, verifyMapSignature } from '$lib/server/ingest/signature';
-import { validateAgainst } from '$lib/server/ingest/validate';
-import { storeComfortCatalogue } from '$lib/server/read/comfort';
+import type { ComfortCatalogueUpload } from '#lib/api/types.ts';
+import { getDb } from '#lib/server/db/client.ts';
+import { secrets } from '#lib/server/auth/secrets.ts';
+import { empty, errorResponse, guarded } from '#lib/server/http/respond.ts';
+import { recordRejectedBatch } from '#lib/server/ingest/ingest.ts';
+import {
+  signatureHeader,
+  timestampHeader,
+  verifyMapSignature
+} from '#lib/server/ingest/signature.ts';
+import { validateAgainst } from '#lib/server/ingest/validate.ts';
+import { storeComfortCatalogue } from '#lib/server/read/comfort.ts';
 
 const maxCatalogueBytes = 512 * 1024;
 const refusalCodes = {

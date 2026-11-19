@@ -1,4 +1,4 @@
-import { browser } from '$app/environment';
+import { browser } from '$app/env';
 
 export const musicSource = '/audio/digging-moat-8bit.mp3';
 export const musicTitle = 'Digging Moat, 8-bit loop';

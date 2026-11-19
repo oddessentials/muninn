@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { Biome } from '$lib/api/types';
+  import type { Biome } from '#lib/api/types.ts';
   import { biomeColors, biomeLabel, isBiome } from './labels';
 
   let { biome }: { biome: Biome | string | null | undefined } = $props();

@@ -1,4 +1,4 @@
-import type { WorldMap } from '$lib/api/types';
+import type { WorldMap } from '#lib/api/types.ts';
 
 export const defaultRadiusM = 10_000;
 export const defaultSizePx = 2048;

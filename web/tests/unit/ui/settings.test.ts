@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import type { AdminSettings } from '$lib/api/types';
-import { buildSettingsUpdate, settingsForm } from '$lib/ui/settings';
+import type { AdminSettings } from '#lib/api/types.ts';
+import { buildSettingsUpdate, settingsForm } from '#lib/ui/settings.ts';
 
 const current: AdminSettings = {
   site_name: 'Valheim guild',

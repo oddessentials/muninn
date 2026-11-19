@@ -8,7 +8,7 @@ import {
   toPixel,
   trackSegments,
   worldViewBox
-} from '$lib/ui/map';
+} from '#lib/ui/map.ts';
 
 const map = {
   available: true,

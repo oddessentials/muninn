@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
-import { shortName, webManifest } from '$lib/ui/manifest';
+import { shortName, webManifest } from '#lib/ui/manifest.ts';
 
 const staticFile = (name: string) =>
   readFileSync(new URL(`../../../static/${name}`, import.meta.url));

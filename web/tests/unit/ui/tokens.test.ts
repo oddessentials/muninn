@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
-import { biomes } from '$lib/ui/labels';
+import { biomes } from '#lib/ui/labels.ts';
 
 const css = readFileSync(new URL('../../../src/app.css', import.meta.url), 'utf8');
 const rootBlock = css.slice(css.indexOf(':root {'), css.indexOf('@theme inline'));

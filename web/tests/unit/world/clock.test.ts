@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import type { Status } from '$lib/api/types';
+import type { Status } from '#lib/api/types.ts';
 import {
   bellLeadSeconds,
   bellOffsetSeconds,
@@ -18,7 +18,7 @@ import {
   sunFraction,
   sunOf,
   worldDay
-} from '$lib/world/clock';
+} from '#lib/world/clock.ts';
 
 const status = (over: Partial<Status>): Status =>
   ({

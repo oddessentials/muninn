@@ -10,7 +10,7 @@ import {
   isBossPrefab,
   keyCategory,
   raidLabel
-} from '$lib/server/names';
+} from '#lib/server/names.ts';
 
 describe('boss names and keys', () => {
   it('names a boss from its key, any phase prefab or either spelling of its name key', () => {

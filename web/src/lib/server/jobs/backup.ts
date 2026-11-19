@@ -3,7 +3,7 @@ import { createWriteStream } from 'node:fs';
 import { mkdir, readdir, stat, unlink } from 'node:fs/promises';
 import { join } from 'node:path';
 import { desc, eq } from 'drizzle-orm';
-import type { Backup } from '$lib/api/types';
+import type { Backup } from '#lib/api/types.ts';
 import { getDb, type Database } from '../db/client';
 import { backups } from '../db/schema';
 import { env } from '../env';

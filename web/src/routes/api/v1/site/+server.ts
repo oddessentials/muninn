@@ -1,7 +1,7 @@
 import type { RequestHandler } from '@sveltejs/kit';
-import type { Site } from '$lib/api/types';
-import { guarded, publicJson } from '$lib/server/http/respond';
-import { siteSettings } from '$lib/server/settings';
+import type { Site } from '#lib/api/types.ts';
+import { guarded, publicJson } from '#lib/server/http/respond.ts';
+import { siteSettings } from '#lib/server/settings.ts';
 
 export const GET: RequestHandler = (event) =>
   guarded(async () => {

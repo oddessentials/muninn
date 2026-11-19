@@ -1,5 +1,5 @@
 import { and, asc, desc, eq, gte, lt, lte, sql, type SQL } from 'drizzle-orm';
-import type { Raid, RaidDetail } from '$lib/api/types';
+import type { Raid, RaidDetail } from '#lib/api/types.ts';
 import type { Database } from '../db/client';
 import { deaths, raids, type RaidRow } from '../db/schema';
 import { notFound, round } from '../http/respond';

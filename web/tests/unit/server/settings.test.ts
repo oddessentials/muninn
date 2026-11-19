@@ -1,12 +1,12 @@
 import { describe, expect, it } from 'vitest';
-import { ApiHttpError } from '$lib/server/http/respond';
+import { ApiHttpError } from '#lib/server/http/respond.ts';
 import {
   defaultSettings,
   lockedFields,
   parseSettingsUpdate,
   resolveSettings,
   type SettingsEnvironment
-} from '$lib/server/settings';
+} from '#lib/server/settings.ts';
 
 const unset: SettingsEnvironment = { publicSiteName: '', steamQueryHost: '', steamQueryPort: null };
 

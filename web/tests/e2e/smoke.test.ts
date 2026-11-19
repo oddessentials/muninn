@@ -1,5 +1,5 @@
 import { readFileSync } from 'node:fs';
-import { expect, test, type Page } from '@playwright/test';
+import { expect, test, type Page } from './hydrated.ts';
 
 const projectVersion = (
   JSON.parse(readFileSync(new URL('../../../package.json', import.meta.url), 'utf8')) as {

@@ -2,7 +2,7 @@ import type { ExtractTablesWithRelations } from 'drizzle-orm';
 import { eq, sql } from 'drizzle-orm';
 import type { PgTransaction } from 'drizzle-orm/pg-core';
 import type { PostgresJsQueryResultHKT } from 'drizzle-orm/postgres-js';
-import type { EventEnvelope } from '$lib/api/types';
+import type { EventEnvelope } from '#lib/api/types.ts';
 import * as schema from '../db/schema';
 import { playerAliases, players } from '../db/schema';
 import { displayIdOf, platformOf } from '../names';

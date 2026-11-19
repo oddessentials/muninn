@@ -4,7 +4,7 @@ import {
   signMap,
   verifyBatchSignature,
   verifyMapSignature
-} from '$lib/server/ingest/signature';
+} from '#lib/server/ingest/signature.ts';
 
 const secret = 'test-secret';
 const body = Buffer.from('{"events":[]}');

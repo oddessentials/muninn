@@ -1,12 +1,12 @@
 <script lang="ts">
   import { untrack } from 'svelte';
-  import { invalidateAll } from '$app/navigation';
-  import { ApiError, api } from '$lib/api/client';
-  import type { AdminSettings } from '$lib/api/types';
-  import Card from '$lib/ui/Card.svelte';
-  import ErrorNote from '$lib/ui/ErrorNote.svelte';
-  import Meta from '$lib/ui/Meta.svelte';
-  import PageHeader from '$lib/ui/PageHeader.svelte';
+  import { refreshAll } from '$app/navigation';
+  import { ApiError, api } from '#lib/api/client.ts';
+  import type { AdminSettings } from '#lib/api/types.ts';
+  import Card from '#lib/ui/Card.svelte';
+  import ErrorNote from '#lib/ui/ErrorNote.svelte';
+  import Meta from '#lib/ui/Meta.svelte';
+  import PageHeader from '#lib/ui/PageHeader.svelte';
   import {
     buildSettingsUpdate,
     environmentVariables,
@@ -14,7 +14,7 @@
     settingsForm,
     siteNameMaxLength,
     type LockableField
-  } from '$lib/ui/settings';
+  } from '#lib/ui/settings.ts';
 
   let { data } = $props();
 
@@ -56,7 +56,7 @@
       saved = await api.updateAdminSettings(built.body);
       form = settingsForm(saved);
       message = 'Saved.';
-      await invalidateAll();
+      await refreshAll();
     } catch (error) {
       problem = explain(error);
     } finally {

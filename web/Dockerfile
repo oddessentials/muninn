@@ -21,6 +21,8 @@ ENV PORT=3000
 ENV HOST=0.0.0.0
 ENV PROTOCOL_HEADER=x-forwarded-proto
 ENV HOST_HEADER=x-forwarded-host
+ENV ADDRESS_HEADER=x-forwarded-for
+ENV XFF_DEPTH=1
 EXPOSE 3000
 HEALTHCHECK --interval=30s --timeout=5s --start-period=30s --retries=3 CMD curl -fsS http://localhost:3000/api/v1/health || exit 1
 WORKDIR /app/web

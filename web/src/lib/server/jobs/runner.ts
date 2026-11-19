@@ -1,5 +1,5 @@
 import { and, desc, eq, inArray } from 'drizzle-orm';
-import type { Job } from '$lib/api/types';
+import type { Job } from '#lib/api/types.ts';
 import { getDb, getJobDb } from '../db/client';
 import { jobs, type JobRow } from '../db/schema';
 import { conflict, notFound } from '../http/respond';

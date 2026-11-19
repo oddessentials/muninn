@@ -4,10 +4,10 @@ import {
   parseInstant,
   parsePage,
   parsePathId
-} from '$lib/server/http/respond';
-import { publicGet } from '$lib/server/http/routes';
-import { buildActivityItems, parseTypes, queryActivity } from '$lib/server/read/activity';
-import { playerRow } from '$lib/server/read/players';
+} from '#lib/server/http/respond.ts';
+import { publicGet } from '#lib/server/http/routes.ts';
+import { buildActivityItems, parseTypes, queryActivity } from '#lib/server/read/activity.ts';
+import { playerRow } from '#lib/server/read/players.ts';
 
 export const GET = publicGet(async ({ params, url }, db) => {
   const id = parsePathId(params.id, 'id');

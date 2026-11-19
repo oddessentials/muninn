@@ -1,5 +1,5 @@
 import { and, desc, eq, inArray, sql } from 'drizzle-orm';
-import type { AdminHealth, AdminPlayer } from '$lib/api/types';
+import type { AdminHealth, AdminPlayer } from '#lib/api/types.ts';
 import { getDb, type Database } from '../db/client';
 import {
   biomeVisits,

@@ -1,19 +1,19 @@
 <script lang="ts">
-  import Card from '$lib/ui/Card.svelte';
-  import EmptyState from '$lib/ui/EmptyState.svelte';
-  import ErrorNote from '$lib/ui/ErrorNote.svelte';
-  import { formatDuration, formatMillis, formatNumber } from '$lib/ui/format';
-  import { stopReasonLabel } from '$lib/ui/labels';
-  import { useLive } from '$lib/ui/live.svelte';
-  import { hasPosition, type MapMarker } from '$lib/ui/map';
-  import Meta from '$lib/ui/Meta.svelte';
-  import PageHeader from '$lib/ui/PageHeader.svelte';
-  import Pager from '$lib/ui/Pager.svelte';
-  import Stat from '$lib/ui/Stat.svelte';
-  import Time from '$lib/ui/Time.svelte';
-  import WorldMap from '$lib/ui/WorldMap.svelte';
-  import { phaseLabel } from '$lib/ui/sunclock';
-  import { worldClock } from '$lib/ui/worldclock.svelte';
+  import Card from '#lib/ui/Card.svelte';
+  import EmptyState from '#lib/ui/EmptyState.svelte';
+  import ErrorNote from '#lib/ui/ErrorNote.svelte';
+  import { formatDuration, formatMillis, formatNumber } from '#lib/ui/format.ts';
+  import { stopReasonLabel } from '#lib/ui/labels.ts';
+  import { useLive } from '#lib/ui/live.svelte.ts';
+  import { hasPosition, type MapMarker } from '#lib/ui/map.ts';
+  import Meta from '#lib/ui/Meta.svelte';
+  import PageHeader from '#lib/ui/PageHeader.svelte';
+  import Pager from '#lib/ui/Pager.svelte';
+  import Stat from '#lib/ui/Stat.svelte';
+  import Time from '#lib/ui/Time.svelte';
+  import WorldMap from '#lib/ui/WorldMap.svelte';
+  import { phaseLabel } from '#lib/ui/sunclock.ts';
+  import { worldClock } from '#lib/ui/worldclock.svelte.ts';
 
   let { data } = $props();
   const live = useLive();

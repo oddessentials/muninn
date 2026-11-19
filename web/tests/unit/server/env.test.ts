@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { validateEnvironment } from '$lib/server/env';
+import { validateEnvironment } from '#lib/server/env.ts';
 
 const database = { DATABASE_URL: 'postgres://valheim:valheim@db:5432/valheim' };
 

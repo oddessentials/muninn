@@ -1,6 +1,6 @@
 import type { RequestHandler } from '@sveltejs/kit';
 import { createHash } from 'node:crypto';
-import { getContractJson } from '$lib/server/openapi';
+import { getContractJson } from '#lib/server/openapi.ts';
 
 export const GET: RequestHandler = async ({ request }) => {
   const body = getContractJson();

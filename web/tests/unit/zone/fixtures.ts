@@ -1,5 +1,10 @@
-import { buildDiagnosticResult } from '$lib/zone/result';
-import type { CompletionInfo, DiagnosticResult, Measurements, SystemInfo } from '$lib/zone/types';
+import { buildDiagnosticResult } from '#lib/zone/result.ts';
+import type {
+  CompletionInfo,
+  DiagnosticResult,
+  Measurements,
+  SystemInfo
+} from '#lib/zone/types.ts';
 
 export const defaultSystem: SystemInfo = {
   logicalProcessors: 8,

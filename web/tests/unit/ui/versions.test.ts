@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import type { Status } from '$lib/api/types';
-import { versionLine } from '$lib/ui/versions';
+import type { Status } from '#lib/api/types.ts';
+import { versionLine } from '#lib/ui/versions.ts';
 
 const run = (pluginVersion: string): NonNullable<Status['run']> => ({
   run_id: 'b7e2f5c3-4d6a-4b8c-8a1d-2e3f4a5b6c7d',

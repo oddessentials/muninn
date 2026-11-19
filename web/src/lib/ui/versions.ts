@@ -1,4 +1,4 @@
-import type { Status } from '$lib/api/types';
+import type { Status } from '#lib/api/types.ts';
 
 export function versionLine(
   site: string,
