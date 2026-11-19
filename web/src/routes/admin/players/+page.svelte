@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { invalidateAll } from '$app/navigation';
+  import { refreshAll } from '$app/navigation';
   import { ApiError, api } from '#lib/api/client.ts';
   import type { AdminPlayer } from '#lib/api/types.ts';
   import Card from '#lib/ui/Card.svelte';
@@ -40,7 +40,7 @@
       message = done;
       editing = null;
       merging = null;
-      await invalidateAll();
+      await refreshAll();
     } catch (error) {
       if (error instanceof ApiError && error.status === 403)
         message = 'The request was refused: admin changes must come from this site.';

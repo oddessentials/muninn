@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { goto, invalidateAll } from '$app/navigation';
+  import { goto, refreshAll } from '$app/navigation';
   import { ApiError, api } from '#lib/api/client.ts';
   import Meta from '#lib/ui/Meta.svelte';
 
@@ -15,7 +15,7 @@
     try {
       await api.adminLogin(password);
       password = '';
-      await invalidateAll();
+      await refreshAll();
       await goto('/admin');
     } catch (error) {
       if (error instanceof ApiError && error.status === 401) message = 'That password is wrong.';

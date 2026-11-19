@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onDestroy, onMount } from 'svelte';
-  import { invalidateAll } from '$app/navigation';
+  import { refreshAll } from '$app/navigation';
   import { ApiError, api } from '#lib/api/client.ts';
   import type { Announcement } from '#lib/api/types.ts';
   import {
@@ -42,7 +42,7 @@
   onMount(() => {
     form.time = localDateTimeValue(Date.now() + 30 * 60_000);
     timer = setInterval(() => {
-      if (live && !busy && cancelling === null) void invalidateAll();
+      if (live && !busy && cancelling === null) void refreshAll();
     }, 10_000);
   });
 
@@ -73,7 +73,7 @@
       await api.createAnnouncement(built.body);
       message = queuedNote(built.body);
       form = { ...emptyForm(), kind: form.kind, time: form.time };
-      await invalidateAll();
+      await refreshAll();
     } catch (error) {
       problem = explain(error);
     } finally {
@@ -91,7 +91,7 @@
         item.kind === 'restart'
           ? 'Restart cancelled. The countdown stops when the server next checks in.'
           : 'Message cancelled.';
-      await invalidateAll();
+      await refreshAll();
     } catch (error) {
       problem = explain(error);
     } finally {

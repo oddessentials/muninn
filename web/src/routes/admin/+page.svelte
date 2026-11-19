@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onDestroy } from 'svelte';
-  import { invalidateAll } from '$app/navigation';
+  import { refreshAll } from '$app/navigation';
   import { ApiError, api } from '#lib/api/client.ts';
   import type { Job } from '#lib/api/types.ts';
   import Card from '#lib/ui/Card.svelte';
@@ -39,7 +39,7 @@
     if (job.state === 'queued' || job.state === 'running') {
       timer = setTimeout(() => poll(id), 2000);
     } else {
-      await invalidateAll();
+      await refreshAll();
     }
   }
 

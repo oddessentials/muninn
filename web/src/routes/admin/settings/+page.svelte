@@ -1,6 +1,6 @@
 <script lang="ts">
   import { untrack } from 'svelte';
-  import { invalidateAll } from '$app/navigation';
+  import { refreshAll } from '$app/navigation';
   import { ApiError, api } from '#lib/api/client.ts';
   import type { AdminSettings } from '#lib/api/types.ts';
   import Card from '#lib/ui/Card.svelte';
@@ -56,7 +56,7 @@
       saved = await api.updateAdminSettings(built.body);
       form = settingsForm(saved);
       message = 'Saved.';
-      await invalidateAll();
+      await refreshAll();
     } catch (error) {
       problem = explain(error);
     } finally {

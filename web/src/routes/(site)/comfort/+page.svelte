@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { afterNavigate, replaceState } from '$app/navigation';
+  import { afterNavigate, goto } from '$app/navigation';
   import { page } from '$app/state';
   import { onMount, untrack } from 'svelte';
   import Card from '#lib/ui/Card.svelte';
@@ -86,7 +86,7 @@
     if ((url.searchParams.get('plan') ?? '') === text) return;
     if (text) url.searchParams.set('plan', text);
     else url.searchParams.delete('plan');
-    replaceState(url, page.state);
+    void goto(url, { state: page.state, shallow: true, replace: true, reset: false });
   }
 
   function commit(next: PlanEntry[]): void {
@@ -102,8 +102,8 @@
     if (remembered.length > 0) plan = remembered;
   });
 
-  afterNavigate(({ type }) => {
-    if (type === 'enter') return;
+  afterNavigate(({ type, shallow }) => {
+    if (type === 'enter' || shallow) return;
     const incoming = page.url.searchParams.get('plan');
     if (type !== 'popstate' && incoming !== null && incoming !== planText) {
       plan = parsePlan(incoming, known);
