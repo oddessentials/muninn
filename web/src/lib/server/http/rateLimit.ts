@@ -1,13 +1,19 @@
 export interface RateLimiter {
   allow(key: string, now?: number): boolean;
   reset(): void;
+  size(): number;
 }
 
-export function createRateLimiter(limit: number, windowMs: number): RateLimiter {
+export const maxTrackedKeys = 10_000;
+
+export function createRateLimiter(
+  limit: number,
+  windowMs: number,
+  maxKeys: number = maxTrackedKeys
+): RateLimiter {
   const hits = new Map<string, number[]>();
   let lastSweep = 0;
   const sweep = (now: number) => {
-    if (now - lastSweep < windowMs) return;
     lastSweep = now;
     for (const [key, stamps] of hits) {
       const kept = stamps.filter((stamp) => now - stamp < windowMs);
@@ -15,20 +21,34 @@ export function createRateLimiter(limit: number, windowMs: number): RateLimiter 
       else hits.set(key, kept);
     }
   };
+  const makeRoom = (now: number) => {
+    if (hits.size < maxKeys) return;
+    sweep(now);
+    while (hits.size >= maxKeys) {
+      const oldest = hits.keys().next();
+      if (oldest.done) return;
+      hits.delete(oldest.value);
+    }
+  };
   return {
     allow(key, now = Date.now()) {
-      sweep(now);
-      const stamps = (hits.get(key) ?? []).filter((stamp) => now - stamp < windowMs);
+      if (now - lastSweep >= windowMs) sweep(now);
+      const known = hits.get(key);
+      const stamps = (known ?? []).filter((stamp) => now - stamp < windowMs);
       if (stamps.length >= limit) {
         hits.set(key, stamps);
         return false;
       }
+      if (known === undefined) makeRoom(now);
       stamps.push(now);
       hits.set(key, stamps);
       return true;
     },
     reset() {
       hits.clear();
+    },
+    size() {
+      return hits.size;
     }
   };
 }
