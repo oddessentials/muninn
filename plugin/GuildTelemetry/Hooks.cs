@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Reflection;
+using GuildTelemetry.Core;
 using HarmonyLib;
 using UnityEngine;
 
@@ -17,6 +18,7 @@ namespace GuildTelemetry
         private static int sayHash;
         private static int registerKillHash;
         private static ZDOID characterBeforeRpc = ZDOID.None;
+        private static readonly FailureThrottle failures = new FailureThrottle(60);
 
         public static List<string> Install(Harmony harmony, Telemetry target)
         {
@@ -108,7 +110,11 @@ namespace GuildTelemetry
             }
             catch (Exception exception)
             {
-                GuildTelemetryPlugin.Log.LogWarning("GuildTelemetry: " + hook + " failed: " + exception);
+                int suppressed;
+                if (failures.Admit(hook, Time.realtimeSinceStartup, out suppressed))
+                {
+                    GuildTelemetryPlugin.Log.LogWarning("GuildTelemetry: " + hook + " failed" + (suppressed > 0 ? " (" + suppressed + " more since the last report)" : string.Empty) + ": " + exception);
+                }
             }
         }
 
@@ -251,8 +257,16 @@ namespace GuildTelemetry
             {
                 int position = pkg.GetPos();
                 ZRoutedRpc.RoutedRPCData data = new ZRoutedRpc.RoutedRPCData();
-                data.Deserialize(pkg);
-                pkg.SetPos(position);
+                try
+                {
+                    pkg.SetPos(0);
+                    data.Deserialize(pkg);
+                }
+                finally
+                {
+                    pkg.SetPos(position);
+                }
+
                 HandleRouted(data);
             });
         }
