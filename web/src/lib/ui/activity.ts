@@ -1,4 +1,4 @@
-import type { ActivityItem, PlayerRef } from '$lib/api/types';
+import type { ActivityItem, PlayerRef } from '#lib/api/types.ts';
 import { formatDuration, formatMillis, formatNumber, formatPosition, formatUtc } from './format';
 import { biomeLabel, hitTypeLabel, isHitType, leftReasonLabel, prefabLabel } from './labels';
 

@@ -1,4 +1,4 @@
-import type { StreamFrame } from '$lib/api/types';
+import type { StreamFrame } from '#lib/api/types.ts';
 import { getFixture } from './fixtures';
 
 export const replayIntervalMs = 10_000;

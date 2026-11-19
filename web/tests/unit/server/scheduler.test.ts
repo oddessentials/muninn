@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { startScheduler } from '$lib/server/jobs/scheduler';
+import { startScheduler } from '#lib/server/jobs/scheduler.ts';
 
 const silent = () => {};
 const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));

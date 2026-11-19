@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { Status } from '$lib/api/types';
+  import type { Status } from '#lib/api/types.ts';
   import type { LiveStreamState } from './live.svelte';
   import type { LoadFailure } from './load';
   import { stripClock } from './sunclock';

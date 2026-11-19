@@ -49,7 +49,15 @@
     "ajv-formats": "3.0.1",
     "openapi-typescript": "7.13.0",
     "prettier": "3.9.6",
-    "typescript": "5.9.3",
+    "typescript": "6.0.3",
     "yaml": "2.9.0"
+  },
+  "overrides": {
+    "openapi-typescript": {
+      "typescript": "$typescript"
+    },
+    "@esbuild-kit/core-utils": {
+      "esbuild": "0.25.12"
+    }
   }
 }

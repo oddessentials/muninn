@@ -1,4 +1,4 @@
-import type { ActivityItem, OnlineList, Status } from '$lib/api/types';
+import type { ActivityItem, OnlineList, Status } from '#lib/api/types.ts';
 
 export type BusEvent =
   | { channel: 'status'; data: Status }

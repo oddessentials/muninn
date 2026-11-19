@@ -1,5 +1,5 @@
 import { sql } from 'drizzle-orm';
-import type { IngestBatch } from '$lib/api/types';
+import type { IngestBatch } from '#lib/api/types.ts';
 import { getDb } from '../db/client';
 import { events, heartbeats, ingestBatches, meta } from '../db/schema';
 import { createContext, type ProjectionEffects, type StoredEnvelope, type Tx } from './context';

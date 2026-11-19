@@ -1,7 +1,7 @@
 import type { RequestEvent } from '@sveltejs/kit';
 import { beforeEach, describe, expect, it } from 'vitest';
-import type { ZoneRankedResult, ZoneResultList } from '$lib/api/types';
-import { answerMockZone, resetMockZone } from '$lib/server/mock/zone';
+import type { ZoneRankedResult, ZoneResultList } from '#lib/api/types.ts';
+import { answerMockZone, resetMockZone } from '#lib/server/mock/zone.ts';
 import { makeResult } from '../zone/fixtures';
 
 function event(method: string, path: string, body?: unknown, admin = false): RequestEvent {

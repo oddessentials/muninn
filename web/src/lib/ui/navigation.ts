@@ -1,4 +1,4 @@
-import type { SiteFeatures } from '$lib/api/types';
+import type { SiteFeatures } from '#lib/api/types.ts';
 
 export interface NavigationEntry {
   label: string;

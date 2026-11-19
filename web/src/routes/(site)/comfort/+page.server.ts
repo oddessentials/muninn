@@ -5,10 +5,10 @@ import {
   sortOrders,
   sortPieces,
   type ComfortFilter
-} from '$lib/ui/comfort';
-import { attempt } from '$lib/ui/load';
-import { pickBoolean, pickEnum, pickText } from '$lib/ui/query';
-import { serverApi } from '$lib/ui/server';
+} from '#lib/ui/comfort.ts';
+import { attempt } from '#lib/ui/load.ts';
+import { pickBoolean, pickEnum, pickText } from '#lib/ui/query.ts';
+import { serverApi } from '#lib/ui/server.ts';
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async ({ fetch, url, parent }) => {

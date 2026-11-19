@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest';
-import { resultFilename, serializeResult } from '$lib/zone/download';
-import type { DiagnosticResult } from '$lib/zone/types';
-import { checkResult } from '$lib/zone/validate';
-import { diagnosticVersion } from '$lib/zone/version';
+import { resultFilename, serializeResult } from '#lib/zone/download.ts';
+import type { DiagnosticResult } from '#lib/zone/types.ts';
+import { checkResult } from '#lib/zone/validate.ts';
+import { diagnosticVersion } from '#lib/zone/version.ts';
 import { makeResult } from './fixtures';
 
 function roundTrip(result: DiagnosticResult): DiagnosticResult {

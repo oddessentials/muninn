@@ -2,7 +2,7 @@ import { mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
-import { backupFileName, runDump, type BackupOptions } from '$lib/server/jobs/backup';
+import { backupFileName, runDump, type BackupOptions } from '#lib/server/jobs/backup.ts';
 
 let directory = '';
 let options: BackupOptions;

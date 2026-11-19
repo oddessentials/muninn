@@ -1,17 +1,17 @@
 import type { RequestHandler } from '@sveltejs/kit';
-import { secrets } from '$lib/server/auth/secrets';
-import { getDb } from '$lib/server/db/client';
-import { errorResponse, guarded, privateJson } from '$lib/server/http/respond';
-import { ingestBatch, maxBatchBytes, recordRejectedBatch } from '$lib/server/ingest/ingest';
+import { secrets } from '#lib/server/auth/secrets.ts';
+import { getDb } from '#lib/server/db/client.ts';
+import { errorResponse, guarded, privateJson } from '#lib/server/http/respond.ts';
+import { ingestBatch, maxBatchBytes, recordRejectedBatch } from '#lib/server/ingest/ingest.ts';
 import {
   signatureHeader,
   timestampHeader,
   verifyBatchSignature
-} from '$lib/server/ingest/signature';
-import { validateBatch } from '$lib/server/ingest/validate';
-import { isRunning } from '$lib/server/jobs/runner';
-import { collectForPlugin } from '$lib/server/read/announcements';
-import { publishAfterIngest } from '$lib/server/stream/publish';
+} from '#lib/server/ingest/signature.ts';
+import { validateBatch } from '#lib/server/ingest/validate.ts';
+import { isRunning } from '#lib/server/jobs/runner.ts';
+import { collectForPlugin } from '#lib/server/read/announcements.ts';
+import { publishAfterIngest } from '#lib/server/stream/publish.ts';
 
 export const POST: RequestHandler = ({ request }) =>
   guarded(async () => {

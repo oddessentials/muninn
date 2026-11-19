@@ -1,6 +1,6 @@
 <script lang="ts">
-  import type { Status } from '$lib/api/types';
-  import { sunriseSunFraction, sunsetSunFraction } from '$lib/world/clock';
+  import type { Status } from '#lib/api/types.ts';
+  import { sunriseSunFraction, sunsetSunFraction } from '#lib/world/clock.ts';
   import { formatNumber } from './format';
   import { clockNote, phaseLabel } from './sunclock';
   import { worldClock } from './worldclock.svelte';

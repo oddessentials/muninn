@@ -1,23 +1,23 @@
 <script lang="ts">
-  import BiomeTag from '$lib/ui/BiomeTag.svelte';
-  import Card from '$lib/ui/Card.svelte';
-  import ErrorNote from '$lib/ui/ErrorNote.svelte';
-  import Meta from '$lib/ui/Meta.svelte';
-  import PageHeader from '$lib/ui/PageHeader.svelte';
-  import { formatDuration, formatNumber, formatPosition } from '$lib/ui/format';
+  import BiomeTag from '#lib/ui/BiomeTag.svelte';
+  import Card from '#lib/ui/Card.svelte';
+  import ErrorNote from '#lib/ui/ErrorNote.svelte';
+  import Meta from '#lib/ui/Meta.svelte';
+  import PageHeader from '#lib/ui/PageHeader.svelte';
+  import { formatDuration, formatNumber, formatPosition } from '#lib/ui/format.ts';
   import {
     raidEndNote,
     raidLength,
     raidPauseNote,
     raidStanding,
     raidStartNote
-  } from '$lib/ui/raids';
-  import type { MapMarker } from '$lib/ui/map';
-  import PlayerLink from '$lib/ui/PlayerLink.svelte';
-  import PlayerNames from '$lib/ui/PlayerNames.svelte';
-  import Stat from '$lib/ui/Stat.svelte';
-  import Time from '$lib/ui/Time.svelte';
-  import WorldMap from '$lib/ui/WorldMap.svelte';
+  } from '#lib/ui/raids.ts';
+  import type { MapMarker } from '#lib/ui/map.ts';
+  import PlayerLink from '#lib/ui/PlayerLink.svelte';
+  import PlayerNames from '#lib/ui/PlayerNames.svelte';
+  import Stat from '#lib/ui/Stat.svelte';
+  import Time from '#lib/ui/Time.svelte';
+  import WorldMap from '#lib/ui/WorldMap.svelte';
 
   let { data } = $props();
 

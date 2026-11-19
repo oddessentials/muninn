@@ -1,5 +1,5 @@
 import type { RequestEvent } from '@sveltejs/kit';
-import type { ZoneResult, ZoneResultList } from '$lib/api/types';
+import type { ZoneResult, ZoneResultList } from '#lib/api/types.ts';
 import { empty, guarded, notFound, privateJson, publicJson, unauthorized } from '../http/respond';
 import { readJsonBody } from '../http/routes';
 import { parseZoneName, parseZoneResult, rankZoneResults } from '../zone/results';

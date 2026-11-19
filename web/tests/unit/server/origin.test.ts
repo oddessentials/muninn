@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { fromThisSite, isSecureSite } from '$lib/server/auth/admin';
+import { fromThisSite, isSecureSite } from '#lib/server/auth/admin.ts';
 
 function event(url: string, origin?: string) {
   return {

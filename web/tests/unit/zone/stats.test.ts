@@ -7,7 +7,7 @@ import {
   percentile,
   slugifyName,
   successiveJitter
-} from '$lib/zone/stats';
+} from '#lib/zone/stats.ts';
 
 describe('stats', () => {
   it('computes the median for odd and even lists', () => {

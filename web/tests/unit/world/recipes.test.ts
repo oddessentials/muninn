@@ -1,7 +1,7 @@
 import { readFileSync, statSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
-import type { Comfort } from '$lib/api/types';
-import data from '$lib/world/comfort-recipes.json';
+import type { Comfort } from '#lib/api/types.ts';
+import data from '#lib/world/comfort-recipes.json';
 import {
   atlas,
   iconPosition,
@@ -13,7 +13,7 @@ import {
   stationIcon,
   stationName,
   statusIcon
-} from '$lib/world/recipes';
+} from '#lib/world/recipes.ts';
 
 const root = new URL('../../../', import.meta.url);
 const fixture = JSON.parse(

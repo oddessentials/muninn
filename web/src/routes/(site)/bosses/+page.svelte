@@ -1,14 +1,14 @@
 <script lang="ts">
-  import Card from '$lib/ui/Card.svelte';
-  import EmptyState from '$lib/ui/EmptyState.svelte';
-  import Meta from '$lib/ui/Meta.svelte';
-  import PageHeader from '$lib/ui/PageHeader.svelte';
-  import ErrorNote from '$lib/ui/ErrorNote.svelte';
-  import { bossStanding, forsakenTotal } from '$lib/ui/bosses';
-  import { formatNumber } from '$lib/ui/format';
-  import { progressionCategoryLabel } from '$lib/ui/labels';
-  import PlayerNames from '$lib/ui/PlayerNames.svelte';
-  import Time from '$lib/ui/Time.svelte';
+  import Card from '#lib/ui/Card.svelte';
+  import EmptyState from '#lib/ui/EmptyState.svelte';
+  import Meta from '#lib/ui/Meta.svelte';
+  import PageHeader from '#lib/ui/PageHeader.svelte';
+  import ErrorNote from '#lib/ui/ErrorNote.svelte';
+  import { bossStanding, forsakenTotal } from '#lib/ui/bosses.ts';
+  import { formatNumber } from '#lib/ui/format.ts';
+  import { progressionCategoryLabel } from '#lib/ui/labels.ts';
+  import PlayerNames from '#lib/ui/PlayerNames.svelte';
+  import Time from '#lib/ui/Time.svelte';
 
   let { data } = $props();
 

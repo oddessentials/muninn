@@ -1,6 +1,6 @@
-import { digestActivityTypes } from '$lib/ui/labels';
-import { attempt } from '$lib/ui/load';
-import { serverApi } from '$lib/ui/server';
+import { digestActivityTypes } from '#lib/ui/labels.ts';
+import { attempt } from '#lib/ui/load.ts';
+import { serverApi } from '#lib/ui/server.ts';
 import type { PageServerLoad } from './$types';
 
 const feedLength = 5;

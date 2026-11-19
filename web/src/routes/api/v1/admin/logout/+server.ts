@@ -5,8 +5,8 @@ import {
   isSecureSite,
   requireAdmin,
   requireSameOrigin
-} from '$lib/server/auth/admin';
-import { empty, guarded } from '$lib/server/http/respond';
+} from '#lib/server/auth/admin.ts';
+import { empty, guarded } from '#lib/server/http/respond.ts';
 
 export const POST: RequestHandler = (event) =>
   guarded(async () => {

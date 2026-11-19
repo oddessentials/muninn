@@ -1,12 +1,11 @@
-import type { Handle, ServerInit } from '@sveltejs/kit';
-import { sequence } from '@sveltejs/kit/hooks';
-import { getDb } from '$lib/server/db/client';
-import { loadEnv } from '$lib/server/env';
-import { apiNotFound, apiRateLimit } from '$lib/server/hooks/api';
-import { mock } from '$lib/server/hooks/mock';
-import { jobs } from '$lib/server/jobs/registry';
-import { startScheduler, type Scheduler } from '$lib/server/jobs/scheduler';
-import { exportConfiguredPlugin } from '$lib/server/plugin';
+import { sequence, type Handle, type ServerInit } from '@sveltejs/kit/hooks';
+import { getDb } from '#lib/server/db/client.ts';
+import { loadEnv } from '#lib/server/env.ts';
+import { apiNotFound, apiRateLimit } from '#lib/server/hooks/api.ts';
+import { mock } from '#lib/server/hooks/mock.ts';
+import { jobs } from '#lib/server/jobs/registry.ts';
+import { startScheduler, type Scheduler } from '#lib/server/jobs/scheduler.ts';
+import { exportConfiguredPlugin } from '#lib/server/plugin.ts';
 
 let scheduler: Scheduler | null = null;
 

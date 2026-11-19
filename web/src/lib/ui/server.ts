@@ -1,5 +1,5 @@
-import { env } from '$env/dynamic/private';
-import { createApi, type Api } from '$lib/api/client';
+import { API_BASE_URL } from '$app/env/private';
+import { createApi, type Api } from '#lib/api/client.ts';
 
 export interface ServerApi {
   api: Api;
@@ -8,7 +8,7 @@ export interface ServerApi {
 }
 
 export function serverApi(fetch: typeof globalThis.fetch, url: URL): ServerApi {
-  const configured = env.API_BASE_URL?.trim().replace(/\/+$/, '');
+  const configured = API_BASE_URL?.trim().replace(/\/+$/, '');
   const base = configured || url.origin;
   return { api: createApi({ fetch, baseUrl: base }), base, external: base !== url.origin };
 }

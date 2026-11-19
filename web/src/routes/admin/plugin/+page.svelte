@@ -1,19 +1,19 @@
 <script lang="ts">
   import { untrack } from 'svelte';
   import { page } from '$app/state';
-  import { ApiError, api } from '$lib/api/client';
-  import Card from '$lib/ui/Card.svelte';
-  import ErrorNote from '$lib/ui/ErrorNote.svelte';
-  import Meta from '$lib/ui/Meta.svelte';
-  import PageHeader from '$lib/ui/PageHeader.svelte';
+  import { ApiError, api } from '#lib/api/client.ts';
+  import Card from '#lib/ui/Card.svelte';
+  import ErrorNote from '#lib/ui/ErrorNote.svelte';
+  import Meta from '#lib/ui/Meta.svelte';
+  import PageHeader from '#lib/ui/PageHeader.svelte';
   import {
     configFileName,
     dllFileName,
     ingestUrl,
     installGuides,
     pluginConfig
-  } from '$lib/ui/plugin';
-  import Time from '$lib/ui/Time.svelte';
+  } from '#lib/ui/plugin.ts';
+  import Time from '#lib/ui/Time.svelte';
 
   let { data } = $props();
 

@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
-import type { Comfort, ComfortPiece } from '$lib/api/types';
+import type { Comfort, ComfortPiece } from '#lib/api/types.ts';
 import {
   conditionLabel,
   defaultOrder,
@@ -15,7 +15,7 @@ import {
   seasonWindow,
   sortPieces,
   topOfGroup
-} from '$lib/ui/comfort';
+} from '#lib/ui/comfort.ts';
 
 const fixture = JSON.parse(
   readFileSync(new URL('../../../fixtures/api/comfort.json', import.meta.url), 'utf8')

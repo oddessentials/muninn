@@ -1,5 +1,4 @@
-import { env as privateEnv } from '$env/dynamic/private';
-import { env as publicEnv } from '$env/dynamic/public';
+import * as declared from '$app/env/private';
 
 const logLevels = ['debug', 'info', 'warn', 'error'] as const;
 export type LogLevel = (typeof logLevels)[number];
@@ -134,7 +133,7 @@ export function validateEnvironment(source: Record<string, string | undefined>):
 let cached: Env | null = null;
 
 export function loadEnv(): Env {
-  if (!cached) cached = validateEnvironment({ ...privateEnv, ...publicEnv, ...process.env });
+  if (!cached) cached = validateEnvironment({ ...declared, ...process.env });
   return cached;
 }
 

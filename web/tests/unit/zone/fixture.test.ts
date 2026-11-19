@@ -1,9 +1,9 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
-import type { ZoneResultList } from '$lib/api/types';
-import { rankResults } from '$lib/zone/ranking';
-import { normalizeZoneName } from '$lib/zone/stats';
-import { checkResult } from '$lib/zone/validate';
+import type { ZoneResultList } from '#lib/api/types.ts';
+import { rankResults } from '#lib/zone/ranking.ts';
+import { normalizeZoneName } from '#lib/zone/stats.ts';
+import { checkResult } from '#lib/zone/validate.ts';
 
 const fixture = JSON.parse(
   readFileSync(new URL('../../../fixtures/api/zone/results.json', import.meta.url), 'utf8')

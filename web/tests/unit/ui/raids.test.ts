@@ -1,5 +1,11 @@
 import { describe, expect, it } from 'vitest';
-import { raidEndNote, raidLength, raidPauseNote, raidStanding, raidStartNote } from '$lib/ui/raids';
+import {
+  raidEndNote,
+  raidLength,
+  raidPauseNote,
+  raidStanding,
+  raidStartNote
+} from '#lib/ui/raids.ts';
 
 const ended = { duration_s: 125, end_reason: 'ended' as const, active_s: 120, restored: false };
 const paused = { duration_s: 15005, end_reason: 'ended' as const, active_s: 120.1, restored: true };

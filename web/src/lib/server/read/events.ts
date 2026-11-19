@@ -1,5 +1,5 @@
 import { and, desc, eq, exists, gte, lt, sql, type SQL } from 'drizzle-orm';
-import type { EventEnvelope, EventType, StoredEvent } from '$lib/api/types';
+import type { EventEnvelope, EventType, StoredEvent } from '#lib/api/types.ts';
 import type { Database } from '../db/client';
 import { eventPlayers, events, heartbeats } from '../db/schema';
 import { notFound } from '../http/respond';

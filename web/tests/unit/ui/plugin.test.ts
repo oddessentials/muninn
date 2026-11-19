@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { configFileName, ingestUrl, installGuides, pluginConfig } from '$lib/ui/plugin';
+import { configFileName, ingestUrl, installGuides, pluginConfig } from '#lib/ui/plugin.ts';
 
 function values(text: string): Record<string, string> {
   return Object.fromEntries(

@@ -1,4 +1,4 @@
-import type { Status } from '$lib/api/types';
+import type { Status } from '#lib/api/types.ts';
 
 export const dayLengthSeconds = 1800;
 export const dawnRawFraction = 0.15;

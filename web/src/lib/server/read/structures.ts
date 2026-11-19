@@ -1,5 +1,5 @@
 import { asc, desc, gte, sql } from 'drizzle-orm';
-import type { StructureEvent, Structures } from '$lib/api/types';
+import type { StructureEvent, Structures } from '#lib/api/types.ts';
 import type { Database } from '../db/client';
 import { structureEvents, structuresDaily } from '../db/schema';
 import { round } from '../http/respond';

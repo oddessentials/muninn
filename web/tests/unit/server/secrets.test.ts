@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { hashPassword, parseNewPassword, passwordMatchesHash } from '$lib/server/auth/secrets';
+import { hashPassword, parseNewPassword, passwordMatchesHash } from '#lib/server/auth/secrets.ts';
 
 describe('the admin password hash', () => {
   it('matches only the password it was made from', async () => {

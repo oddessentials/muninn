@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { PlayerRef } from '$lib/api/types';
+  import type { PlayerRef } from '#lib/api/types.ts';
 
   let { player, online = null }: { player: PlayerRef | null; online?: boolean | null } = $props();
 </script>

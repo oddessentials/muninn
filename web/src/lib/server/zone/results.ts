@@ -1,7 +1,7 @@
-import type { ZoneRankedResult, ZoneResult } from '$lib/api/types';
-import { rankResults } from '$lib/zone/ranking';
-import { normalizeZoneName } from '$lib/zone/stats';
-import { checkResult } from '$lib/zone/validate';
+import type { ZoneRankedResult, ZoneResult } from '#lib/api/types.ts';
+import { rankResults } from '#lib/zone/ranking.ts';
+import { normalizeZoneName } from '#lib/zone/stats.ts';
+import { checkResult } from '#lib/zone/validate.ts';
 import { describeErrors, schemaValidator } from '../ingest/validate';
 import { badRequest, unprocessable } from '../http/respond';
 

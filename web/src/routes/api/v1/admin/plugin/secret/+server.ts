@@ -1,7 +1,7 @@
-import { secrets } from '$lib/server/auth/secrets';
-import { privateJson } from '$lib/server/http/respond';
-import { adminMutation } from '$lib/server/http/routes';
-import { exportConfiguredPlugin } from '$lib/server/plugin';
+import { secrets } from '#lib/server/auth/secrets.ts';
+import { privateJson } from '#lib/server/http/respond.ts';
+import { adminMutation } from '#lib/server/http/routes.ts';
+import { exportConfiguredPlugin } from '#lib/server/plugin.ts';
 
 export const POST = adminMutation(async (_event, db) => {
   const telemetrySecret = await secrets.regenerateTelemetrySecret();

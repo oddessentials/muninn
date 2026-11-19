@@ -1,6 +1,6 @@
-import { badRequest } from '$lib/server/http/respond';
-import { adminGet } from '$lib/server/http/routes';
-import { adminEvent } from '$lib/server/read/events';
+import { badRequest } from '#lib/server/http/respond.ts';
+import { adminGet } from '#lib/server/http/routes.ts';
+import { adminEvent } from '#lib/server/read/events.ts';
 
 export const GET = adminGet(async ({ params }, db) => {
   const id = params.id ?? '';

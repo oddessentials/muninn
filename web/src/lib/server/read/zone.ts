@@ -1,5 +1,5 @@
 import { eq } from 'drizzle-orm';
-import type { ZoneRankedResult, ZoneResultList } from '$lib/api/types';
+import type { ZoneRankedResult, ZoneResultList } from '#lib/api/types.ts';
 import type { Database } from '../db/client';
 import { zoneResults } from '../db/schema';
 import { notFound } from '../http/respond';

@@ -1,5 +1,5 @@
 import { desc, inArray, sql } from 'drizzle-orm';
-import type { Comfort, ComfortCatalogueUpload } from '$lib/api/types';
+import type { Comfort, ComfortCatalogueUpload } from '#lib/api/types.ts';
 import type { Database } from '../db/client';
 import { comfortCatalogues, structuresDaily } from '../db/schema';
 

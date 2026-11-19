@@ -5,10 +5,10 @@ import {
   parseIntegerParam,
   parseOptionalEnum,
   parsePage
-} from '$lib/server/http/respond';
-import { adminGet } from '$lib/server/http/routes';
-import { allEventTypes } from '$lib/server/read/activity';
-import { listAdminEvents } from '$lib/server/read/events';
+} from '#lib/server/http/respond.ts';
+import { adminGet } from '#lib/server/http/routes.ts';
+import { allEventTypes } from '#lib/server/read/activity.ts';
+import { listAdminEvents } from '#lib/server/read/events.ts';
 
 export const GET = adminGet(async ({ url }, db) => {
   const page = parsePage(url);

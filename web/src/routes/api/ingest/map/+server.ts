@@ -1,10 +1,14 @@
 import type { RequestHandler } from '@sveltejs/kit';
-import { getDb } from '$lib/server/db/client';
-import { secrets } from '$lib/server/auth/secrets';
-import { empty, errorResponse, guarded } from '$lib/server/http/respond';
-import { recordRejectedBatch } from '$lib/server/ingest/ingest';
-import { signatureHeader, timestampHeader, verifyMapSignature } from '$lib/server/ingest/signature';
-import { storeMapImage } from '$lib/server/read/world';
+import { getDb } from '#lib/server/db/client.ts';
+import { secrets } from '#lib/server/auth/secrets.ts';
+import { empty, errorResponse, guarded } from '#lib/server/http/respond.ts';
+import { recordRejectedBatch } from '#lib/server/ingest/ingest.ts';
+import {
+  signatureHeader,
+  timestampHeader,
+  verifyMapSignature
+} from '#lib/server/ingest/signature.ts';
+import { storeMapImage } from '#lib/server/read/world.ts';
 
 const maxMapBytes = 16 * 1024 * 1024;
 const pngSignature = Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]);

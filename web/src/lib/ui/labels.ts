@@ -6,7 +6,7 @@ import type {
   LeftReason,
   Platform,
   Status
-} from '$lib/api/types';
+} from '#lib/api/types.ts';
 
 export const biomes: readonly Biome[] = [
   'Meadows',

@@ -1,4 +1,4 @@
-import type { Announcement, AnnouncementCreate, AnnouncementStatus } from '$lib/api/types';
+import type { Announcement, AnnouncementCreate, AnnouncementStatus } from '#lib/api/types.ts';
 import { formatDuration, parseInstant } from './format';
 
 export const restartPresets: readonly number[] = [5, 10, 15, 30];

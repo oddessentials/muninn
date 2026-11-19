@@ -1,4 +1,4 @@
-import type { Handle } from '@sveltejs/kit';
+import type { Handle } from '@sveltejs/kit/hooks';
 import { env } from '../env';
 import { answerFromFixtures } from '../mock/router';
 

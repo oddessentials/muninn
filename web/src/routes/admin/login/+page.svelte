@@ -1,7 +1,7 @@
 <script lang="ts">
   import { goto, invalidateAll } from '$app/navigation';
-  import { ApiError, api } from '$lib/api/client';
-  import Meta from '$lib/ui/Meta.svelte';
+  import { ApiError, api } from '#lib/api/client.ts';
+  import Meta from '#lib/ui/Meta.svelte';
 
   let { data } = $props();
   let password = $state('');

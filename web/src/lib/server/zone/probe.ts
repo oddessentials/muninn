@@ -1,5 +1,5 @@
-import type { ProbeHealth } from '$lib/api/types';
-import { diagnosticVersion } from '$lib/zone/version';
+import type { ProbeHealth } from '#lib/api/types.ts';
+import { diagnosticVersion } from '#lib/zone/version.ts';
 import { badRequest, noStore, payloadTooLarge } from '../http/respond';
 
 export const probeMinBytes = 16;

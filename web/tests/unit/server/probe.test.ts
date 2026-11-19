@@ -1,12 +1,12 @@
 import { describe, expect, it } from 'vitest';
-import { ApiHttpError } from '$lib/server/http/respond';
+import { ApiHttpError } from '#lib/server/http/respond.ts';
 import {
   countUploadBytes,
   parseProbeBytes,
   patternBytes,
   probeMaxBytes,
   probeMinBytes
-} from '$lib/server/zone/probe';
+} from '#lib/server/zone/probe.ts';
 
 function url(query: string): URL {
   return new URL(`http://probe/api/v1/zone/probe/download${query}`);

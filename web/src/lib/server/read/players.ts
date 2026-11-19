@@ -10,7 +10,7 @@ import type {
   PlayerStructures,
   Position,
   Session
-} from '$lib/api/types';
+} from '#lib/api/types.ts';
 import type { Database } from '../db/client';
 import {
   biomeVisits,

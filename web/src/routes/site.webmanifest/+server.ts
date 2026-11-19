@@ -1,7 +1,7 @@
 import type { RequestHandler } from '@sveltejs/kit';
-import { attempt } from '$lib/ui/load';
-import { webManifest } from '$lib/ui/manifest';
-import { serverApi } from '$lib/ui/server';
+import { attempt } from '#lib/ui/load.ts';
+import { webManifest } from '#lib/ui/manifest.ts';
+import { serverApi } from '#lib/ui/server.ts';
 
 export const GET: RequestHandler = async ({ fetch, url }) => {
   const site = await attempt(serverApi(fetch, url).api.getSite());

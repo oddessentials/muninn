@@ -1,4 +1,4 @@
-import type { Handle } from '@sveltejs/kit';
+import type { Handle } from '@sveltejs/kit/hooks';
 import { errorResponse } from '../http/respond';
 import { publicRateLimiter } from '../http/rateLimit';
 import { clientAddress } from '../http/routes';

@@ -9,7 +9,7 @@ import {
   parseKeywords,
   queryInfo,
   queryPlayers
-} from '$lib/server/a2s';
+} from '#lib/server/a2s.ts';
 
 const capture = Buffer.from(
   'ffffffff4911526176656e686f6c6400526176656e686f6c640076616c6865696d00000000040a0064770100312e302e302e3000b1b9690100000000004001673d312e302e372c6e3d33392c6d3d002aa00d0000000000',

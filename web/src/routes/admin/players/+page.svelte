@@ -1,16 +1,16 @@
 <script lang="ts">
   import { invalidateAll } from '$app/navigation';
-  import { ApiError, api } from '$lib/api/client';
-  import type { AdminPlayer } from '$lib/api/types';
-  import Card from '$lib/ui/Card.svelte';
-  import EmptyState from '$lib/ui/EmptyState.svelte';
-  import ErrorNote from '$lib/ui/ErrorNote.svelte';
-  import { formatHours, formatNumber } from '$lib/ui/format';
-  import Meta from '$lib/ui/Meta.svelte';
-  import PageHeader from '$lib/ui/PageHeader.svelte';
-  import Pager from '$lib/ui/Pager.svelte';
-  import PlatformTag from '$lib/ui/PlatformTag.svelte';
-  import Time from '$lib/ui/Time.svelte';
+  import { ApiError, api } from '#lib/api/client.ts';
+  import type { AdminPlayer } from '#lib/api/types.ts';
+  import Card from '#lib/ui/Card.svelte';
+  import EmptyState from '#lib/ui/EmptyState.svelte';
+  import ErrorNote from '#lib/ui/ErrorNote.svelte';
+  import { formatHours, formatNumber } from '#lib/ui/format.ts';
+  import Meta from '#lib/ui/Meta.svelte';
+  import PageHeader from '#lib/ui/PageHeader.svelte';
+  import Pager from '#lib/ui/Pager.svelte';
+  import PlatformTag from '#lib/ui/PlatformTag.svelte';
+  import Time from '#lib/ui/Time.svelte';
 
   let { data } = $props();
 

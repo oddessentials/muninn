@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { Status } from '$lib/api/types';
+  import type { Status } from '#lib/api/types.ts';
   import { formatDuration } from './format';
   import { sourceLabel } from './labels';
   import { popOutWidget } from './popout';

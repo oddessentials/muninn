@@ -1,8 +1,8 @@
 <script lang="ts">
   import { onDestroy, onMount } from 'svelte';
   import { invalidateAll } from '$app/navigation';
-  import { ApiError, api } from '$lib/api/client';
-  import type { Announcement } from '$lib/api/types';
+  import { ApiError, api } from '#lib/api/client.ts';
+  import type { Announcement } from '#lib/api/types.ts';
   import {
     announcementSummary,
     buildAnnouncement,
@@ -17,14 +17,14 @@
     restartPresets,
     statusLabel,
     statusTone
-  } from '$lib/ui/announcements';
-  import Card from '$lib/ui/Card.svelte';
-  import { clock } from '$lib/ui/clock.svelte';
-  import EmptyState from '$lib/ui/EmptyState.svelte';
-  import ErrorNote from '$lib/ui/ErrorNote.svelte';
-  import Meta from '$lib/ui/Meta.svelte';
-  import PageHeader from '$lib/ui/PageHeader.svelte';
-  import Time from '$lib/ui/Time.svelte';
+  } from '#lib/ui/announcements.ts';
+  import Card from '#lib/ui/Card.svelte';
+  import { clock } from '#lib/ui/clock.svelte.ts';
+  import EmptyState from '#lib/ui/EmptyState.svelte';
+  import ErrorNote from '#lib/ui/ErrorNote.svelte';
+  import Meta from '#lib/ui/Meta.svelte';
+  import PageHeader from '#lib/ui/PageHeader.svelte';
+  import Time from '#lib/ui/Time.svelte';
 
   let { data } = $props();
 

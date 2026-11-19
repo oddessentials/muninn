@@ -1,6 +1,6 @@
 import { getContext, setContext } from 'svelte';
-import { connectStream, type StreamConnection, type StreamState } from '$lib/api/sse';
-import type { ActivityItem, OnlineList, Status } from '$lib/api/types';
+import { connectStream, type StreamConnection, type StreamState } from '#lib/api/sse.ts';
+import type { ActivityItem, OnlineList, Status } from '#lib/api/types.ts';
 
 export type LiveStreamState = StreamState | 'off';
 

@@ -1,6 +1,6 @@
-import { parseEnum, parsePage, parsePathId } from '$lib/server/http/respond';
-import { publicGet, requireFeature } from '$lib/server/http/routes';
-import { playerPositions } from '$lib/server/read/players';
+import { parseEnum, parsePage, parsePathId } from '#lib/server/http/respond.ts';
+import { publicGet, requireFeature } from '#lib/server/http/routes.ts';
+import { playerPositions } from '#lib/server/read/players.ts';
 
 export const GET = publicGet(async ({ params, url }, db) => {
   await requireFeature('positions', db);

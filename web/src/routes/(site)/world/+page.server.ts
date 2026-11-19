@@ -1,7 +1,7 @@
 import { error } from '@sveltejs/kit';
-import { attempt } from '$lib/ui/load';
-import { pickText } from '$lib/ui/query';
-import { assetUrl, serverApi } from '$lib/ui/server';
+import { attempt } from '#lib/ui/load.ts';
+import { pickText } from '#lib/ui/query.ts';
+import { assetUrl, serverApi } from '#lib/ui/server.ts';
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async ({ fetch, url, parent }) => {

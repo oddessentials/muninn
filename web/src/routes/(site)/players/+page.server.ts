@@ -1,6 +1,6 @@
-import { attempt } from '$lib/ui/load';
-import { pickBoolean, pickEnum, pickText } from '$lib/ui/query';
-import { serverApi } from '$lib/ui/server';
+import { attempt } from '#lib/ui/load.ts';
+import { pickBoolean, pickEnum, pickText } from '#lib/ui/query.ts';
+import { serverApi } from '#lib/ui/server.ts';
 import type { PageServerLoad } from './$types';
 
 const sorts = ['playtime', 'last_seen', 'deaths', 'kills', 'name', 'first_seen'] as const;

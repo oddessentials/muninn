@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { ActivityItem } from '$lib/api/types';
+  import type { ActivityItem } from '#lib/api/types.ts';
   import { describeActivity, type ActivityTone } from './activity';
   import { formatPosition } from './format';
   import { activityTypeLabel } from './labels';

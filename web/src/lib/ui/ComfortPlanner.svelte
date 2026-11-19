@@ -1,6 +1,6 @@
 <script lang="ts">
   import { page } from '$app/state';
-  import type { ComfortCatalogue, ComfortPiece } from '$lib/api/types';
+  import type { ComfortCatalogue, ComfortPiece } from '#lib/api/types.ts';
   import {
     conditionLabel,
     groupLabel,
@@ -10,9 +10,9 @@
     restedSeconds,
     topOfGroup,
     ungrouped
-  } from '$lib/ui/comfort';
-  import { formatDistance, formatDuration, formatNumber } from '$lib/ui/format';
-  import GameIcon from '$lib/ui/GameIcon.svelte';
+  } from '#lib/ui/comfort.ts';
+  import { formatDistance, formatDuration, formatNumber } from '#lib/ui/format.ts';
+  import GameIcon from '#lib/ui/GameIcon.svelte';
   import {
     changeCount,
     countOf,
@@ -25,8 +25,8 @@
     totalPieces,
     withoutRecipe,
     type PlanEntry
-  } from '$lib/ui/plan';
-  import RecipeLine from '$lib/ui/RecipeLine.svelte';
+  } from '#lib/ui/plan.ts';
+  import RecipeLine from '#lib/ui/RecipeLine.svelte';
   import {
     materialIcon,
     materialName,
@@ -36,7 +36,7 @@
     stationIcon,
     stationName,
     statusIcon
-  } from '$lib/world/recipes';
+  } from '#lib/world/recipes.ts';
 
   let {
     catalogue,

@@ -1,6 +1,6 @@
 import type { RequestHandler } from '@sveltejs/kit';
-import { guarded, noStore } from '$lib/server/http/respond';
-import { parseProbeBytes, patternBytes } from '$lib/server/zone/probe';
+import { guarded, noStore } from '#lib/server/http/respond.ts';
+import { parseProbeBytes, patternBytes } from '#lib/server/zone/probe.ts';
 
 export const GET: RequestHandler = (event) =>
   guarded(() => {

@@ -1,6 +1,6 @@
-import { privateJson } from '$lib/server/http/respond';
-import { adminGet, adminMutation, readJsonBody } from '$lib/server/http/routes';
-import { parseSettingsUpdate, siteSettings } from '$lib/server/settings';
+import { privateJson } from '#lib/server/http/respond.ts';
+import { adminGet, adminMutation, readJsonBody } from '#lib/server/http/routes.ts';
+import { parseSettingsUpdate, siteSettings } from '#lib/server/settings.ts';
 
 export const GET = adminGet(() => siteSettings.read());
 

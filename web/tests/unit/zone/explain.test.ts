@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { explainResult, recommendationFor } from '$lib/zone/explain';
+import { explainResult, recommendationFor } from '#lib/zone/explain.ts';
 import { makeMeasurements, makeResult } from './fixtures';
 
 describe('deterministic explanations', () => {

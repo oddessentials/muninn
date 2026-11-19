@@ -1,6 +1,6 @@
-import { attempt } from '$lib/ui/load';
-import { pickText } from '$lib/ui/query';
-import { serverApi } from '$lib/ui/server';
+import { attempt } from '#lib/ui/load.ts';
+import { pickText } from '#lib/ui/query.ts';
+import { serverApi } from '#lib/ui/server.ts';
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async ({ fetch, url }) => {

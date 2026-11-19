@@ -5,8 +5,8 @@ import {
   compactDuration,
   phaseLabel,
   stripClock
-} from '$lib/ui/sunclock';
-import { readingOf, type ClockState } from '$lib/ui/worldclock.svelte';
+} from '#lib/ui/sunclock.ts';
+import { readingOf, type ClockState } from '#lib/ui/worldclock.svelte.ts';
 
 const noon = 290 * 1800 + 900;
 const bell = 290 * 1800 + 1425;

@@ -1,6 +1,6 @@
-import { attempt } from '$lib/ui/load';
-import { navigationFor } from '$lib/ui/navigation';
-import { serverApi } from '$lib/ui/server';
+import { attempt } from '#lib/ui/load.ts';
+import { navigationFor } from '#lib/ui/navigation.ts';
+import { serverApi } from '#lib/ui/server.ts';
 import type { LayoutServerLoad } from './$types';
 
 const defaultSiteName = 'Valheim guild';

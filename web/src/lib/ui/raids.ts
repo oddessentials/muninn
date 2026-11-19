@@ -1,4 +1,4 @@
-import type { Raid } from '$lib/api/types';
+import type { Raid } from '#lib/api/types.ts';
 import { formatDuration } from './format';
 
 export type RaidStanding = 'running' | 'ended' | 'cut short';

@@ -1,7 +1,7 @@
 import { error } from '@sveltejs/kit';
-import { attempt } from '$lib/ui/load';
-import { pickInstant, pickInt, pickOptionalEnum, pickText } from '$lib/ui/query';
-import { assetUrl, serverApi } from '$lib/ui/server';
+import { attempt } from '#lib/ui/load.ts';
+import { pickInstant, pickInt, pickOptionalEnum, pickText } from '#lib/ui/query.ts';
+import { assetUrl, serverApi } from '#lib/ui/server.ts';
 import type { PageServerLoad } from './$types';
 
 const kinds = ['shout', 'ping', 'say'] as const;

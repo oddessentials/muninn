@@ -3,7 +3,7 @@ import type {
   ComfortCondition,
   ComfortPiece,
   ComfortSeason
-} from '$lib/api/types';
+} from '#lib/api/types.ts';
 
 export const baseComfort = 1;
 export const shelterComfort = 1;

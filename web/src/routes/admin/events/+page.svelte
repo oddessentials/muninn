@@ -1,16 +1,16 @@
 <script lang="ts">
   import { SvelteSet } from 'svelte/reactivity';
-  import Card from '$lib/ui/Card.svelte';
-  import EmptyState from '$lib/ui/EmptyState.svelte';
-  import ErrorNote from '$lib/ui/ErrorNote.svelte';
-  import { formatNumber } from '$lib/ui/format';
-  import JsonView from '$lib/ui/JsonView.svelte';
-  import { activityTypeLabel, activityTypes } from '$lib/ui/labels';
-  import Meta from '$lib/ui/Meta.svelte';
-  import PageHeader from '$lib/ui/PageHeader.svelte';
-  import Pager from '$lib/ui/Pager.svelte';
-  import { dateInputValue } from '$lib/ui/query';
-  import Time from '$lib/ui/Time.svelte';
+  import Card from '#lib/ui/Card.svelte';
+  import EmptyState from '#lib/ui/EmptyState.svelte';
+  import ErrorNote from '#lib/ui/ErrorNote.svelte';
+  import { formatNumber } from '#lib/ui/format.ts';
+  import JsonView from '#lib/ui/JsonView.svelte';
+  import { activityTypeLabel, activityTypes } from '#lib/ui/labels.ts';
+  import Meta from '#lib/ui/Meta.svelte';
+  import PageHeader from '#lib/ui/PageHeader.svelte';
+  import Pager from '#lib/ui/Pager.svelte';
+  import { dateInputValue } from '#lib/ui/query.ts';
+  import Time from '#lib/ui/Time.svelte';
 
   let { data } = $props();
 

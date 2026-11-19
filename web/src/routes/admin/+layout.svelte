@@ -1,10 +1,10 @@
 <script lang="ts">
   import { goto, invalidateAll } from '$app/navigation';
   import { page } from '$app/state';
-  import { api } from '$lib/api/client';
-  import ErrorNote from '$lib/ui/ErrorNote.svelte';
-  import { isCurrent } from '$lib/ui/navigation';
-  import Time from '$lib/ui/Time.svelte';
+  import { api } from '#lib/api/client.ts';
+  import ErrorNote from '#lib/ui/ErrorNote.svelte';
+  import { isCurrent } from '#lib/ui/navigation.ts';
+  import Time from '#lib/ui/Time.svelte';
 
   let { data, children } = $props();
   let message = $state('');

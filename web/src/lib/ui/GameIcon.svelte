@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { atlas, iconPosition } from '$lib/world/recipes';
+  import { atlas, iconPosition } from '#lib/world/recipes.ts';
 
   let {
     icon,

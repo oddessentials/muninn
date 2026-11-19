@@ -1,7 +1,7 @@
 import type { RequestHandler } from '@sveltejs/kit';
-import type { Health } from '$lib/api/types';
-import { pingDatabase } from '$lib/server/db/client';
-import { env } from '$lib/server/env';
+import type { Health } from '#lib/api/types.ts';
+import { pingDatabase } from '#lib/server/db/client.ts';
+import { env } from '#lib/server/env.ts';
 
 export const GET: RequestHandler = async () => {
   const body: Health = {

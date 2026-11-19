@@ -1,4 +1,4 @@
-import type { Phase } from '$lib/world/clock';
+import type { Phase } from '#lib/world/clock.ts';
 import type { ClockReading, ClockState } from './worldclock.svelte';
 
 const phaseNames: Record<Phase, string> = {

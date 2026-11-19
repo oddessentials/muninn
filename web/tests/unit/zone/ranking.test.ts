@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { compareZoneLeaders, rankResults } from '$lib/zone/ranking';
-import type { DiagnosticResult } from '$lib/zone/types';
+import { compareZoneLeaders, rankResults } from '#lib/zone/ranking.ts';
+import type { DiagnosticResult } from '#lib/zone/types.ts';
 import { makeMeasurements, makeResult } from './fixtures';
 
 function withScoresOf(base: DiagnosticResult, result: DiagnosticResult): DiagnosticResult {

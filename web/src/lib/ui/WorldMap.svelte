@@ -1,6 +1,6 @@
 <script lang="ts">
   import { fade } from 'svelte/transition';
-  import type { WorldMap } from '$lib/api/types';
+  import type { WorldMap } from '#lib/api/types.ts';
   import Emblem from './Emblem.svelte';
   import { biomeLabel, mapBiomeColors } from './labels';
   import {

@@ -15,7 +15,7 @@ import {
   uniqueIndex,
   uuid
 } from 'drizzle-orm/pg-core';
-import type { ComfortCatalogueUpload, ZoneResult } from '$lib/api/types';
+import type { ComfortCatalogueUpload, ZoneResult } from '#lib/api/types.ts';
 
 const bytea = customType<{ data: Buffer; driverData: Buffer }>({
   dataType: () => 'bytea'

@@ -1,5 +1,5 @@
-import { attempt } from '$lib/ui/load';
-import { serverApi } from '$lib/ui/server';
+import { attempt } from '#lib/ui/load.ts';
+import { serverApi } from '#lib/ui/server.ts';
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async ({ fetch, url }) => {

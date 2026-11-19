@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import type { Announcement } from '$lib/api/types';
+import type { Announcement } from '#lib/api/types.ts';
 import {
   announcementSummary,
   buildAnnouncement,
@@ -12,9 +12,9 @@ import {
   restartLead,
   statusLabel,
   statusTone
-} from '$lib/ui/announcements';
-import { describeActivity } from '$lib/ui/activity';
-import { activityTypeLabel } from '$lib/ui/labels';
+} from '#lib/ui/announcements.ts';
+import { describeActivity } from '#lib/ui/activity.ts';
+import { activityTypeLabel } from '#lib/ui/labels.ts';
 
 const now = Date.UTC(2026, 8, 12, 20, 0, 0);
 

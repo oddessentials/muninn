@@ -1,6 +1,6 @@
-import type { ComfortPiece } from '$lib/api/types';
-import { groupStandings } from '$lib/ui/comfort';
-import type { MaterialAmount, Recipe } from '$lib/world/recipes';
+import type { ComfortPiece } from '#lib/api/types.ts';
+import { groupStandings } from '#lib/ui/comfort.ts';
+import type { MaterialAmount, Recipe } from '#lib/world/recipes.ts';
 
 export interface PlanEntry {
   prefab: string;

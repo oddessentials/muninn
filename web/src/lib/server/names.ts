@@ -1,4 +1,4 @@
-import type { Biome } from '$lib/api/types';
+import type { Biome } from '#lib/api/types.ts';
 import {
   bossDefinitions,
   bossForKey,
@@ -6,14 +6,14 @@ import {
   bossForPrefab,
   type BossDefinition,
   type BossTier
-} from '$lib/world/bosses';
+} from '#lib/world/bosses.ts';
 
 export {
   bossDefinitions,
   forsakenBosses,
   miniBosses,
   type BossDefinition
-} from '$lib/world/bosses';
+} from '#lib/world/bosses.ts';
 
 export const knownBosses: readonly BossDefinition[] = bossDefinitions;
 

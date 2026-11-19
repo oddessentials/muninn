@@ -1,8 +1,8 @@
 import { error } from '@sveltejs/kit';
-import { ApiError, type PositionsRange } from '$lib/api/client';
-import { attempt } from '$lib/ui/load';
-import { pickEnum, pickText } from '$lib/ui/query';
-import { assetUrl, serverApi } from '$lib/ui/server';
+import { ApiError, type PositionsRange } from '#lib/api/client.ts';
+import { attempt } from '#lib/ui/load.ts';
+import { pickEnum, pickText } from '#lib/ui/query.ts';
+import { assetUrl, serverApi } from '#lib/ui/server.ts';
 import type { PageServerLoad } from './$types';
 
 const ranges: readonly NonNullable<PositionsRange>[] = ['1h', '6h', '24h', '7d'];

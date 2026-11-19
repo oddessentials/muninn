@@ -1,7 +1,7 @@
 <script lang="ts">
   import { goto, invalidateAll } from '$app/navigation';
-  import { ApiError, api } from '$lib/api/client';
-  import Meta from '$lib/ui/Meta.svelte';
+  import { ApiError, api } from '#lib/api/client.ts';
+  import Meta from '#lib/ui/Meta.svelte';
 
   const minimumLength = 8;
   const maximumLength = 200;

@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import type { StreamFrame } from '$lib/api/types';
-import { framesAfter, mockStream, serializeFrame } from '$lib/server/mock/sse';
+import type { StreamFrame } from '#lib/api/types.ts';
+import { framesAfter, mockStream, serializeFrame } from '#lib/server/mock/sse.ts';
 
 const activity = (id: string): StreamFrame => ({
   event: 'activity',

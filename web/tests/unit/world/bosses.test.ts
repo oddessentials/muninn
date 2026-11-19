@@ -9,7 +9,7 @@ import {
   miniBosses,
   phaseOfKey,
   phaseOfPrefab
-} from '$lib/world/bosses';
+} from '#lib/world/bosses.ts';
 
 describe('boss definitions', () => {
   it('lists eight Forsaken in the game order and six mini-bosses', () => {

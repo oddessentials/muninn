@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { browser } from '$app/environment';
-  import type { StatusHistory } from '$lib/api/types';
+  import { browser } from '$app/env';
+  import type { StatusHistory } from '#lib/api/types.ts';
   import { clock } from './clock.svelte';
   import { formatDateTime, formatUtc, parseInstant } from './format';
 

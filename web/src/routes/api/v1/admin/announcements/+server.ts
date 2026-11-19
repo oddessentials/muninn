@@ -1,10 +1,10 @@
-import { privateJson } from '$lib/server/http/respond';
-import { adminGet, adminMutation, readJsonBody } from '$lib/server/http/routes';
+import { privateJson } from '#lib/server/http/respond.ts';
+import { adminGet, adminMutation, readJsonBody } from '#lib/server/http/routes.ts';
 import {
   createAnnouncement,
   listAnnouncements,
   parseAnnouncement
-} from '$lib/server/read/announcements';
+} from '#lib/server/read/announcements.ts';
 
 export const GET = adminGet(async (_event, db) => ({ items: await listAnnouncements(db) }));
 

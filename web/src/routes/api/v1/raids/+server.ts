@@ -1,6 +1,6 @@
-import { encodeCursor, parseInstant, parsePage } from '$lib/server/http/respond';
-import { publicGet } from '$lib/server/http/routes';
-import { listRaids } from '$lib/server/read/raids';
+import { encodeCursor, parseInstant, parsePage } from '#lib/server/http/respond.ts';
+import { publicGet } from '#lib/server/http/routes.ts';
+import { listRaids } from '#lib/server/read/raids.ts';
 
 export const GET = publicGet(async ({ url }, db) => {
   const page = parsePage(url);

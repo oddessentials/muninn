@@ -14,7 +14,7 @@ import type {
   ZoneTarget,
   ZoneTestStatus,
   ZoneValueSource
-} from '$lib/api/types';
+} from '#lib/api/types.ts';
 
 export type Rating = ZoneRating;
 export type Recommendation = ZoneRecommendation;

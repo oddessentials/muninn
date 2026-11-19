@@ -1,20 +1,20 @@
 <script lang="ts">
   import '../app.css';
   import { page } from '$app/state';
-  import Backdrop from '$lib/ui/Backdrop.svelte';
-  import AtmosphereToggle from '$lib/ui/AtmosphereToggle.svelte';
-  import { atmosphere } from '$lib/ui/atmosphere.svelte';
-  import { clock } from '$lib/ui/clock.svelte';
-  import Emblem from '$lib/ui/Emblem.svelte';
-  import { provideLive } from '$lib/ui/live.svelte';
-  import { music } from '$lib/ui/music.svelte';
-  import { shroud } from '$lib/ui/shroud.svelte';
-  import MusicToggle from '$lib/ui/MusicToggle.svelte';
-  import SiteNav from '$lib/ui/SiteNav.svelte';
-  import StatusStrip from '$lib/ui/StatusStrip.svelte';
-  import { versionLine } from '$lib/ui/versions';
-  import Wordmark from '$lib/ui/Wordmark.svelte';
-  import { worldClock } from '$lib/ui/worldclock.svelte';
+  import Backdrop from '#lib/ui/Backdrop.svelte';
+  import AtmosphereToggle from '#lib/ui/AtmosphereToggle.svelte';
+  import { atmosphere } from '#lib/ui/atmosphere.svelte.ts';
+  import { clock } from '#lib/ui/clock.svelte.ts';
+  import Emblem from '#lib/ui/Emblem.svelte';
+  import { provideLive } from '#lib/ui/live.svelte.ts';
+  import { music } from '#lib/ui/music.svelte.ts';
+  import { shroud } from '#lib/ui/shroud.svelte.ts';
+  import MusicToggle from '#lib/ui/MusicToggle.svelte';
+  import SiteNav from '#lib/ui/SiteNav.svelte';
+  import StatusStrip from '#lib/ui/StatusStrip.svelte';
+  import { versionLine } from '#lib/ui/versions.ts';
+  import Wordmark from '#lib/ui/Wordmark.svelte';
+  import { worldClock } from '#lib/ui/worldclock.svelte.ts';
 
   let { data, children } = $props();
 
