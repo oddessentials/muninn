@@ -1,4 +1,4 @@
-import { expect, test, type Page } from '@playwright/test';
+import { expect, test, type Page } from './hydrated.ts';
 
 function watchConsole(page: Page): string[] {
   const problems: string[] = [];

@@ -21,6 +21,9 @@
   const live = provideLive();
   const bare = $derived(page.route.id === '/(site)/widget');
 
+  $effect(() => {
+    document.documentElement.dataset.hydrated = 'true';
+  });
   $effect(() => clock.start());
   $effect(() => worldClock.start());
   $effect(() => {

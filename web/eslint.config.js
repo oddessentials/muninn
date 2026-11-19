@@ -31,6 +31,23 @@ export default ts.config(
     }
   },
   {
+    files: ['tests/e2e/**'],
+    ignores: ['tests/e2e/hydrated.ts'],
+    rules: {
+      'no-restricted-imports': [
+        'error',
+        {
+          paths: [
+            {
+              name: '@playwright/test',
+              message: 'Import from ./hydrated.ts so every page load waits for hydration.'
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
     ignores: ['build/', '.svelte-kit/', 'src/lib/api/types.ts', 'drizzle/meta/']
   }
 );

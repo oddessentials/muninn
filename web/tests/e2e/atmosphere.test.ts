@@ -1,4 +1,4 @@
-import { expect, test, type Page } from '@playwright/test';
+import { expect, test, type Page } from './hydrated.ts';
 
 async function allowScenery(page: Page): Promise<void> {
   await page.emulateMedia({ reducedMotion: 'no-preference' });
